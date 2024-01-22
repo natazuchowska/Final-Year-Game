@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: f9638d97b1c984541849315b70d7f54c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5710602140183106552
+    second: glasshouse_0
+  - first:
+      213: -320374898700037945
+    second: glasshouse_1
+  - first:
+      213: -869682701721158460
+    second: glasshouse_2
+  - first:
+      213: -4823727224864425486
+    second: glasshouse_3
+  - first:
+      213: -6103277634692574093
+    second: glasshouse_4
+  - first:
+      213: -6769926297736650502
+    second: glasshouse_5
+  - first:
+      213: 6397818530326928638
+    second: glasshouse_6
+  - first:
+      213: -3706362458379737469
+    second: glasshouse_7
+  - first:
+      213: 7568557794082052302
+    second: glasshouse_8
+  - first:
+      213: -6562029525947941160
+    second: glasshouse_9
+  - first:
+      213: 8760550379311160060
+    second: glasshouse_10
+  - first:
+      213: -1880713370011050538
+    second: glasshouse_11
+  - first:
+      213: -1985231396232256944
+    second: glasshouse_12
+  - first:
+      213: -7385642358155063262
+    second: glasshouse_13
+  - first:
+      213: 1444614902797218095
+    second: glasshouse_14
+  - first:
+      213: -6017832930325981085
+    second: glasshouse_15
+  - first:
+      213: 1311293209163468124
+    second: glasshouse_16
+  - first:
+      213: 3806171044545454726
+    second: glasshouse_17
+  - first:
+      213: -3193925930660713678
+    second: glasshouse_18
+  - first:
+      213: -5628008383238478555
+    second: glasshouse_19
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: glasshouse_0
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 40
+        width: 2059
+        height: 1600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f31333f362204f40800000000000000
+      internalID: 5710602140183106552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_1
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 1189
+        width: 136
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c058002abccd8bf0800000000000000
+      internalID: -320374898700037945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 886
+        width: 157
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ccbb98c0344ee3f0800000000000000
+      internalID: -869682701721158460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_3
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 814
+        width: 149
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f9339c65adae0db0800000000000000
+      internalID: -4823727224864425486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_4
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 679
+        width: 119
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374109ae35dcc4ba0800000000000000
+      internalID: -6103277634692574093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_5
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 728
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0e4db96e36c02a0800000000000000
+      internalID: -6769926297736650502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_6
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 675
+        width: 57
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc5c856e0e99c850800000000000000
+      internalID: 6397818530326928638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_7
+      rect:
+        serializedVersion: 2
+        x: 2287
+        y: 654
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386ae633bfa509cc0800000000000000
+      internalID: -3706362458379737469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_8
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 607
+        width: 54
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec8564ab63be80960800000000000000
+      internalID: 7568557794082052302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_9
+      rect:
+        serializedVersion: 2
+        x: 2189
+        y: 564
+        width: 109
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de7f3cc9ecfee4a0800000000000000
+      internalID: -6562029525947941160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_10
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 527
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa51c3972ab39970800000000000000
+      internalID: 8760550379311160060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_11
+      rect:
+        serializedVersion: 2
+        x: 2257
+        y: 546
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ddd928872d56e5e0800000000000000
+      internalID: -1880713370011050538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_12
+      rect:
+        serializedVersion: 2
+        x: 2269
+        y: 528
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 052af96309a0374e0800000000000000
+      internalID: -1985231396232256944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_13
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 486
+        width: 119
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220d614f76de08990800000000000000
+      internalID: -7385642358155063262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_14
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 437
+        width: 65
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21b676a99d4c0410800000000000000
+      internalID: 1444614902797218095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_15
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 288
+        width: 126
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368954e65dc5c7ca0800000000000000
+      internalID: -6017832930325981085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_16
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 351
+        width: 70
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d0298e936a23210800000000000000
+      internalID: 1311293209163468124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_17
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 352
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6826288266c32d430800000000000000
+      internalID: 3806171044545454726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_18
+      rect:
+        serializedVersion: 2
+        x: 2298
+        y: 352
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b2f08c945eca3d0800000000000000
+      internalID: -3193925930660713678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse_19
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 38
+        width: 155
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5256624a13c45e1b0800000000000000
+      internalID: -5628008383238478555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      glasshouse_0: 5710602140183106552
+      glasshouse_1: -320374898700037945
+      glasshouse_10: 8760550379311160060
+      glasshouse_11: -1880713370011050538
+      glasshouse_12: -1985231396232256944
+      glasshouse_13: -7385642358155063262
+      glasshouse_14: 1444614902797218095
+      glasshouse_15: -6017832930325981085
+      glasshouse_16: 1311293209163468124
+      glasshouse_17: 3806171044545454726
+      glasshouse_18: -3193925930660713678
+      glasshouse_19: -5628008383238478555
+      glasshouse_2: -869682701721158460
+      glasshouse_3: -4823727224864425486
+      glasshouse_4: -6103277634692574093
+      glasshouse_5: -6769926297736650502
+      glasshouse_6: 6397818530326928638
+      glasshouse_7: -3706362458379737469
+      glasshouse_8: 7568557794082052302
+      glasshouse_9: -6562029525947941160
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
