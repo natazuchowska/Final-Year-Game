@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: 75ccc0a38de70924ea3ab338a89b6673
+guid: bd22081ace784954e87127efce932358
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1340532279770573336
-    second: Grafika_bez_nazwy_0
+      213: 6527203419805736114
+    second: glasshouse (3)_0
   - first:
-      213: -3711624583914485165
-    second: Grafika_bez_nazwy_1
+      213: -8082946912707518661
+    second: glasshouse (3)_1
   - first:
-      213: -3758093927054406122
-    second: Grafika_bez_nazwy_2
+      213: -6307392413356215712
+    second: glasshouse (3)_2
   - first:
-      213: 6342871463436066722
-    second: Grafika_bez_nazwy_3
+      213: 5165729022419895192
+    second: glasshouse (3)_3
   - first:
-      213: -2423427862090766382
-    second: Grafika_bez_nazwy_4
+      213: -5349343990765524051
+    second: glasshouse (3)_4
   - first:
-      213: -3257818432686973088
-    second: Grafika_bez_nazwy_5
+      213: -2263180949581058794
+    second: glasshouse (3)_5
   - first:
-      213: 7744469604368752413
-    second: Grafika_bez_nazwy_6
-  - first:
-      213: -8944938670695732445
-    second: Grafika_bez_nazwy_7
+      213: -5494332554607619344
+    second: glasshouse (3)_6
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -67,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -131,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grafika_bez_nazwy_0
+      name: glasshouse (3)_0
       rect:
         serializedVersion: 2
-        x: 213
-        y: 791
-        width: 942
-        height: 1300
+        x: 505
+        y: 1888
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e594567ef8756de0800000000000000
-      internalID: -1340532279770573336
+      spriteID: 2bc5c3e7de8459a50800000000000000
+      internalID: 6527203419805736114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grafika_bez_nazwy_1
+      name: glasshouse (3)_1
       rect:
         serializedVersion: 2
-        x: 632
-        y: 812
-        width: 18
-        height: 13
+        x: 746
+        y: 1897
+        width: 76
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,18 +163,102 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35a8b202b19ad7cc0800000000000000
-      internalID: -3711624583914485165
+      spriteID: b3f5ab1bb9a93df80800000000000000
+      internalID: -8082946912707518661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grafika_bez_nazwy_2
+      name: glasshouse (3)_2
       rect:
         serializedVersion: 2
-        x: 636
-        y: 804
+        x: 849
+        y: 1902
+        width: 99
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 062b8ee9404a778a0800000000000000
+      internalID: -6307392413356215712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse (3)_3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 394
+        width: 1509
+        height: 1463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893834b3d2b50b740800000000000000
+      internalID: 5165729022419895192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse (3)_4
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 1808
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dabec018bff43c5b0800000000000000
+      internalID: -5349343990765524051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse (3)_5
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1753
+        width: 9
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d2acdcae09790e0800000000000000
+      internalID: -2263180949581058794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasshouse (3)_6
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1548
         width: 6
         height: 6
       alignment: 0
@@ -187,113 +268,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61e8e5d0c7198dbc0800000000000000
-      internalID: -3758093927054406122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grafika_bez_nazwy_3
-      rect:
-        serializedVersion: 2
-        x: 714
-        y: 807
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2af91127df7660850800000000000000
-      internalID: 6342871463436066722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grafika_bez_nazwy_4
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 815
-        width: 27
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2d7ab4503314e5ed0800000000000000
-      internalID: -2423427862090766382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grafika_bez_nazwy_5
-      rect:
-        serializedVersion: 2
-        x: 734
-        y: 802
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 06f19f86567e9c2d0800000000000000
-      internalID: -3257818432686973088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grafika_bez_nazwy_6
-      rect:
-        serializedVersion: 2
-        x: 744
-        y: 813
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d1f953eb212e97b60800000000000000
-      internalID: 7744469604368752413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grafika_bez_nazwy_7
-      rect:
-        serializedVersion: 2
-        x: 784
-        y: 815
-        width: 11
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 32ba68bdba13dd380800000000000000
-      internalID: -8944938670695732445
+      spriteID: 0f29fbcd6a530c3b0800000000000000
+      internalID: -5494332554607619344
       vertices: []
       indices: 
       edges: []
@@ -301,7 +277,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -309,14 +285,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grafika_bez_nazwy_0: -1340532279770573336
-      Grafika_bez_nazwy_1: -3711624583914485165
-      Grafika_bez_nazwy_2: -3758093927054406122
-      Grafika_bez_nazwy_3: 6342871463436066722
-      Grafika_bez_nazwy_4: -2423427862090766382
-      Grafika_bez_nazwy_5: -3257818432686973088
-      Grafika_bez_nazwy_6: 7744469604368752413
-      Grafika_bez_nazwy_7: -8944938670695732445
+      glasshouse (3)_0: 6527203419805736114
+      glasshouse (3)_1: -8082946912707518661
+      glasshouse (3)_2: -6307392413356215712
+      glasshouse (3)_3: 5165729022419895192
+      glasshouse (3)_4: -5349343990765524051
+      glasshouse (3)_5: -2263180949581058794
+      glasshouse (3)_6: -5494332554607619344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

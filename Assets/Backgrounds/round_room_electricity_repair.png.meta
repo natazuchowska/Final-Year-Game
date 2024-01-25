@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a55bc66394b767747808a882c0cc4c32
+guid: 98cb60b48b4397f40a4d528a230e8f97
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2078250577759641631
-    second: square (1)_0
+      213: -765883112341794139
+    second: round_room_electricity_repair_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: square (1)_0
+      name: round_room_electricity_repair_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 12
-        width: 104
-        height: 104
+        x: 0
+        y: 0
+        width: 2360
+        height: 1640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f102d91b3ed67dc10800000000000000
-      internalID: 2078250577759641631
+      spriteID: 5a2956dfd590f55f0800000000000000
+      internalID: -765883112341794139
       vertices: []
       indices: 
       edges: []
@@ -133,7 +133,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      square (1)_0: 2078250577759641631
+      round_room_electricity_repair_0: -765883112341794139
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

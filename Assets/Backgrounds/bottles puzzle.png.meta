@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a55bc66394b767747808a882c0cc4c32
+guid: b4fbf0cbd1c1d9d45a9c3790c694ea94
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2078250577759641631
-    second: square (1)_0
+      213: -3846784360849502276
+    second: bottles_puzzle_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: square (1)_0
+      name: bottles_puzzle_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 12
-        width: 104
-        height: 104
+        x: 0
+        y: 0
+        width: 2360
+        height: 1640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f102d91b3ed67dc10800000000000000
-      internalID: 2078250577759641631
+      spriteID: cbf8904410a7d9ac0800000000000000
+      internalID: -3846784360849502276
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      square (1)_0: 2078250577759641631
+      bottles_puzzle_0: -3846784360849502276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

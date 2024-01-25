@@ -35,5 +35,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PaintingsPuzzle.unity
     guid: 1e6e0cf6e0b6cd744930519fa978d82c
+  - enabled: 1
+    path: Assets/Scenes/ChessPuzzleHint.unity
+    guid: 9de4e3b3b537676428ddf8e49d8bf368
+  - enabled: 1
+    path: Assets/Scenes/BottlePuzzle.unity
+    guid: 83fe3a12411cc664f964a8604a72afe9
+  - enabled: 1
+    path: Assets/Scenes/SwimmingPool.unity
+    guid: 04bde7675dc555b439295439713f315b
+  - enabled: 1
+    path: Assets/Scenes/CableFixPuzzle.unity
+    guid: 5269e099f7c3b014cbc1181bd57dffe6
+  - enabled: 1
+    path: Assets/Scenes/ElectricityPuzzle.unity
+    guid: 18eeb744f8b8af348bd3b1933c2529d9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
