@@ -6,11 +6,17 @@ public class SnapController : MonoBehaviour
 {
     public List<Transform> snapPoints;
     public List<Draggable> draggableObjects;
-    // int[] takenSnapPoints; // to store which slots aready occupied
-    public bool correctOrder = false; // check if bottles in correct slots
-    public int howManyCorrect = 0; // how many bottles ok
+
+    //instantiate slots to false
+    bool slot1 = false;
+    bool slot2 = false;
+    bool slot3 = false; 
+    // public int howManyCorrect = 0; // how many bottles ok
 
     public float snapRange = 0.5f;
+
+    GameObject keyReward; // reward for solving the puzzle
+    public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
 
 
     // Start is called before the first frame update
@@ -22,13 +28,8 @@ public class SnapController : MonoBehaviour
             draggable.dragInProgressCallback = OnDragInProgress; // when the mouse is holding the object
         }
 
-        // takenSnapPoints = new int[snapPoints.Count]; // create an int array to store which slots already have an item in them
-                                                     // - if a slot is taken no item should be able to snap to it
-
-        /*for (int i = 0; i < takenSnapPoints.Length; i++) //iterate through taken array
-        {
-            takenSnapPoints[i] = 0; // initialize with 0 => indicating free slot
-        }*/
+        keyReward = GameObject.FindGameObjectWithTag("KeyReward"); // get the key object
+        keyReward.SetActive(false); // deactivate key until puzzle not solved
     }
 
     private void OnDragEnded(Draggable draggable)
@@ -46,14 +47,13 @@ public class SnapController : MonoBehaviour
                 // if smaller - update the current minimum
                 closestSnapPoint = snapPoint;
                 closestDistance = currentDistance;
-                snapIndex = snapPoints.IndexOf(closestSnapPoint); // get the index of snappoint
+                snapIndex = snapPoints.IndexOf(snapPoint); // get the index of snappoint
             }
         }
 
         if(closestSnapPoint != null && closestDistance <= snapRange /* && takenSnapPoints[snapIndex] == 0*/) // if item can be inserted into the slot
         {
             draggable.transform.localPosition = closestSnapPoint.localPosition; // put the object in the centre of the (closest) snappoint
-            // takenSnapPoints[snapIndex] = 1; // slot taken now
 
             if (draggable.gameObject.CompareTag("Plant"))
             {
@@ -62,67 +62,53 @@ public class SnapController : MonoBehaviour
 
             if(draggable.gameObject.CompareTag("SnapBottle")) // if the object inserted in the slot is a snapBottle
             {
-                // check which bottle that is
-                if (draggable.gameObject.name == "leftBottle") 
+                if (snapIndex == 0)
                 {
-                    if(snapIndex == 0)
+                    // check which bottle that is
+                    if (draggable.gameObject.name == "leftBottle")
                     {
-                        // correct place
-                        // Debug.Log("bottleL CORRECT"); 
-                        howManyCorrect++;
-                        Debug.Log(howManyCorrect);
+                        slot1 = true;
+                        Debug.Log("left OK");
                     }
                     else
                     {
-                        // wrong place
-                        if(howManyCorrect>0)
-                        {
-                            howManyCorrect--;
-                        }
-                    }
-                } 
-                if (draggable.gameObject.name == "middleBottle") 
-                {
-                    if(snapIndex == 1)
-                    {
-                        // correct place
-                        // Debug.Log("bottleM CORRECT");
-                        howManyCorrect++;
-                        Debug.Log(howManyCorrect);
-                    }
-                    else
-                    {
-                        // wrong place
-                        if (howManyCorrect > 0)
-                        {
-                            howManyCorrect--;
-                        }
+                        slot1 = false;
                     }
                 }
-                if (draggable.gameObject.name == "rightBottle") 
+                if (snapIndex == 1)
                 {
-                    if(snapIndex == 2)
+                    // check which bottle that is
+                    if (draggable.gameObject.name == "middleBottle")
                     {
-                        // correct place
-                        // Debug.Log("bottleR CORRECT");
-                        howManyCorrect++;
-                        Debug.Log(howManyCorrect);
+                        slot2 = true;
+                        Debug.Log("middle OK");
                     }
                     else
                     {
-                        // wrong place
-                        if (howManyCorrect > 0)
-                        {
-                            howManyCorrect--;
-                        }
+                        slot2 = false;
+                    }
+                }
+                if (snapIndex == 2)
+                {
+                    // check which bottle that is
+                    if (draggable.gameObject.name == "rightBottle")
+                    {
+                        slot3 = true;
+                        Debug.Log("right OK");
+                    }
+                    else
+                    {
+                        slot3 = false;
                     }
                 }
 
                 // are all in correct order?
-                if(howManyCorrect == 3)
+                if(slot1 == true && slot2 == true && slot3 == true)
                 {
-                    correctOrder = true;
                     Debug.Log("CORRECT ORDER! CONGRATS!!!!");
+
+                    keyReward.SetActive(true);
+                    audioPlayer.Play(); // play puzzle solved sound 
                 }
             }
         }
