@@ -17,6 +17,11 @@ TagManager:
   - SnapBottle
   - KeyReward
   - PuzzleSolvedAudio
+  - Steam
+  - SteamL
+  - SteamM
+  - SteamR
+  - BackgroundAfter
   layers:
   - Default
   - TransparentFX
