@@ -24,6 +24,7 @@ TagManager:
   - BackgroundAfter
   - Key
   - GoThruText
+  - LampLight
   layers:
   - Default
   - TransparentFX

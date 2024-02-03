@@ -6,7 +6,7 @@ public class Draggable : MonoBehaviour
 {
     public delegate void DragEndedDelegate(Draggable draggableObject); // delegate type - can hold reference to another method
 
-    public DragEndedDelegate dragEndedCallback; // want o invoke the callback when the drag is over
+    public DragEndedDelegate dragEndedCallback; // want to invoke the callback when the drag is over
     
     // ---------------------------------------------------------------------------------------------
 
