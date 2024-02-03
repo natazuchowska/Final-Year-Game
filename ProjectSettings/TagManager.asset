@@ -22,6 +22,8 @@ TagManager:
   - SteamM
   - SteamR
   - BackgroundAfter
+  - Key
+  - GoThruText
   layers:
   - Default
   - TransparentFX
