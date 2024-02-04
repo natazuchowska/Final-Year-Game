@@ -12,7 +12,6 @@ public class GoToActivator : MonoBehaviour
     private void Awake()
     {
         goToButton.interactable = false;
-        goToButton.interactable = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
