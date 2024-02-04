@@ -9,7 +9,7 @@ public class ElectricitySnapController : MonoBehaviour
     public List<Transform> snapPoints;
     public List<Draggable> draggableObjects;
 
-    [SerializeField] public static bool lightOn;
+    [SerializeField] public static bool lightOn = true; // lamp on and needs to be switched off (if initialized here, when set to false would the false value persist when script is executed again?)
 
     //instantiate slots to false
     bool slot1 = false;
@@ -28,7 +28,6 @@ public class ElectricitySnapController : MonoBehaviour
             draggable.dragInProgressCallback = OnDragInProgress; // when the mouse is holding the object
         }
 
-        lightOn = true; // lamp light is on and needs to be switched off
         Debug.Log("lightOn val in electricity box: " + lightOn);
     }
 
