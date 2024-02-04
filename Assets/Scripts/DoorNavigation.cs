@@ -22,7 +22,7 @@ public class DoorNavigation : MonoBehaviour
         goThruDoorText = GameObject.FindGameObjectWithTag("GoThruText"); // get the reference to the text object
         goThruDoorText.SetActive(false); // hide text
 
-        canGo = KeySnapController.canGoThru; // get the value of canGoThru fom KeySnapController
+        canGo = KeySnapController.canGoThru1; // get the value of canGoThru fom KeySnapController
         Debug.Log(canGo);
     }
 

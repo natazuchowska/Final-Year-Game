@@ -681,7 +681,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -750,6 +750,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301825219}
   m_CullTransparentMesh: 1
+--- !u!1 &1315411667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315411669}
+  - component: {fileID: 1315411668}
+  m_Layer: 0
+  m_Name: NavControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1315411668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315411667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aff01453fb9c0a49a84f352bd4cc654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goThruDoor: {fileID: 1479282488}
+  goToRoom: {fileID: 1301825222}
+--- !u!4 &1315411669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315411667}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.13648, y: 4.084693, z: -0.08601712}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1479282486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -758,6 +804,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1576977104}
     m_Modifications:
+    - target: {fileID: 237024998100293648, guid: 9b5120d613b0d7645b1bc652d1f0db1c, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 237024998100293648, guid: 9b5120d613b0d7645b1bc652d1f0db1c, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 237024998100293648, guid: 9b5120d613b0d7645b1bc652d1f0db1c, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 237024998100293648, guid: 9b5120d613b0d7645b1bc652d1f0db1c, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 237024998100293648, guid: 9b5120d613b0d7645b1bc652d1f0db1c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 15
@@ -871,6 +933,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5679473241418310158, guid: 9b5120d613b0d7645b1bc652d1f0db1c, type: 3}
   m_PrefabInstance: {fileID: 1479282486}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1479282488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 237024998100293648, guid: 9b5120d613b0d7645b1bc652d1f0db1c, type: 3}
+  m_PrefabInstance: {fileID: 1479282486}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1576977100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,3 +1687,4 @@ SceneRoots:
   - {fileID: 1576977104}
   - {fileID: 1669849945}
   - {fileID: 144807154}
+  - {fileID: 1315411669}

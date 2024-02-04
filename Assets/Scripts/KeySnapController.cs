@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,7 +10,9 @@ public class KeySnapController : MonoBehaviour
     public List<Transform> snapPoints;
     public List<Draggable> draggableObjects;
 
-    [SerializeField] public static bool canGoThru;
+    [SerializeField] public static bool canGoThru1; // glasshouse door
+    [SerializeField] public static bool canGoThru2; // basement door
+
 
     // nav buttons
     [SerializeField] public Button goBackButton;
@@ -18,6 +21,7 @@ public class KeySnapController : MonoBehaviour
     //instantiate slots to false
     bool slot1 = false;
     bool slot2 = false;
+    bool slot3 = false;
 
     public float snapRange = 0.5f;
 
@@ -27,7 +31,7 @@ public class KeySnapController : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         foreach (Draggable draggable in draggableObjects)
         {
@@ -36,12 +40,14 @@ public class KeySnapController : MonoBehaviour
         }
 
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of the scene
-        canGoThru = false; // door locked by default
+        /*canGoThru1 = false; // door locked by default
+        canGoThru2 = false; // door locked by default*/
 
         goBackButton.interactable = true; // can go back
         goThruDoorButton.interactable = false; // can't go thru (door locked)
 
-        Debug.Log(canGoThru);
+        Debug.Log(canGoThru1);
+        Debug.Log(canGoThru2);
     }
 
     private void OnDragEnded(Draggable draggable)
@@ -71,27 +77,13 @@ public class KeySnapController : MonoBehaviour
             {
                 if(sceneID == 15) // BASEMENT DOOR
                 {
-                    if (snapIndex == 0)
+                    if (snapIndex == 0) // top lock
                     {
                         // check if correct key
                         if (draggable.gameObject.name == "keyTop")
                         {
-                            slot1 = true;
-                            Debug.Log("top key OK");
-                            audioPlayer.Play(); // play door unlocking sound
-                        }
-                        else
-                        {
-                            slot1 = false;
-                        }
-                    }
-                    if (snapIndex == 1)
-                    {
-                        // check if correct key
-                        if (draggable.gameObject.name == "keyBottom")
-                        {
                             slot2 = true;
-                            Debug.Log("bottom key OK");
+                            Debug.Log("top key OK");
                             audioPlayer.Play(); // play door unlocking sound
                         }
                         else
@@ -99,12 +91,29 @@ public class KeySnapController : MonoBehaviour
                             slot2 = false;
                         }
                     }
+                    if (snapIndex == 1) // bottom lock
+                    {
+                        // check if correct key
+                        if (draggable.gameObject.name == "keyBottom")
+                        {
+                            slot3 = true;
+                            Debug.Log("bottom key OK");
+                            audioPlayer.Play(); // play door unlocking sound
+                        }
+                        else
+                        {
+                            slot3 = false;
+                        }
+                    }
 
                     // are all keys in place?
-                    if (slot1 == true && slot2 == true)
+                    if (slot2 == true && slot3 == true)
                     {
                         Debug.Log("DOOR NOW OPEN");
-                        canGoThru = true;
+                        canGoThru2 = true;
+
+                        goBackButton.interactable = false; // can't go back to the room
+                        goThruDoorButton.interactable = true; // can go to the next room
                     }
                 }
 
@@ -118,21 +127,16 @@ public class KeySnapController : MonoBehaviour
                             slot1 = true;
                             Debug.Log("key OK");
                             audioPlayer.Play(); // play door unlocking sound
-                            canGoThru = true;
+                            canGoThru1 = true;
+
+                            goBackButton.interactable = false; // can't go back to the room
+                            goThruDoorButton.interactable = true; // can go to the next room
                         }
                         else
                         {
                             slot1 = false;
                         }
                     }
-                }
-
-                if(canGoThru == true)
-                {
-                    goBackButton.interactable = false; // can't go back to the room
-                    goThruDoorButton.interactable = true; // can go to the next room
-
-                    Debug.Log("can go thru now");
                 }
             }
                 
