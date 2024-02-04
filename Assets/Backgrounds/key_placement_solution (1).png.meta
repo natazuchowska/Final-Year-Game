@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5323bdb204e78ec43b94342d26b59e91
+guid: 3d7662d186798f348ab5558128ed0043
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8758370345214783464
-    second: glasshouse_door_0
+      213: -7626491274833898438
+    second: key_placement_solution (1)_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: glasshouse_door_0
+      name: key_placement_solution (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2360
-        height: 1640
+        x: 278
+        y: 251
+        width: 1501
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8efa7d5dc6bfb8970800000000000000
-      internalID: 8758370345214783464
+      spriteID: a34d8e8a792492690800000000000000
+      internalID: -7626491274833898438
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      glasshouse_door_0: 8758370345214783464
+      key_placement_solution (1)_0: -7626491274833898438
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

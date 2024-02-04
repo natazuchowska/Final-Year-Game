@@ -25,6 +25,7 @@ TagManager:
   - Key
   - GoThruText
   - LampLight
+  - CableFix
   layers:
   - Default
   - TransparentFX

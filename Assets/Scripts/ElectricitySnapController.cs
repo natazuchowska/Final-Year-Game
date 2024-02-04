@@ -13,6 +13,9 @@ public class ElectricitySnapController : MonoBehaviour
 
     //instantiate slots to false
     bool slot1 = false;
+    bool electricityFlow; // ckeck if electricity ON -> if yes display open box
+
+    GameObject backgroundAfter;
 
     public float snapRange = 0.5f;
 
@@ -29,6 +32,15 @@ public class ElectricitySnapController : MonoBehaviour
         }
 
         Debug.Log("lightOn val in electricity box: " + lightOn);
+        backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // get reference to the background
+        backgroundAfter.SetActive(false); // display closed box initially
+
+        electricityFlow = CableFix.electricityFlow; // get the state of electricity from cable fix puzzle
+
+        if(electricityFlow == true)
+        {
+            backgroundAfter.SetActive(true); //display open box
+        }
     }
 
     private void OnDragEnded(Draggable draggable)
