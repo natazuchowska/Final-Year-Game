@@ -49,11 +49,11 @@ public class CableFix : MonoBehaviour
             }
         }
 
-        if (closestSnapPoint != null && closestDistance <= snapRange /* && takenSnapPoints[snapIndex] == 0*/) // if item can be inserted into the slot
+        if (closestSnapPoint != null && closestDistance <= snapRange) // if item can be inserted into the slot
         {
             draggable.transform.localPosition = closestSnapPoint.localPosition; // put the object in the centre of the (closest) snappoint
 
-            if (draggable.gameObject.CompareTag("CableFix")) // if the object inserted in the slot is a snapBottle
+            if (draggable.gameObject.CompareTag("CableFix")) // if the object inserted in the slot is a cable for fixing
             {
                 if (snapIndex == 0)
                 {
