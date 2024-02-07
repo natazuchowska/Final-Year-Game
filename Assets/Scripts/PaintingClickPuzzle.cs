@@ -11,9 +11,15 @@ public class PaintingClickPuzzle : MonoBehaviour
     [SerializeField] public List<Button> paints;
     [SerializeField] public List<GameObject> texts;
 
+    GameObject keyReward; // key to get when puzzle solved
+
     public static int[] correctOrder = { 6, 3, 4, 2, 5, 1 }; //the order in which paintings should be clicked
     public static int howManyPaintings;
     public static int howManyCorrectSoFar = 0; // how many have been clicked ok so far
+
+    public static bool puzzleSolved = false;
+    public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
+    public static bool soundPlayed = false;
 
     public static int paintPuzzleID; // get the order_id of the painting being clicked from the singular paintings cript
 
@@ -30,6 +36,29 @@ public class PaintingClickPuzzle : MonoBehaviour
         Debug.Log(correctOrder[1]); //3
 
         howManyPaintings = paints.Count;
+
+        keyReward = GameObject.FindGameObjectWithTag("KeyReward"); // get reference to the key sprite
+        keyReward.SetActive(false); // hide key until puzzle not solved
+    }
+
+    private void Update()
+    {
+        if(puzzleSolved == true)
+        {
+            keyReward.SetActive(true);
+
+            // play sound only once
+            if(soundPlayed == false)
+            {
+                PlaySound();
+                soundPlayed = true;
+            }
+        }
+    }
+
+    public void PlaySound()
+    {
+        this.audioPlayer.Play();
     }
 
     public static void setPaintOrderID(int paintID)
@@ -49,6 +78,7 @@ public class PaintingClickPuzzle : MonoBehaviour
         if(howManyCorrectSoFar == howManyPaintings)
         {
             Debug.Log("PUZZLE SOLVED!!!!!");
+            puzzleSolved = true;
         }
     }
 }
