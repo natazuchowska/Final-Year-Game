@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Object.DontDestroyOnLoad example.
 //
@@ -10,14 +11,15 @@ using UnityEngine;
 
 public class DontDestroy : MonoBehaviour
 {
+   
     void Awake()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
+        /*GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
 
-        if (objs.Length > 1)
+        if (player.Length > 1) // destroy if any duplicates of the player occur
         {
             Destroy(this.gameObject); // avoid duplicates (if plaer already in the scene we don't want to keep the object from previous scene
-        }
+        }*/
 
         DontDestroyOnLoad(this.gameObject);
         // this.gameObject.transform.localScale *= 0.5f;

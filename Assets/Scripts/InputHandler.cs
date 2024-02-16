@@ -20,7 +20,7 @@ public class InputHandler : MonoBehaviour
 
         if(!rayHit.collider) { return; }
 
-        Debug.Log(rayHit.collider.gameObject.name); //display the name of the clicked object on the console
+        // Debug.Log(rayHit.collider.gameObject.name); //display the name of the clicked object on the console
 
         Vector3 itemScale = rayHit.transform.localScale;
         // if not player nor goTo button - resize object on click
