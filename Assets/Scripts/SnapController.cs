@@ -64,6 +64,12 @@ public class SnapController : MonoBehaviour
             if (draggable.gameObject.CompareTag("Plant"))
             {
                 Debug.Log("Character is saying: Thank you for the plant girlie");
+                GameObject plant = draggable.gameObject;
+                plant.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                plant.transform.localPosition = new Vector3(plant.transform.localPosition.x, plant.transform.localPosition.y, -3); // move the plant to the front
+                plant.GetComponent<Renderer>().material.color = Color.white;
+
+                GameManager.plantGiven = true; // inform game mngr that plant was received
             }
 
             /*if(draggable.gameObject.CompareTag("SnapBottle")) // if the object inserted in the slot is a snapBottle

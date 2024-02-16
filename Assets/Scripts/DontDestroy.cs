@@ -14,12 +14,12 @@ public class DontDestroy : MonoBehaviour
    
     void Awake()
     {
-        /*GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+        GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
 
         if (player.Length > 1) // destroy if any duplicates of the player occur
         {
             Destroy(this.gameObject); // avoid duplicates (if plaer already in the scene we don't want to keep the object from previous scene
-        }*/
+        }
 
         DontDestroyOnLoad(this.gameObject);
         // this.gameObject.transform.localScale *= 0.5f;

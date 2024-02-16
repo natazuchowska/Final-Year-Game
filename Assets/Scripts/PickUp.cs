@@ -24,7 +24,7 @@ public class PickUp : MonoBehaviour
 
     private void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Inventory>();
         pickUpItem = this.gameObject;
 
         pickUpButton = pickUpItem.GetComponent<Button>(); // get the button of the collectible object
