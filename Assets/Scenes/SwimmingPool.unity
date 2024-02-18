@@ -672,6 +672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 600104057}
   - component: {fileID: 600104056}
+  - component: {fileID: 600104058}
   m_Layer: 0
   m_Name: key2
   m_TagString: KeyReward
@@ -746,6 +747,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 54.838}
+--- !u!114 &600104058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600104055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa32f9398cf960499157d96f0cfa455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemButton: {fileID: 0}
+  pickUpItem: {fileID: 0}
+  pickUpButton: {fileID: 0}
 --- !u!1 &660657068
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class PickUp : MonoBehaviour
     private Camera mainCamera;
 
     public GameObject pickUpItem;
-    [SerializeField] public Button pickUpButton; // button of the thing being picked up
+    public Button pickUpButton; // button of the thing being picked up
 
     // public AudioSource audioSource; // to play pickup sound on item pickup
 
@@ -43,7 +43,7 @@ public class PickUp : MonoBehaviour
         Vector3 itemScale = rayHit.transform.localScale;
 
         // if collectible add to inventory on click
-        if (rayHit.collider.gameObject.CompareTag("Collectible"))
+        if (rayHit.collider.gameObject.CompareTag("Collectible") || rayHit.collider.gameObject.CompareTag("KeyReward") || rayHit.collider.gameObject.CompareTag("Bottle"))
         {
             Debug.Log("item added to inventory NOW");
             rayHit.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
@@ -56,7 +56,8 @@ public class PickUp : MonoBehaviour
                     // audioSource.Play(); // play pickup sound
 
                     inventory.isFull[i] = true; //set slot to full now
-                    Instantiate(itemButton, inventory.slots[i].transform); // make sure the button spawns at the same position as the graphic (instantiate as child of that slot)
+                    GameObject inventoryObj = Instantiate(itemButton, inventory.slots[i].transform); // make sure the button spawns at the same position as the graphic (instantiate as child of that slot)
+                    inventoryObj.AddComponent<Draggable>(); // add a draggable script to the object so it can be used by dragging out of inventory
                     Destroy(gameObject);
                     break;
                 }

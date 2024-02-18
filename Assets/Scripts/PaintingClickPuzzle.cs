@@ -20,15 +20,9 @@ public class PaintingClickPuzzle : MonoBehaviour
     public static bool puzzleSolved = false;
     public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
     public static bool soundPlayed = false;
+    private int puzzleFlag = 0;
 
     public static int paintPuzzleID; // get the order_id of the painting being clicked from the singular paintings cript
-
-    /*[SerializeField] public Button paint1;
-    [SerializeField] public Button paint2;
-    [SerializeField] public Button paint3;
-    [SerializeField] public Button paint4;
-    [SerializeField] public Button paint5;
-    [SerializeField] public Button paint6;*/
 
     // Start is called before the first frame update
     void Start()
@@ -43,9 +37,10 @@ public class PaintingClickPuzzle : MonoBehaviour
 
     private void Update()
     {
-        if(puzzleSolved == true)
+        if(puzzleSolved == true && puzzleFlag == 0)
         {
             keyReward.SetActive(true);
+            puzzleFlag = 1; // to execute only once
 
             // play sound only once
             if(soundPlayed == false)
