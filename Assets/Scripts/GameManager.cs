@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("OnSceneLoaded: " + scene.name);
         Debug.Log(mode);
 
+        // inventoryCanvas.SetActive(false); // close inventory (if was open) on every new scene load
+
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of current scene
 
         if (sceneID == 8 || sceneID == 9 || sceneID == 10 || sceneID == 12 || sceneID == 14 || sceneID == 15)
@@ -116,6 +118,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // enable navigation when plant given to wizard
+        
     }
 }

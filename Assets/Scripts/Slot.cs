@@ -28,8 +28,12 @@ public class Slot : MonoBehaviour
 
         foreach(Transform child in transform) // for each child in slot
         {
-            child.GetComponent<Spawn>().SpawnDroppedItem();
-            GameObject.Destroy(child.gameObject);
+            if(!child.CompareTag("Cross")) // get the item in slot, not the cross icon
+            {
+                child.GetComponent<Spawn>().SpawnDroppedItem();
+                GameObject.Destroy(child.gameObject);
+            }
+            
         }
     }
 }

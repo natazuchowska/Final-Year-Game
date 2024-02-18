@@ -13,7 +13,7 @@ public class PickUp : MonoBehaviour
     private Camera mainCamera;
 
     public GameObject pickUpItem;
-    public Button pickUpButton; // button of the thing being picked up
+    [SerializeField] public Button pickUpButton; // button of the thing being picked up
 
     // public AudioSource audioSource; // to play pickup sound on item pickup
 
@@ -31,10 +31,9 @@ public class PickUp : MonoBehaviour
 
     }
 
-  /*  public void OnClick(InputAction.CallbackContext context)
+    // add to inventory on mouse CLICK
+    private void OnMouseDown()
     {
-        if (!context.started) { return; }
-
         var rayHit = Physics2D.GetRayIntersection(mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
 
         if (!rayHit.collider) { return; }
@@ -47,14 +46,8 @@ public class PickUp : MonoBehaviour
         if (rayHit.collider.gameObject.CompareTag("Collectible"))
         {
             Debug.Log("item added to inventory NOW");
-            rayHit.collider.gameObject.GetComponent<Renderer>().material.color = Color.green;
-        }
-    }*/
+            rayHit.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
             for (int i = 0; i < inventory.slots.Length; i++)
             {
                 if (inventory.isFull[i] == false) // if the slot empty add the item to it
@@ -71,38 +64,17 @@ public class PickUp : MonoBehaviour
         }
     }
 
-    public void AddToInventory()
-    {
-        for (int i = 0; i < inventory.slots.Length; i++)
-        {
-            if (inventory.isFull[i] == false) // if the slot empty add the item to it
-            {
-                // ISSUE --> when item dropped and trying to pick up again - Null Reference -> AudioSource is not initialized eith an item -> how to do it?
-                // audioSource.Play(); // play pickup sound
-
-                inventory.isFull[i] = true; //set slot to full now
-                Instantiate(itemButton, inventory.slots[i].transform); // make sure the button spawns at the same position as the graphic (instantiate as child of that slot)
-                Destroy(gameObject);
-                break;
-            }
-        }
-    }
-
     private void OnMouseEnter()
     {
         // Debug.Log("Mouse over interactable object!!!!");
 
         if (gameObject.CompareTag("Collectible"))
         {
-            /*gameObject.GetComponent<Renderer>().material.color = Color.green;*/
-            // pickUpButton.onClick.AddListener(TaskOnClick); // add click listener
+            // CHANGE CURSON ICON HERE (to show that obj is collectible)
+            gameObject.GetComponent<Renderer>().material.color = Color.green;
+            // --------------------------------------------------------------
+            
         }
-    }
-
-    // todo when button clicked 
-    private void TaskOnClick()
-    {
-        Debug.Log("object to be added to inventory NOW");
     }
 
     private void OnMouseExit()
