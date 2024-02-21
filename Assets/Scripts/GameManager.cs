@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
 
     GameObject[] pickUps;
 
-
     public Button goToRRButton;
     // [SerializeField] public int firstTime = 0; // flag for 1st plant puzzle
 
@@ -42,8 +41,6 @@ public class GameManager : MonoBehaviour
 
     bool isFacingRight;
     PlayerController playerScript;
-
-
 
     private void Awake()
     {
