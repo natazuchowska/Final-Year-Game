@@ -24,6 +24,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int sceneID; // strore the id of the current scene
     [SerializeField] GameObject player;
 
+    // collectibles flags (do not render in scene on load if previously already collected)
+    public bool bottle1 = false;
+    public bool bottle2 = false;
+    public bool bottle3 = false;
+    public bool bottle4 = false;
+    public bool bottle5 = false;
+    public bool bottle6 = false;
+
+    GameObject[] pickUps;
+
+
     public Button goToRRButton;
     // [SerializeField] public int firstTime = 0; // flag for 1st plant puzzle
 
@@ -74,6 +85,16 @@ public class GameManager : MonoBehaviour
         if (sceneID == 1) // ROUND ROOM
         {
             player.transform.localPosition = new Vector3(-3, -3, -3); // move player to coordinates in the scene
+
+            pickUps = GameObject.FindGameObjectsWithTag("Bottle"); // get ref to bottles, check if previously collected, if so destroy 
+
+            foreach(GameObject pickUp in pickUps)
+            { 
+                if((pickUp.name == "bottle1" && bottle1 == true) || (pickUp.name == "bottle2" && bottle2 == true) || (pickUp.name == "bottle3" && bottle3 == true) || (pickUp.name == "bottle4" && bottle4 == true) || (pickUp.name == "bottle5" && bottle5 == true) || (pickUp.name == "bottle6" && bottle6 == true))
+                {
+                    Destroy(pickUp); // gameobj shouldn't be rendered anymore so destroy when attempted
+                }
+            }
         }
 
         if (sceneID == 6) // GLASSHOUSE
@@ -84,7 +105,11 @@ public class GameManager : MonoBehaviour
         if (sceneID == 11) // SWIMMING POOL (GLASSHOUSE TOP FLOOR)
         {
             player.transform.localPosition = new Vector3(2.1f, 1.4f, -1); // move player 
-            player.transform.localScale = new Vector3(-0.16f, 0.16f, 0.16f); // rescale player 
+            player.transform.localScale = new Vector3(-0.16f, 0.16f, 0.16f); // rescale player only in this room
+        }
+        else
+        {
+            player.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f); // rescale player back to normal size
         }
 
         // MAIN SCENE
