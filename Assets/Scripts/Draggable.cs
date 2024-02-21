@@ -12,7 +12,15 @@ public class Draggable : MonoBehaviour
 
     public delegate void DragInProgressDelegate(Draggable draggableObject); // delegate type - can hold reference to another method
 
-    public DragEndedDelegate dragInProgressCallback; // want o invoke the callback when the drag is in progress
+    public DragInProgressDelegate dragInProgressCallback; // want o invoke the callback when the drag is in progress
+
+    // ---------------------------------------------------------------------------------------------
+
+    public delegate void BeforeDragDelegate(Draggable draggableObject); // delegate type - can hold reference to another method
+
+    public BeforeDragDelegate whereBeforeDragCallback; // want o invoke the callback when the drag is in progress
+
+
 
     private bool isDragged = false;
     private Vector3 mouseDragStartPoistion;
@@ -24,6 +32,10 @@ public class Draggable : MonoBehaviour
         isDragged = true;
         mouseDragStartPoistion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         spriteDragStartPosition = transform.localPosition;
+        if(this.gameObject.tag != "Key") // only snap back if not a key
+        {
+            whereBeforeDragCallback(this);
+        }
     }
 
     // when the object is being dragged

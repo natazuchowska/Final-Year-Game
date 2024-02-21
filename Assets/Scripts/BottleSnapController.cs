@@ -8,6 +8,8 @@ public class BottleSnapController : MonoBehaviour
     public List<Transform> snapPoints;
     public List<Draggable> draggableObjects;
 
+    Vector3 initialPos;
+
     //instantiate slots to false
     bool slot1 = false;
     bool slot2 = false;
@@ -38,6 +40,7 @@ public class BottleSnapController : MonoBehaviour
         {
             draggable.dragEndedCallback = OnDragEnded; // delegate type storing reference to method, will invoke OnDragEnded in OnMouseUp
             draggable.dragInProgressCallback = OnDragInProgress; // when the mouse is holding the object
+            draggable.whereBeforeDragCallback = OnBeforeDrag;
         }
 
         bottleKeyReward = GameObject.FindGameObjectWithTag("KeyReward"); // get the key object
@@ -57,6 +60,11 @@ public class BottleSnapController : MonoBehaviour
         backgroundAfter.SetActive(false);
     }
 
+    private void OnBeforeDrag(Draggable draggable)
+    {
+        initialPos = draggable.transform.localPosition; // store the position before drag happens
+    }
+
     private void OnDragEnded(Draggable draggable)
     {
         float closestDistance = -1;
@@ -73,6 +81,18 @@ public class BottleSnapController : MonoBehaviour
                 closestSnapPoint = snapPoint;
                 closestDistance = currentDistance;
                 snapIndex = snapPoints.IndexOf(snapPoint); // get the index of snappoint
+               /* if(snapIndex == 0 && slot1 == false)
+                {
+                    steamLeft.SetActive(true);
+                }
+                if(snapIndex == 1 && slot2 == false)
+                {
+                    steamMid.SetActive(true);
+                }
+                if(snapIndex == 2 && slot3 == false)
+                {
+                    steamRight.SetActive(true);
+                }*/
             }
         }
 

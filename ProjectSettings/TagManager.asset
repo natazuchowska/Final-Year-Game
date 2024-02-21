@@ -28,6 +28,9 @@ TagManager:
   - CableFix
   - GameManager
   - Cross
+  - CursorManager
+  - Puzzle
+  - Music
   layers:
   - Default
   - TransparentFX

@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     private float speed = 2f;
     //private float jumpingPower = 8f;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
 
     private Animator animator;
     private bool isMoving = false; // to set walking animation

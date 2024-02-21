@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
 
     public static bool plantGiven; // has plant been given back to the wizard? if so -> unblock the left door
 
+    bool isFacingRight;
+
 
     private void Awake()
     {
@@ -68,6 +70,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("OnSceneLoaded: " + scene.name);
         Debug.Log(mode);
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player"); // get reference to cursor manager obj
+        PlayerController playerScript = player.GetComponent<PlayerController>(); // get the cursor manager script
+        isFacingRight = playerScript.isFacingRight; // var from playercontroller script
 
         // inventoryCanvas.SetActive(false); // close inventory (if was open) on every new scene load
 
@@ -105,11 +111,27 @@ public class GameManager : MonoBehaviour
         if (sceneID == 11) // SWIMMING POOL (GLASSHOUSE TOP FLOOR)
         {
             player.transform.localPosition = new Vector3(2.1f, 1.4f, -1); // move player 
-            player.transform.localScale = new Vector3(-0.16f, 0.16f, 0.16f); // rescale player only in this room
+
+            if(isFacingRight)
+            {
+                player.transform.localScale = new Vector3(0.16f, 0.16f, 0.16f); // rescale player only in this room
+            }
+            else
+            {
+                player.transform.localScale = new Vector3(-0.16f, 0.16f, 0.16f); // rescale player only in this room
+            }
         }
         else
         {
-            player.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f); // rescale player back to normal size
+            if(isFacingRight)
+            {
+                player.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f); // rescale player back to normal size
+            }
+            else
+            {
+                player.transform.localScale = new Vector3(-0.3f, 0.3f, 0.3f); // rescale player back to normal size
+            }
+            
         }
 
         // MAIN SCENE

@@ -8,15 +8,9 @@ public class SnapController : MonoBehaviour
     public List<Transform> snapPoints;
     public List<Draggable> draggableObjects;
 
-    //instantiate slots to false
-    /*bool slot1 = false;
-    bool slot2 = false;
-    bool slot3 = false; */
-    // public int howManyCorrect = 0; // how many bottles ok
-
     public float snapRange = 0.5f;
+    Vector3 initialPos;
 
-    // GameObject bottleKeyReward; // reward for solving the puzzle
     // public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
 
     // store ID of current scene
@@ -30,12 +24,13 @@ public class SnapController : MonoBehaviour
         {
             draggable.dragEndedCallback = OnDragEnded; // delegate type storing reference to method, will invoke OnDragEnded in OnMouseUp
             draggable.dragInProgressCallback = OnDragInProgress; // when the mouse is holding the object
+            draggable.whereBeforeDragCallback = OnBeforeDrag;
         }
+    }
 
-       /* sceneID = SceneManager.GetActiveScene().buildIndex;
-
-        bottleKeyReward = GameObject.FindGameObjectWithTag("KeyReward"); // get the key object
-        bottleKeyReward.SetActive(false); // deactivate key until puzzle not solved*/
+    private void OnBeforeDrag(Draggable draggable)
+    {
+        initialPos = draggable.transform.localPosition; // store the position before drag happens
     }
 
     private void OnDragEnded(Draggable draggable)
@@ -71,58 +66,11 @@ public class SnapController : MonoBehaviour
 
                 GameManager.plantGiven = true; // inform game mngr that plant was received
             }
+        }
 
-            /*if(draggable.gameObject.CompareTag("SnapBottle")) // if the object inserted in the slot is a snapBottle
-            {
-                if (snapIndex == 0)
-                {
-                    // check which bottle that is
-                    if (draggable.gameObject.name == "leftBottle")
-                    {
-                        slot1 = true;
-                        Debug.Log("left OK");
-                    }
-                    else
-                    {
-                        slot1 = false;
-                    }
-                }
-                if (snapIndex == 1)
-                {
-                    // check which bottle that is
-                    if (draggable.gameObject.name == "middleBottle")
-                    {
-                        slot2 = true;
-                        Debug.Log("middle OK");
-                    }
-                    else
-                    {
-                        slot2 = false;
-                    }
-                }
-                if (snapIndex == 2)
-                {
-                    // check which bottle that is
-                    if (draggable.gameObject.name == "rightBottle")
-                    {
-                        slot3 = true;
-                        Debug.Log("right OK");
-                    }
-                    else
-                    {
-                        slot3 = false;
-                    }
-                }
-
-                // are all in correct order?
-                if(slot1 == true && slot2 == true && slot3 == true)
-                {
-                    Debug.Log("CORRECT ORDER! CONGRATS!!!!");
-
-                    bottleKeyReward.SetActive(true);
-                    audioPlayer.Play(); // play puzzle solved sound 
-                }
-            }*/
+        if (closestDistance > snapRange) //not in snap distance so snap back to original position
+        {
+            draggable.transform.localPosition = initialPos; // go back to the initial position of the object if not put in the snap slot
         }
     }
 
