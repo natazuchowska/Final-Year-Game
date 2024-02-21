@@ -3624,10 +3624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorManager: {fileID: 0}
-  cmScript: {fileID: 0}
-  objectTag: 
-  cursorCase: 3
 --- !u!1 &799953358
 GameObject:
   m_ObjectHideFlags: 0
@@ -4352,10 +4348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorManager: {fileID: 0}
-  cmScript: {fileID: 0}
-  objectTag: 
-  cursorCase: 3
 --- !u!1 &904919788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4768,10 +4760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorManager: {fileID: 0}
-  cmScript: {fileID: 0}
-  objectTag: 
-  cursorCase: 3
 --- !u!1 &1065692559
 GameObject:
   m_ObjectHideFlags: 0
@@ -5340,10 +5328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorManager: {fileID: 0}
-  cmScript: {fileID: 0}
-  objectTag: 
-  cursorCase: 3
 --- !u!1 &1178466556
 GameObject:
   m_ObjectHideFlags: 0
@@ -5561,10 +5545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorManager: {fileID: 0}
-  cmScript: {fileID: 0}
-  objectTag: 
-  cursorCase: 3
 --- !u!1 &1220411921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6654,10 +6634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorManager: {fileID: 0}
-  cmScript: {fileID: 0}
-  objectTag: 
-  cursorCase: 3
 --- !u!1 &1501920538
 GameObject:
   m_ObjectHideFlags: 0
@@ -7458,27 +7434,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841925199}
   m_CullTransparentMesh: 1
---- !u!1 &1869932692 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1180793806157959848, guid: 06c97489fee03be4fb6e62a4125b0c84, type: 3}
-  m_PrefabInstance: {fileID: 3238324664161985143}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1869932707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869932692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorManager: {fileID: 0}
-  cmScript: {fileID: 0}
-  objectTag: 
-  cursorCase: 3
 --- !u!1 &1871957100
 GameObject:
   m_ObjectHideFlags: 0
@@ -7976,11 +7931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c33161f7e1a664f8cad181a6fae6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCursor: {fileID: 2800000, guid: c53240cc30941ba4192e2532885c8f22, type: 3}
-  normalCursor: {fileID: 2800000, guid: c53240cc30941ba4192e2532885c8f22, type: 3}
-  interactCursor: {fileID: 2800000, guid: 1b1df8f9530898a4399f63ac4bd64e4d, type: 3}
-  puzzleCursor: {fileID: 2800000, guid: 0a8a232a447c9fc47a80b438b695c641, type: 3}
-  dragCursor: {fileID: 2800000, guid: 6bfe4c6ac7ec1ad4b85193f76366af6f, type: 3}
 --- !u!4 &2076869510
 Transform:
   m_ObjectHideFlags: 0
@@ -8094,10 +8044,7 @@ PrefabInstance:
     - {fileID: 3698234482800630803, guid: 06c97489fee03be4fb6e62a4125b0c84, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1180793806157959848, guid: 06c97489fee03be4fb6e62a4125b0c84, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1869932707}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06c97489fee03be4fb6e62a4125b0c84, type: 3}
 --- !u!1001 &4271598961992488523
 PrefabInstance:

@@ -6,11 +6,6 @@ public class PauseController : MonoBehaviour
 {
     private bool isPaused; // check if the game is currently paused
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)) // esc key

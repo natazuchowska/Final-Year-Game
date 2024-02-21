@@ -41,12 +41,16 @@ public class GameManager : MonoBehaviour
     public static bool plantGiven; // has plant been given back to the wizard? if so -> unblock the left door
 
     bool isFacingRight;
+    PlayerController playerScript;
+
 
 
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
         player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
+        playerScript = player.GetComponent<PlayerController>(); // get the cursor manager script
+
         plantGiven = false;
 
         // MAIN SCENE
@@ -61,6 +65,8 @@ public class GameManager : MonoBehaviour
     void OnEnable()
     {
         Debug.Log("OnEnable called");
+        // GameObject player = GameObject.FindGameObjectWithTag("Player"); // get reference to cursor manager obj
+        
         SceneManager.sceneLoaded += OnSceneLoaded;
         // player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
     }
@@ -71,25 +77,26 @@ public class GameManager : MonoBehaviour
         Debug.Log("OnSceneLoaded: " + scene.name);
         Debug.Log(mode);
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player"); // get reference to cursor manager obj
-        PlayerController playerScript = player.GetComponent<PlayerController>(); // get the cursor manager script
         isFacingRight = playerScript.isFacingRight; // var from playercontroller script
 
         // inventoryCanvas.SetActive(false); // close inventory (if was open) on every new scene load
 
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of current scene
 
-        if (sceneID == 8 || sceneID == 9 || sceneID == 10 || sceneID == 12 || sceneID == 14 || sceneID == 15)
+        if (!(sceneID == 8 || sceneID == 9 || sceneID == 10 || sceneID == 12 || sceneID == 14 || sceneID == 15))
         {
-            puzzleSceneAction(); // this is a puzzle scene/ door scene so perform the appropriate actions
+            Debug.Log("ENABLING THE PLAYER");
+            player.SetActive(true); // not a puzzle scene
         }
         else
         {
-            player.SetActive(true);
+            Debug.Log("DISABLING THE PLAYER");
+            player.SetActive(false); // this is a puzzle scene/ door scene so perform the appropriate actions
         }
 
         if (sceneID == 1) // ROUND ROOM
         {
+            player.SetActive(true);
             player.transform.localPosition = new Vector3(-3, -3, -3); // move player to coordinates in the scene
 
             pickUps = GameObject.FindGameObjectsWithTag("Bottle"); // get ref to bottles, check if previously collected, if so destroy 
@@ -105,11 +112,13 @@ public class GameManager : MonoBehaviour
 
         if (sceneID == 6) // GLASSHOUSE
         {
+            player.SetActive(true);
             player.transform.localPosition = new Vector3(-0.5f, -3.4f, -1); // move player 
         }
 
         if (sceneID == 11) // SWIMMING POOL (GLASSHOUSE TOP FLOOR)
         {
+            player.SetActive(true);
             player.transform.localPosition = new Vector3(2.1f, 1.4f, -1); // move player 
 
             if(isFacingRight)
@@ -147,13 +156,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         
-    }
-
-    // current scene is a puzzle scene
-    void puzzleSceneAction()
-    {
-        player.SetActive(false); // hide the player sprite
-        Debug.Log("PUZZLE SCENE - DISABLE PLAYER");
     }
 
     // set initial position and scale of the player in the newly loaded scene
