@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseController : MonoBehaviour
 {
-    private bool isPaused = false; // check if the game is currently paused
+    public bool isPaused = false; // check if the game is currently paused
     [SerializeField] private GameObject pauseCanvas;
 
     GameObject musicManager;
@@ -67,7 +67,10 @@ public class PauseController : MonoBehaviour
             {
                 if (a.CompareTag("Music")) // only pause if it is the main scene music
                 {
-                    musicScript.DecideAudio();
+                    if(musicScript != null)
+                    {
+                        musicScript.DecideAudio();
+                    }
                 }
             }
         }
@@ -82,7 +85,10 @@ public class PauseController : MonoBehaviour
             {
                 if (a.CompareTag("Music")) // only pause if it is the main scene music
                 {
-                    a.Pause();
+                    if(musicScript != null)
+                    {
+                        a.Pause();
+                    }
                 }
             }
         }

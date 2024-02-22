@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
             {
                 optionsCanvas.SetActive(false);
                 InventoryManager invManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<InventoryManager>(); // get ref to inventory manager script
-                if(invManager.isOpen == true)
+                if(invManager!= null && invManager.isOpen == true)
                 {
                     invManager.OpenInventory(); // close inventory
                 }

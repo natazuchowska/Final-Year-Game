@@ -11,28 +11,35 @@ public class InventoryManager : MonoBehaviour
     public bool isOpen = false;
 
     [SerializeField] GameObject optionsCanvas;
+
+    GameObject player;
     bool playerIsMoving;
+
+    bool gamePaused; // if pausescreen displayed we want to close the inventory
+
+    private void Awake()
+    {
+        inventoryCanvas = GameObject.FindGameObjectWithTag("Inventory"); // find the reference to inventory canvas
+    }
 
     private void Start()
     {
-        inventoryCanvas = GameObject.FindGameObjectWithTag("Inventory"); // find the reference to inventory canvas
+        optionsCanvas = GameObject.Find("OptionsCanvas");
+
         inventoryCanvas.SetActive(false); // hide inentory by default
         isOpen = false;
-
-        optionsCanvas = GameObject.Find("OptionsCanvas");
     }
 
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        // player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        
-        inventoryCanvas.SetActive(false); // close inventory (if was open) on every new scene load
-        isOpen = false;
+        inventoryCanvas = GameObject.FindGameObjectWithTag("Inventory"); // find the reference to inventory canvas
+        isOpen = true;
+        OpenInventory();
     }
 
     private void Update()
@@ -43,8 +50,23 @@ public class InventoryManager : MonoBehaviour
             OpenInventory();
         }
 
+        player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
         playerIsMoving = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isMoving; // check if player is moving
-        if (playerIsMoving == true)
+
+        // only do this if there is a player sprite in the current scene
+        if(player.active == true)
+        {
+            if (playerIsMoving == true)
+            {
+                inventoryCanvas.SetActive(false);
+                isOpen = false;
+            }
+        }
+
+        gamePaused = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseController>().isPaused; // get value if game paused or not
+        // if paused -> close the inventory
+
+        if(gamePaused == true)
         {
             inventoryCanvas.SetActive(false);
             isOpen = false;
@@ -53,13 +75,19 @@ public class InventoryManager : MonoBehaviour
 
     public void OpenInventory()
     {
-        if(!isOpen) {
-            inventoryCanvas.SetActive(true); // open on first click if closed
-        }
-        else {
-            inventoryCanvas.SetActive(false); // close on second click if open
-        }
+        // if this is a scene where there is an inventory
+        if(inventoryCanvas != null)
+        {
+            if (!isOpen)
+            {
+                inventoryCanvas.SetActive(true); // open on first click if closed
+            }
+            else
+            {
+                inventoryCanvas.SetActive(false); // close on second click if open
+            }
 
-        isOpen = !isOpen;
+            isOpen = !isOpen;
+        }
     }
 }
