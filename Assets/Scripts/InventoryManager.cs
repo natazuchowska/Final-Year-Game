@@ -20,6 +20,7 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         inventoryCanvas = GameObject.FindGameObjectWithTag("Inventory"); // find the reference to inventory canvas
+        player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
     }
 
     private void Start()
@@ -37,29 +38,31 @@ public class InventoryManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        inventoryCanvas = GameObject.FindGameObjectWithTag("Inventory"); // find the reference to inventory canvas
         isOpen = true;
         OpenInventory();
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+    
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             // open inventory with inventory button or space key
             OpenInventory();
         }
 
-        player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
-        playerIsMoving = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isMoving; // check if player is moving
-
         // only do this if there is a player sprite in the current scene
-        if(player.active == true)
+        if (player.activeInHierarchy == true)
         {
+            playerIsMoving = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isMoving; // check if player is moving
+
             if (playerIsMoving == true)
             {
-                inventoryCanvas.SetActive(false);
-                isOpen = false;
+                if(isOpen == true)
+                {
+                    inventoryCanvas.SetActive(false);
+                    isOpen = false;
+                } 
             }
         }
 

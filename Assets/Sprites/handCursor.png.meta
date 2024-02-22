@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 119cfef91a1c0bf408c5e2d08eadb459
+guid: 9c26ad13db12f5f4491dbb35d3f4f9e8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8505082207647985325
-    second: icons8-speech-bubble-100_0
+      213: 6902419286930492783
+    second: icons8-hand-cursor-50_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -57,7 +57,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 7
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icons8-speech-bubble-100_0
+      name: icons8-hand-cursor-50_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 7
-        width: 86
-        height: 83
+        x: 5
+        y: 4
+        width: 37
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35195a34bc0e7f980800000000000000
-      internalID: -8505082207647985325
+      spriteID: f6d0c4855c15acf50800000000000000
+      internalID: 6902419286930492783
       vertices: []
       indices: 
       edges: []
@@ -133,15 +133,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      icons8-speech-bubble-100_0: -8505082207647985325
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

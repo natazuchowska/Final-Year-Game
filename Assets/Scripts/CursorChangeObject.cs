@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +7,7 @@ public class CursorChangeObject : MonoBehaviour
     GameObject cursorManager;
     CursorManager cmScript;
     string objectTag;
-    int cursorCase = 3; // normal cursor
+    int whichCursor = 3; // normal cursor
 
     // Start is called before the first frame update
     void Start()
@@ -16,31 +16,47 @@ public class CursorChangeObject : MonoBehaviour
         cmScript = cursorManager.GetComponent<CursorManager>(); // get the cursor manager script
 
         objectTag = this.gameObject.tag; // store the tag of this gameobject
+    }
 
+    private void Update()
+    {
+        objectTag = this.gameObject.tag; // store the tag of this gameobject
+        whichCursor = DecideCursor();
+    }
+
+    int DecideCursor()
+    {
         // set the passed argument to a correct cursor case
-        if(tag == "Plant")
+        if (objectTag == "Plant")
         {
-            cursorCase = 0;
+            return 0;
         }
-        if(tag == "Pickup" || tag == "Character" || tag == "Collectible" || tag == "Bottle")
+        else if (objectTag == "Pickup" || objectTag == "Collectible" || objectTag == "Bottle")
         {
-            cursorCase = 1;
+            return 1;
+        }
+        else if (objectTag == "Puzzle")
+        {
+            return 2;
+        }
+        else if (objectTag == "Character")
+        {
+            return 3;
         }
         else
         {
-            cursorCase = 3;
+            return 4;
         }
     }
 
     private void OnMouseEnter()
     {
-        cmScript.ChangeCursor(cursorCase);
+        cmScript.ChangeCursor(whichCursor);
     }
 
 
     private void OnMouseExit()
     {
-        cmScript.ChangeCursor(3);
+        cmScript.ChangeCursor(4);
     }
 }
-*/

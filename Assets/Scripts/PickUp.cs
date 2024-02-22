@@ -108,7 +108,7 @@ public class PickUp : MonoBehaviour
         if (gameObject.CompareTag("Collectible"))
         {
             // CHANGE CURSON ICON HERE (to show that obj is collectible)
-            gameObject.GetComponent<Renderer>().material.color = Color.green;
+            gameObject.GetComponent<Renderer>().material.color = Color.grey;
             // --------------------------------------------------------------
             
         }
