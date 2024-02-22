@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
 
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of current scene
 
-        if (!(sceneID == 8 || sceneID == 9 || sceneID == 10 || sceneID == 12 || sceneID == 14 || sceneID == 15))
+        if (!(sceneID == 8 || sceneID == 9 || sceneID == 10 || sceneID == 12 || sceneID == 14 || sceneID == 15 || sceneID == 3 || sceneID == 5))
         {
             Debug.Log("ENABLING THE PLAYER");
             player.SetActive(true); // not a puzzle scene

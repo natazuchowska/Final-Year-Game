@@ -12,7 +12,6 @@ public class BackgroundMusicManager : MonoBehaviour
     public AudioSource GHAudio; // glasshouse
 
     [SerializeField] private int sceneID;
-    private int changeAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +19,6 @@ public class BackgroundMusicManager : MonoBehaviour
         currentAudio = mainSceneAudio;
 
         currentAudio.Play();
-        changeAudio = 0; // default audio
     }
 
     private void OnEnable()
