@@ -14,6 +14,15 @@ public class InventoryManager : MonoBehaviour
         inventoryCanvas.SetActive(false); // hide inentory by default
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            // open inventory with inventory button or space key
+            OpenInventory();
+        }
+    }
+
     public void OpenInventory()
     {
         if(!isOpen) {

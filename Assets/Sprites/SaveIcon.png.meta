@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5428318e6a8000f46b003df4c710d144
+guid: a12a9503a95a68244b270c082779157a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -886935037474193911
-    second: icons8-bookmark-275_0
+      213: -5783694205919540746
+    second: icons8-bookmark-100_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icons8-bookmark-275_0
+      name: icons8-bookmark-100_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 275
-        height: 366
+        x: 20
+        y: 4
+        width: 63
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90eb0885849f0b3f0800000000000000
-      internalID: -886935037474193911
+      spriteID: 6f94ea653c03cbfa0800000000000000
+      internalID: -5783694205919540746
       vertices: []
       indices: 
       edges: []
@@ -133,7 +133,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      icons8-bookmark-275_0: -886935037474193911
+      icons8-bookmark-100_0: -5783694205919540746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

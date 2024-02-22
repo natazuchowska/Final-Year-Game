@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0a8a232a447c9fc47a80b438b695c641
+guid: d603486c5e19fb745b539f43384b06e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 301613795816152981
-    second: Win95ZIn_0
+      213: 1047452780963506244
+    second: icons8-puzzle-100_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Win95ZIn_0
+      name: icons8-puzzle-100_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 13
-        width: 36
-        height: 36
+        x: 12
+        y: 12
+        width: 84
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 59f9af6362c8f2400800000000000000
-      internalID: 301613795816152981
+      spriteID: 448235031cc498e00800000000000000
+      internalID: 1047452780963506244
       vertices: []
       indices: 
       edges: []
@@ -133,7 +133,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Win95ZIn_0: 301613795816152981
+      icons8-puzzle-100_0: 1047452780963506244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

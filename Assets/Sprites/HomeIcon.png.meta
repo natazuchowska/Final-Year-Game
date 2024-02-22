@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0152f7248ff5f3e4c8d269001a3a9b82
+guid: 5d82f92ee83c27e41ac6fbb92573e866
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4059773787127108031
-    second: icons8-home-275_0
+      213: -540165571374701771
+    second: icons8-home-100_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icons8-home-275_0
+      name: icons8-home-100_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 275
-        height: 224
+        x: 13
+        y: 10
+        width: 78
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14ea8dd0049c8a7c0800000000000000
-      internalID: -4059773787127108031
+      spriteID: 533a0565642f088f0800000000000000
+      internalID: -540165571374701771
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      icons8-home-275_0: -4059773787127108031
+      icons8-home-100_0: -540165571374701771
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

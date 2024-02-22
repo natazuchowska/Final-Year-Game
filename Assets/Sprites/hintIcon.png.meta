@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 7bc720ce786bf5c43b4c7a8828791054
+guid: 809d4e3ab510f9149bac6a10006c1d71
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -447490241038879483
-    second: icons8-cursor-100 (1)_0
+      213: 2750762605871656134
+    second: icons8-idea-100 (1)_0
   - first:
-      213: -2721249386166312720
-    second: icons8-cursor-100 (1)_1
+      213: -2247281876311712848
+    second: icons8-idea-100 (1)_1
   - first:
-      213: -2210993678945675378
-    second: icons8-cursor-100 (1)_2
+      213: 6540512803421147449
+    second: icons8-idea-100 (1)_2
   - first:
-      213: -8746130595902753843
-    second: icons8-cursor-100 (1)_3
+      213: -1607283406582862062
+    second: icons8-idea-100 (1)_3
+  - first:
+      213: 3241171990162117676
+    second: icons8-idea-100 (1)_4
+  - first:
+      213: -1751024600790749881
+    second: icons8-idea-100 (1)_5
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -33,7 +39,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -66,7 +72,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 7
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -119,34 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icons8-cursor-100 (1)_0
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 12
-        width: 80
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5057c662ff13ac9f0800000000000000
-      internalID: -447490241038879483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icons8-cursor-100 (1)_1
+      name: icons8-idea-100 (1)_0
       rect:
         serializedVersion: 2
         x: 11
-        y: 80
-        width: 8
-        height: 8
+        y: 1
+        width: 69
+        height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,40 +139,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f0ae40e91e2c3ad0800000000000000
-      internalID: -2721249386166312720
+      spriteID: 6cc6860140cac2620800000000000000
+      internalID: 2750762605871656134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons8-cursor-100 (1)_2
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 81
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e871fcd96f8f051e0800000000000000
-      internalID: -2210993678945675378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icons8-cursor-100 (1)_3
+      name: icons8-idea-100 (1)_1
       rect:
         serializedVersion: 2
         x: 13
-        y: 61
-        width: 8
+        y: 85
+        width: 9
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -196,8 +160,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc37a00ef808f9680800000000000000
-      internalID: -8746130595902753843
+      spriteID: 0bb54444a0d00d0e0800000000000000
+      internalID: -2247281876311712848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icons8-idea-100 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 83
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931dfc8ddb194ca50800000000000000
+      internalID: 6540512803421147449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icons8-idea-100 (1)_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 62
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21faf39e148c1b9e0800000000000000
+      internalID: -1607283406582862062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icons8-idea-100 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 40
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c241f89a0c4fafc20800000000000000
+      internalID: 3241171990162117676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icons8-idea-100 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 46
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74da5e4276c13b7e0800000000000000
+      internalID: -1751024600790749881
       vertices: []
       indices: 
       edges: []
@@ -213,10 +261,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      icons8-cursor-100 (1)_0: -447490241038879483
-      icons8-cursor-100 (1)_1: -2721249386166312720
-      icons8-cursor-100 (1)_2: -2210993678945675378
-      icons8-cursor-100 (1)_3: -8746130595902753843
+      icons8-idea-100 (1)_0: 2750762605871656134
+      icons8-idea-100 (1)_1: -2247281876311712848
+      icons8-idea-100 (1)_2: 6540512803421147449
+      icons8-idea-100 (1)_3: -1607283406582862062
+      icons8-idea-100 (1)_4: 3241171990162117676
+      icons8-idea-100 (1)_5: -1751024600790749881
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
