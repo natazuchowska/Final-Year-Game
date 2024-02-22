@@ -27,11 +27,11 @@ public class CursorChangeObject : MonoBehaviour
     int DecideCursor()
     {
         // set the passed argument to a correct cursor case
-        if (objectTag == "Plant")
+        if (objectTag == "Plant" || objectTag == "Key")
         {
             return 0;
         }
-        else if (objectTag == "Pickup" || objectTag == "Collectible" || objectTag == "Bottle")
+        else if (objectTag == "Pickup" || objectTag == "Collectible" || objectTag == "Bottle" || objectTag == "KeyReward")
         {
             return 1;
         }
@@ -54,6 +54,11 @@ public class CursorChangeObject : MonoBehaviour
         cmScript.ChangeCursor(whichCursor);
     }
 
+    private void OnMouseDown()
+    {
+        // on click change to normal cursor
+        cmScript.ChangeCursor(4);
+    }
 
     private void OnMouseExit()
     {

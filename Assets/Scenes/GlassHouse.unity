@@ -2189,6 +2189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BottlesPuzzleClick
       objectReference: {fileID: 0}
+    - target: {fileID: 575648184400316562, guid: 0a916bf4ad963b14397db1f832759588, type: 3}
+      propertyPath: m_TagString
+      value: Puzzle
+      objectReference: {fileID: 0}
     - target: {fileID: 2121003049982284522, guid: 0a916bf4ad963b14397db1f832759588, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2272,8 +2276,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 575648184400316562, guid: 0a916bf4ad963b14397db1f832759588, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6161012168276823389}
   m_SourcePrefab: {fileID: 100100000, guid: 0a916bf4ad963b14397db1f832759588, type: 3}
+--- !u!1 &6161012168276823388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575648184400316562, guid: 0a916bf4ad963b14397db1f832759588, type: 3}
+  m_PrefabInstance: {fileID: 6161012168276823387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6161012168276823389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6161012168276823388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -154,6 +154,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("OnCollisionEnter2D");
+        Debug.Log(col.gameObject.name);
         if (col.gameObject.CompareTag("Plant"))
         {
             Debug.Log("Hit the plant:(");

@@ -519,6 +519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueCircle
       objectReference: {fileID: 0}
+    - target: {fileID: 5165461901913862913, guid: 0ecbe02a598013340a27f2b5b3c69baf, type: 3}
+      propertyPath: m_TagString
+      value: Character
+      objectReference: {fileID: 0}
     - target: {fileID: 6158439313268827380, guid: 0ecbe02a598013340a27f2b5b3c69baf, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -566,8 +570,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5165461901913862913, guid: 0ecbe02a598013340a27f2b5b3c69baf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 487949732}
   m_SourcePrefab: {fileID: 100100000, guid: 0ecbe02a598013340a27f2b5b3c69baf, type: 3}
+--- !u!1 &487949731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5165461901913862913, guid: 0ecbe02a598013340a27f2b5b3c69baf, type: 3}
+  m_PrefabInstance: {fileID: 487949730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &487949732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487949731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &577341982
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,9 +603,10 @@ GameObject:
   - component: {fileID: 577341984}
   - component: {fileID: 577341983}
   - component: {fileID: 577341985}
+  - component: {fileID: 577341986}
   m_Layer: 0
   m_Name: clickTile
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -662,6 +687,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileButton: {fileID: 856815497}
   audioPlayer: {fileID: 1657404025}
+--- !u!114 &577341986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577341982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &600104055
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +712,7 @@ GameObject:
   - component: {fileID: 600104058}
   - component: {fileID: 600104060}
   - component: {fileID: 600104059}
+  - component: {fileID: 600104061}
   m_Layer: 0
   m_Name: key3
   m_TagString: KeyReward
@@ -854,6 +892,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &600104061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600104055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &660657068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,7 +1209,7 @@ GameObject:
   - component: {fileID: 871888749}
   m_Layer: 0
   m_Name: sardynka
-  m_TagString: Untagged
+  m_TagString: Bottle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
