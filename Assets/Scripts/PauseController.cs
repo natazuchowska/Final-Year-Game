@@ -34,7 +34,7 @@ public class PauseController : MonoBehaviour
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        isPaused = false;
+        // isPaused = false;
     }
 
     void Update()
@@ -47,7 +47,6 @@ public class PauseController : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
         isPaused = true;
         manageAppearance();
     }

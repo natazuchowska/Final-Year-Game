@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     GameObject[] pickUps;
 
+    [SerializeField] GameObject optionsCanvas;
+
     public Button goToRRButton;
     // [SerializeField] public int firstTime = 0; // flag for 1st plant puzzle
 
@@ -47,6 +49,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
         playerScript = player.GetComponent<PlayerController>(); // get the cursor manager script
+
+        optionsCanvas = GameObject.Find("OptionsCanvas");
 
         plantGiven = false;
 
@@ -89,6 +93,24 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("DISABLING THE PLAYER");
             player.SetActive(false); // this is a puzzle scene/ door scene so perform the appropriate actions
+        }
+
+        // MENU SCENES -> disable inventory and option buttons
+        if(sceneID == 3 || sceneID == 5)
+        {
+            if(optionsCanvas != null) // if game was already started before and the reference is set
+            {
+                optionsCanvas.SetActive(false);
+                InventoryManager invManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<InventoryManager>(); // get ref to inventory manager script
+                if(invManager.isOpen == true)
+                {
+                    invManager.OpenInventory(); // close inventory
+                }
+            }
+        }
+        else
+        {
+            optionsCanvas.SetActive(true);
         }
 
         if (sceneID == 1) // ROUND ROOM

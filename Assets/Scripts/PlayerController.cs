@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public bool isFacingRight = true;
 
     private Animator animator;
-    private bool isMoving = false; // to set walking animation
+    public bool isMoving = false; // to set walking animation (was private before but inventory needs to access it to close on movement)
     //private bool isInAir = false; // to set jumping animation
     private bool isThinking = false; //to set thinking animation
 
