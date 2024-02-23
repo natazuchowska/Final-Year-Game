@@ -170,22 +170,4 @@ public class GameManager : MonoBehaviour
         }
 
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // set initial position and scale of the player in the newly loaded scene
-    void setInitialPlayer()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
