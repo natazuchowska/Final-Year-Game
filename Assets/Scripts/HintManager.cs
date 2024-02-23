@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TMPro;
 
 public class HintManager : MonoBehaviour
 {
@@ -13,10 +14,21 @@ public class HintManager : MonoBehaviour
     [SerializeField] GameObject hint3;
     [SerializeField] GameObject hint4;
 
+    GameObject hint1Cover;
+    GameObject hint2Cover;
+    GameObject hint3Cover;
+    GameObject hint4Cover;
+
+
     Button btn1;
     Button btn2;
     Button btn3;
     Button btn4;
+
+    [SerializeField] GameObject text1;
+    [SerializeField] GameObject text2;
+    [SerializeField] GameObject text3;
+    [SerializeField] GameObject text4;
 
     [SerializeField] Button hintButton;
     bool canvasOpen;
@@ -24,16 +36,21 @@ public class HintManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hint1Cover = GameObject.Find("Hint1Cover");
+        hint2Cover = GameObject.Find("Hint2Cover");
+        hint3Cover = GameObject.Find("Hint3Cover");
+        hint4Cover = GameObject.Find("Hint4Cover");
+
+        // get the buttons of each hint card
+        btn1 = hint1Cover.GetComponent<Button>();
+        btn2 = hint2Cover.GetComponent<Button>();
+        btn3 = hint3Cover.GetComponent<Button>();
+        btn4 = hint4Cover.GetComponent<Button>();
+
         hintCanvas.SetActive(false); // hide canvas
         hintButton.onClick.AddListener(ShowCanvas); // display canvas when button clicked
 
-        // store references to hint images
-       /* hint1 = GameObject.Find("Hint1");
-        hint2 = GameObject.Find("Hint2");
-        hint3 = GameObject.Find("Hint3");
-        hint4 = GameObject.Find("Hint4");*/
-
-        /*btn1.onClick.AddListener(ShowHint);
+/*      btn1.onClick.AddListener(ShowHint);
         btn2.onClick.AddListener(ShowHint);
         btn3.onClick.AddListener(ShowHint);
         btn4.onClick.AddListener(ShowHint);*/
@@ -44,14 +61,21 @@ public class HintManager : MonoBehaviour
         hint2.SetActive(false);
         hint3.SetActive(false);
         hint4.SetActive(false);
-
-
-       
     }
 
     void ShowCanvas()
     {
-        if(canvasOpen == false)
+        hint1.SetActive(false);
+        hint2.SetActive(false);
+        hint3.SetActive(false);
+        hint4.SetActive(false);
+
+        text1.SetActive(true);
+        text2.SetActive(true);
+        text3.SetActive(true);
+        text4.SetActive(true);
+
+        if (canvasOpen == false)
         {
             hintCanvas.SetActive(true);
         }
@@ -64,10 +88,14 @@ public class HintManager : MonoBehaviour
         
     }
 
- /*   // Update is called once per frame
-    private void ShowHint()
+
+    public void ShowHint(GameObject hint)
     {
-        hint1.SetActive(true);
-        yield return null;
-    }*/
+        hint.SetActive(true);
+    }
+
+    public void HideText(GameObject text)
+    {
+        text.SetActive(false); 
+    }
 }
