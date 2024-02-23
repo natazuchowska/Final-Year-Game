@@ -29,6 +29,11 @@ public class KeySnapController : MonoBehaviour
 
     int sceneID; // to check which door it is
 
+    [SerializeField] GameObject keyInserted; // sprite of the key after insertion to lock -> 1st door
+    [SerializeField] GameObject keyInserted1; // sprite of the key after insertion to lock -> 2nd door top lock
+    [SerializeField] GameObject keyInserted2; // sprite of the key after insertion to lock -> 2nd door bottom lock
+    public float maxRotationTimer = 0.5f;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -48,6 +53,22 @@ public class KeySnapController : MonoBehaviour
 
         Debug.Log(canGoThru1);
         Debug.Log(canGoThru2);
+
+        if(sceneID == 14) // 1st door
+        {
+            keyInserted = GameObject.FindGameObjectWithTag("KeyInserted"); // get reference to key sprite after inserting it to lock
+            keyInserted.SetActive(false); // hide as long as key not inserted correctly
+        }
+        if(sceneID == 15) // 2nd door
+        {
+            // find keys by object names
+            keyInserted1 = GameObject.Find("keyInserted1");
+            keyInserted2 = GameObject.Find("keyInserted2");
+
+            keyInserted1.SetActive(false);
+            keyInserted2.SetActive(false);
+        }
+
     }
 
     private void OnDragEnded(Draggable draggable)
@@ -84,6 +105,12 @@ public class KeySnapController : MonoBehaviour
                         {
                             slot2 = true;
                             Debug.Log("top key OK");
+
+                            draggable.gameObject.transform.Translate(draggable.gameObject.transform.position.x, draggable.gameObject.transform.position.y, 10); // hide key sprite (push to the back)
+                            keyInserted1.SetActive(true); // show the inserted key sprite
+
+                            StartCoroutine(RotateKey(2));
+
                             audioPlayer.Play(); // play door unlocking sound
                         }
                         else
@@ -98,6 +125,12 @@ public class KeySnapController : MonoBehaviour
                         {
                             slot3 = true;
                             Debug.Log("bottom key OK");
+
+                            draggable.gameObject.transform.Translate(draggable.gameObject.transform.position.x, draggable.gameObject.transform.position.y, 10); // hide key sprite (push to the back)
+                            keyInserted2.SetActive(true); // show the inserted key sprite
+
+                            StartCoroutine(RotateKey(3));
+
                             audioPlayer.Play(); // play door unlocking sound
                         }
                         else
@@ -126,6 +159,12 @@ public class KeySnapController : MonoBehaviour
                         {
                             slot1 = true;
                             Debug.Log("key OK");
+
+                            draggable.gameObject.transform.Translate(draggable.gameObject.transform.position.x, draggable.gameObject.transform.position.y, 10); // hide key sprite (push to the back)
+                            keyInserted.SetActive(true); // show the inserted key sprite
+
+                            StartCoroutine(RotateKey(1));
+
                             audioPlayer.Play(); // play door unlocking sound
                             canGoThru1 = true;
 
@@ -142,6 +181,36 @@ public class KeySnapController : MonoBehaviour
                 
         }
     }
+
+    IEnumerator RotateKey(int whichKey)
+    {
+        GameObject keyToRotate = null;
+        if(whichKey == 1)
+        {
+            keyToRotate = keyInserted; // 1st door
+        }
+        else if(whichKey == 2)
+        {
+            keyToRotate = keyInserted1; // 2nd door top lock
+        }
+        else if(whichKey == 3)
+        {
+            keyToRotate = keyInserted2; // 2nd door bottom lock
+        }
+        else
+        {
+            yield return null;
+        }
+
+        float timer = 0f;
+        while (timer <= maxRotationTimer)
+        {
+            keyToRotate.transform.Rotate(new Vector3(0, 0, -180) * 2 * Time.deltaTime);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+    }
+
 
     private void OnDragInProgress(Draggable draggable)
     {
@@ -160,22 +229,5 @@ public class KeySnapController : MonoBehaviour
             }
         }
 
-        /*if (closestSnapPoint != null && closestDistance <= snapRange)
-        {
-            if (draggable.gameObject.CompareTag("Plant") || draggable.gameObject.CompareTag("Bottle")) // if the thing being dragged in the slot is a plant object
-            {
-                draggable.gameObject.GetComponent<Renderer>().material.color = Color.grey; // change object's clour to grey when put near the slot
-            }
-        }
-
-        if (closestSnapPoint != null && closestDistance > snapRange) // outside of snap range so reset the colour
-        {
-            // takenSnapPoints[snapPoints.IndexOf(closestSnapPoint)] = 0;
-
-            if (draggable.gameObject.CompareTag("Plant") || draggable.gameObject.CompareTag("Bottle")) // if the thing being dragged in the slot is a plant object
-            {
-                draggable.gameObject.GetComponent<Renderer>().material.color = Color.white; // reset to original colour when out of slot interaction range
-            }
-        }*/
     }
 }

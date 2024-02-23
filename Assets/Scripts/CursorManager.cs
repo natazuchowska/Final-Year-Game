@@ -34,6 +34,7 @@ public class CursorManager : MonoBehaviour
         }
         else if (whichOne == 2)
         {
+            Debug.Log("CHANGING TO PUZZLE CURSOR - cursor manager");
             currentCursor = puzzleCursor;
         }
         else if(whichOne == 3)

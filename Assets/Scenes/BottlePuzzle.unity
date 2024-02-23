@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 103478109}
   - component: {fileID: 103478111}
   - component: {fileID: 103478112}
+  - component: {fileID: 103478113}
   m_Layer: 0
   m_Name: middleBottle
   m_TagString: SnapBottle
@@ -432,6 +433,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.3258543, y: 4.884549}
   m_EdgeRadius: 0
+--- !u!114 &103478113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103478108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &172660644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1051,7 @@ GameObject:
   - component: {fileID: 1130138239}
   - component: {fileID: 1130138241}
   - component: {fileID: 1130138242}
+  - component: {fileID: 1130138243}
   m_Layer: 0
   m_Name: rightBottle
   m_TagString: SnapBottle
@@ -1170,6 +1184,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.4640894, y: 12.691014}
   m_EdgeRadius: 0
+--- !u!114 &1130138243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130138238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1223017002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1435,6 +1461,7 @@ GameObject:
   - component: {fileID: 1769202135}
   - component: {fileID: 1769202136}
   - component: {fileID: 1769202137}
+  - component: {fileID: 1769202138}
   m_Layer: 0
   m_Name: key2
   m_TagString: KeyReward
@@ -1614,6 +1641,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 16.4, y: 23.603092}
   m_EdgeRadius: 0
+--- !u!114 &1769202138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769202132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1800340579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,6 +1749,7 @@ GameObject:
   - component: {fileID: 1864750303}
   - component: {fileID: 1864750305}
   - component: {fileID: 1864750306}
+  - component: {fileID: 1864750307}
   m_Layer: 0
   m_Name: leftBottle
   m_TagString: SnapBottle
@@ -1842,6 +1882,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.7364306, y: 14.497816}
   m_EdgeRadius: 0
+--- !u!114 &1864750307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864750302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1919805605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1958,7 +2010,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1981261435}
   - component: {fileID: 1981261434}
-  - component: {fileID: 1981261433}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1966,14 +2017,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1981261433
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981261432}
-  m_Enabled: 1
 --- !u!20 &1981261434
 Camera:
   m_ObjectHideFlags: 0

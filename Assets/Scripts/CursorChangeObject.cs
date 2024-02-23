@@ -7,7 +7,7 @@ public class CursorChangeObject : MonoBehaviour
     GameObject cursorManager;
     CursorManager cmScript;
     string objectTag;
-    int whichCursor = 3; // normal cursor
+    int whichCursor; // normal cursor
 
     // Start is called before the first frame update
     void Start()
@@ -16,18 +16,19 @@ public class CursorChangeObject : MonoBehaviour
         cmScript = cursorManager.GetComponent<CursorManager>(); // get the cursor manager script
 
         objectTag = this.gameObject.tag; // store the tag of this gameobject
+        whichCursor = 3;
     }
 
     private void Update()
     {
-        objectTag = this.gameObject.tag; // store the tag of this gameobject
-        whichCursor = DecideCursor();
+        // objectTag = this.gameObject.tag; // store the tag of this gameobject
+        // whichCursor = DecideCursor();
     }
 
     int DecideCursor()
     {
         // set the passed argument to a correct cursor case
-        if (objectTag == "Plant" || objectTag == "Key")
+        if (objectTag == "Plant" || objectTag == "Key" || objectTag == "SnapBottle")
         {
             return 0;
         }
@@ -51,7 +52,9 @@ public class CursorChangeObject : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        whichCursor = DecideCursor();
         cmScript.ChangeCursor(whichCursor);
+        // cmScript.ChangeCursor(2);
     }
 
     private void OnMouseDown()

@@ -33,6 +33,7 @@ TagManager:
   - Music
   - Pause
   - RUSure
+  - KeyInserted
   layers:
   - Default
   - TransparentFX
