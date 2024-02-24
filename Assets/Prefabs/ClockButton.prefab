@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7135892254169341588}
   - component: {fileID: 7828377900406663002}
   - component: {fileID: -3243224255105439628}
-  - component: {fileID: -6088877473497514343}
+  - component: {fileID: 427014035289509285}
   m_Layer: 5
   m_Name: ClockButton
   m_TagString: Untagged
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 2774073944194032943, guid: f7511214ef867af4799d8db50e37543e, type: 3}
---- !u!114 &-6088877473497514343
+--- !u!114 &427014035289509285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

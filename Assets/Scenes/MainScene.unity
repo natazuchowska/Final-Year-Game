@@ -9740,7 +9740,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1975874664265510634, guid: 7a103a98054698240ace97e42174e8e3, type: 3}
+      propertyPath: draggableObjects.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975874664265510634, guid: 7a103a98054698240ace97e42174e8e3, type: 3}
       propertyPath: 'draggableObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 884205683}
+    - target: {fileID: 1975874664265510634, guid: 7a103a98054698240ace97e42174e8e3, type: 3}
+      propertyPath: 'draggableObjects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1257577120465767745, guid: ab7d0762f1e13094ea545b227118aa7c, type: 3}
+    - target: {fileID: 1975874664265510634, guid: 7a103a98054698240ace97e42174e8e3, type: 3}
+      propertyPath: 'draggableObjects.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3107734907563266804, guid: 343f22d293316e844846da8cefc219d6, type: 3}
+    - target: {fileID: 1975874664265510634, guid: 7a103a98054698240ace97e42174e8e3, type: 3}
+      propertyPath: 'draggableObjects.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1349240246215125837, guid: 60e0f068e2183b24597f30ddacd12f75, type: 3}
+    - target: {fileID: 1975874664265510634, guid: 7a103a98054698240ace97e42174e8e3, type: 3}
+      propertyPath: 'draggableObjects.Array.data[4]'
+      value: 
+      objectReference: {fileID: 884205683}
+    - target: {fileID: 1975874664265510634, guid: 7a103a98054698240ace97e42174e8e3, type: 3}
+      propertyPath: 'draggableObjects.Array.data[5]'
       value: 
       objectReference: {fileID: 884205683}
     - target: {fileID: 2161547906759394424, guid: 7a103a98054698240ace97e42174e8e3, type: 3}

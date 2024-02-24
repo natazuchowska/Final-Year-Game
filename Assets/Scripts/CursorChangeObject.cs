@@ -9,6 +9,7 @@ public class CursorChangeObject : MonoBehaviour
     string objectTag;
     int whichCursor; // normal cursor
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +33,23 @@ public class CursorChangeObject : MonoBehaviour
         {
             return 0;
         }
-        else if (objectTag == "Pickup" || objectTag == "Collectible" || objectTag == "Bottle" || objectTag == "KeyReward")
+        else if (objectTag == "Pickup" || objectTag == "Collectible" || objectTag == "Bottle" || objectTag == "KeyReward" || objectTag == "ClickTile")
         {
+            /*if(objectTag == "KeyReward")
+            {
+                if(GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().lightOn == false)
+                {
+                    return 1; // only show interactable cursor if lamp light has been switched off
+                }
+                else
+                {
+                    return 4;
+                }
+            }
+            */
+            
             return 1;
+     
         }
         else if (objectTag == "Puzzle")
         {

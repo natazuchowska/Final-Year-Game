@@ -35,6 +35,8 @@ TagManager:
   - RUSure
   - KeyInserted
   - Hint
+  - Draggable
+  - ClickTile
   layers:
   - Default
   - TransparentFX

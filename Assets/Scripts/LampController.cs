@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LampController : MonoBehaviour
 {
-    bool lightOn = true; // is light turned on(?)
+    public bool lightOn = true; // is light turned on(?)
     GameObject lightSprite;
 
     // Start is called before the first frame update

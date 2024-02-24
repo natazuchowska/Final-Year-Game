@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
     bool isFacingRight;
     PlayerController playerScript;
 
+    public bool lightOn = true;
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -60,6 +62,8 @@ public class GameManager : MonoBehaviour
             goToRRButton = GameObject.Find("RoundRoomButton").GetComponent<Button>(); // get reference to the navigation button
             goToRRButton.interactable = false;
         }
+
+        
     }
 
     // called first
@@ -140,7 +144,10 @@ public class GameManager : MonoBehaviour
             player.SetActive(true);
             player.transform.localPosition = new Vector3(2.1f, 1.4f, -1); // move player 
 
-            if(isFacingRight)
+            lightOn = GameObject.FindGameObjectWithTag("LampLight").GetComponent<LampController>().lightOn; // read lightOn value from lamp script
+
+
+            if (isFacingRight)
             {
                 player.transform.localScale = new Vector3(0.16f, 0.16f, 0.16f); // rescale player only in this room
             }

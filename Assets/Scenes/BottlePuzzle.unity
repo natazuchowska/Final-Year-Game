@@ -1362,6 +1362,9 @@ MonoBehaviour:
   - {fileID: 1864750305}
   - {fileID: 103478111}
   - {fileID: 1130138241}
+  - {fileID: 1257577120465767745, guid: ab7d0762f1e13094ea545b227118aa7c, type: 3}
+  - {fileID: 3107734907563266804, guid: 343f22d293316e844846da8cefc219d6, type: 3}
+  - {fileID: 1349240246215125837, guid: 60e0f068e2183b24597f30ddacd12f75, type: 3}
   snapRange: 2
   audioPlayer: {fileID: 835720172}
 --- !u!1 &1427092720

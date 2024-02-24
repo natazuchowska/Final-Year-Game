@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 577341986}
   m_Layer: 0
   m_Name: clickTile
-  m_TagString: Collectible
+  m_TagString: ClickTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1207,6 +1207,7 @@ GameObject:
   - component: {fileID: 871888748}
   - component: {fileID: 871888750}
   - component: {fileID: 871888749}
+  - component: {fileID: 871888751}
   m_Layer: 0
   m_Name: sardynka
   m_TagString: Bottle
@@ -1386,6 +1387,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &871888751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871888744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &926839096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,7 +1830,7 @@ GameObject:
   - component: {fileID: 1400733842}
   - component: {fileID: 1400733844}
   m_Layer: 0
-  m_Name: lamp_light
+  m_Name: lampLight
   m_TagString: LampLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1902,6 +1915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e14ff153706e344b934f7a2bf240780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightOn: 1
 --- !u!1 &1462060999
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4275153677423338013}
   - component: {fileID: 6478586358519991444}
   - component: {fileID: -5438494907267427349}
+  - component: {fileID: 7043015298931849501}
   m_Layer: 5
   m_Name: BottleButton
   m_TagString: Untagged
@@ -134,3 +135,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 1691607482431815773, guid: 86eaf63ea884b6a4cbee7ecb84679377, type: 3}
+--- !u!114 &7043015298931849501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5277565819059789725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1d4a588ae06a941ba667a53804b062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
