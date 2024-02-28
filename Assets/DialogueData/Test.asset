@@ -17,7 +17,11 @@ MonoBehaviour:
   - Could you bring it to me?
   - ... Please ;(
   responses:
-  - responseText: Yes
-    dialogueObject: {fileID: 11400000, guid: a85f65f34ef8bd44982ea14f8498c48e, type: 2}
-  - responseText: No
-    dialogueObject: {fileID: 11400000, guid: 1c6f98decd6009b4d892e5660a4364e4, type: 2}
+  - responseText: Talk about TOPIC1
+    dialogueObject: {fileID: 11400000, guid: b70fab010bbf79349bcf11f4333154d2, type: 2}
+  - responseText: Talk about TOPIC2
+    dialogueObject: {fileID: 11400000, guid: 5fc58331e59a8c04391ec4b03234a3d4, type: 2}
+  - responseText: Talk about TOPIC3
+    dialogueObject: {fileID: 11400000, guid: b0afb55b6e8bb344886b424f2a402230, type: 2}
+  - responseText: Talk about TOPIC4
+    dialogueObject: {fileID: 11400000, guid: 803aff467eb141548a36db083d7447a0, type: 2}

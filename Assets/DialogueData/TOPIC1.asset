@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5cc27cd04975a4459d50a58bbf7bcd9, type: 3}
+  m_Name: TOPIC1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - talk about topic 1
+  - what do you think about topic 1?
+  - i don't think i'm a fan of topic 1
+  - '... yeah... '
+  responses:
+  - responseText: Talk about TOPIC2
+    dialogueObject: {fileID: 11400000, guid: 5fc58331e59a8c04391ec4b03234a3d4, type: 2}
+  - responseText: Talk about TOPIC3
+    dialogueObject: {fileID: 11400000, guid: b0afb55b6e8bb344886b424f2a402230, type: 2}
+  - responseText: Talk about TOPIC4
+    dialogueObject: {fileID: 11400000, guid: 803aff467eb141548a36db083d7447a0, type: 2}
+  - responseText: Goodbye!
+    dialogueObject: {fileID: 11400000, guid: 4c16b3ec13986bf46b91d8e57d252acf, type: 2}

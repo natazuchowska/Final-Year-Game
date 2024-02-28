@@ -503,6 +503,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2243945579787241545, guid: 0ecbe02a598013340a27f2b5b3c69baf, type: 3}
+      propertyPath: dialogueObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c11880b5070592469f26a57a7db0b0e, type: 2}
     - target: {fileID: 3574360933325092669, guid: 0ecbe02a598013340a27f2b5b3c69baf, type: 3}
       propertyPath: m_Radius
       value: 12.453038

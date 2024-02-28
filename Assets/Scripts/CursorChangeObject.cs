@@ -28,6 +28,8 @@ public class CursorChangeObject : MonoBehaviour
 
     int DecideCursor()
     {
+        Debug.Log("object tag: " + objectTag);
+
         // set the passed argument to a correct cursor case
         if (objectTag == "Plant" || objectTag == "Key" || objectTag == "SnapBottle")
         {
@@ -53,6 +55,7 @@ public class CursorChangeObject : MonoBehaviour
         }
         else if (objectTag == "Puzzle")
         {
+            Debug.Log("cursor change obj case puzzle");
             return 2;
         }
         else if (objectTag == "Character")

@@ -10,13 +10,14 @@ public class BackgroundMusicManager : MonoBehaviour
     public AudioSource mainSceneAudio; // beginning scene
     public AudioSource RRAudio; // round room
     public AudioSource GHAudio; // glasshouse
+    public AudioSource menuAudio; // start screen - menu
 
     [SerializeField] private int sceneID;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentAudio = mainSceneAudio;
+        currentAudio = menuAudio;
 
         currentAudio.Play();
     }
@@ -42,7 +43,7 @@ public class BackgroundMusicManager : MonoBehaviour
         sceneID = SceneManager.GetActiveScene().buildIndex;
         if (currentAudio == null)
         {
-            currentAudio = mainSceneAudio;
+            currentAudio = menuAudio;
         }
 
         currentAudio.Pause();
@@ -69,7 +70,11 @@ public class BackgroundMusicManager : MonoBehaviour
             currentAudio = GHAudio;
             currentAudio.volume = 0.8f;
         }
-
+        if(sceneID == 3 || sceneID == 4 || sceneID == 5)
+        {
+            currentAudio = menuAudio;
+            currentAudio.volume = 0.8f;
+        }
 
         currentAudio.Play();
     }

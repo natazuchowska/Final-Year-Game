@@ -3,7 +3,13 @@ guid: e9c33161f7e1a664f8cad181a6fae6b9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - currentCursor: {instanceID: 0}
+  - normalCursor: {fileID: 2800000, guid: b6091a047f40c6141862459e596c86e2, type: 3}
+  - interactCursor: {fileID: 2800000, guid: 9c26ad13db12f5f4491dbb35d3f4f9e8, type: 3}
+  - puzzleCursor: {fileID: 2800000, guid: 2c651a33318495344bfe89455d904764, type: 3}
+  - dragCursor: {fileID: 2800000, guid: e9a158d6bae31184dbbc4705e1ace0c9, type: 3}
+  - talkCursor: {fileID: 2800000, guid: 2279a7b836b51744185da4ecd69eb7a3, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
