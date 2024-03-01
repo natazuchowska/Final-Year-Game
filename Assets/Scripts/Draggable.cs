@@ -20,8 +20,6 @@ public class Draggable : MonoBehaviour
 
     public BeforeDragDelegate whereBeforeDragCallback; // want o invoke the callback when the drag is in progress
 
-
-
     private bool isDragged = false;
     private Vector3 mouseDragStartPoistion;
     private Vector3 spriteDragStartPosition;
