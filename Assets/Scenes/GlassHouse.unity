@@ -2258,6 +2258,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Puzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 1043366270170129407, guid: 0a916bf4ad963b14397db1f832759588, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2121003049982284522, guid: 0a916bf4ad963b14397db1f832759588, type: 3}
       propertyPath: m_Pivot.x
       value: 0

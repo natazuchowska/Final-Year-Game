@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5cc27cd04975a4459d50a58bbf7bcd9, type: 3}
   m_Name: TOPIC1
   m_EditorClassIdentifier: 
+  narrativeID: 1
   dialogue:
   - talk about topic 1
   - what do you think about topic 1?
