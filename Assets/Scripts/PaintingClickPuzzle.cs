@@ -16,6 +16,11 @@ public class PaintingClickPuzzle : MonoBehaviour
 
     public static int[] correctOrder = { -1, -1, -1, -1, -1, -1 }; //the order in which paintings should be clicked
 
+    // ------------ BACKGROUNDS -------------------------
+    GameObject ogBackground;
+    GameObject variant1Background;
+    // --------------------------------------------------
+
     [SerializeField] public int[] dialogueOrder; // get order of dialogue from 1st scene
 
     public static int howManyPaintings;
@@ -35,6 +40,13 @@ public class PaintingClickPuzzle : MonoBehaviour
 
         correctOrder = decideOrder();
 
+        // get BACKGROUNDS
+        ogBackground = GameObject.Find("paintings_puzzle");
+        variant1Background = GameObject.Find("paintings_variant");
+
+        // hide other variant by default
+        variant1Background.SetActive(false); 
+
         string correctStr = "";
         for(int i=0; i<6; i++)
         {
@@ -51,12 +63,18 @@ public class PaintingClickPuzzle : MonoBehaviour
 
     private int[] decideOrder()
     {
+
         if (dialogueOrder[1] == 1)
         {
             for(int i=0; i<6; i++)
             {
                 correctOrder[i] = i+1;
             }
+
+            // change displayed graphic
+            variant1Background.SetActive(true);
+            ogBackground.SetActive(false);
+
             Debug.Log("order version 1");
         }
         else if (dialogueOrder[1] == 2)

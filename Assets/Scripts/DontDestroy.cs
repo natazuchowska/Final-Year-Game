@@ -15,11 +15,16 @@ public class DontDestroy : MonoBehaviour
     void Awake()
     {
         GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
-        GameObject[] mainMusic = GameObject.FindGameObjectsWithTag("Music");
+        AudioListener[] listeners = GameObject.FindObjectsByType<AudioListener>(FindObjectsSortMode.None);
 
         if (player.Length > 1) // destroy if any duplicates of the player occur
         {
             Destroy(this.gameObject); // avoid duplicates (if plaer already in the scene we don't want to keep the object from previous scene
+        }
+
+        if (listeners.Length > 1) 
+        {
+            Destroy(this.gameObject); // avoid duplicates 
         }
 
         /*if(mainMusic.Length > 1)
