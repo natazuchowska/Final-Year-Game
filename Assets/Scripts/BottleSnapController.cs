@@ -156,6 +156,9 @@ public class BottleSnapController : MonoBehaviour
                     bottleKeyReward.SetActive(true);
                     backgroundAfter.SetActive(true);
                     audioPlayer.Play(); // play puzzle solved sound 
+
+                    GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(3); // mark appropriate puzzle flag in game mngr as solved
+
                 }
             }
         }

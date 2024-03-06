@@ -37,6 +37,7 @@ TagManager:
   - Hint
   - Draggable
   - ClickTile
+  - TalkLabel
   layers:
   - Default
   - TransparentFX

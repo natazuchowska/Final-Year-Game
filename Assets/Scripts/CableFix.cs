@@ -115,6 +115,8 @@ public class CableFix : MonoBehaviour
 
                     electricityFlow = true; // electricity now on -> can open the box with cables on the other wall
                     audioPlayer.Play(); // play puzzle solved sound 
+
+                    GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(1); // mark appropriate puzzle flag in game mngr as solved
                 }
             }
         }

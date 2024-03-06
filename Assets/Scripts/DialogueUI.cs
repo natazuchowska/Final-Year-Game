@@ -53,7 +53,7 @@ public class DialogueUI : MonoBehaviour
             characterVoice.Play(); // play the talking sound
 
             yield return null; 
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return)); // wait with displaying the next line until ENTER key not hit
+            yield return new WaitUntil(() => (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow))); // wait with displaying the next line until ENTER key not hit
         }
 
         if(dialogueObject.HasResponses)
@@ -78,7 +78,7 @@ public class DialogueUI : MonoBehaviour
         {
             yield return null; // wait 1 frame
 
-            if(Input.GetKeyDown(KeyCode.Return))
+            if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 typeWriterEffect.Stop();
             }

@@ -77,6 +77,8 @@ public class ElectricitySnapController : MonoBehaviour
 
                     lightOn = false; // light now turned off
                     Debug.Log("lightOn val in electricity box: " + lightOn);
+
+                    GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(2); // mark appropriate puzzle flag in game mngr as solved
                 }
                 else
                 {

@@ -36,6 +36,7 @@ public class PaintingClickPuzzle : MonoBehaviour
 
     public static int paintPuzzleID; // get the order_id of the painting being clicked from the singular paintings cript (WAS STATIC)
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -170,6 +171,8 @@ public class PaintingClickPuzzle : MonoBehaviour
             {
                 Debug.Log("PUZZLE SOLVED!!!!!");
                 puzzleSolved = true;
+
+                GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(0); // mark appropriate puzzle flag in game mngr as solved
             }
         }
        

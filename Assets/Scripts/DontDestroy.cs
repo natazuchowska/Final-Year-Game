@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,28 +12,32 @@ using UnityEngine.SceneManagement;
 
 public class DontDestroy : MonoBehaviour
 {
+    private int sceneID;
    
     void Awake()
     {
         GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
         AudioListener[] listeners = GameObject.FindObjectsByType<AudioListener>(FindObjectsSortMode.None);
 
+
         if (player.Length > 1) // destroy if any duplicates of the player occur
         {
             Destroy(this.gameObject); // avoid duplicates (if plaer already in the scene we don't want to keep the object from previous scene
         }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
 
-        if (listeners.Length > 1) 
+        if (listeners.Length > 1)
         {
             Destroy(this.gameObject); // avoid duplicates 
         }
-
-        /*if(mainMusic.Length > 1)
+        else
         {
-            Destroy(this.gameObject); // avoid any duplicates of main audio source
-        }*/
-
-        DontDestroyOnLoad(this.gameObject);
-        // this.gameObject.transform.localScale *= 0.5f;
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
+
+   
 }

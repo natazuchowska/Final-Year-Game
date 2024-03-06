@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: fb118abf117b2c844ac9b2b739385edd
+guid: e716b3fab65852849bda2326b3b0f9f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 265015697235864959
-    second: top_floor_glasshouse (4)_0
+      213: -7831155366223980409
+    second: top_floor_glasshouse (5)_0
   - first:
-      213: -8196842909728509508
-    second: top_floor_glasshouse (4)_1
+      213: 4908827479192059228
+    second: top_floor_glasshouse (5)_1
   - first:
-      213: -387026461216371386
-    second: top_floor_glasshouse (4)_2
+      213: -3784179157551981860
+    second: top_floor_glasshouse (5)_2
   - first:
-      213: 2760001525756289372
-    second: top_floor_glasshouse (4)_3
+      213: -2132396162878180136
+    second: top_floor_glasshouse (5)_3
   - first:
-      213: 8172669933482849015
-    second: top_floor_glasshouse (4)_4
+      213: -2429292856090875564
+    second: top_floor_glasshouse (5)_4
   - first:
-      213: 8114081173159386230
-    second: top_floor_glasshouse (4)_5
+      213: 7367966785776050655
+    second: top_floor_glasshouse (5)_5
   - first:
-      213: 792111516524312790
-    second: top_floor_glasshouse (4)_6
+      213: -4096826122594972566
+    second: top_floor_glasshouse (5)_6
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: top_floor_glasshouse (4)_0
+      name: top_floor_glasshouse (5)_0
       rect:
         serializedVersion: 2
         x: 193
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f7d65ad5f568da300800000000000000
-      internalID: 265015697235864959
+      spriteID: 78853578fa5225390800000000000000
+      internalID: -7831155366223980409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: top_floor_glasshouse (4)_1
+      name: top_floor_glasshouse (5)_1
       rect:
         serializedVersion: 2
         x: 1787
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb1f3f56dc6fe3e80800000000000000
-      internalID: -8196842909728509508
+      spriteID: c5d3be09598af1440800000000000000
+      internalID: 4908827479192059228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: top_floor_glasshouse (4)_2
+      name: top_floor_glasshouse (5)_2
       rect:
         serializedVersion: 2
         x: 2315
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64d858ceb7101aaf0800000000000000
-      internalID: -387026461216371386
+      spriteID: cda5dab0b15eb7bc0800000000000000
+      internalID: -3784179157551981860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: top_floor_glasshouse (4)_3
+      name: top_floor_glasshouse (5)_3
       rect:
         serializedVersion: 2
         x: 2355
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c516d3ab3ce7d4620800000000000000
-      internalID: 2760001525756289372
+      spriteID: 8d47d3fdcf43862e0800000000000000
+      internalID: -2132396162878180136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: top_floor_glasshouse (4)_4
+      name: top_floor_glasshouse (5)_4
       rect:
         serializedVersion: 2
         x: 0
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f2b2cbf0082b6170800000000000000
-      internalID: 8172669933482849015
+      spriteID: 4592f41b40b694ed0800000000000000
+      internalID: -2429292856090875564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: top_floor_glasshouse (4)_5
+      name: top_floor_glasshouse (5)_5
       rect:
         serializedVersion: 2
         x: 1528
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67c99d436d10b9070800000000000000
-      internalID: 8114081173159386230
+      spriteID: fd1ee0721c6404660800000000000000
+      internalID: 7367966785776050655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: top_floor_glasshouse (4)_6
+      name: top_floor_glasshouse (5)_6
       rect:
         serializedVersion: 2
         x: 1500
@@ -268,8 +268,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d87dec3a352efa00800000000000000
-      internalID: 792111516524312790
+      spriteID: a6c8f20f8562527c0800000000000000
+      internalID: -4096826122594972566
       vertices: []
       indices: 
       edges: []
@@ -285,13 +285,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      top_floor_glasshouse (4)_0: 265015697235864959
-      top_floor_glasshouse (4)_1: -8196842909728509508
-      top_floor_glasshouse (4)_2: -387026461216371386
-      top_floor_glasshouse (4)_3: 2760001525756289372
-      top_floor_glasshouse (4)_4: 8172669933482849015
-      top_floor_glasshouse (4)_5: 8114081173159386230
-      top_floor_glasshouse (4)_6: 792111516524312790
+      top_floor_glasshouse (5)_0: -7831155366223980409
+      top_floor_glasshouse (5)_1: 4908827479192059228
+      top_floor_glasshouse (5)_2: -3784179157551981860
+      top_floor_glasshouse (5)_3: -2132396162878180136
+      top_floor_glasshouse (5)_4: -2429292856090875564
+      top_floor_glasshouse (5)_5: 7367966785776050655
+      top_floor_glasshouse (5)_6: -4096826122594972566
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

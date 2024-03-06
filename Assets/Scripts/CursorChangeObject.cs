@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
+using System.Net.Security;
 
 public class CursorChangeObject : MonoBehaviour
 {
@@ -9,12 +12,25 @@ public class CursorChangeObject : MonoBehaviour
     string objectTag;
     int whichCursor; // normal cursor
 
+    // [SerializeField] public GameObject textLabel;
+    int sceneID;
+
+    private void Awake()
+    {
+        if (sceneID == 1 || sceneID == 11) // the only scenes with characters
+        {
+            // talkLabel = GameObject.FindGameObjectWithTag("TalkLabel");
+            // textLabel.SetActive(false);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         cursorManager = GameObject.FindGameObjectWithTag("CursorManager"); // get reference to cursor manager obj
         cmScript = cursorManager.GetComponent<CursorManager>(); // get the cursor manager script
+
+        sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of current scene    
 
         objectTag = this.gameObject.tag; // store the tag of this gameobject
         whichCursor = 3;
@@ -37,19 +53,21 @@ public class CursorChangeObject : MonoBehaviour
         }
         else if (objectTag == "Pickup" || objectTag == "Collectible" || objectTag == "Bottle" || objectTag == "KeyReward" || objectTag == "ClickTile")
         {
-            /*if(objectTag == "KeyReward")
+            if(sceneID == 11 && objectTag.Equals("ClickTile"))
             {
-                if(GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().lightOn == false)
+                // if lamp light turned off
+                if(GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().checkIfSolved(2) == true)
                 {
-                    return 1; // only show interactable cursor if lamp light has been switched off
+                    // only then change the cursor to handCursor -> otherwise don't show that tile is interractable
+                    return 1;
                 }
                 else
                 {
+                    // otherwise return the normal cursor
                     return 4;
                 }
             }
-            */
-            
+
             return 1;
      
         }
@@ -60,6 +78,7 @@ public class CursorChangeObject : MonoBehaviour
         }
         else if (objectTag == "Character")
         {
+            // textLabel.SetActive(true);
             return 3;
         }
         else
@@ -83,6 +102,10 @@ public class CursorChangeObject : MonoBehaviour
 
     private void OnMouseExit()
     {
+        /*if((sceneID == 1 || sceneID == 11) && textLabel.activeSelf == true)
+        {
+            textLabel.SetActive(false);
+        }*/
         cmScript.ChangeCursor(4);
     }
 }

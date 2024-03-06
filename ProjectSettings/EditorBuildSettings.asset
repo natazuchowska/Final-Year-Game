@@ -59,7 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ControlsManual.unity
     guid: 6347a45294f55d1488f438b7bb4c377b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Balcony.unity
     guid: d6cdef5c228b0644497c0a9f4d7e5d91
   m_configObjects: {}

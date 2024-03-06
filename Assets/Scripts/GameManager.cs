@@ -21,7 +21,10 @@ public class GameManager : MonoBehaviour
      * 15 -> basement DOOR (2)
      ------------------------------------------ */
 
-    [SerializeField] private int sceneID; // strore the id of the current scene
+    [SerializeField] private int sceneID; // store the id of the current scene
+    [SerializeField] public int previousSceneID; // store the id of the previous scene
+
+
     [SerializeField] GameObject player;
 
     // collectibles flags (do not render in scene on load if previously already collected)
@@ -46,6 +49,16 @@ public class GameManager : MonoBehaviour
 
     public bool lightOn = true;
 
+    public bool newGameStarted = false; // to check when going back to settings/controls where we came from and change 'go back' button redirection
+
+
+    // FLAG PUZZLES THT HAVE ALREADY BEEN SOLVED 
+    private bool[] puzzleSolved = new bool[4]; // 4 puzzles in game to be marked as solved(true)/not solved yet (false)
+    // id 0 -> paintings
+    // id 1 -> cables
+    // id 2 -> electricity
+    // id 3 -> bottles
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -63,7 +76,7 @@ public class GameManager : MonoBehaviour
             goToRRButton.interactable = false;
         }
 
-        
+        previousSceneID = -1; // initialize with value
     }
 
     // called first
@@ -71,7 +84,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("OnEnable called");
         // GameObject player = GameObject.FindGameObjectWithTag("Player"); // get reference to cursor manager obj
-        
+
         SceneManager.sceneLoaded += OnSceneLoaded;
         // player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
     }
@@ -82,11 +95,17 @@ public class GameManager : MonoBehaviour
         Debug.Log("OnSceneLoaded: " + scene.name);
         Debug.Log(mode);
 
+
         isFacingRight = playerScript.isFacingRight; // var from playercontroller script
 
         // inventoryCanvas.SetActive(false); // close inventory (if was open) on every new scene load
 
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of current scene
+
+        if(sceneID == 1)
+        {
+            newGameStarted = true; // change the flag to conditionally change settings/controls goback button redirection
+        }
 
         if (!(sceneID == 8 || sceneID == 9 || sceneID == 10 || sceneID == 12 || sceneID == 14 || sceneID == 15 || sceneID == 3 || sceneID == 5))
         {
@@ -99,14 +118,19 @@ public class GameManager : MonoBehaviour
             player.SetActive(false); // this is a puzzle scene/ door scene so perform the appropriate actions
         }
 
-        // MENU SCENES -> disable inventory and option buttons
-        if(sceneID == 3 || sceneID == 5)
+        if(!(sceneID == 5 || sceneID == 16))
         {
-            if(optionsCanvas != null) // if game was already started before and the reference is set
+            previousSceneID = sceneID; // remember this scene id for later navigation back
+        }
+
+        // MENU SCENES -> disable inventory and option buttons
+        if (sceneID == 3 || sceneID == 5 || sceneID == 16)
+        {
+            if (optionsCanvas != null) // if game was already started before and the reference is set
             {
                 optionsCanvas.SetActive(false);
                 InventoryManager invManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<InventoryManager>(); // get ref to inventory manager script
-                if(invManager!= null && invManager.isOpen == true)
+                if (invManager != null && invManager.isOpen == true)
                 {
                     invManager.OpenInventory(); // close inventory
                 }
@@ -124,9 +148,9 @@ public class GameManager : MonoBehaviour
 
             pickUps = GameObject.FindGameObjectsWithTag("Bottle"); // get ref to bottles, check if previously collected, if so destroy 
 
-            foreach(GameObject pickUp in pickUps)
-            { 
-                if((pickUp.name == "bottle1" && bottle1 == true) || (pickUp.name == "bottle2" && bottle2 == true) || (pickUp.name == "bottle3" && bottle3 == true) || (pickUp.name == "bottle4" && bottle4 == true) || (pickUp.name == "bottle5" && bottle5 == true) || (pickUp.name == "bottle6" && bottle6 == true))
+            foreach (GameObject pickUp in pickUps)
+            {
+                if ((pickUp.name == "bottle1" && bottle1 == true) || (pickUp.name == "bottle2" && bottle2 == true) || (pickUp.name == "bottle3" && bottle3 == true) || (pickUp.name == "bottle4" && bottle4 == true) || (pickUp.name == "bottle5" && bottle5 == true) || (pickUp.name == "bottle6" && bottle6 == true))
                 {
                     Destroy(pickUp); // gameobj shouldn't be rendered anymore so destroy when attempted
                 }
@@ -158,7 +182,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if(isFacingRight)
+            if (isFacingRight)
             {
                 player.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f); // rescale player back to normal size
             }
@@ -166,7 +190,7 @@ public class GameManager : MonoBehaviour
             {
                 player.transform.localScale = new Vector3(-0.3f, 0.3f, 0.3f); // rescale player back to normal size
             }
-            
+
         }
 
         // MAIN SCENE
@@ -177,4 +201,15 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    // getter and setter for checking if puzzles solved
+    public bool checkIfSolved(int i)
+    {
+        return puzzleSolved[i]; // to check if certain puzzle was solved
+    }
+    public void markAsSolved(int i)
+    {
+        puzzleSolved[i] = true; // mark appropriate puzzle as already solved
+    }
+        
 }

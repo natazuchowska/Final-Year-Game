@@ -63,9 +63,9 @@ public class PlayerController : MonoBehaviour
             /*ChangeSize(1.01f);*/
         }
 
-        // --------------------------------------------------------------
+        // ----- MANAGE DIALOGUE ---------------------------------------------
 
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.T))
         {
             if(Interactable != null)
             {
