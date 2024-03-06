@@ -14,11 +14,14 @@ public class PaintingClickPuzzle : MonoBehaviour
 
     GameObject keyReward; // key to get when puzzle solved
 
-    public static int[] correctOrder = { -1, -1, -1, -1, -1, -1 }; //the order in which paintings should be clicked
+    public static int[] correctOrder = { 6, 5, 3, 4, 2, 1 }; //the order in which paintings should be clicked
 
     // ------------ BACKGROUNDS -------------------------
-    GameObject ogBackground;
-    GameObject variant1Background;
+    [SerializeField] GameObject paintV1;
+    [SerializeField] GameObject paintV2;
+    [SerializeField] GameObject paintV3;
+    [SerializeField] GameObject paintV4;
+    [SerializeField] GameObject paintV5;
     // --------------------------------------------------
 
     [SerializeField] public int[] dialogueOrder; // get order of dialogue from 1st scene
@@ -38,14 +41,16 @@ public class PaintingClickPuzzle : MonoBehaviour
     {
         dialogueOrder = GameObject.Find("GameManager").GetComponent<DialogueOrderManager>().getFinalOrder(); // get the array from dialogueOrderManager script
 
-        correctOrder = decideOrder();
-
         // get BACKGROUNDS
-        ogBackground = GameObject.Find("paintings_puzzle");
-        variant1Background = GameObject.Find("paintings_variant");
+        /*ogBackground = GameObject.Find("paintings_puzzle");
+        variant1Background = GameObject.Find("paintingsVariant");*/
 
-        // hide other variant by default
-        variant1Background.SetActive(false); 
+        // hide all painting variants by default
+        paintV1.SetActive(false);
+        paintV2.SetActive(false);
+        paintV3.SetActive(false);
+        paintV4.SetActive(false);
+        paintV5.SetActive(false);
 
         string correctStr = "";
         for(int i=0; i<6; i++)
@@ -59,6 +64,8 @@ public class PaintingClickPuzzle : MonoBehaviour
 
         keyReward = GameObject.FindGameObjectWithTag("KeyReward"); // get reference to the key sprite
         keyReward.SetActive(false); // hide key until puzzle not solved
+
+        correctOrder = decideOrder();
     }
 
     private int[] decideOrder()
@@ -71,9 +78,8 @@ public class PaintingClickPuzzle : MonoBehaviour
                 correctOrder[i] = i+1;
             }
 
-            // change displayed graphic
-            variant1Background.SetActive(true);
-            ogBackground.SetActive(false);
+            // activate the appropriate graphic
+            paintV2.SetActive(true);
 
             Debug.Log("order version 1");
         }
@@ -83,6 +89,10 @@ public class PaintingClickPuzzle : MonoBehaviour
             {
                 correctOrder[(i+2) % 6] = i+1;
             }
+
+            // activate the appropriate graphic
+            paintV3.SetActive(true);
+
             Debug.Log("order version 2");
         }
         else if (dialogueOrder[1] == 3)
@@ -91,6 +101,10 @@ public class PaintingClickPuzzle : MonoBehaviour
             {
                 correctOrder[(i+4) % 6] = i+1;
             }
+
+            // activate the appropriate graphic
+            paintV4.SetActive(true);
+
             Debug.Log("order version 3");
         }
         else if (dialogueOrder[1] == 4)
@@ -99,9 +113,19 @@ public class PaintingClickPuzzle : MonoBehaviour
             {
                 correctOrder[(i+3) % 6] = i+1;
             }
+
+            // activate the appropriate graphic
+            paintV5.SetActive(true);
+
             Debug.Log("order version 4");
         }
+        else
+        {
+            // in case dialogue hs not been attempted at all
+            paintV1.SetActive(true);
+        }
 
+        Debug.Log("start click chain from painting nr " + correctOrder[0]);
         return correctOrder;
     }
 
@@ -131,19 +155,23 @@ public class PaintingClickPuzzle : MonoBehaviour
         paintPuzzleID = paintID;
         Debug.Log("this painting has order id of: " + paintPuzzleID);
 
-        if(paintPuzzleID == correctOrder[howManyCorrectSoFar])
+        if(puzzleSolved == false)
         {
-            howManyCorrectSoFar++; // go to next in order
-        }
-        else
-        {
-            howManyCorrectSoFar = 0; // restart
-        }
+            if (paintPuzzleID == correctOrder[howManyCorrectSoFar])
+            {
+                howManyCorrectSoFar++; // go to next in order
+            }
+            else
+            {
+                howManyCorrectSoFar = 0; // restart
+            }
 
-        if(howManyCorrectSoFar == howManyPaintings)
-        {
-            Debug.Log("PUZZLE SOLVED!!!!!");
-            puzzleSolved = true;
+            if (howManyCorrectSoFar == howManyPaintings)
+            {
+                Debug.Log("PUZZLE SOLVED!!!!!");
+                puzzleSolved = true;
+            }
         }
+       
     }
 }
