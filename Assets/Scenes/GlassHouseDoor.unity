@@ -603,7 +603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8911115646970094051, guid: 58dbfa09c90d56243bff0044adcd522c, type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 0.1764706
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -667,22 +667,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: glasshouseKey
       objectReference: {fileID: 0}
+    - target: {fileID: 6600540431325066746, guid: a81caa2bb6b883f4fb53e4fe8cab8bdc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a81caa2bb6b883f4fb53e4fe8cab8bdc, type: 3}
---- !u!114 &797397745 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 972002034115868871, guid: a81caa2bb6b883f4fb53e4fe8cab8bdc, type: 3}
-  m_PrefabInstance: {fileID: 797397744}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f1d4a588ae06a941ba667a53804b062, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1276663920 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 237024998100293648, guid: 9b5120d613b0d7645b1bc652d1f0db1c, type: 3}
@@ -905,21 +898,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1441818943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c2c5f58ea5ffef46ad4f8f6da8ede5a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3750165d09424ea468b9b293902fa5b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   snapPoints:
   - {fileID: 748187738}
   draggableObjects:
-  - {fileID: 797397745}
   - {fileID: 972002034115868871, guid: a81caa2bb6b883f4fb53e4fe8cab8bdc, type: 3}
+  - {fileID: 1257577120465767745, guid: ab7d0762f1e13094ea545b227118aa7c, type: 3}
+  - {fileID: 3107734907563266804, guid: 343f22d293316e844846da8cefc219d6, type: 3}
+  - {fileID: 1349240246215125837, guid: 60e0f068e2183b24597f30ddacd12f75, type: 3}
+  snapRange: 0.5
   goBackButton: {fileID: 1541729030}
   goThruDoorButton: {fileID: 1276663920}
-  snapRange: 2
   audioPlayer: {fileID: 1853229879}
-  keyInserted: {fileID: 0}
-  keyInserted1: {fileID: 0}
-  keyInserted2: {fileID: 0}
+  keyInserted: {fileID: 1405868220}
+  keyInserted1: {fileID: 1405868220}
+  keyInserted2: {fileID: 1405868220}
   maxRotationTimer: 0.5
 --- !u!1001 &1541729027
 PrefabInstance:

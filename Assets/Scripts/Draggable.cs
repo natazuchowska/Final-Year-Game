@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Draggable : MonoBehaviour
 {
+
+
+    // ERROR OF NULLREFERENCE -> DELEGATES SHOULD BE REASSIGNED TO A NEW SNAPCONTROLLER WITH EVERY SCENE CHANGE
     public delegate void DragEndedDelegate(Draggable draggableObject); // delegate type - can hold reference to another method
 
     public DragEndedDelegate dragEndedCallback; // want to invoke the callback when the drag is over
@@ -20,19 +25,86 @@ public class Draggable : MonoBehaviour
 
     public BeforeDragDelegate whereBeforeDragCallback; // want o invoke the callback when the drag is in progress
 
+    /*    // === FOR KEY SNAP CONTROLLER: ================================================================
+
+        public delegate void KeyDragEndedDelegate(Draggable draggableObject); 
+
+        public KeyDragEndedDelegate keyDragEndedCallback; 
+
+        // ---------------------------------------------------------------------------------------------
+
+        public delegate void KeyDragInProgressDelegate(Draggable draggableObject);
+
+        public KeyDragInProgressDelegate keyDragInProgressCallback;
+
+        // ---------------------------------------------------------------------------------------------
+
+        public delegate void KeyBeforeDragDelegate(Draggable draggableObject);
+
+        public KeyBeforeDragDelegate keyWhereBeforeDragCallback;*/
+
+
+
+    [SerializeField] SnapController snapControl; // to reference snap controller
+
     private bool isDragged = false;
     private Vector3 mouseDragStartPoistion;
     private Vector3 spriteDragStartPosition;
+
+    // store ID of current scene
+    int sceneID;
+
+    // called first
+/*    void OnEnable()
+    {
+        Debug.Log("OnEnable called");
+        // GameObject player = GameObject.FindGameObjectWithTag("Player"); // get reference to cursor manager obj
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        // player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded: " + scene.name);
+        Debug.Log(mode);
+
+        // scene with snap points
+        if (sceneID == 0 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)
+        {
+            snapControl = GameObject.Find("SnapPointsContainer").GetComponent<SnapController>(); // ref the game manager script
+        }
+    }*/
+
+    private void Update()
+    {
+        if (snapControl == null)
+        {
+            // scene with snap points
+            if (sceneID == 0 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)
+            {
+                snapControl = GameObject.Find("SnapPointsContainer").GetComponent<SnapController>(); // ref the game manager script
+            }
+        }
+    }
 
     // when an object is clicked
     private void OnMouseDown()
     {
         isDragged = true;
+
+        sceneID = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().getSceneID(); // get id of current scene from gamemanager
+
         mouseDragStartPoistion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         spriteDragStartPosition = transform.localPosition;
         if(this.gameObject.tag != "Key") // only snap back if not a key
         {
-            whereBeforeDragCallback(this);
+            // scene has no snap slots so return
+            if (!(sceneID == 0 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)) { return; }
+
+            // whereBeforeDragCallback(this);
+            snapControl.OnBeforeDrag(this);
+
         }
     }
 
@@ -42,7 +114,12 @@ public class Draggable : MonoBehaviour
         if(isDragged)
         {
             transform.localPosition = spriteDragStartPosition + (Camera.main.ScreenToWorldPoint(Input.mousePosition) - mouseDragStartPoistion);
-            dragInProgressCallback(this);
+            
+            // scene has no snap slots so return
+            if (!(sceneID == 0 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)) { return; }
+
+            // dragInProgressCallback(this);
+            snapControl.OnDragInProgress(this);
         }
     }
 
@@ -50,6 +127,11 @@ public class Draggable : MonoBehaviour
     private void OnMouseUp()
     {
         isDragged = false;
-        dragEndedCallback(this);
+
+        // scene has no snap slots so return
+        if (!(sceneID == 0 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)) { return; }
+
+        // dragEndedCallback(this);
+        snapControl.OnDragEnded(this);
     }
 }

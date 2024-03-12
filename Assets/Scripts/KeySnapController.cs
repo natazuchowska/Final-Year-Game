@@ -19,11 +19,12 @@ public class KeySnapController : MonoBehaviour
     [SerializeField] public Button goThruDoorButton;
 
     //instantiate slots to false
-    bool slot1 = false;
-    bool slot2 = false;
-    bool slot3 = false;
+    bool keySlot1 = false;
+    bool keySlot2 = false;
+    bool keySlot3 = false;
 
     public float snapRange = 0.5f;
+    Vector3 initialPos;
 
     public AudioSource audioPlayer; // to play door unlocking sound
 
@@ -40,8 +41,9 @@ public class KeySnapController : MonoBehaviour
     {
         foreach (Draggable draggable in draggableObjects)
         {
-            draggable.dragEndedCallback = OnDragEnded; // delegate type storing reference to method, will invoke OnDragEnded in OnMouseUp
-            draggable.dragInProgressCallback = OnDragInProgress; // when the mouse is holding the object
+            draggable.dragEndedCallback = KeyOnDragEnded; // delegate type storing reference to method, will invoke OnDragEnded in OnMouseUp
+            draggable.dragInProgressCallback = KeyOnDragInProgress; // when the mouse is holding the object
+            draggable.whereBeforeDragCallback = KeyOnBeforeDrag;
         }
 
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of the scene
@@ -71,7 +73,12 @@ public class KeySnapController : MonoBehaviour
 
     }
 
-    private void OnDragEnded(Draggable draggable)
+    private void KeyOnBeforeDrag(Draggable draggable)
+    {
+        initialPos = draggable.transform.localPosition; // store the position before drag happens
+    }
+
+    private void KeyOnDragEnded(Draggable draggable)
     {
         float closestDistance = -1;
         Transform closestSnapPoint = null;
@@ -94,7 +101,7 @@ public class KeySnapController : MonoBehaviour
         {
             draggable.transform.localPosition = closestSnapPoint.localPosition; // put the object in the centre of the (closest) snappoint
 
-            if (draggable.gameObject.CompareTag("Key")) // if the object inserted in the slot is a snapBottle
+            if (draggable.gameObject.CompareTag("Key")) // if the object inserted in the slot is a key
             {
                 if(sceneID == 15) // BASEMENT DOOR
                 {
@@ -103,7 +110,7 @@ public class KeySnapController : MonoBehaviour
                         // check if correct key
                         if (draggable.gameObject.name == "keyTop")
                         {
-                            slot2 = true;
+                            keySlot2 = true;
                             Debug.Log("top key OK");
 
                             draggable.gameObject.transform.Translate(draggable.gameObject.transform.position.x, draggable.gameObject.transform.position.y, 10); // hide key sprite (push to the back)
@@ -115,7 +122,7 @@ public class KeySnapController : MonoBehaviour
                         }
                         else
                         {
-                            slot2 = false;
+                            keySlot2 = false;
                         }
                     }
                     if (snapIndex == 1) // bottom lock
@@ -123,7 +130,7 @@ public class KeySnapController : MonoBehaviour
                         // check if correct key
                         if (draggable.gameObject.name == "keyBottom")
                         {
-                            slot3 = true;
+                            keySlot3 = true;
                             Debug.Log("bottom key OK");
 
                             draggable.gameObject.transform.Translate(draggable.gameObject.transform.position.x, draggable.gameObject.transform.position.y, 10); // hide key sprite (push to the back)
@@ -135,12 +142,12 @@ public class KeySnapController : MonoBehaviour
                         }
                         else
                         {
-                            slot3 = false;
+                            keySlot3 = false;
                         }
                     }
 
                     // are all keys in place?
-                    if (slot2 == true && slot3 == true)
+                    if (keySlot2 == true && keySlot3 == true)
                     {
                         Debug.Log("DOOR NOW OPEN");
                         canGoThru2 = true;
@@ -157,7 +164,7 @@ public class KeySnapController : MonoBehaviour
                         // check if correct key
                         if (draggable.gameObject.name == "glasshouseKey")
                         {
-                            slot1 = true;
+                            keySlot1 = true;
                             Debug.Log("key OK");
 
                             draggable.gameObject.transform.Translate(draggable.gameObject.transform.position.x, draggable.gameObject.transform.position.y, 10); // hide key sprite (push to the back)
@@ -173,12 +180,17 @@ public class KeySnapController : MonoBehaviour
                         }
                         else
                         {
-                            slot1 = false;
+                            keySlot1 = false;
                         }
                     }
                 }
             }
                 
+        }
+
+        if (closestDistance > snapRange) //not in snap distance so snap back to original position
+        {
+            draggable.transform.localPosition = initialPos; // go back to the initial position of the object if not put in the snap slot
         }
     }
 
@@ -212,10 +224,11 @@ public class KeySnapController : MonoBehaviour
     }
 
 
-    private void OnDragInProgress(Draggable draggable)
+    private void KeyOnDragInProgress(Draggable draggable)
     {
         float closestDistance = -1;
         Transform closestSnapPoint = null;
+
 
         foreach (Transform snapPoint in snapPoints)
         {

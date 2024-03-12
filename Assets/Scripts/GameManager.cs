@@ -211,5 +211,10 @@ public class GameManager : MonoBehaviour
     {
         puzzleSolved[i] = true; // mark appropriate puzzle as already solved
     }
-        
+       
+    // public getter for ID of current scene
+    public int getSceneID()
+    {
+        return sceneID;
+    }
 }
