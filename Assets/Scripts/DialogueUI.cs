@@ -14,6 +14,13 @@ public class DialogueUI : MonoBehaviour
     private TypeWriterEffect typeWriterEffect;
 
     [SerializeField] private AudioSource characterVoice;
+    [SerializeField] private AudioSource topic1;
+    [SerializeField] private AudioSource topic2;
+    [SerializeField] private AudioSource topic3;
+    [SerializeField] private AudioSource topic4;
+    [SerializeField] public AudioSource speakNow;
+
+    int ID;
 
     DialogueOrderManager recordOrder; // to store picked order of responses (topics)
 
@@ -21,6 +28,8 @@ public class DialogueUI : MonoBehaviour
     {
         typeWriterEffect = GetComponent<TypeWriterEffect>();
         responseHandler = GetComponent<ResponseHandler>();
+
+        speakNow = characterVoice; // initialise with default voice
 
         recordOrder = GameObject.Find("GameManager").GetComponent<DialogueOrderManager>();
 
@@ -32,10 +41,32 @@ public class DialogueUI : MonoBehaviour
         isOpen = true;
 
         dialogueBox.SetActive(true); // display the dialogue box
-        StartCoroutine(StepThroughDialogue(dialogueObject));
 
-        int ID = dialogueObject.getID();
+        ID = dialogueObject.getID();
         recordOrder.RecordResponse(ID); // get id of topic and pass to dialogueOrderManager to record it was picked
+
+        // choose and assign the approriate voice for the topic picked
+        switch(ID)
+        {
+            case 0:
+                speakNow = characterVoice;
+                break;
+            case 1:
+                speakNow = topic1;
+                break;
+            case 2:
+                speakNow = topic2;
+                break;
+            case 3:
+                speakNow = topic3;
+                break;
+            case 4:
+                speakNow = topic4;
+                break;
+        }
+
+        speakNow.Play(); // play the character voice sound
+        StartCoroutine(StepThroughDialogue(dialogueObject));
     }
 
     public IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
@@ -50,8 +81,6 @@ public class DialogueUI : MonoBehaviour
            
             if(i == dialogueObject.Dialogue.Length - 1 && dialogueObject.HasResponses) { break; }
 
-            characterVoice.Play(); // play the talking sound
-
             yield return null; 
             yield return new WaitUntil(() => (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow))); // wait with displaying the next line until ENTER key not hit
         }
@@ -64,10 +93,10 @@ public class DialogueUI : MonoBehaviour
         else
         { 
             CloseDialogueBox(); // close dialogue box after whole dialogue has been diaplayed
-            characterVoice.Pause();
 
             recordOrder.PrintChosenOrder(); // show order of topics chosen by player
         }
+        speakNow.Pause();
     }
 
     private IEnumerator RunTypingEffect(string dialogue)
