@@ -44,7 +44,7 @@ public class Draggable : MonoBehaviour
         public KeyBeforeDragDelegate keyWhereBeforeDragCallback;*/
 
 
-
+    GameObject snapControlObj; // get reference to snap control object
     [SerializeField] SnapController snapControl; // to reference snap controller
 
     private bool isDragged = false;
@@ -78,13 +78,11 @@ public class Draggable : MonoBehaviour
 
     private void Update()
     {
-        if (snapControl == null)
+        snapControlObj = GameObject.Find("SnapPointsContainer"); // try find the snap points container object
+
+        if (snapControlObj != null) // if object exists in the scene
         {
-            // scene with snap points
-            if (sceneID == 0 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)
-            {
-                snapControl = GameObject.Find("SnapPointsContainer").GetComponent<SnapController>(); // ref the game manager script
-            }
+            snapControl = snapControlObj.GetComponent<SnapController>(); // ref the snap points script
         }
     }
 

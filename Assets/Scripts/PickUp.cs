@@ -54,7 +54,7 @@ public class PickUp : MonoBehaviour
 
 
             // CHECK WHICH BOTTLE WAS COLLECTED AND MARK THE APPROPRIATE FLAG IN GM --------------------------------------
-            if (rayHit.collider.gameObject.name == "bottle1")
+            if (rayHit.collider.gameObject.name == "middleBottle")
             {
                 gm.bottle1 = true; //say that bottle has been collected so should not be rendered with next new scene load
             }
@@ -62,7 +62,7 @@ public class PickUp : MonoBehaviour
             {
                 gm.bottle2 = true; //say that bottle has been collected so should not be rendered with next new scene load
             }
-            if (rayHit.collider.gameObject.name == "bottle3")
+            if (rayHit.collider.gameObject.name == "leftBottle")
             {
                 gm.bottle3 = true; //say that bottle has been collected so should not be rendered with next new scene load
             }
@@ -70,7 +70,7 @@ public class PickUp : MonoBehaviour
             {
                 gm.bottle4 = true; //say that bottle has been collected so should not be rendered with next new scene load
             }
-            if (rayHit.collider.gameObject.name == "bottle5")
+            if (rayHit.collider.gameObject.name == "rightBottle")
             {
                 gm.bottle5 = true; //say that bottle has been collected so should not be rendered with next new scene load
             }

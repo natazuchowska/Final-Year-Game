@@ -307,7 +307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &103478109
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -387,6 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1d4a588ae06a941ba667a53804b062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapControl: {fileID: 0}
 --- !u!61 &103478112
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1066,7 +1067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1130138239
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1146,6 +1147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1d4a588ae06a941ba667a53804b062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapControl: {fileID: 0}
 --- !u!61 &1130138242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1359,7 +1361,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1223017003}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fd2153c0b60b204083b1c6f1aa1c529, type: 3}
+  m_Script: {fileID: 11500000, guid: 3750165d09424ea468b9b293902fa5b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   snapPoints:
@@ -1373,8 +1375,14 @@ MonoBehaviour:
   - {fileID: 1257577120465767745, guid: ab7d0762f1e13094ea545b227118aa7c, type: 3}
   - {fileID: 3107734907563266804, guid: 343f22d293316e844846da8cefc219d6, type: 3}
   - {fileID: 1349240246215125837, guid: 60e0f068e2183b24597f30ddacd12f75, type: 3}
-  snapRange: 2
-  audioPlayer: {fileID: 835720172}
+  snapRange: 0.5
+  goBackButton: {fileID: 3274988348697762681}
+  goThruDoorButton: {fileID: 0}
+  audioPlayer: {fileID: 0}
+  keyInserted: {fileID: 0}
+  keyInserted1: {fileID: 0}
+  keyInserted2: {fileID: 0}
+  maxRotationTimer: 0.5
 --- !u!1 &1427092720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1864750303
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1847,6 +1855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1d4a588ae06a941ba667a53804b062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapControl: {fileID: 0}
 --- !u!61 &1864750306
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2204,6 +2213,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5679473241418310158, guid: 9b5120d613b0d7645b1bc652d1f0db1c, type: 3}
   m_PrefabInstance: {fileID: 3274988348697762679}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3274988348697762681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 237024998100293648, guid: 9b5120d613b0d7645b1bc652d1f0db1c, type: 3}
+  m_PrefabInstance: {fileID: 3274988348697762679}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -27,10 +27,24 @@ public class SnapController : MonoBehaviour
     [SerializeField] public Button goBackButton;
     [SerializeField] public Button goThruDoorButton;
 
-    //instantiate slots to false
+    //instantiate key slots to false
     bool keySlot1 = false;
     bool keySlot2 = false;
     bool keySlot3 = false;
+
+    //instantiate bottle slots to false
+    bool bottleSlot1 = false;
+    bool bottleSlot2 = false;
+    bool bottleSlot3 = false;
+
+    GameObject bottleKeyReward; // reward for solving the puzzle
+
+    // steam to be disabled when correct bottle inserted
+    GameObject steamLeft;
+    GameObject steamMid;
+    GameObject steamRight;
+
+    GameObject backgroundAfter; // to change the background when puzzle solved
 
     public AudioSource audioPlayer; // to play door unlocking sound
 
@@ -55,6 +69,7 @@ public class SnapController : MonoBehaviour
         /*canGoThru1 = false; // door locked by default
         canGoThru2 = false; // door locked by default*/
 
+        // DOOR SCENES
         if(sceneID == 14 || sceneID == 15)
         {
             goBackButton.interactable = true; // can go back
@@ -80,6 +95,26 @@ public class SnapController : MonoBehaviour
             keyInserted2.SetActive(false);
         }
 
+        // BOTTLES PUZZLE SCENE
+        if(sceneID == 10)
+        {
+            bottleKeyReward = GameObject.FindGameObjectWithTag("KeyReward"); // get the key object
+            bottleKeyReward.SetActive(false); // deactivate key until puzzle not solved
+
+            // find and store reference to steam sprites
+            steamLeft = GameObject.FindGameObjectWithTag("SteamL");
+            steamMid = GameObject.FindGameObjectWithTag("SteamM");
+            steamRight = GameObject.FindGameObjectWithTag("SteamR");
+
+            // set to be visible on start
+            steamLeft.SetActive(true);
+            steamMid.SetActive(true);
+            steamRight.SetActive(true);
+
+            backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // open little door revealing the key
+            backgroundAfter.SetActive(false);
+        }
+
     }
 
     // wken key is dropped out of inventory
@@ -93,16 +128,6 @@ public class SnapController : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    /*    void Start()
-        {
-            foreach (Draggable draggable in draggableObjects)
-            {
-                draggable.dragEndedCallback = OnDragEnded; // delegate type storing reference to method, will invoke OnDragEnded in OnMouseUp
-                draggable.dragInProgressCallback = OnDragInProgress; // when the mouse is holding the object
-                draggable.whereBeforeDragCallback = OnBeforeDrag;
-            }
-        }*/
 
     public void OnBeforeDrag(Draggable draggable) // was private before with delegates
     {
@@ -231,6 +256,70 @@ public class SnapController : MonoBehaviour
                     
                 }
             }
+            if(draggable.gameObject.CompareTag("SnapBottle"))
+            {
+                if (draggable.gameObject.CompareTag("SnapBottle")) // if the object inserted in the slot is a snapBottle
+                {
+                    if (snapIndex == 0)
+                    {
+                        // check which bottle that is
+                        if (draggable.gameObject.name == "leftBottle(Clone)")
+                        {
+                            bottleSlot1 = true;
+                            Debug.Log("left OK");
+                            steamLeft.SetActive(false);
+                        }
+                        else
+                        {
+                            bottleSlot1 = false;
+                            steamLeft.SetActive(true);
+                        }
+                    }
+                    if (snapIndex == 1)
+                    {
+                        // check which bottle that is
+                        if (draggable.gameObject.name == "middleBottle(Clone)")
+                        {
+                            bottleSlot2 = true;
+                            Debug.Log("middle OK");
+                            steamMid.SetActive(false);
+                        }
+                        else
+                        {
+                            bottleSlot2 = false;
+                            steamMid.SetActive(true);
+                        }
+                    }
+                    if (snapIndex == 2)
+                    {
+                        // check which bottle that is
+                        if (draggable.gameObject.name == "rightBottle(Clone)")
+                        {
+                            bottleSlot3 = true;
+                            Debug.Log("right OK");
+                            steamRight.SetActive(false);
+                        }
+                        else
+                        {
+                            bottleSlot3 = false;
+                            steamRight.SetActive(true);
+                        }
+                    }
+
+                    // are all in correct order?
+                    if (bottleSlot1 == true && bottleSlot2 == true && bottleSlot3 == true)
+                    {
+                        Debug.Log("CORRECT ORDER! CONGRATS!!!!");
+
+                        bottleKeyReward.SetActive(true);
+                        backgroundAfter.SetActive(true);
+                        audioPlayer.Play(); // play puzzle solved sound 
+
+                        GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(3); // mark appropriate puzzle flag in game mngr as solved
+
+                    }
+                }
+            }
         }
 
         if (closestDistance > snapRange) //not in snap distance so snap back to original position
@@ -259,7 +348,7 @@ public class SnapController : MonoBehaviour
 
         if (closestSnapPoint != null && closestDistance <= snapRange)
         {
-            if (draggable.gameObject.CompareTag("Plant") || draggable.gameObject.CompareTag("Bottle")) // if the thing being dragged in the slot is a plant object
+            if (draggable.gameObject.CompareTag("Plant") || draggable.gameObject.CompareTag("SnapBottle")) // if the thing being dragged in the slot is a plant object
             {
                 draggable.gameObject.GetComponent<Renderer>().material.color = Color.grey; // change object's clour to grey when put near the slot
             }
@@ -269,7 +358,7 @@ public class SnapController : MonoBehaviour
         {
             // takenSnapPoints[snapPoints.IndexOf(closestSnapPoint)] = 0;
 
-            if (draggable.gameObject.CompareTag("Plant") || draggable.gameObject.CompareTag("Bottle")) // if the thing being dragged in the slot is a plant object
+            if (draggable.gameObject.CompareTag("Plant") || draggable.gameObject.CompareTag("SnapBottle")) // if the thing being dragged in the slot is a plant object
             {
                 draggable.gameObject.GetComponent<Renderer>().material.color = Color.white; // reset to original colour when out of slot interaction range
             }

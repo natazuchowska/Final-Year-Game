@@ -7,18 +7,22 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     /* SCENE INDICES -----------------------------
-     * 0 -> main scene
+     * 0 -> main scene /->snap slots
      * 1 -> round room
      * 6 -> glasshouse
      * 7 -> basement
+     
      * 8 -> paintings PUZZLE
-     * 9 -> chess PUZZLE HINT
-     * 10 -> bottles PUZZLE
+     * 9 -> chess PUZZLE HINT 
+     * 10 -> bottles PUZZLE /->snap slots
+    
      * 11 -> swimming pool
-     * 12 -> cable fix PUZZLE
-     * 13 -> electricity (lamp light) PUZZLE
-     * 14 -> glasshouse DOOR (1)
-     * 15 -> basement DOOR (2)
+     
+     * 12 -> cable fix PUZZLE /->snap slots
+     * 13 -> electricity (lamp light) PUZZLE /-> snap slots
+     
+     * 14 -> glasshouse DOOR (1) /->snap slots
+     * 15 -> basement DOOR (2) /->snap slots
      ------------------------------------------ */
 
     [SerializeField] private int sceneID; // store the id of the current scene
@@ -150,7 +154,7 @@ public class GameManager : MonoBehaviour
 
             foreach (GameObject pickUp in pickUps)
             {
-                if ((pickUp.name == "bottle1" && bottle1 == true) || (pickUp.name == "bottle2" && bottle2 == true) || (pickUp.name == "bottle3" && bottle3 == true) || (pickUp.name == "bottle4" && bottle4 == true) || (pickUp.name == "bottle5" && bottle5 == true) || (pickUp.name == "bottle6" && bottle6 == true))
+                if ((pickUp.name == "middleBottle" && bottle1 == true) || (pickUp.name == "bottle2" && bottle2 == true) || (pickUp.name == "leftBottle" && bottle3 == true) || (pickUp.name == "bottle4" && bottle4 == true) || (pickUp.name == "rightBottle" && bottle5 == true) || (pickUp.name == "bottle6" && bottle6 == true))
                 {
                     Destroy(pickUp); // gameobj shouldn't be rendered anymore so destroy when attempted
                 }
