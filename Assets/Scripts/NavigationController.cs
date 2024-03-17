@@ -24,11 +24,11 @@ public class NavigationController : MonoBehaviour
 
         if(sceneID == 1) // door1 - to glasshouse
         {
-            doorOpen = KeySnapController.canGoThru1; // can go thru door? (static var controlled by door script)
+            doorOpen = SnapController.canGoThru1; // can go thru door? (static var controlled by door script)
         }
         if(sceneID == 6) // door2 - to basement
         {
-            doorOpen = KeySnapController.canGoThru2; // can go thru door? (static var controlled by door script)
+            doorOpen = SnapController.canGoThru2; // can go thru door? (static var controlled by door script)
         }
 
         goThruDoor.interactable = true; // need to go to door and unlock

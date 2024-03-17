@@ -603,7 +603,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8911115646970094051, guid: 58dbfa09c90d56243bff0044adcd522c, type: 3}
       propertyPath: m_Color.a
-      value: 0.1764706
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911115646970094051, guid: 58dbfa09c90d56243bff0044adcd522c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911115646970094051, guid: 58dbfa09c90d56243bff0044adcd522c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911115646970094051, guid: 58dbfa09c90d56243bff0044adcd522c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -908,7 +920,7 @@ MonoBehaviour:
   - {fileID: 1257577120465767745, guid: ab7d0762f1e13094ea545b227118aa7c, type: 3}
   - {fileID: 3107734907563266804, guid: 343f22d293316e844846da8cefc219d6, type: 3}
   - {fileID: 1349240246215125837, guid: 60e0f068e2183b24597f30ddacd12f75, type: 3}
-  snapRange: 0.5
+  snapRange: 2
   goBackButton: {fileID: 1541729030}
   goThruDoorButton: {fileID: 1276663920}
   audioPlayer: {fileID: 1853229879}
