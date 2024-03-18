@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 76709216}
   m_Layer: 5
   m_Name: Slot(4)
-  m_TagString: Cross
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2012,7 +2012,7 @@ GameObject:
   - component: {fileID: 523037561}
   m_Layer: 5
   m_Name: Slot(5)
-  m_TagString: Untagged
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2230,7 +2230,7 @@ GameObject:
   - component: {fileID: 584660807}
   m_Layer: 5
   m_Name: Slot(8)
-  m_TagString: Untagged
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5129,14 +5129,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  icon1: {fileID: 142294750}
-  icon2: {fileID: 770636483}
-  icon3: {fileID: 1640754069}
-  icon4: {fileID: 1701643302}
-  icon5: {fileID: 1920657729}
-  icon6: {fileID: 92879883}
-  icon7: {fileID: 1709980127}
-  icon8: {fileID: 1658764235}
+  useIcon:
+  - {fileID: 142294750}
+  - {fileID: 770636483}
+  - {fileID: 1640754069}
+  - {fileID: 1701643302}
+  - {fileID: 1920657729}
+  - {fileID: 92879883}
+  - {fileID: 1709980127}
+  - {fileID: 1658764235}
+  slot1Item: {fileID: 0}
 --- !u!1 &934682011
 GameObject:
   m_ObjectHideFlags: 0
@@ -7087,7 +7089,7 @@ GameObject:
   - component: {fileID: 1220411923}
   m_Layer: 5
   m_Name: Slot(7)
-  m_TagString: Untagged
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8508,7 +8510,7 @@ GameObject:
   - component: {fileID: 1501920540}
   m_Layer: 5
   m_Name: Slot(6)
-  m_TagString: Untagged
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9380,7 +9382,7 @@ GameObject:
   - component: {fileID: 1655374676}
   m_Layer: 5
   m_Name: Slot(1)
-  m_TagString: Untagged
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9673,7 +9675,7 @@ GameObject:
   - component: {fileID: 1681666650}
   m_Layer: 5
   m_Name: Slot(2)
-  m_TagString: Untagged
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11012,7 +11014,7 @@ GameObject:
   - component: {fileID: 1915712660}
   m_Layer: 5
   m_Name: Slot(3)
-  m_TagString: Untagged
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

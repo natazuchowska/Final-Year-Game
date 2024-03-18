@@ -6,20 +6,16 @@ using UnityEngine.UI;
 
 public class ChangeSprite : MonoBehaviour
 {
-    /*public SpriteRenderer spriteRender;
-    public Sprite disabledSprite; // item from slot cannot be used -> dark arrow
-    public Sprite activeSprite; // item can be used -> green arrow*/
 
     int sceneID;
     [SerializeField] bool isActive;
-    public GameObject icon1;
-    public GameObject icon2;
-    public GameObject icon3;
-    public GameObject icon4;
-    public GameObject icon5;
-    public GameObject icon6;
-    public GameObject icon7;
-    public GameObject icon8;
+
+    // arrow icons for inventory slots
+    public GameObject[] useIcon = new GameObject[8];
+
+
+    public GameObject slot1Item;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,14 +24,12 @@ public class ChangeSprite : MonoBehaviour
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of current scene
         // inventoryCanvas = GameObject.FindGameObjectWithTag("Inventory"); // find the reference to inventory canvas
 
-        icon1.SetActive(false);
-        icon2.SetActive(false);
-        icon3.SetActive(false);
-        icon4.SetActive(false);
-        icon5.SetActive(false);
-        icon6.SetActive(false);
-        icon7.SetActive(false);
-        icon8.SetActive(false);
+        foreach(GameObject icon in useIcon)
+        {
+            icon.SetActive(false); // disable all the active icons by default;
+        }
+
+
     }
     private void Update()
     {
@@ -44,36 +38,25 @@ public class ChangeSprite : MonoBehaviour
         //inventoryOpen = inventoryCanvas.activeSelf;
         //correctScene = (sceneID == 1);
 
+       /* int i = 0;
 
         if (sceneID == 1)
         {
-            ChangeSpriteActive();
+            ChangeSpriteActive(i);
         }
         else
         {
-            ChangeSpriteDisabled();
-        }
+            ChangeSpriteDisabled(i);
+        }*/
     }
 
-   /* private void OnMouseEnter()
+    public void ChangeSpriteActive(int i)
     {
-        Debug.Log("CHANGE ARROW NOW");
-        ChangeSpriteActive();
+        useIcon[i].SetActive(true);
     }
 
-    private void OnMouseExit()
+    public void ChangeSpriteDisabled(int i)
     {
-        Debug.Log("CHANGE ARROW TO DISABLED BACK");
-        ChangeSpriteDisabled();
-    }*/
-
-    void ChangeSpriteActive()
-    {
-        icon1.SetActive(true);
-    }
-
-    void ChangeSpriteDisabled()
-    {
-        icon1.SetActive(false);
+        useIcon[i].SetActive(false);
     }
 }

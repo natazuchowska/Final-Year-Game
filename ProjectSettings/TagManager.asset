@@ -38,6 +38,7 @@ TagManager:
   - Draggable
   - ClickTile
   - TalkLabel
+  - Slot
   layers:
   - Default
   - TransparentFX
