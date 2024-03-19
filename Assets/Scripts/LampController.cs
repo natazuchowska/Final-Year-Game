@@ -10,9 +10,8 @@ public class LampController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lightOn = ElectricitySnapController.lightOn; // get light info from electricity box
+        lightOn = SnapController.lightOn; // get light info from electricity box
         lightSprite = GameObject.FindGameObjectWithTag("LampLight");
-        // lightSprite.SetActive(true); // light urned on by default
 
         Debug.Log("lightOn value in swimming pool: " + lightOn);
     }
@@ -20,12 +19,5 @@ public class LampController : MonoBehaviour
     private void Update()
     {
         lightSprite.SetActive(lightOn);
-
-        /*if (lightOn == false)
-        {
-            Debug.Log("LIGHT TURNED OFF!!!!! FISH ARE SAVED");
-            lightSprite.SetActive(false); // turn off light
-            Debug.Log("lightOn value in swimming pool: " + lightOn);
-        }*/
     }
 }

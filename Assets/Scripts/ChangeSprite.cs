@@ -30,6 +30,7 @@ public class ChangeSprite : MonoBehaviour
         }
 
 
+
     }
     private void Update()
     {
@@ -38,16 +39,6 @@ public class ChangeSprite : MonoBehaviour
         //inventoryOpen = inventoryCanvas.activeSelf;
         //correctScene = (sceneID == 1);
 
-       /* int i = 0;
-
-        if (sceneID == 1)
-        {
-            ChangeSpriteActive(i);
-        }
-        else
-        {
-            ChangeSpriteDisabled(i);
-        }*/
     }
 
     public void ChangeSpriteActive(int i)

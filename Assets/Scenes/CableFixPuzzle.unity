@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 71385657}
   - component: {fileID: 71385656}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: PuzzleSolvedAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -495,6 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1d4a588ae06a941ba667a53804b062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapControl: {fileID: 0}
 --- !u!212 &137860981
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -745,6 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1d4a588ae06a941ba667a53804b062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapControl: {fileID: 0}
 --- !u!212 &337161023
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1362,6 +1364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1d4a588ae06a941ba667a53804b062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapControl: {fileID: 0}
 --- !u!212 &1126190095
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1506,6 +1509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1d4a588ae06a941ba667a53804b062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapControl: {fileID: 0}
 --- !u!212 &1633858208
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1830,7 +1834,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1952255425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d212af2f21a722b4c93e6a046dcfd94d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3750165d09424ea468b9b293902fa5b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   snapPoints:
@@ -1844,7 +1848,13 @@ MonoBehaviour:
   - {fileID: 1633858207}
   - {fileID: 1126190094}
   snapRange: 0.5
-  audioPlayer: {fileID: 71385656}
+  audioPlayer: {fileID: 0}
+  goBackButton: {fileID: 0}
+  goThruDoorButton: {fileID: 0}
+  keyInserted: {fileID: 0}
+  keyInserted1: {fileID: 0}
+  keyInserted2: {fileID: 0}
+  maxRotationTimer: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

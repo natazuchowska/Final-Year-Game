@@ -19,7 +19,7 @@ public class TileController : MonoBehaviour
         backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // background to set after puzzle is solved
         backgroundAfter.SetActive(false);
 
-        lightOn = ElectricitySnapController.lightOn; // get light info from electricity box
+        lightOn = SnapController.lightOn; // get light info from electricity box
 
         tileButton.onClick.AddListener(TaskOnClick);
 

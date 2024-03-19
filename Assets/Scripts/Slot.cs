@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class Slot : MonoBehaviour
 {
     private Inventory inventory;
+    private InventoryManager inventoryyMngr;
+
     public int i; // slot id
 
     public AudioSource audioPlayer;
@@ -25,6 +27,8 @@ public class Slot : MonoBehaviour
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of current scene
 
         inventory = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Inventory>();
+        inventoryyMngr = GameObject.Find("InventoryButton").GetComponent<InventoryManager>();
+
         invCanvas = GameObject.Find("InventoryCanvas").GetComponent<ChangeSprite>(); // script to change arrows sprites to interactive
     }
 
@@ -64,6 +68,8 @@ public class Slot : MonoBehaviour
 
                 child.name = null;
                 slotActiveToUse = false;
+                invCanvas.ChangeSpriteDisabled(i);
+                inventoryyMngr.OpenInventory(); // close inventory when item dropped
             }
             
         }

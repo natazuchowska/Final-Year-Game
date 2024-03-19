@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEditor.SearchService;
 using UnityEngine;
@@ -17,7 +18,7 @@ public class SnapController : MonoBehaviour
 
     int sceneID; // to check which scene it is
 
-    // public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
+    public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
 
     [SerializeField] public static bool canGoThru1; // glasshouse door
     [SerializeField] public static bool canGoThru2; // basement door
@@ -31,6 +32,8 @@ public class SnapController : MonoBehaviour
     bool keySlot1 = false;
     bool keySlot2 = false;
     bool keySlot3 = false;
+
+    // ------------------------------------------------------------------------------
 
     //instantiate bottle slots to false
     bool bottleSlot1 = false;
@@ -46,12 +49,32 @@ public class SnapController : MonoBehaviour
 
     GameObject backgroundAfter; // to change the background when puzzle solved
 
-    public AudioSource audioPlayer; // to play door unlocking sound
+    // ------------------------------------------------------------------------------
+
+    public static bool electricityFlow = false; //electricity turned off initially, // check if electricity ON -> if yes display open box
+
+    //instantiate slots to false
+    bool cableSlot1 = false;
+    bool cableSlot2 = false;
+    bool cableSlot3 = false;
+    bool cableSlot4 = false;
+
+    // -----------------------------------------------------------------------------
 
     [SerializeField] GameObject keyInserted; // sprite of the key after insertion to lock -> 1st door
     [SerializeField] GameObject keyInserted1; // sprite of the key after insertion to lock -> 2nd door top lock
     [SerializeField] GameObject keyInserted2; // sprite of the key after insertion to lock -> 2nd door bottom lock
     public float maxRotationTimer = 0.5f;
+
+    // ------------------------------------------------------------------------------
+
+    [SerializeField] public static bool lightOn = true; // lamp on and needs to be switched off (if initialized here, when set to false would the false value persist when script is executed again?)
+
+    //instantiate slots to false
+    bool slot1 = false;
+    // bool electricityFlow; 
+
+    GameObject electricityBackgroundAfter;
 
     // scenes with snap slots
     // ids: 0 10 12 13 14 15
@@ -88,8 +111,8 @@ public class SnapController : MonoBehaviour
         if (sceneID == 15) // 2nd door
         {
             // find keys by object names
-            keyInserted1 = GameObject.Find("keyInserted1");
-            keyInserted2 = GameObject.Find("keyInserted2");
+            keyInserted1 = GameObject.Find("KeyInserted1");
+            keyInserted2 = GameObject.Find("KeyInserted2");
 
             keyInserted1.SetActive(false);
             keyInserted2.SetActive(false);
@@ -115,16 +138,43 @@ public class SnapController : MonoBehaviour
             backgroundAfter.SetActive(false);
         }
 
+        // ELECTRICITY (LAMP) PUZZLE SCENE
+        if(sceneID == 13)
+        {
+            Debug.Log("lightOn val in electricity box: " + lightOn);
+            electricityBackgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // get reference to the background
+            electricityBackgroundAfter.SetActive(false); // display closed box initially
+
+           /* electricityFlow = CableFix.electricityFlow; // get the state of electricity from cable fix puzzle*/
+
+            if (electricityFlow == true)
+            {
+                electricityBackgroundAfter.SetActive(true); //display open box
+            }
+        }
+
     }
 
     // wken key is dropped out of inventory
     private void Update()
     {
+        // audioPlayer = GameObject.Find("PuzzleSolvedAudio").GetComponent<AudioSource>();
+
         foreach (Draggable draggable in draggableObjects)
         {
             draggable.dragEndedCallback = OnDragEnded; // delegate type storing reference to method, will invoke OnDragEnded in OnMouseUp
             draggable.dragInProgressCallback = OnDragInProgress; // when the mouse is holding the object
             draggable.whereBeforeDragCallback = OnBeforeDrag;
+        }
+
+        // electricity puzzle scene
+        if (electricityFlow == true)
+        {
+            // lamp switch scene
+            if(sceneID == 13)
+            {
+                electricityBackgroundAfter.SetActive(true); //display open box
+            }
         }
     }
 
@@ -141,7 +191,12 @@ public class SnapController : MonoBehaviour
         Transform closestSnapPoint = null;
         int snapIndex = -1;
 
-        foreach(Transform snapPoint in snapPoints)
+        if(sceneID == 10 || sceneID == 12)
+        {
+            audioPlayer = GameObject.Find("PuzzleSolvedAudio").GetComponent<AudioSource>();
+        }
+
+        foreach (Transform snapPoint in snapPoints)
         {
             float currentDistance = Vector2.Distance(draggable.transform.localPosition, snapPoint.localPosition); // store the distance between the object and snappoint
 
@@ -178,7 +233,7 @@ public class SnapController : MonoBehaviour
                     if (snapIndex == 0) // top lock
                     {
                         // check if correct key
-                        if (draggable.gameObject.name == "keyTop")
+                        if (draggable.gameObject.name == "keyTop(Clone)")
                         {
                             keySlot2 = true;
                             Debug.Log("top key OK");
@@ -198,7 +253,7 @@ public class SnapController : MonoBehaviour
                     if (snapIndex == 1) // bottom lock
                     {
                         // check if correct key
-                        if (draggable.gameObject.name == "keyBottom")
+                        if (draggable.gameObject.name == "keyBottom(Clone)")
                         {
                             keySlot3 = true;
                             Debug.Log("bottom key OK");
@@ -317,6 +372,104 @@ public class SnapController : MonoBehaviour
 
                         GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(3); // mark appropriate puzzle flag in game mngr as solved
 
+                    }
+                }
+            }
+            if(draggable.gameObject.CompareTag("CableFix"))
+            {
+                if (snapIndex == 0)
+                {
+                    // check which bottle that is
+                    if (draggable.gameObject.name == "cable1")
+                    {
+                        cableSlot1 = true;
+                        Debug.Log("c1 OK");
+                    }
+                    else
+                    {
+                        cableSlot1 = false;
+                    }
+                }
+                if (snapIndex == 1)
+                {
+                    // check which bottle that is
+                    if (draggable.gameObject.name == "cable2")
+                    {
+                        cableSlot2 = true;
+                        Debug.Log("c2 OK");
+                    }
+                    else
+                    {
+                        cableSlot2 = false;
+                    }
+                }
+                if (snapIndex == 2)
+                {
+                    // check which bottle that is
+                    if (draggable.gameObject.name == "cable3")
+                    {
+                        cableSlot3 = true;
+                        Debug.Log("c3 OK");
+                    }
+                    else
+                    {
+                        cableSlot3 = false;
+                    }
+                }
+                if (snapIndex == 3)
+                {
+                    // check which bottle that is
+                    if (draggable.gameObject.name == "cable4")
+                    {
+                        cableSlot4 = true;
+                        Debug.Log("c4 OK");
+                    }
+                    else
+                    {
+                        cableSlot4 = false;
+                    }
+                }
+
+                // are all in correct order?
+                if (cableSlot1 == true && cableSlot2 == true && cableSlot3 == true && cableSlot4 == true)
+                {
+                    Debug.Log("CORRECT CABLE FIX! CONGRATS!!!!");
+
+                    electricityFlow = true; // electricity now on -> can open the box with cables on the other wall
+                    audioPlayer.Play(); // play puzzle solved sound 
+
+                    GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(1); // mark appropriate puzzle flag in game mngr as solved
+                }
+            }
+
+            // ELECTRICITY FIX PUZZLE ====================================================================================
+            if(sceneID == 13)
+            {
+                backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // open little door revealing the key
+                backgroundAfter.SetActive(false);
+
+                if (electricityFlow == true)
+                {
+                    electricityBackgroundAfter.SetActive(true); //display open box
+                }
+
+                if (snapIndex == 0)
+                {
+                    // check if correct obj (docelowo -> button)
+                    if (draggable.gameObject.name == "sardynka")
+                    {
+                        Debug.Log("object inserted OK");
+                        audioPlayer.Play(); // play door unlocking sound
+
+                        lightOn = false; // light now turned off
+                        Debug.Log("lightOn val in electricity box: " + lightOn);
+
+                        GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(2); // mark appropriate puzzle flag in game mngr as solved
+                    }
+                    else
+                    {
+                        /*slot1 = false;*/
+                        Debug.Log("wrong object");
                     }
                 }
             }
