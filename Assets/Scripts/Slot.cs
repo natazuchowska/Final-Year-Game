@@ -91,6 +91,12 @@ public class Slot : MonoBehaviour
                 slotActiveToUse = false;
             }
         }
+        else if(childName.Equals("Key1Button(Clone)") && !(sceneID==14))
+        {
+            invCanvas.ChangeSpriteDisabled(i);
+            slotActiveToUse = false;
+        }
+    
 
         // bottles puzzle
         if(sceneID == 10)
@@ -106,6 +112,11 @@ public class Slot : MonoBehaviour
                 slotActiveToUse = false;
             }
         }
+        else if((childName.Equals("LeftBottleButton(Clone)") || childName.Equals("RightBottleButton(Clone)") || childName.Equals("MiddleBottleButton(Clone)") || childName.Equals("Bottle1Button(Clone)") || childName.Equals("Bottle2Button(Clone)") || childName.Equals("Bottle3Button(Clone)") || childName.Equals("Bottle4Button(Clone)") || childName.Equals("Bottle5Button(Clone)") || childName.Equals("Bottle6Button(Clone)") && !(sceneID == 10)))
+        {
+            invCanvas.ChangeSpriteDisabled(i);
+            slotActiveToUse = false;
+        }
 
         if(sceneID == 15)
         {
@@ -119,6 +130,11 @@ public class Slot : MonoBehaviour
                 invCanvas.ChangeSpriteDisabled(i);
                 slotActiveToUse = false;
             }
+        }
+        else if((childName.Equals("Key2Button(Clone)") || childName.Equals("Key3Button(Clone)")) && !(sceneID == 15))
+        {
+            invCanvas.ChangeSpriteDisabled(i);
+            slotActiveToUse = false;
         }
     }
 }

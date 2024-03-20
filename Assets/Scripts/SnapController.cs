@@ -111,8 +111,8 @@ public class SnapController : MonoBehaviour
         if (sceneID == 15) // 2nd door
         {
             // find keys by object names
-            keyInserted1 = GameObject.Find("KeyInserted1");
-            keyInserted2 = GameObject.Find("KeyInserted2");
+            keyInserted1 = GameObject.Find("keyInserted1");
+            keyInserted2 = GameObject.Find("keyInserted2");
 
             keyInserted1.SetActive(false);
             keyInserted2.SetActive(false);

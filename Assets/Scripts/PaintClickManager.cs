@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,7 +15,10 @@ public class PaintClickManager : MonoBehaviour
     [SerializeField] int paintID; // the paintings id
 
     // get reference to texts displayed by paintings
-    [SerializeField] public GameObject text;
+    /*[SerializeField] public GameObject text;*/
+
+    [SerializeField] PaintingClickPuzzle pcp;
+    int[] correctOrder;
 
 
 
@@ -22,36 +26,32 @@ public class PaintClickManager : MonoBehaviour
     void Start()
     {
         paintButton.onClick.AddListener(TaskOnClick); // add click listener
-        text.SetActive(false); //hide displaying text
+        // text.SetActive(false); //hide displaying text
 
     }
 
     // todo when button clicked 
     private void TaskOnClick()
     {
-        Debug.Log("displaying text of painting ");
+        // Debug.Log("displaying text of painting ");
         Debug.Log("ID in puzzle: " + paintID);
 
-        
+        pcp = GameObject.Find("PaintStoryManager").GetComponent<PaintingClickPuzzle>();
+        correctOrder = GameObject.Find("PaintStoryManager").GetComponent<PaintingClickPuzzle>().correctOrder; // get the correct paintings order from the other script
+
         StartCoroutine(WaitForSec());
-        
 
-        // display paintings text for 6 seconds and then hide again
-        // text.SetActive(true);
-        // StartCoroutine("WaitForSec");
-
-        // if puzzle has already been solved (key shown) do not call method again
-
-        PaintingClickPuzzle.setPaintOrderID(paintID); // inform/pass the order id to general script
-        
+        pcp.setPaintOrderID(paintID); // inform/pass the order id to general script
     }
 
     IEnumerator WaitForSec()
     {
         // make texts visible for 4 seconds only and then hide again
         Debug.Log("Coroutine started");
-        text.SetActive(true);
+        // text.SetActive(true);
+        GameObject.Find("PaintStoryManager").GetComponent<PaintingClickPuzzle>().paintAudio[Array.IndexOf(correctOrder, paintID)].Play(); // play the correct audio
         yield return new WaitForSeconds(4);
-        text.SetActive(false);
+        // text.SetActive(false);
+        GameObject.Find("PaintStoryManager").GetComponent<PaintingClickPuzzle>().paintAudio[Array.IndexOf(correctOrder, paintID)].Pause(); // pause the correct audio
     }
 }

@@ -28,9 +28,6 @@ public class ChangeSprite : MonoBehaviour
         {
             icon.SetActive(false); // disable all the active icons by default;
         }
-
-
-
     }
     private void Update()
     {

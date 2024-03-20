@@ -10,11 +10,12 @@ public class PaintingClickPuzzle : MonoBehaviour
     // general script for checking for the correct order od clicks
 
     [SerializeField] public List<Button> paints;
-    [SerializeField] public List<GameObject> texts;
+    /*[SerializeField] public List<GameObject> texts;*/
 
     GameObject keyReward; // key to get when puzzle solved
 
-    public static int[] correctOrder = { 6, 5, 3, 4, 2, 1 }; //the order in which paintings should be clicked
+    public int[] correctOrder = { 6, 5, 3, 4, 2, 1 }; //the order in which paintings should be clicked
+    [SerializeField] public AudioSource[] paintAudio; // store audios for each painting
 
     // ------------ BACKGROUNDS -------------------------
     [SerializeField] GameObject paintV1;
@@ -151,7 +152,7 @@ public class PaintingClickPuzzle : MonoBehaviour
         this.audioPlayer.Play();
     }
 
-    public static void setPaintOrderID(int paintID)
+    public void setPaintOrderID(int paintID)
     {
         paintPuzzleID = paintID;
         Debug.Log("this painting has order id of: " + paintPuzzleID);
