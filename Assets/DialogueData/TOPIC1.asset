@@ -14,16 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   narrativeID: 1
   dialogue:
-  - talk about topic 1
-  - what do you think about topic 1?
-  - i don't think i'm a fan of topic 1
-  - '... yeah... '
+  - Oh! I almost forgot to tell you... This planet does not have a name, I also believe
+    I am the only inhabitant...
+  - Anyway, we don't get visitors here very often.
   responses:
-  - responseText: Talk about TOPIC2
+  - responseText: Name it [...]?
     dialogueObject: {fileID: 11400000, guid: 5fc58331e59a8c04391ec4b03234a3d4, type: 2}
-  - responseText: Talk about TOPIC3
+  - responseText: What have you lost?
     dialogueObject: {fileID: 11400000, guid: b0afb55b6e8bb344886b424f2a402230, type: 2}
-  - responseText: Talk about TOPIC4
+  - responseText: You smell
     dialogueObject: {fileID: 11400000, guid: 803aff467eb141548a36db083d7447a0, type: 2}
   - responseText: Goodbye!
     dialogueObject: {fileID: 11400000, guid: 4c16b3ec13986bf46b91d8e57d252acf, type: 2}

@@ -14,20 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   narrativeID: 3
   dialogue:
-  - 'talk about topic 3
+  - I get sad every time I think about it ...
+  - 'It was my beloved plant. I''ve had it ever since I can remember.
 
 
 '
-  - 'i hate topic 3
-
-
-'
+  - It was like a child to me... I really hope I will find it one day.
   responses:
-  - responseText: Talk about TOPIC1
+  - responseText: Where am I?
     dialogueObject: {fileID: 11400000, guid: b70fab010bbf79349bcf11f4333154d2, type: 2}
-  - responseText: Talk about TOPIC2
+  - responseText: Name it [...]?
     dialogueObject: {fileID: 11400000, guid: 5fc58331e59a8c04391ec4b03234a3d4, type: 2}
-  - responseText: Talk about TOPIC4
+  - responseText: You smell
     dialogueObject: {fileID: 11400000, guid: 803aff467eb141548a36db083d7447a0, type: 2}
   - responseText: Goodbye!
     dialogueObject: {fileID: 11400000, guid: 4c16b3ec13986bf46b91d8e57d252acf, type: 2}

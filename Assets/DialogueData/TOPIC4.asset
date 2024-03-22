@@ -14,19 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   narrativeID: 4
   dialogue:
-  - 'talk about topic 4
+  - 'Says who
 
 '
-  - 'ohhh how i love topic 4
-
-'
-  - fr
   responses:
-  - responseText: Talk about TOPIC1
+  - responseText: Where am I?
     dialogueObject: {fileID: 11400000, guid: b70fab010bbf79349bcf11f4333154d2, type: 2}
-  - responseText: Talk about TOPIC2
+  - responseText: Name it [...]?
     dialogueObject: {fileID: 11400000, guid: 5fc58331e59a8c04391ec4b03234a3d4, type: 2}
-  - responseText: Talk about TOPIC3
+  - responseText: What have you lost?
     dialogueObject: {fileID: 11400000, guid: b0afb55b6e8bb344886b424f2a402230, type: 2}
   - responseText: Goodbye!
     dialogueObject: {fileID: 11400000, guid: 4c16b3ec13986bf46b91d8e57d252acf, type: 2}

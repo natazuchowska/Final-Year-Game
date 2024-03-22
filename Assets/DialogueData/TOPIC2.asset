@@ -14,18 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   narrativeID: 2
   dialogue:
-  - 'talk about topic 2
+  - 'I reckon a good name for the planet would be "Hash-Brown".
 
 '
-  - 'tbh i dont rly care about topic 2
-
-'
+  - Oh how I love hash browns... This has to be the best part of english breakfast
+  - Yeah I think I'm going to start calling it that
   responses:
-  - responseText: Talk about TOPIC1
+  - responseText: Where am I?
     dialogueObject: {fileID: 11400000, guid: b70fab010bbf79349bcf11f4333154d2, type: 2}
-  - responseText: Talk about TOPIC3
+  - responseText: What have you lost?
     dialogueObject: {fileID: 11400000, guid: b0afb55b6e8bb344886b424f2a402230, type: 2}
-  - responseText: Talk about TOPIC4
+  - responseText: You smell
     dialogueObject: {fileID: 11400000, guid: 803aff467eb141548a36db083d7447a0, type: 2}
   - responseText: Goodbye!
     dialogueObject: {fileID: 11400000, guid: 4c16b3ec13986bf46b91d8e57d252acf, type: 2}

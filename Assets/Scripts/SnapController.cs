@@ -29,16 +29,16 @@ public class SnapController : MonoBehaviour
     [SerializeField] public Button goThruDoorButton;
 
     //instantiate key slots to false
-    bool keySlot1 = false;
-    bool keySlot2 = false;
-    bool keySlot3 = false;
+    public static bool keySlot1 = false;
+    public static bool keySlot2 = false;
+    public static bool keySlot3 = false;
 
     // ------------------------------------------------------------------------------
 
     //instantiate bottle slots to false
-    bool bottleSlot1 = false;
-    bool bottleSlot2 = false;
-    bool bottleSlot3 = false;
+    public static bool bottleSlot1 = false;
+    public static bool bottleSlot2 = false;
+    public static bool bottleSlot3 = false;
 
     GameObject bottleKeyReward; // reward for solving the puzzle
 
@@ -46,6 +46,10 @@ public class SnapController : MonoBehaviour
     GameObject steamLeft;
     GameObject steamMid;
     GameObject steamRight;
+
+    GameObject bottleLprev;
+    GameObject bottleMprev;
+    GameObject bottleRprev;
 
     GameObject backgroundAfter; // to change the background when puzzle solved
 
@@ -114,7 +118,24 @@ public class SnapController : MonoBehaviour
             keyInserted1 = GameObject.Find("keyInserted1");
             keyInserted2 = GameObject.Find("keyInserted2");
 
-            keyInserted1.SetActive(false);
+            if(keySlot2 == false)
+            {
+                keyInserted1.SetActive(false);
+            }
+            else
+            {
+                keyInserted1.SetActive(true);
+            }
+
+            if (keySlot3 == false)
+            {
+                keyInserted2.SetActive(false);
+            }
+            else
+            {
+                keyInserted2.SetActive(true);
+            }
+
             keyInserted2.SetActive(false);
         }
 
@@ -133,6 +154,31 @@ public class SnapController : MonoBehaviour
             steamLeft.SetActive(true);
             steamMid.SetActive(true);
             steamRight.SetActive(true);
+
+            bottleLprev = GameObject.Find("leftBottle");
+            bottleMprev = GameObject.Find("middleBottle");
+            bottleRprev = GameObject.Find("rightBottle");
+
+            bottleLprev.SetActive(false);
+            bottleMprev.SetActive(false);
+            bottleRprev.SetActive(false);
+
+            // if returning to the scene
+            if(bottleSlot1 == true)
+            {
+                steamLeft.SetActive(false);
+                bottleLprev.SetActive(true);
+            }
+            if (bottleSlot2 == true)
+            {
+                steamMid.SetActive(false);
+                bottleMprev.SetActive(true);
+            }
+            if (bottleSlot3 == true)
+            {
+                steamRight.SetActive(false);
+                bottleRprev.SetActive(true);
+            }
 
             backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // open little door revealing the key
             backgroundAfter.SetActive(false);
