@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1092959389603950368}
   - component: {fileID: 8822020927442450401}
   - component: {fileID: 428062174113205174}
+  - component: {fileID: -924769811973022465}
   m_Layer: 0
   m_Name: keyTop
   m_TagString: Key
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1d4a588ae06a941ba667a53804b062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapControl: {fileID: 0}
 --- !u!61 &428062174113205174
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,3 +146,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.662544, y: 8.13727}
   m_EdgeRadius: 0
+--- !u!114 &-924769811973022465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5527472410223521246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62851109a7523584f9dde59fffb6d4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

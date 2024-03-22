@@ -39,7 +39,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialogueUI.isOpen) return; // do not move while the dialogue window is open
+        // if there is a dialogueUI in the scene
+        if(GameObject.Find("DialogueCanvas") != null)
+        {
+            dialogueUI = GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>();
+            if (dialogueUI.isOpen) return; // do not move while the dialogue window is open
+        }
 
         rb.velocity = new Vector2(horizontal * speed, vertical * speed); // calculate the speed of the player
 
@@ -72,23 +77,9 @@ public class PlayerController : MonoBehaviour
                 Interactable.Interact(this); // same as Interactable?.Interact(this) --> can then omit the 'if(Intractable != null)' as equivalent
             }
         }
-    }
 
-   /* public void Jump(InputAction.CallbackContext context)
-    {
-        if (context.performed && isGrounded())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower); // player on the ground so able to jump
-            isInAir = true;
-            animator.SetBool("isInAir", isInAir); // set isInAir to true to enable jumping animation
-        }
-        if (context.canceled && rb.velocity.y > 0f) // player above the ground (is jumping rn)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.3f);
-            isInAir = false;
-            animator.SetBool("isInAir", isInAir); // disable jump animation when player falling down (?)
-        }
-    }*/
+        
+    }
 
     private void FixedUpdate()
     {
