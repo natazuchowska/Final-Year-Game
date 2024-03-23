@@ -40,6 +40,15 @@ public class SnapController : MonoBehaviour
     public static bool bottleSlot2 = false;
     public static bool bottleSlot3 = false;
 
+   /* public bool bottleLDropped = false;
+    public bool bottleMDropped = false;
+    public bool bottleRDropped = false;*/
+
+    // flags
+    public static int bLD = 0;
+    public static int bMD = 0;
+    public static int bRD = 0;
+
     GameObject bottleKeyReward; // reward for solving the puzzle
 
     // steam to be disabled when correct bottle inserted
@@ -93,8 +102,6 @@ public class SnapController : MonoBehaviour
         }
 
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of the scene
-        /*canGoThru1 = false; // door locked by default
-        canGoThru2 = false; // door locked by default*/
 
         // DOOR SCENES
         if(sceneID == 14 || sceneID == 15)
@@ -105,7 +112,6 @@ public class SnapController : MonoBehaviour
             Debug.Log(canGoThru1);
             Debug.Log(canGoThru2);
         }
-
 
         if (sceneID == 14) // 1st door
         {
@@ -142,6 +148,12 @@ public class SnapController : MonoBehaviour
         // BOTTLES PUZZLE SCENE
         if(sceneID == 10)
         {
+            // puzzle has been solved already so display after background
+            if(GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
+            {
+                backgroundAfter.SetActive(true);
+            }
+
             bottleKeyReward = GameObject.FindGameObjectWithTag("KeyReward"); // get the key object
             bottleKeyReward.SetActive(false); // deactivate key until puzzle not solved
 
@@ -164,20 +176,38 @@ public class SnapController : MonoBehaviour
             bottleRprev.SetActive(false);
 
             // if returning to the scene
-            if(bottleSlot1 == true)
+            if(bottleSlot1 == true || bLD != 0)
             {
                 steamLeft.SetActive(false);
                 bottleLprev.SetActive(true);
+
+                if(bLD != 0 && !bottleSlot1)
+                {
+                    bottleLprev.transform.localPosition = new Vector3(-7, 0, -3);
+                    steamLeft.SetActive(true);
+                }
             }
-            if (bottleSlot2 == true)
+            if (bottleSlot2 == true || bMD != 0)
             {
                 steamMid.SetActive(false);
                 bottleMprev.SetActive(true);
+
+                if (bMD != 0 && !bottleSlot2)
+                {
+                    bottleMprev.transform.localPosition = new Vector3(-7, 2, -3);
+                    steamMid.SetActive(true);
+                }
             }
-            if (bottleSlot3 == true)
+            if (bottleSlot3 == true || bRD != 0)
             {
                 steamRight.SetActive(false);
                 bottleRprev.SetActive(true);
+
+                if (bRD != 0 && !bottleSlot3)
+                {
+                    bottleRprev.transform.localPosition = new Vector3(-7, -2, -3);
+                    steamRight.SetActive(true);
+                }
             }
 
             backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // open little door revealing the key
@@ -364,7 +394,7 @@ public class SnapController : MonoBehaviour
                     if (snapIndex == 0)
                     {
                         // check which bottle that is
-                        if (draggable.gameObject.name == "leftBottle(Clone)")
+                        if (draggable.gameObject.name == "leftBottle(Clone)" || draggable.gameObject.name == "leftBottle")
                         {
                             bottleSlot1 = true;
                             Debug.Log("left OK");
@@ -379,7 +409,7 @@ public class SnapController : MonoBehaviour
                     if (snapIndex == 1)
                     {
                         // check which bottle that is
-                        if (draggable.gameObject.name == "middleBottle(Clone)")
+                        if (draggable.gameObject.name == "middleBottle(Clone)" || draggable.gameObject.name == "middleBottle")
                         {
                             bottleSlot2 = true;
                             Debug.Log("middle OK");
@@ -394,7 +424,7 @@ public class SnapController : MonoBehaviour
                     if (snapIndex == 2)
                     {
                         // check which bottle that is
-                        if (draggable.gameObject.name == "rightBottle(Clone)")
+                        if (draggable.gameObject.name == "rightBottle(Clone)" || draggable.gameObject.name == "rightBottle")
                         {
                             bottleSlot3 = true;
                             Debug.Log("right OK");
@@ -590,6 +620,22 @@ public class SnapController : MonoBehaviour
             keyToRotate.transform.Rotate(new Vector3(0, 0, -180) * 2 * Time.deltaTime);
             timer += Time.deltaTime;
             yield return null;
+        }
+    }
+
+    public static void markBottleDropped(int i)
+    {
+        switch(i)
+        {
+            case 1:
+                bLD = 1;
+                return;
+            case 2:
+                bMD = 1;
+                return;
+            case 3:
+                bRD = 1;
+                return;
         }
     }
 }

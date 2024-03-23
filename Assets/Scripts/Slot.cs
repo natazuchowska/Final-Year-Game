@@ -64,12 +64,33 @@ public class Slot : MonoBehaviour
             if(!child.CompareTag("Cross") && slotActiveToUse)
             {
                 child.GetComponent<Spawn>().SpawnDroppedItem();
+
+                if (child.name.Equals("LeftBottleButton(Clone)"))
+                {
+                    // GameObject.Find("SnapPointsContainer").GetComponent<SnapController>().bottleLDropped = true;
+                    SnapController.markBottleDropped(1);
+                }
+
+                if (child.name.Equals("MiddleBottleButton(Clone)"))
+                {
+                    // GameObject.Find("SnapPointsContainer").GetComponent<SnapController>().bottleMDropped = true;
+                    SnapController.markBottleDropped(2);
+                }
+
+                if (child.name.Equals("RightBottleButton(Clone)"))
+                {
+                    // GameObject.Find("SnapPointsContainer").GetComponent<SnapController>().bottleRDropped = true;
+                    SnapController.markBottleDropped(3);
+                }
+
                 GameObject.Destroy(child.gameObject);
 
                 child.name = null;
                 slotActiveToUse = false;
                 invCanvas.ChangeSpriteDisabled(i);
                 inventoryyMngr.OpenInventory(); // close inventory when item dropped
+
+
             }
             
         }
