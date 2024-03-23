@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -47,24 +48,33 @@ public class DialogueUI : MonoBehaviour
         ID = dialogueObject.getID();
         recordOrder.RecordResponse(ID); // get id of topic and pass to dialogueOrderManager to record it was picked
 
-        // choose and assign the approriate voice for the topic picked
-        switch(ID)
+        // choose and assign the approriate voice for the topic picked -> main scene
+        if(SceneManager.GetActiveScene().buildIndex == 0)
         {
-            case 0:
-                speakNow = characterVoice;
-                break;
-            case 1:
-                speakNow = topic1;
-                break;
-            case 2:
-                speakNow = topic2;
-                break;
-            case 3:
-                speakNow = topic3;
-                break;
-            case 4:
-                speakNow = topic4;
-                break;
+            switch (ID)
+            {
+                case 0:
+                    speakNow = characterVoice;
+                    break;
+                case 1:
+                    speakNow = topic1;
+                    break;
+                case 2:
+                    speakNow = topic2;
+                    break;
+                case 3:
+                    speakNow = topic3;
+                    break;
+                case 4:
+                    speakNow = topic4;
+                    break;
+            }
+        }
+
+        // swimming pool
+        if(SceneManager.GetActiveScene().buildIndex == 11)
+        {
+            GameObject.Find("MainMusic").GetComponent<BackgroundMusicManager>().currentAudio.Pause();
         }
 
         speakNow.Play(); // play the character voice sound
@@ -106,11 +116,20 @@ public class DialogueUI : MonoBehaviour
         { 
             CloseDialogueBox(); // close dialogue box after whole dialogue has been diaplayed
 
+            if(GameObject.Find("DialogueCircle") != null)
+            {
+                GameObject.Find("DialogueCircle").GetComponent<DialogueActivator>().dialogueBackground.SetActive(false);
+            }
+
+            // swimming pool
+            if (SceneManager.GetActiveScene().buildIndex == 11)
+            {
+                GameObject.Find("MainMusic").GetComponent<BackgroundMusicManager>().currentAudio.Play();
+            }
+
             recordOrder.PrintChosenOrder(); // show order of topics chosen by player
         }
         speakNow.Pause();
-
-        
     }
 
     private IEnumerator RunTypingEffect(string dialogue)

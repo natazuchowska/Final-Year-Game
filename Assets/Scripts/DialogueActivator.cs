@@ -5,10 +5,18 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
     [SerializeField] private DialogueObject dialogueObject;
     // DialogueUI dialogueUI;
 
+    public GameObject dialogueBackground;
+
 
     private void Start()
     {
         // dialogueUI = GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>();
+        dialogueBackground = GameObject.Find("talking_background");
+
+        if(dialogueBackground != null)
+        {
+            dialogueBackground.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,6 +40,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
 
     public void Interact(PlayerController player)
     {
+        dialogueBackground.SetActive(true);
         player.DialogueUI.ShowDialogue(dialogueObject);
     }
 }

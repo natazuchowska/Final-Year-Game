@@ -14,11 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   narrativeID: 2
   dialogue:
-  - 'I reckon a good name for the planet would be "Hash-Brown".
-
-'
-  - Oh how I love hash browns... This has to be the best part of english breakfast
-  - Yeah I think I'm going to start calling it that
+  - It is a little bulb with 3 or 4 round leaves.
+  - It looks quite odd... However, I love it from the bottom of my heart.
+  - You know what they say- "it's the inside that counts"
   responses:
   - responseText: Where am I?
     dialogueObject: {fileID: 11400000, guid: b70fab010bbf79349bcf11f4333154d2, type: 2}

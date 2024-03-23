@@ -22,7 +22,7 @@ MonoBehaviour:
   responses:
   - responseText: Where am I?
     dialogueObject: {fileID: 11400000, guid: b70fab010bbf79349bcf11f4333154d2, type: 2}
-  - responseText: Name it [...]?
+  - responseText: Describe it better
     dialogueObject: {fileID: 11400000, guid: 5fc58331e59a8c04391ec4b03234a3d4, type: 2}
   - responseText: What have you lost?
     dialogueObject: {fileID: 11400000, guid: b0afb55b6e8bb344886b424f2a402230, type: 2}

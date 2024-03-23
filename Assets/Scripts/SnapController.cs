@@ -148,14 +148,16 @@ public class SnapController : MonoBehaviour
         // BOTTLES PUZZLE SCENE
         if(sceneID == 10)
         {
-            // puzzle has been solved already so display after background
-            if(GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
-            {
-                backgroundAfter.SetActive(true);
-            }
-
             bottleKeyReward = GameObject.FindGameObjectWithTag("KeyReward"); // get the key object
             bottleKeyReward.SetActive(false); // deactivate key until puzzle not solved
+
+            // puzzle has been solved already so display after background
+            if (GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
+            {
+                backgroundAfter.SetActive(true);
+                // hide the key
+                bottleKeyReward.transform.localPosition = new Vector3(bottleKeyReward.transform.localPosition.x, bottleKeyReward.transform.localPosition.y, 10);
+            }
 
             // find and store reference to steam sprites
             steamLeft = GameObject.FindGameObjectWithTag("SteamL");

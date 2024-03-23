@@ -18,7 +18,7 @@ MonoBehaviour:
     I am the only inhabitant...
   - Anyway, we don't get visitors here very often.
   responses:
-  - responseText: Name it [...]?
+  - responseText: Describe it better
     dialogueObject: {fileID: 11400000, guid: 5fc58331e59a8c04391ec4b03234a3d4, type: 2}
   - responseText: What have you lost?
     dialogueObject: {fileID: 11400000, guid: b0afb55b6e8bb344886b424f2a402230, type: 2}
