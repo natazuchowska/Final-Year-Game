@@ -58,16 +58,6 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        // size down the character if going up (away), size up if going down (closer)
-        if(vertical > 0f) // away - make smaller
-        {
-            /*ChangeSize(0.99f);*/
-        }
-        else if(vertical < 0f) // closer - make bigger
-        {
-            /*ChangeSize(1.01f);*/
-        }
-
         // ----- MANAGE DIALOGUE ---------------------------------------------
 
         if(Input.GetKeyDown(KeyCode.T))
@@ -76,9 +66,7 @@ public class PlayerController : MonoBehaviour
             {
                 Interactable.Interact(this); // same as Interactable?.Interact(this) --> can then omit the 'if(Intractable != null)' as equivalent
             }
-        }
-
-        
+        } 
     }
 
     private void FixedUpdate()

@@ -7,28 +7,66 @@ using Unity.VisualScripting;
 
 public class WizardController : MonoBehaviour
 {
-    /*public GameObject uiObject;*/
-    GameObject plant;
+    private Animator animator;
+    public bool isSpeaking = false;
+    public int convoTopic;
 
-
-    void OnCollisionEnter2D(Collision2D col)
+    private void Awake()
     {
-        if (col.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Hit the character");
-            /*uiObject.SetActive(true);*/
-        }
+        animator = GetComponent<Animator>();
+    }
 
-        if(col.gameObject.CompareTag("Plant"))
-        {
-            // goToRRButton.SetActive(true); // make the navigation visible now
-            
-        }
-    }
-   /* IEnumerator WaitForSec() // wait for 4 seconds and then stop displaying the message
+    private void FixedUpdate()
     {
-        yield return new WaitForSeconds(4);
-        uiObject.SetActive(false);
+
+        // if there is a dialogueUI in the scene
+        if (GameObject.Find("DialogueCanvas") != null)
+        {
+            if (GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().isOpen == true)
+            {
+                convoTopic = GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().getTopicID(); // check which topic is chosen is convo
+                
+                SetSpeakingAnimation();
+
+                switch (convoTopic)
+                {
+                    case 0:
+                        SetTopicAnimation(0);
+                        return;
+                    case 1:
+                        SetTopicAnimation(0);
+                        return;
+                    case 2:
+                        SetTopicAnimation(0);
+                        return;
+                    case 3:
+                        SetTopicAnimation(3);
+                        return;
+                    case 4:
+                        SetTopicAnimation(4);
+                        return;
+                }
+            }
+            else
+            {
+                SetIdleAnimation();
+            }
+        }
+       
     }
-*/
+
+    private void SetSpeakingAnimation() // make character speak when dialogue window open
+    {
+        animator.SetBool("isSpeaking", true);
+    }
+
+    private void SetIdleAnimation() // make character speak when dialogue window open
+    {
+        animator.SetBool("isSpeaking", false);
+    }
+
+    private void SetTopicAnimation(int topic)
+    {
+        animator.SetInteger("convoTopic", topic);
+    }
 }

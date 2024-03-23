@@ -20,6 +20,8 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private AudioSource topic4;
     [SerializeField] public AudioSource speakNow;
 
+    GameObject Character;
+
     int ID;
 
     DialogueOrderManager recordOrder; // to store picked order of responses (topics)
@@ -123,5 +125,10 @@ public class DialogueUI : MonoBehaviour
 
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
+    }
+
+    public int getTopicID()
+    {
+        return ID;
     }
 }

@@ -29,9 +29,9 @@ public class SnapController : MonoBehaviour
     [SerializeField] public Button goThruDoorButton;
 
     //instantiate key slots to false
-    public static bool keySlot1 = false;
-    public static bool keySlot2 = false;
-    public static bool keySlot3 = false;
+    public static bool keySlot1;
+    public static bool keySlot2;
+    public static bool keySlot3;
 
     // ------------------------------------------------------------------------------
 
