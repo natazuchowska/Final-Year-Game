@@ -11,7 +11,7 @@ public class DialogueUI : MonoBehaviour
     public bool isOpen { get; private set; }
 
     private ResponseHandler responseHandler;
-    private TypeWriterEffect typeWriterEffect;
+    public TypeWriterEffect typeWriterEffect;
 
     [SerializeField] private AudioSource characterVoice;
     [SerializeField] private AudioSource topic1;
@@ -73,6 +73,11 @@ public class DialogueUI : MonoBehaviour
 
     public IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
     {
+        if (GameObject.Find("Character") != null)
+        {
+            GameObject.Find("Character").GetComponent<WizardController>().SetSpeakingAnimation();
+        }
+
         for (int i = 0; i<dialogueObject.Dialogue.Length; i++)
         {
             string dialogue = dialogueObject.Dialogue[i];
@@ -89,8 +94,13 @@ public class DialogueUI : MonoBehaviour
 
         if(dialogueObject.HasResponses)
         {
-
             responseHandler.ShowResponses(dialogueObject.Responses); // show responses if there are any
+
+            if (GameObject.Find("Character") != null)
+            {
+                GameObject.Find("Character").GetComponent<WizardController>().SetTopicAnimation(0);
+                GameObject.Find("Character").GetComponent<WizardController>().SetIdleAnimation();
+            }
         }
         else
         { 
@@ -99,6 +109,8 @@ public class DialogueUI : MonoBehaviour
             recordOrder.PrintChosenOrder(); // show order of topics chosen by player
         }
         speakNow.Pause();
+
+        
     }
 
     private IEnumerator RunTypingEffect(string dialogue)

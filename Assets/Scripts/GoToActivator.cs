@@ -8,10 +8,25 @@ public class GoToActivator : MonoBehaviour
 {
     [SerializeField] public Button goToButton;
 
+    [SerializeField] GameObject bgAfter;
+    [SerializeField] GameObject bgBefore;
+
+    int flag = 0;
+
     // hide goToButtons by default
     private void Awake()
     {
-        // goToButton.interactable = false;
+        bgAfter.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if(GameManager.plantGiven == true && flag == 0)
+        {
+            bgAfter.SetActive(true);
+            bgBefore.SetActive(false);
+            flag = 1;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

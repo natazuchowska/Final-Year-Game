@@ -25,8 +25,8 @@ public class WizardController : MonoBehaviour
             if (GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().isOpen == true)
             {
                 convoTopic = GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().getTopicID(); // check which topic is chosen is convo
-                
-                SetSpeakingAnimation();
+             
+                // SetSpeakingAnimation();
 
                 switch (convoTopic)
                 {
@@ -55,17 +55,17 @@ public class WizardController : MonoBehaviour
        
     }
 
-    private void SetSpeakingAnimation() // make character speak when dialogue window open
+    public void SetSpeakingAnimation() // make character speak when dialogue window open
     {
         animator.SetBool("isSpeaking", true);
     }
 
-    private void SetIdleAnimation() // make character speak when dialogue window open
+    public void SetIdleAnimation() // make character speak when dialogue window open
     {
         animator.SetBool("isSpeaking", false);
     }
 
-    private void SetTopicAnimation(int topic)
+    public void SetTopicAnimation(int topic)
     {
         animator.SetInteger("convoTopic", topic);
     }
