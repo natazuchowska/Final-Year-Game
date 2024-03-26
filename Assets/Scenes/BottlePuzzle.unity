@@ -1379,6 +1379,10 @@ MonoBehaviour:
   audioPlayer: {fileID: 0}
   goBackButton: {fileID: 3274988348697762681}
   goThruDoorButton: {fileID: 0}
+  key1prev: {fileID: 0}
+  key2prev: {fileID: 0}
+  key3prev: {fileID: 0}
+  backgroundAfter: {fileID: 277505090}
   keyInserted: {fileID: 0}
   keyInserted1: {fileID: 0}
   keyInserted2: {fileID: 0}

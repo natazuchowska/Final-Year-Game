@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DialogueActivator : MonoBehaviour, IInteractable // make the class implement the Interactable interface
 {
-    [SerializeField] private DialogueObject dialogueObject;
+    [SerializeField] public DialogueObject dialogueObject;
     // DialogueUI dialogueUI;
 
     public GameObject dialogueBackground;

@@ -69,7 +69,7 @@ public class SnapController : MonoBehaviour
     GameObject bottleMprev;
     GameObject bottleRprev;
 
-    GameObject backgroundAfter; // to change the background when puzzle solved
+    [SerializeField] GameObject backgroundAfter; // to change the background when puzzle solved
 
     // ------------------------------------------------------------------------------
 
@@ -153,12 +153,6 @@ public class SnapController : MonoBehaviour
             {
                 keyInserted2.SetActive(true);
             }
-
-            // key2prev = GameObject.Find("keyTop");
-            // key2prev.SetActive(false);
-
-            // key3prev = GameObject.Find("keyBottom");
-            // key3prev.SetActive(false);
         }
 
         // BOTTLES PUZZLE SCENE
@@ -166,6 +160,11 @@ public class SnapController : MonoBehaviour
         {
             bottleKeyReward = GameObject.FindGameObjectWithTag("KeyReward"); // get the key object
             bottleKeyReward.SetActive(false); // deactivate key until puzzle not solved
+
+            // find and store reference to steam sprites
+            steamLeft = GameObject.FindGameObjectWithTag("SteamL");
+            steamMid = GameObject.FindGameObjectWithTag("SteamM");
+            steamRight = GameObject.FindGameObjectWithTag("SteamR");
 
             // puzzle has been solved already so display after background
             if (GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
@@ -179,15 +178,33 @@ public class SnapController : MonoBehaviour
                 bottleKeyReward.transform.localPosition = new Vector3(bottleKeyReward.transform.localPosition.x, bottleKeyReward.transform.localPosition.y, 10);
             }
 
-            // find and store reference to steam sprites
-            steamLeft = GameObject.FindGameObjectWithTag("SteamL");
-            steamMid = GameObject.FindGameObjectWithTag("SteamM");
-            steamRight = GameObject.FindGameObjectWithTag("SteamR");
-
             // set to be visible on start
-            steamLeft.SetActive(true);
-            steamMid.SetActive(true);
-            steamRight.SetActive(true);
+            if(!bottleSlot1)
+            {
+                steamLeft.SetActive(true);
+            }
+            else
+            {
+                steamLeft.SetActive(false);
+            }
+
+            if(!bottleSlot2)
+            {
+                steamMid.SetActive(true);
+            }
+            else
+            {
+                steamMid.SetActive(false);
+            }
+
+            if(!bottleSlot3)
+            {
+                steamRight.SetActive(true);
+            }
+            else
+            {
+                steamRight.SetActive(false);
+            }
 
             bottleLprev = GameObject.Find("leftBottle");
             bottleMprev = GameObject.Find("middleBottle");
@@ -232,7 +249,7 @@ public class SnapController : MonoBehaviour
                 }
             }
 
-            backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // open little door revealing the key
+            // backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // open little door revealing the key
             backgroundAfter.SetActive(false);
         }
 
@@ -255,6 +272,23 @@ public class SnapController : MonoBehaviour
 
     private void Start()
     {
+        if(sceneID == 10)
+        {
+            // backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // open little door revealing the key
+
+            // puzzle has been solved already so display after background
+            if (GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
+            {
+                backgroundAfter.SetActive(true);
+                steamLeft.SetActive(false);
+                steamMid.SetActive(false);
+                steamRight.SetActive(false);
+
+                // hide the key
+                bottleKeyReward.transform.localPosition = new Vector3(bottleKeyReward.transform.localPosition.x, bottleKeyReward.transform.localPosition.y, 10);
+            }
+        }
+
         if(sceneID == 14)
         {
             if (k1D != 0 && keySlot1 == false) // if key was previously droped in the scene render it when entered again

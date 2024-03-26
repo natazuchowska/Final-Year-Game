@@ -29,6 +29,10 @@ public class PlayerController : MonoBehaviour
 
     public DialogueUI DialogueUI => dialogueUI; // getter for dialogueUI
 
+    public bool canTalkRn = false; // check if player can talk to a character (flag)
+
+    [SerializeField] GameObject dialogueBackground;
+
     public IInteractable Interactable { get; set; }
 
     private void Awake()
@@ -60,13 +64,30 @@ public class PlayerController : MonoBehaviour
 
         // ----- MANAGE DIALOGUE ---------------------------------------------
 
-        if(Input.GetKeyDown(KeyCode.T))
+        // get the mouse position
+
+       
+        
+        /*if (Input.GetKeyDown(KeyCode.T))
         {
             if(Interactable != null)
             {
                 Interactable.Interact(this); // same as Interactable?.Interact(this) --> can then omit the 'if(Intractable != null)' as equivalent
             }
-        } 
+        } */
+    }
+
+    public void TalkToCharacter()
+    {
+        if(GameObject.Find("DialogueCircle").GetComponent<SpeechBubbleManager>().inArea == true)
+        {
+            // dialogueBackground = GameObject.Find("talking_background");
+            dialogueBackground.SetActive(true);
+
+            DialogueObject dialogueObject = GameObject.Find("DialogueCircle").GetComponent<DialogueActivator>().dialogueObject;
+            this.DialogueUI.ShowDialogue(dialogueObject);
+            // Interactable.Interact(this); // same as Interactable?.Interact(this) --> can then omit the 'if(Intractable != null)' as equivalent
+        }
     }
 
     private void FixedUpdate()

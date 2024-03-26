@@ -36,13 +36,7 @@ public class CursorChangeObject : MonoBehaviour
         whichCursor = 3;
     }
 
-    private void Update()
-    {
-        // objectTag = this.gameObject.tag; // store the tag of this gameobject
-        // whichCursor = DecideCursor();
-    }
-
-    int DecideCursor()
+    public int DecideCursor()
     {
         Debug.Log("object tag: " + objectTag);
 
@@ -78,7 +72,21 @@ public class CursorChangeObject : MonoBehaviour
         }
         else if (objectTag == "Character")
         {
-            // textLabel.SetActive(true);
+            if(sceneID == 0)
+            {
+                Debug.Log("player in area?: " + GameObject.Find("DialogueCircle").GetComponent<SpeechBubbleManager>().inArea);
+
+                if (GameObject.Find("DialogueCircle").GetComponent<SpeechBubbleManager>().inArea == true)
+                {
+                    return 3;
+                }
+
+                if (GameObject.Find("DialogueCircle").GetComponent<SpeechBubbleManager>().inArea == false)
+                {
+                    return 4;
+                }
+            }
+            
             return 3;
         }
         else

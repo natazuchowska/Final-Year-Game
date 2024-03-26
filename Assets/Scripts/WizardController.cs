@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.InputSystem;
 
 public class WizardController : MonoBehaviour
 {
@@ -11,13 +12,34 @@ public class WizardController : MonoBehaviour
     public bool isSpeaking = false;
     public int convoTopic;
 
+    private Camera mainCamera;
+
+    [SerializeField] GameObject player;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+
     }
 
     private void FixedUpdate()
     {
+        /*if (GameObject.Find("GameManager").GetComponent<GameManager>().sceneID == 0)
+        {
+            var rayHit = Physics2D.GetRayIntersection(mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
+
+            if (!rayHit.collider) { return; }
+
+            if (rayHit.collider.gameObject.CompareTag("Character"))
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().canTalkRn = true;
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().canTalkRn = false;
+            }
+        }*/
+
 
         // if there is a dialogueUI in the scene
         if (GameObject.Find("DialogueCanvas") != null)
@@ -53,6 +75,11 @@ public class WizardController : MonoBehaviour
             }
         }
        
+    }
+
+    private void OnMouseDown()
+    {
+        player.GetComponent<PlayerController>().TalkToCharacter();
     }
 
     public void SetSpeakingAnimation() // make character speak when dialogue window open

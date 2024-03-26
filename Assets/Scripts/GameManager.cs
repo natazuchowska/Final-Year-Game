@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
      * 15 -> basement DOOR (2) /->snap slots
      ------------------------------------------ */
 
-    [SerializeField] private int sceneID; // store the id of the current scene
+    [SerializeField] public int sceneID; // store the id of the current scene
     [SerializeField] public int previousSceneID; // store the id of the previous scene
 
 
