@@ -11,12 +11,17 @@ public class GoToActivator : MonoBehaviour
     [SerializeField] GameObject bgAfter;
     [SerializeField] GameObject bgBefore;
 
+    [SerializeField] GameObject thankYouMessage;
+
     int flag = 0;
 
     // hide goToButtons by default
     private void Awake()
     {
         bgAfter.SetActive(false);
+        // thankYouMessage = GameObject.Find("thank_you");
+
+        thankYouMessage.SetActive(false);
     }
 
     private void Update()
@@ -25,6 +30,10 @@ public class GoToActivator : MonoBehaviour
         {
             bgAfter.SetActive(true);
             bgBefore.SetActive(false);
+
+            thankYouMessage.SetActive(true);
+            // GameObject.Find("thank_you").SetActive(true);
+
             flag = 1;
         }
     }

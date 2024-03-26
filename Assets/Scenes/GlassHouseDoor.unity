@@ -681,13 +681,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6600540431325066746, guid: a81caa2bb6b883f4fb53e4fe8cab8bdc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a81caa2bb6b883f4fb53e4fe8cab8bdc, type: 3}
+--- !u!1 &797397745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6600540431325066746, guid: a81caa2bb6b883f4fb53e4fe8cab8bdc, type: 3}
+  m_PrefabInstance: {fileID: 797397744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1276663920 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 237024998100293648, guid: 9b5120d613b0d7645b1bc652d1f0db1c, type: 3}
@@ -921,9 +926,12 @@ MonoBehaviour:
   - {fileID: 3107734907563266804, guid: 343f22d293316e844846da8cefc219d6, type: 3}
   - {fileID: 1349240246215125837, guid: 60e0f068e2183b24597f30ddacd12f75, type: 3}
   snapRange: 2
+  audioPlayer: {fileID: 1853229879}
   goBackButton: {fileID: 1541729030}
   goThruDoorButton: {fileID: 1276663920}
-  audioPlayer: {fileID: 1853229879}
+  key1prev: {fileID: 797397745}
+  key2prev: {fileID: 0}
+  key3prev: {fileID: 0}
   keyInserted: {fileID: 1405868220}
   keyInserted1: {fileID: 1405868220}
   keyInserted2: {fileID: 1405868220}

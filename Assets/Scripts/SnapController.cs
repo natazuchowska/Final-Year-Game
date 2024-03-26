@@ -29,9 +29,18 @@ public class SnapController : MonoBehaviour
     [SerializeField] public Button goThruDoorButton;
 
     //instantiate key slots to false
-    public static bool keySlot1;
-    public static bool keySlot2;
-    public static bool keySlot3;
+    public static bool keySlot1 = false;
+    public static bool keySlot2 = false;
+    public static bool keySlot3 = false;
+
+    // check if key dropped in a door scene
+    public static int k1D = 0;
+    public static int k2D = 0;
+    public static int k3D = 0;
+
+    [SerializeField] GameObject key1prev;
+    [SerializeField] GameObject key2prev;
+    [SerializeField] GameObject key3prev;
 
     // ------------------------------------------------------------------------------
 
@@ -117,6 +126,9 @@ public class SnapController : MonoBehaviour
         {
             keyInserted = GameObject.FindGameObjectWithTag("KeyInserted"); // get reference to key sprite after inserting it to lock
             keyInserted.SetActive(false); // hide as long as key not inserted correctly
+
+            // key1prev = GameObject.Find("glasshouseKey");
+            // key1prev.SetActive(false);
         }
         if (sceneID == 15) // 2nd door
         {
@@ -142,7 +154,11 @@ public class SnapController : MonoBehaviour
                 keyInserted2.SetActive(true);
             }
 
-            keyInserted2.SetActive(false);
+            // key2prev = GameObject.Find("keyTop");
+            // key2prev.SetActive(false);
+
+            // key3prev = GameObject.Find("keyBottom");
+            // key3prev.SetActive(false);
         }
 
         // BOTTLES PUZZLE SCENE
@@ -155,6 +171,10 @@ public class SnapController : MonoBehaviour
             if (GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
             {
                 backgroundAfter.SetActive(true);
+                steamLeft.SetActive(false);
+                steamMid.SetActive(false);
+                steamRight.SetActive(false);
+
                 // hide the key
                 bottleKeyReward.transform.localPosition = new Vector3(bottleKeyReward.transform.localPosition.x, bottleKeyReward.transform.localPosition.y, 10);
             }
@@ -231,6 +251,42 @@ public class SnapController : MonoBehaviour
             }
         }
 
+    }
+
+    private void Start()
+    {
+        if(sceneID == 14)
+        {
+            if (k1D != 0 && keySlot1 == false) // if key was previously droped in the scene render it when entered again
+            {
+                key1prev.SetActive(true);
+            }
+            else
+            {
+                key1prev.SetActive(false);
+            }
+        }
+
+        if(sceneID == 15)
+        {
+            if (k2D != 0 && keySlot2 == false) // if key was previously droped in the scene render it when entered again
+            {
+                key2prev.SetActive(true);
+            }
+            else
+            {
+                key2prev.SetActive(false);
+            }
+
+            if (k3D != 0 && keySlot3 == false) // if key was previously droped in the scene render it when entered again
+            {
+                key3prev.SetActive(true);
+            }
+            else 
+            {
+                key3prev.SetActive(false);
+            }
+        }
     }
 
     // wken key is dropped out of inventory
@@ -311,7 +367,7 @@ public class SnapController : MonoBehaviour
                     if (snapIndex == 0) // top lock
                     {
                         // check if correct key
-                        if (draggable.gameObject.name == "keyTop(Clone)")
+                        if (draggable.gameObject.name == "keyTop(Clone)" || draggable.gameObject.name == "keyTop")
                         {
                             keySlot2 = true;
                             Debug.Log("top key OK");
@@ -331,7 +387,7 @@ public class SnapController : MonoBehaviour
                     if (snapIndex == 1) // bottom lock
                     {
                         // check if correct key
-                        if (draggable.gameObject.name == "keyBottom(Clone)")
+                        if (draggable.gameObject.name == "keyBottom(Clone)" || draggable.gameObject.name == "keyBottom")
                         {
                             keySlot3 = true;
                             Debug.Log("bottom key OK");
@@ -637,6 +693,22 @@ public class SnapController : MonoBehaviour
                 return;
             case 3:
                 bRD = 1;
+                return;
+        }
+    }
+
+    public static void markKeyDropped(int i)
+    {
+        switch (i)
+        {
+            case 1:
+                k1D = 1; // 1st door
+                return;
+            case 2:
+                k2D = 1; // 2nd door top lock
+                return;
+            case 3:
+                k3D = 1; // 2nd door bottom lock
                 return;
         }
     }

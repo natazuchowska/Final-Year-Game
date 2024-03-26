@@ -52,7 +52,6 @@ public class Slot : MonoBehaviour
                 invCanvas.ChangeSpriteDisabled(i);
             }
         }
-        
     }
 
     public void DropItem()
@@ -64,6 +63,8 @@ public class Slot : MonoBehaviour
             if(!child.CompareTag("Cross") && slotActiveToUse)
             {
                 child.GetComponent<Spawn>().SpawnDroppedItem();
+                Debug.Log("key child name is: " + child.name);
+                Debug.Log("key transform name is: " + child.name);
 
                 if (child.name.Equals("LeftBottleButton(Clone)"))
                 {
@@ -83,16 +84,34 @@ public class Slot : MonoBehaviour
                     SnapController.markBottleDropped(3);
                 }
 
+                if (child.name.Equals("Key1Button(Clone)"))
+                {
+                    // GameObject.Find("SnapPointsContainer").GetComponent<SnapController>().bottleLDropped = true;
+                    SnapController.markKeyDropped(1);
+                    Debug.Log("marking key 1 as dropped");
+                }
+
+                if (child.name.Equals("Key2Button(Clone)"))
+                {
+                    // GameObject.Find("SnapPointsContainer").GetComponent<SnapController>().bottleLDropped = true;
+                    SnapController.markKeyDropped(2);
+                    Debug.Log("marking key 2 as dropped");
+                }
+
+                if (child.name.Equals("Key3Button(Clone)"))
+                {
+                    // GameObject.Find("SnapPointsContainer").GetComponent<SnapController>().bottleLDropped = true;
+                    SnapController.markKeyDropped(3);
+                    Debug.Log("marking key3 as dropped");
+                }
+
                 GameObject.Destroy(child.gameObject);
 
                 child.name = null;
                 slotActiveToUse = false;
                 invCanvas.ChangeSpriteDisabled(i);
                 inventoryyMngr.OpenInventory(); // close inventory when item dropped
-
-
             }
-            
         }
     }
 

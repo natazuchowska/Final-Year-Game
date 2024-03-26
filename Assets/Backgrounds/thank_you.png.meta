@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7261f86fc1c3df7418b4c03534cf1757
+guid: 532610aa7af13ee46ae146f6c58ea115
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3797491604427515306
-    second: top_floor_glasshouse (8)_0
+      213: -5255103153814801158
+    second: default_scene (4)_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: top_floor_glasshouse (8)_0
+      name: default_scene (4)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2360
-        height: 1640
+        x: 1189
+        y: 970
+        width: 261
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65ad19871899c4bc0800000000000000
-      internalID: -3797491604427515306
+      spriteID: af475da368f1217b0800000000000000
+      internalID: -5255103153814801158
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      top_floor_glasshouse (8)_0: -3797491604427515306
+      default_scene (4)_0: -5255103153814801158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
