@@ -20,6 +20,11 @@ public class SpeechBubbleManager : MonoBehaviour
         character = GameObject.Find("Character");
     }
 
+    private void Update()
+    {
+        character = GameObject.Find("Character");
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -31,7 +36,10 @@ public class SpeechBubbleManager : MonoBehaviour
             inArea = true;
             // cmScript.ChangeCursor(3);
 
-            character.GetComponent<CursorChangeObject>().DecideCursor();
+            if(character != null)
+            {
+                character.GetComponent<CursorChangeObject>().DecideCursor();
+            }
         }
     }
 
@@ -44,8 +52,10 @@ public class SpeechBubbleManager : MonoBehaviour
 
             inArea = false;
             // cmScript.ChangeCursor(4);
-
-            character.GetComponent<CursorChangeObject>().DecideCursor();
+            if(character != null)
+            {
+                character.GetComponent<CursorChangeObject>().DecideCursor();
+            }
         }
     }
 

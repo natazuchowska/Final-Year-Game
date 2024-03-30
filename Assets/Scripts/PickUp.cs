@@ -18,20 +18,33 @@ public class PickUp : MonoBehaviour
 
     private GameManager gm; // reference to gamemanager script
 
-    // public AudioSource audioSource; // to play pickup sound on item pickup
+    // [SerializeField] private GameObject invIcon;
+    [SerializeField] private InventoryManager invMngr;
+
+    public AudioSource pickUpAudio; // to play pickup sound on item pickup
 
     private void Awake()
     {
         mainCamera = Camera.main;
+        //invIcon = GameObject.Find("InventoryButtonActive");
     }
 
     private void Start()
     {
+        /*if (invIcon != null)
+        {
+            invIcon.SetActive(false);
+        }
+*/
         inventory = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Inventory>();
         pickUpItem = this.gameObject;
 
         pickUpButton = pickUpItem.GetComponent<Button>(); // get the button of the collectible object
+        pickUpAudio = GameObject.Find("PickupAudio").GetComponent<AudioSource>();
+
+        invMngr = GameObject.Find("InventoryButton").GetComponent<InventoryManager>(); // mngr script attached to inventory icon
     }
+
 
     // add to inventory on mouse CLICK
     private void OnMouseDown()
@@ -86,10 +99,26 @@ public class PickUp : MonoBehaviour
 
                 if (inventory.isFull[i] == false) // if the slot empty add the item to it
                 {
-                    // ISSUE --> when item dropped and trying to pick up again - Null Reference -> AudioSource is not initialized eith an item -> how to do it?
-                    // audioSource.Play(); // play pickup sound
+                    // *** REFERENCE THE INVENTORY ICON HERE AND CHANGE ITS COLOUR ON EVERY PICKUP (and possibly play pickup sound)
+                    //invIcon.GetComponent<Renderer>().material.color = Color.green;
+                    /*Color addColour = Color.green;
+                    ColorBlock cb = invIcon.colors;
+
+                    cb.normalColor = addColour;*/
+                    
+                    /*StartCoroutine(SetIconActive(true));
+                    StartCoroutine(SetIconActive(false));
+*/
+
+                    //invIcon.SetActive(false);
+
+                    // cb.normalColor = Color.white;
+
+                    pickUpAudio.Play(); // play pickup sound
 
                     inventory.isFull[i] = true; //set slot to full now
+
+                    invMngr.HighlightButton(); // highlight the inventory icon
 
                     Debug.Log("adding item to slot " + i);
 
@@ -106,7 +135,7 @@ public class PickUp : MonoBehaviour
     {
         // Debug.Log("Mouse over interactable object!!!!");
 
-        if (gameObject.CompareTag("Collectible"))
+        if (gameObject.CompareTag("Collectible") || gameObject.CompareTag("Bottle"))
         {
             // CHANGE CURSON ICON HERE (to show that obj is collectible)
             gameObject.GetComponent<Renderer>().material.color = Color.grey;
@@ -119,9 +148,17 @@ public class PickUp : MonoBehaviour
     {
         // Debug.Log("Mouse NOT over interactable object ANYMORE!!!!");
 
-        if (gameObject.CompareTag("Collectible"))
+        if (gameObject.CompareTag("Collectible") || gameObject.CompareTag("Bottle"))
         {
             gameObject.GetComponent<Renderer>().material.color = Color.white;
         }
     }
+
+/*    IEnumerator SetIconActive(bool activate) 
+    {
+        Debug.Log("Coroutine called");
+
+        invIcon.SetActive(activate);
+        yield return new WaitForSeconds(2);
+    }*/
 }

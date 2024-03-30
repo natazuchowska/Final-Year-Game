@@ -41,6 +41,7 @@ TagManager:
   - Slot
   - AfterInsert
   - CharacterTalkCircle
+  - DialogueBackground
   layers:
   - Default
   - TransparentFX

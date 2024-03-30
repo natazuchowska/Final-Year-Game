@@ -15,14 +15,6 @@ public class CursorChangeObject : MonoBehaviour
     // [SerializeField] public GameObject textLabel;
     int sceneID;
 
-    private void Awake()
-    {
-        if (sceneID == 1 || sceneID == 11) // the only scenes with characters
-        {
-            // talkLabel = GameObject.FindGameObjectWithTag("TalkLabel");
-            // textLabel.SetActive(false);
-        }
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -72,7 +64,7 @@ public class CursorChangeObject : MonoBehaviour
         }
         else if (objectTag == "Character")
         {
-            if(sceneID == 0)
+            if(sceneID == 0 || sceneID == 11)
             {
                 Debug.Log("player in area?: " + GameObject.Find("DialogueCircle").GetComponent<SpeechBubbleManager>().inArea);
 

@@ -12,6 +12,8 @@ public class Slot : MonoBehaviour
     public int i; // slot id
 
     public AudioSource audioPlayer;
+    public AudioSource audioPlayerInactive;
+
     private GameObject useIcon;
 
     private ChangeSprite invCanvas;
@@ -30,6 +32,9 @@ public class Slot : MonoBehaviour
         inventoryyMngr = GameObject.Find("InventoryButton").GetComponent<InventoryManager>();
 
         invCanvas = GameObject.Find("InventoryCanvas").GetComponent<ChangeSprite>(); // script to change arrows sprites to interactive
+
+        audioPlayer = GameObject.Find("RespawnItemAudio").GetComponent<AudioSource>();
+        audioPlayerInactive = GameObject.Find("RespawnItemAudioInactive").GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -56,7 +61,7 @@ public class Slot : MonoBehaviour
 
     public void DropItem()
     {
-        audioPlayer.Play(); // play respawn sound 
+        
 
         foreach(Transform child in transform) // for each child in slot
         {
@@ -105,12 +110,17 @@ public class Slot : MonoBehaviour
                     Debug.Log("marking key3 as dropped");
                 }
 
+                audioPlayer.Play(); // play respawn sound 
                 GameObject.Destroy(child.gameObject);
 
                 child.name = null;
                 slotActiveToUse = false;
                 invCanvas.ChangeSpriteDisabled(i);
                 inventoryyMngr.OpenInventory(); // close inventory when item dropped
+            }
+            else if(!slotActiveToUse)
+            {
+                audioPlayerInactive.Play();
             }
         }
     }

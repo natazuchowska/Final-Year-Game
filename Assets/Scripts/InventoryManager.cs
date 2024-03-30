@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,15 +13,23 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField] GameObject optionsCanvas;
 
+    [SerializeField] public GameObject invIcon;
+    [SerializeField] public Button invButton;
+
     GameObject player;
     bool playerIsMoving;
 
     bool gamePaused; // if pausescreen displayed we want to close the inventory
 
+    public float maxRotationTimer = 0.5f;
+
     private void Awake()
     {
         inventoryCanvas = GameObject.FindGameObjectWithTag("Inventory"); // find the reference to inventory canvas
         player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
+
+        invIcon = GameObject.Find("InventoryButton");
+        invButton = GameObject.Find("InventoryButton").GetComponent<Button>();
     }
 
     private void Start()
@@ -91,6 +100,49 @@ public class InventoryManager : MonoBehaviour
             }
 
             isOpen = !isOpen;
+        }
+    }
+
+    public void HighlightButton()
+    {
+        Debug.Log("HighlightButton() executed");
+
+
+        StartCoroutine(WaitForSec());
+        
+    }
+
+    IEnumerator WaitForSec()
+    {
+        Debug.Log("WaitForSec() executed");
+
+        invButton.interactable = false;
+        // invIcon.transform.localScale = new Vector3(1.7f, 1.7f, 1);
+
+        StartCoroutine(RotateIcon());
+
+        yield return new WaitForSeconds(0.5f);
+
+        invIcon.transform.rotation = Quaternion.identity; // reset the rotation 
+        invButton.interactable = true;
+        // invIcon.transform.localScale = new Vector3(1.5f, 1.5f, 1);
+    }
+
+    IEnumerator RotateIcon()
+    {
+        float timer = 0f;
+        while (timer <= maxRotationTimer)
+        {
+            if(timer < maxRotationTimer/2)
+            {
+                invIcon.transform.Rotate(new Vector3(0, 0, -20) * 2 * Time.deltaTime);
+            }
+            else
+            {
+                invIcon.transform.Rotate(new Vector3(0, 0, 20) * 2 * Time.deltaTime);
+            }
+            timer += Time.deltaTime;
+            yield return null;
         }
     }
 }

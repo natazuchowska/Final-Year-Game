@@ -5,13 +5,17 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
     [SerializeField] public DialogueObject dialogueObject;
     // DialogueUI dialogueUI;
 
-    public GameObject dialogueBackground;
+    [SerializeField] public GameObject dialogueBackground;
 
 
     private void Start()
     {
         // dialogueUI = GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>();
-        dialogueBackground = GameObject.Find("talking_background");
+/*
+        if(dialogueBackground = null) // not initialized yet (2nd dialogue scene)
+        {
+            dialogueBackground = GameObject.FindGameObjectWithTag("DialogueBackground");
+        }*/
 
         if(dialogueBackground != null)
         {

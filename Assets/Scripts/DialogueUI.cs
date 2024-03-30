@@ -85,7 +85,10 @@ public class DialogueUI : MonoBehaviour
     {
         if (GameObject.Find("Character") != null)
         {
-            GameObject.Find("Character").GetComponent<WizardController>().SetSpeakingAnimation();
+            if(SceneManager.GetActiveScene().buildIndex == 0) // only set animations in 1st scene
+            {
+                GameObject.Find("Character").GetComponent<WizardController>().SetSpeakingAnimation();
+            }
         }
 
         for (int i = 0; i<dialogueObject.Dialogue.Length; i++)

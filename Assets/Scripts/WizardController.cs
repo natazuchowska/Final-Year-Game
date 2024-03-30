@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class WizardController : MonoBehaviour
 {
@@ -18,33 +19,21 @@ public class WizardController : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            animator = GetComponent<Animator>();
+        }
+
+        player = GameObject.FindGameObjectWithTag("Player");
 
     }
 
     private void FixedUpdate()
     {
-        /*if (GameObject.Find("GameManager").GetComponent<GameManager>().sceneID == 0)
-        {
-            var rayHit = Physics2D.GetRayIntersection(mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-
-            if (!rayHit.collider) { return; }
-
-            if (rayHit.collider.gameObject.CompareTag("Character"))
-            {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().canTalkRn = true;
-            }
-            else
-            {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().canTalkRn = false;
-            }
-        }*/
-
-
         // if there is a dialogueUI in the scene
         if (GameObject.Find("DialogueCanvas") != null)
         {
-            if (GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().isOpen == true)
+            if (GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().isOpen == true && SceneManager.GetActiveScene().buildIndex == 0)
             {
                 convoTopic = GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().getTopicID(); // check which topic is chosen is convo
              
@@ -94,6 +83,9 @@ public class WizardController : MonoBehaviour
 
     public void SetTopicAnimation(int topic)
     {
-        animator.SetInteger("convoTopic", topic);
+        if(SceneManager.GetActiveScene().buildIndex == 0) // only animate in the first scene
+        {
+            animator.SetInteger("convoTopic", topic);
+        }
     }
 }

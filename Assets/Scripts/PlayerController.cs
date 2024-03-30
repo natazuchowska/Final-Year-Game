@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using System;
 using Unity.VisualScripting;
 using System.Xml.Linq;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -33,6 +34,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] GameObject dialogueBackground;
 
+    int sceneID;
+
     public IInteractable Interactable { get; set; }
 
     private void Awake()
@@ -40,11 +43,19 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+        // Update is called once per frame
+        void Update()
     {
+        sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of current scene    
+
+        if((sceneID == 0 || sceneID == 11) && dialogueBackground == null)
+        {
+            dialogueBackground = GameObject.Find("DialogueCircle").GetComponent<DialogueActivator>().dialogueBackground;
+            // dialogueBackground.SetActive(false);
+        }
+
         // if there is a dialogueUI in the scene
-        if(GameObject.Find("DialogueCanvas") != null)
+        if (GameObject.Find("DialogueCanvas") != null)
         {
             dialogueUI = GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>();
             if (dialogueUI.isOpen) return; // do not move while the dialogue window is open
@@ -79,10 +90,17 @@ public class PlayerController : MonoBehaviour
 
     public void TalkToCharacter()
     {
+        Debug.Log("CALLED TALK TO CHARACTER METHOD");
+
         if(GameObject.Find("DialogueCircle").GetComponent<SpeechBubbleManager>().inArea == true)
         {
             // dialogueBackground = GameObject.Find("talking_background");
-            dialogueBackground.SetActive(true);
+            // dialogueBackground.SetActive(true);
+
+            if (sceneID == 0 || sceneID == 11)
+            {
+                dialogueBackground.SetActive(true);
+            }
 
             DialogueObject dialogueObject = GameObject.Find("DialogueCircle").GetComponent<DialogueActivator>().dialogueObject;
             this.DialogueUI.ShowDialogue(dialogueObject);
