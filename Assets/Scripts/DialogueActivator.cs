@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueActivator : MonoBehaviour, IInteractable // make the class implement the Interactable interface
 {
@@ -44,7 +45,20 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
 
     public void Interact(PlayerController player)
     {
-        dialogueBackground.SetActive(true);
-        player.DialogueUI.ShowDialogue(dialogueObject);
+        if(SceneManager.GetActiveScene().buildIndex == 11) // swimming pool -> disable fish talking if light turned off
+        {
+            if(!GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().checkIfSolved(2))
+            {
+                dialogueBackground.SetActive(true);
+                player.DialogueUI.ShowDialogue(dialogueObject);
+            }
+
+        }
+        else
+        {
+            dialogueBackground.SetActive(true);
+            player.DialogueUI.ShowDialogue(dialogueObject);
+        }
+        
     }
 }

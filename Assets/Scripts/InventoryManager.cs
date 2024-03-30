@@ -36,8 +36,8 @@ public class InventoryManager : MonoBehaviour
     {
         optionsCanvas = GameObject.Find("OptionsCanvas");
 
-        inventoryCanvas.SetActive(false); // hide inentory by default
-        isOpen = false;
+       /* inventoryCanvas.SetActive(false); // hide inentory by default
+        isOpen = false;*/
     }
 
     void OnEnable()
@@ -47,18 +47,18 @@ public class InventoryManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        isOpen = true;
-        OpenInventory();
+        isOpen = false;
+        inventoryCanvas.SetActive(false);
     }
 
     private void Update()
     {
     
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             // open inventory with inventory button or space key
             OpenInventory();
-        }
+        }*/
 
         // only do this if there is a player sprite in the current scene
         if (player.activeInHierarchy == true)

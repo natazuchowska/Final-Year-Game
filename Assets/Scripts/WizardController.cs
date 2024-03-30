@@ -78,7 +78,11 @@ public class WizardController : MonoBehaviour
 
     public void SetIdleAnimation() // make character speak when dialogue window open
     {
-        animator.SetBool("isSpeaking", false);
+        if (SceneManager.GetActiveScene().buildIndex == 0) // only animate in the first scene
+        {
+            animator.SetBool("isSpeaking", false);
+        }
+        
     }
 
     public void SetTopicAnimation(int topic)

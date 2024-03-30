@@ -17,14 +17,17 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
     private float vertical;
 
-    private float speed = 2f;
+    public float speed = 2.4f;
     //private float jumpingPower = 8f;
     public bool isFacingRight = true;
 
     private Animator animator;
     public bool isMoving = false; // to set walking animation (was private before but inventory needs to access it to close on movement)
     //private bool isInAir = false; // to set jumping animation
-    private bool isThinking = false; //to set thinking animation
+    public bool isThinking = false; //to set thinking animation
+
+    private AudioSource walkAudio; // walking sound
+    private bool walkSoundPlaying = false;
 
     [SerializeField] private DialogueUI dialogueUI; // reference to interact with dialogues
 
@@ -41,6 +44,8 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+
+        walkAudio = this.GetComponent<AudioSource>();
     }
 
         // Update is called once per frame
@@ -100,6 +105,9 @@ public class PlayerController : MonoBehaviour
             if (sceneID == 0 || sceneID == 11)
             {
                 dialogueBackground.SetActive(true);
+
+                isThinking = true;
+                // SetThinkingAnimation();
             }
 
             DialogueObject dialogueObject = GameObject.Find("DialogueCircle").GetComponent<DialogueActivator>().dialogueObject;
@@ -111,13 +119,29 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         SetWalkingAnimation();
+        SetThinkingAnimation();
+
+        if(isMoving && !walkSoundPlaying)
+        {
+            walkAudio.Play();
+            walkSoundPlaying = true;
+        }
+        else
+        {
+            walkAudio.Pause();
+            walkSoundPlaying = false;
+        }
     }
 
     private void SetWalkingAnimation() // set the walk animation if player is moving (isMoving == true)
     {
-
         isMoving = rb.velocity != Vector2.zero;
         animator.SetBool("isMoving", isMoving);
+    }
+
+    private void SetThinkingAnimation() // set the thinking animation when talking to another character
+    {
+        animator.SetBool("isThinking", isThinking);
     }
 
 
@@ -167,6 +191,8 @@ public class PlayerController : MonoBehaviour
     {
         horizontal = context.ReadValue<Vector2>().x;
         vertical = context.ReadValue<Vector2>().y;
+
+        isThinking = false;
     }
 
     void OnCollisionEnter2D(Collision2D col)

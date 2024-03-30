@@ -12,6 +12,10 @@ public class NavigationController : MonoBehaviour
     [SerializeField] public Button goThruDoor;
     [SerializeField] public Button goToRoom;
 
+    private bool playerInArea = false;
+
+    [SerializeField] GameObject goToText;
+
     // round room id: 1
     // glasshouse gf id: 6
 
@@ -31,16 +35,77 @@ public class NavigationController : MonoBehaviour
             doorOpen = SnapController.canGoThru2; // can go thru door? (static var controlled by door script)
         }
 
-        goThruDoor.interactable = true; // need to go to door and unlock
-        goToRoom.interactable = false; // can't go thru (door locked)
+        /*goThruDoor.interactable = true; // need to go to door and unlock
+        goToRoom.interactable = false; // can't go thru (door locked)*/
+
+        // initially hide both as player far away
+        goThruDoor.interactable = false;
+        goToRoom.interactable = false;
 
         Debug.Log(doorOpen);
 
-        if (doorOpen == true)
+        if(doorOpen == null) // if no door then same as door open
         {
-            // door now open so go straight to the next room
-            goThruDoor.interactable = false;
-            goToRoom.interactable = true;
+            doorOpen = true;
         }
+
+        if (goToText != null) // if theres a text to an arrow
+        {
+            goToText.SetActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        if(playerInArea)
+        {
+            if (goToText != null) // if theres a text to an arrow
+            {
+                goToText.SetActive(true);
+            }
+
+            if(doorOpen) // door now open so go straight to the next room
+            {
+                goToRoom.interactable = true;
+            }
+            else if(!doorOpen)  // take player to the door scene
+            {
+                goThruDoor.interactable = true;
+            }
+        }
+        else
+        {
+            if (goToText != null) // if theres a text to an arrow
+            {
+                goToText.SetActive(false);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            playerInArea = true;
+        }
+        else
+        {
+            playerInArea = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            playerInArea = false;
+            goToRoom.interactable = false;
+
+            if(goThruDoor != null)
+            {
+                goThruDoor.interactable = false;
+            }
+        }
+        
     }
 }

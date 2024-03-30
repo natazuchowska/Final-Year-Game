@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GoToActivator : MonoBehaviour
@@ -14,45 +15,81 @@ public class GoToActivator : MonoBehaviour
     [SerializeField] GameObject thankYouMessage;
 
     int flag = 0;
+    int sceneID;
 
     // hide goToButtons by default
     private void Awake()
     {
-        bgAfter.SetActive(false);
-        // thankYouMessage = GameObject.Find("thank_you");
+        sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of the scene
 
-        thankYouMessage.SetActive(false);
+        if (bgAfter != null && sceneID == 0) // initial scene
+        {
+            bgAfter.SetActive(false);
+            // thankYouMessage = GameObject.Find("thank_you");
+
+            thankYouMessage.SetActive(false);
+        }
+        
     }
 
     private void Update()
     {
-        if(GameManager.plantGiven == true && flag == 0)
+        sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of the scene
+
+        if(sceneID == 0)
         {
-            bgAfter.SetActive(true);
-            bgBefore.SetActive(false);
+            if (GameManager.plantGiven == true && flag == 0)
+            {
+                bgAfter.SetActive(true);
+                bgBefore.SetActive(false);
 
-            thankYouMessage.SetActive(true);
-            // GameObject.Find("thank_you").SetActive(true);
+                thankYouMessage.SetActive(true);
 
-            flag = 1;
+                flag = 1;
+            }
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // show buttons when player goes into a certain area (collides with button collider)
-        if (collision.CompareTag("Player") && GameManager.plantGiven == true)
+        if(sceneID == 0) // additional plant condition to check
         {
-            // goToButton.gameObject.SetActive(true); // show button upon collision with a player
-            goToButton.interactable = true; // enable navigation when plant given to wizard
+            // show buttons when player goes into a certain area (collides with button collider)
+            if (collision.CompareTag("Player") && GameManager.plantGiven == true)
+            {
+                goToButton.interactable = true; // enable navigation when plant given to wizard
+            }
+        }
+        else
+        {
+           if (collision.CompareTag("Player"))
+           {
+                goToButton.interactable = true; // enable navigation when plant given to wizard
+           }
+           else
+            {
+                goToButton.interactable = false;
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(goToButton != null && GameManager.plantGiven == true)
+        if(sceneID == 0)
         {
-           goToButton.interactable = false;
+            if (goToButton != null && GameManager.plantGiven == true)
+            {
+                goToButton.interactable = false;
+            }
         }
+        else
+        {
+            if (goToButton != null)
+            {
+                goToButton.interactable = false;
+            }
+        }
+        
     }
 }

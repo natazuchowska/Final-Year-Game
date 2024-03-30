@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     public static bool plantGiven; // has plant been given back to the wizard? if so -> unblock the left door
 
     bool isFacingRight;
-    PlayerController playerScript;
+    public PlayerController playerScript;
 
     public bool lightOn = true;
 
@@ -171,6 +171,7 @@ public class GameManager : MonoBehaviour
         {
             player.SetActive(true);
             player.transform.localPosition = new Vector3(2.1f, 1.4f, -1); // move player 
+            playerScript.speed = 2.0f; // player smaller so needs to proportionally walk a bit slower
 
             lightOn = GameObject.FindGameObjectWithTag("LampLight").GetComponent<LampController>().lightOn; // read lightOn value from lamp script
 
@@ -195,6 +196,7 @@ public class GameManager : MonoBehaviour
                 player.transform.localScale = new Vector3(-0.3f, 0.3f, 0.3f); // rescale player back to normal size
             }
 
+            playerScript.speed = 2.4f;
         }
 
         // MAIN SCENE

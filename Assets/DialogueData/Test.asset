@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   narrativeID: 0
   dialogue:
-  - Hello! I lost my plant and cannot find it anywhere :(
+  - "Hello! I lost my plant and cannot find it anywhere :( \n[press ENTER]"
   - Could you bring it to me?
   - ... Please ;(
   responses:

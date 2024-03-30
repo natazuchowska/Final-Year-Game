@@ -15,7 +15,6 @@ public class SnapController : MonoBehaviour
     public float snapRange = 0.5f;
     Vector3 initialPos;
 
-
     int sceneID; // to check which scene it is
 
     public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
@@ -81,6 +80,8 @@ public class SnapController : MonoBehaviour
     bool cableSlot3 = false;
     bool cableSlot4 = false;
 
+    GameObject puzzleSolvedBg;
+
     // -----------------------------------------------------------------------------
 
     [SerializeField] GameObject keyInserted; // sprite of the key after insertion to lock -> 1st door
@@ -113,7 +114,7 @@ public class SnapController : MonoBehaviour
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of the scene
 
         // DOOR SCENES
-        if(sceneID == 14 || sceneID == 15)
+        if (sceneID == 14 || sceneID == 15)
         {
             goBackButton.interactable = true; // can go back
             goThruDoorButton.interactable = false; // can't go thru (door locked)
@@ -136,7 +137,7 @@ public class SnapController : MonoBehaviour
             keyInserted1 = GameObject.Find("keyInserted1");
             keyInserted2 = GameObject.Find("keyInserted2");
 
-            if(keySlot2 == false)
+            if (keySlot2 == false)
             {
                 keyInserted1.SetActive(false);
             }
@@ -156,7 +157,7 @@ public class SnapController : MonoBehaviour
         }
 
         // BOTTLES PUZZLE SCENE
-        if(sceneID == 10)
+        if (sceneID == 10)
         {
             bottleKeyReward = GameObject.FindGameObjectWithTag("KeyReward"); // get the key object
             bottleKeyReward.SetActive(false); // deactivate key until puzzle not solved
@@ -179,7 +180,7 @@ public class SnapController : MonoBehaviour
             }
 
             // set to be visible on start
-            if(!bottleSlot1)
+            if (!bottleSlot1)
             {
                 steamLeft.SetActive(true);
             }
@@ -188,7 +189,7 @@ public class SnapController : MonoBehaviour
                 steamLeft.SetActive(false);
             }
 
-            if(!bottleSlot2)
+            if (!bottleSlot2)
             {
                 steamMid.SetActive(true);
             }
@@ -197,7 +198,7 @@ public class SnapController : MonoBehaviour
                 steamMid.SetActive(false);
             }
 
-            if(!bottleSlot3)
+            if (!bottleSlot3)
             {
                 steamRight.SetActive(true);
             }
@@ -215,12 +216,12 @@ public class SnapController : MonoBehaviour
             bottleRprev.SetActive(false);
 
             // if returning to the scene
-            if(bottleSlot1 == true || bLD != 0)
+            if (bottleSlot1 == true || bLD != 0)
             {
                 steamLeft.SetActive(false);
                 bottleLprev.SetActive(true);
 
-                if(bLD != 0 && !bottleSlot1)
+                if (bLD != 0 && !bottleSlot1)
                 {
                     bottleLprev.transform.localPosition = new Vector3(-7, 0, -3);
                     steamLeft.SetActive(true);
@@ -254,13 +255,13 @@ public class SnapController : MonoBehaviour
         }
 
         // ELECTRICITY (LAMP) PUZZLE SCENE
-        if(sceneID == 13)
+        if (sceneID == 13)
         {
             Debug.Log("lightOn val in electricity box: " + lightOn);
             electricityBackgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // get reference to the background
             electricityBackgroundAfter.SetActive(false); // display closed box initially
 
-           /* electricityFlow = CableFix.electricityFlow; // get the state of electricity from cable fix puzzle*/
+            /* electricityFlow = CableFix.electricityFlow; // get the state of electricity from cable fix puzzle*/
 
             if (electricityFlow == true)
             {
@@ -268,6 +269,12 @@ public class SnapController : MonoBehaviour
             }
         }
 
+        // cables puzzle scene
+        if (sceneID == 12)
+        {
+            puzzleSolvedBg = GameObject.FindGameObjectWithTag("BackgroundAfter");
+            puzzleSolvedBg.SetActive(false);
+        }
     }
 
     private void Start()
@@ -343,6 +350,24 @@ public class SnapController : MonoBehaviour
             {
                 electricityBackgroundAfter.SetActive(true); //display open box
             }
+
+            // cables puzzle scene
+            if(sceneID == 12)
+            {
+                puzzleSolvedBg.SetActive(false);
+
+                if (puzzleSolvedBg != null && GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(1))
+                {
+                    if(puzzleSolvedBg.activeSelf == false)
+                    {
+                        puzzleSolvedBg.SetActive(true);
+                        Destroy(GameObject.Find("cable1").GetComponent<CursorChangeObject>());
+                        Destroy(GameObject.Find("cable2").GetComponent<CursorChangeObject>());
+                        Destroy(GameObject.Find("cable3").GetComponent<CursorChangeObject>());
+                        Destroy(GameObject.Find("cable4").GetComponent<CursorChangeObject>());
+                    }
+                }
+            }
         }
     }
 
@@ -380,6 +405,7 @@ public class SnapController : MonoBehaviour
         if(closestSnapPoint != null && closestDistance <= snapRange /* && takenSnapPoints[snapIndex] == 0*/) // if item can be inserted into the slot
         {
             draggable.transform.localPosition = closestSnapPoint.localPosition; // put the object in the centre of the (closest) snappoint
+            draggable.gameObject.GetComponent<Renderer>().material.color = Color.white;
 
             // MAIN SCENE ===========================================================================
             if (draggable.gameObject.CompareTag("Plant"))
@@ -606,6 +632,11 @@ public class SnapController : MonoBehaviour
                     electricityFlow = true; // electricity now on -> can open the box with cables on the other wall
                     audioPlayer.Play(); // play puzzle solved sound 
 
+                    if(puzzleSolvedBg != null)
+                    {
+                        puzzleSolvedBg.SetActive(true);
+                    }
+
                     GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(1); // mark appropriate puzzle flag in game mngr as solved
                 }
             }
@@ -669,7 +700,7 @@ public class SnapController : MonoBehaviour
 
         if (closestSnapPoint != null && closestDistance <= snapRange)
         {
-            if (draggable.gameObject.CompareTag("Plant") || draggable.gameObject.CompareTag("SnapBottle")) // if the thing being dragged in the slot is a plant object
+            if (draggable.gameObject.CompareTag("Plant") || draggable.gameObject.CompareTag("SnapBottle") || draggable.gameObject.CompareTag("CableFix")) // if the thing being dragged in the slot is a plant object
             {
                 draggable.gameObject.GetComponent<Renderer>().material.color = Color.grey; // change object's clour to grey when put near the slot
             }
@@ -679,7 +710,7 @@ public class SnapController : MonoBehaviour
         {
             // takenSnapPoints[snapPoints.IndexOf(closestSnapPoint)] = 0;
 
-            if (draggable.gameObject.CompareTag("Plant") || draggable.gameObject.CompareTag("SnapBottle")) // if the thing being dragged in the slot is a plant object
+            if (draggable.gameObject.CompareTag("Plant") || draggable.gameObject.CompareTag("SnapBottle") || draggable.gameObject.CompareTag("CableFix")) // if the thing being dragged in the slot is a plant object
             {
                 draggable.gameObject.GetComponent<Renderer>().material.color = Color.white; // reset to original colour when out of slot interaction range
             }

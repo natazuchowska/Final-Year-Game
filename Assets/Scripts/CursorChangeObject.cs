@@ -33,7 +33,7 @@ public class CursorChangeObject : MonoBehaviour
         Debug.Log("object tag: " + objectTag);
 
         // set the passed argument to a correct cursor case
-        if (objectTag == "Plant" || objectTag == "Key" || objectTag == "SnapBottle")
+        if (objectTag == "Plant" || objectTag == "Key" || objectTag == "SnapBottle" || objectTag == "CableFix")
         {
             return 0;
         }
