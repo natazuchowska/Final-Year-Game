@@ -66,6 +66,8 @@ public class CursorChangeObject : MonoBehaviour
         {
             if(sceneID == 0 || sceneID == 11)
             {
+                if(GameObject.Find("DialogueCircle") == null) { return 4; } // return normal cursor if no dialogue circle in scene (has been disabled)
+
                 Debug.Log("player in area?: " + GameObject.Find("DialogueCircle").GetComponent<SpeechBubbleManager>().inArea);
 
                 if (GameObject.Find("DialogueCircle").GetComponent<SpeechBubbleManager>().inArea == true)

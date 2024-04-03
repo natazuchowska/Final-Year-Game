@@ -10,6 +10,8 @@ public class SpeechBubbleManager : MonoBehaviour
 
     GameObject character;
 
+    GameObject dialogueCircle;
+
     public bool inArea = false;
 
     private void Start()
@@ -18,6 +20,8 @@ public class SpeechBubbleManager : MonoBehaviour
         cmScript = cursorManager.GetComponent<CursorManager>(); // get the cursor manager script
 
         character = GameObject.Find("Character");
+
+        dialogueCircle = GameObject.Find("DialogueCircle");
     }
 
     private void Update()
@@ -52,7 +56,7 @@ public class SpeechBubbleManager : MonoBehaviour
 
             inArea = false;
             // cmScript.ChangeCursor(4);
-            if(character != null)
+            if(character != null && dialogueCircle != null)
             {
                 character.GetComponent<CursorChangeObject>().DecideCursor();
             }

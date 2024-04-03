@@ -89,6 +89,8 @@ public class SnapController : MonoBehaviour
     [SerializeField] GameObject keyInserted2; // sprite of the key after insertion to lock -> 2nd door bottom lock
     public float maxRotationTimer = 0.5f;
 
+    private GameObject confirmPanel;
+
     // ------------------------------------------------------------------------------
 
     [SerializeField] public static bool lightOn = true; // lamp on and needs to be switched off (if initialized here, when set to false would the false value persist when script is executed again?)
@@ -136,6 +138,8 @@ public class SnapController : MonoBehaviour
             // find keys by object names
             keyInserted1 = GameObject.Find("keyInserted1");
             keyInserted2 = GameObject.Find("keyInserted2");
+
+            confirmPanel = GameObject.Find("confirmPanel");
 
             if (keySlot2 == false)
             {
@@ -432,11 +436,11 @@ public class SnapController : MonoBehaviour
                             keySlot2 = true;
                             Debug.Log("top key OK");
 
+
                             draggable.gameObject.transform.Translate(draggable.gameObject.transform.position.x, draggable.gameObject.transform.position.y, 10); // hide key sprite (push to the back)
                             keyInserted1.SetActive(true); // show the inserted key sprite
 
                             StartCoroutine(RotateKey(2));
-
                             audioPlayer.Play(); // play door unlocking sound
                         }
                         else
@@ -456,7 +460,6 @@ public class SnapController : MonoBehaviour
                             keyInserted2.SetActive(true); // show the inserted key sprite
 
                             StartCoroutine(RotateKey(3));
-
                             audioPlayer.Play(); // play door unlocking sound
                         }
                         else

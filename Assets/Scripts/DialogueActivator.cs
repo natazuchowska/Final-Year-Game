@@ -8,6 +8,8 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
 
     [SerializeField] public GameObject dialogueBackground;
 
+    private static bool alreadyTalked = false;
+
 
     private void Start()
     {
@@ -47,10 +49,11 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
     {
         if(SceneManager.GetActiveScene().buildIndex == 11) // swimming pool -> disable fish talking if light turned off
         {
-            if(!GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().checkIfSolved(2))
+            if(!alreadyTalked)
             {
                 dialogueBackground.SetActive(true);
                 player.DialogueUI.ShowDialogue(dialogueObject);
+                alreadyTalked = true; //shouldn't be able to talk twice to the fish
             }
 
         }

@@ -99,9 +99,13 @@ public class NavigationController : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             playerInArea = false;
-            goToRoom.interactable = false;
+            
+            if (goToRoom != null)
+            {
+                goToRoom.interactable = false;
+            }
 
-            if(goThruDoor != null)
+            if (goThruDoor != null)
             {
                 goThruDoor.interactable = false;
             }
