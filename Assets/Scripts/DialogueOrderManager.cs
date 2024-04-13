@@ -14,8 +14,12 @@ public class DialogueOrderManager : MonoBehaviour
 
     public void RecordResponse(int ID)
     {
-        dialogueOrder[count] = ID;
-        count++;
+        if(count<dialogueOrder.Length)
+        {
+            dialogueOrder[count] = ID;
+            count++;
+        }
+
         //dialogueOrder.Append(ID); // add topic id to list of chosen ones
         Debug.Log("ID of chosen topic: " + ID);
 

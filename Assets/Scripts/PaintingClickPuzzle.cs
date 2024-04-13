@@ -33,7 +33,8 @@ public class PaintingClickPuzzle : MonoBehaviour
     public static bool puzzleSolved = false;
     public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
     public static bool soundPlayed = false;
-    private int puzzleFlag = 0;
+    private static int puzzleFlag = 0;
+
 
     public static int paintPuzzleID; // get the order_id of the painting being clicked from the singular paintings cript (WAS STATIC)
 
@@ -172,6 +173,7 @@ public class PaintingClickPuzzle : MonoBehaviour
             {
                 Debug.Log("PUZZLE SOLVED!!!!!");
                 puzzleSolved = true;
+
 
                 GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(0); // mark appropriate puzzle flag in game mngr as solved
             }

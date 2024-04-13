@@ -35,6 +35,7 @@ public class CursorChangeObject : MonoBehaviour
         // set the passed argument to a correct cursor case
         if (objectTag == "Plant" || objectTag == "Key" || objectTag == "SnapBottle" || objectTag == "CableFix")
         {
+            Debug.Log("Changing cursor!!");
             return 0;
         }
         else if (objectTag == "Pickup" || objectTag == "Collectible" || objectTag == "Bottle" || objectTag == "KeyReward" || objectTag == "ClickTile")

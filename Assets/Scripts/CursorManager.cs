@@ -26,6 +26,7 @@ public class CursorManager : MonoBehaviour
 
     public void ChangeCursor(int whichOne)
     {
+        Debug.Log("entered the cursor manager script and changing the cursor!");
         if (whichOne == 0)
         {
             currentCursor = dragCursor;

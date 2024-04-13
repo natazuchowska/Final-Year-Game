@@ -30,15 +30,13 @@ public class InventoryManager : MonoBehaviour
 
         invIcon = GameObject.Find("InventoryButton");
         invButton = GameObject.Find("InventoryButton").GetComponent<Button>();
-    }
 
-    private void Start()
-    {
         optionsCanvas = GameObject.Find("OptionsCanvas");
 
-       /* inventoryCanvas.SetActive(false); // hide inentory by default
-        isOpen = false;*/
+        /*isOpen = false;
+        inventoryCanvas.SetActive(false);*/
     }
+
 
     void OnEnable()
     {
@@ -47,8 +45,12 @@ public class InventoryManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        isOpen = false;
-        inventoryCanvas.SetActive(false);
+        if (inventoryCanvas != null /*&& inventoryCanvas.activeSelf && SceneManager.GetActiveScene().buildIndex != 0*/)
+        {
+            Debug.Log("OnSceneLoaded called");
+            isOpen = false;
+            inventoryCanvas.SetActive(false);
+        }
     }
 
     private void Update()
@@ -71,8 +73,10 @@ public class InventoryManager : MonoBehaviour
                 {
                     inventoryCanvas.SetActive(false);
                     isOpen = false;
+                    Debug.Log("player moving case of inventory caled");
                 } 
             }
+
         }
 
         gamePaused = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseController>().isPaused; // get value if game paused or not
@@ -80,22 +84,32 @@ public class InventoryManager : MonoBehaviour
 
         if(gamePaused == true)
         {
-            inventoryCanvas.SetActive(false);
-            isOpen = false;
+            if(inventoryCanvas!=null)
+            {
+                inventoryCanvas.SetActive(false);
+                isOpen = false;
+
+                Debug.Log("game paused case of inventory called");
+            }
+
         }
     }
 
     public void OpenInventory()
     {
+        Debug.Log("called OpenInventory() method");
+
         // if this is a scene where there is an inventory
         if(inventoryCanvas != null)
         {
             if (!isOpen)
             {
+                Debug.Log("isOpen false if else called");
                 inventoryCanvas.SetActive(true); // open on first click if closed
             }
             else
             {
+                Debug.Log("isOpen true if else called");
                 inventoryCanvas.SetActive(false); // close on second click if open
             }
 

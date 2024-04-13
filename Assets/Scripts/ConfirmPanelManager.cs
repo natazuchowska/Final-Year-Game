@@ -12,18 +12,12 @@ public class ConfirmPanelManager : MonoBehaviour
     {
         confirmPanel = GameObject.Find("confirmPanel"); // get reference to the panel to display
         confirmPanel.SetActive(false); // hide panel by default
-
-
     }
 
-    private void Update()
+    public void DisplayPanel()
     {
         // if one inserted but not both 
-        if((SnapController.keySlot2 == true || SnapController.keySlot3 == true && !(SnapController.keySlot2 == true && SnapController.keySlot3 == true)) && !alreadyDisplayed)
-        {
-            StartCoroutine(DisplayForSec());
-            alreadyDisplayed = true;
-        }
+        StartCoroutine(DisplayForSec());
     }
 
     IEnumerator DisplayForSec()

@@ -10,7 +10,7 @@ public class LampController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lightOn = SnapController.lightOn; // get light info from electricity box
+        lightOn = CalculatorLampPuzzle.lightOn; // get light info from electricity box
         lightSprite = GameObject.FindGameObjectWithTag("LampLight");
 
         Debug.Log("lightOn value in swimming pool: " + lightOn);

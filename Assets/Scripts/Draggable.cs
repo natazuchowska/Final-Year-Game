@@ -54,28 +54,6 @@ public class Draggable : MonoBehaviour
     // store ID of current scene
     int sceneID;
 
-    // called first
-/*    void OnEnable()
-    {
-        Debug.Log("OnEnable called");
-        // GameObject player = GameObject.FindGameObjectWithTag("Player"); // get reference to cursor manager obj
-
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        // player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        Debug.Log("OnSceneLoaded: " + scene.name);
-        Debug.Log(mode);
-
-        // scene with snap points
-        if (sceneID == 0 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)
-        {
-            snapControl = GameObject.Find("SnapPointsContainer").GetComponent<SnapController>(); // ref the game manager script
-        }
-    }*/
-
     private void Update()
     {
         snapControlObj = GameObject.Find("SnapPointsContainer"); // try find the snap points container object
