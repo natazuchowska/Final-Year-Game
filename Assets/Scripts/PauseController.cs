@@ -18,7 +18,7 @@ public class PauseController : MonoBehaviour
     [SerializeField] Button mainMenuButton;
     [SerializeField] Button settingsButton;
 
-    [SerializeField] Button hintButton;
+    // [SerializeField] Button hintButton;
 
     private void Start()
     {
@@ -26,7 +26,8 @@ public class PauseController : MonoBehaviour
         musicManager = GameObject.Find("MainMusic"); // get reference to the object controlling music
         musicScript = musicManager.GetComponent<BackgroundMusicManager>(); // get reference to music script
         menuButton.onClick.AddListener(manageAppearance); // call manageAppearance() when button clicked
-        hintButton.onClick.AddListener(manageAppearanceHints); // pause the game when hints displayed
+        // hintButton.onClick.AddListener(manageAppearanceHints); // pause the game when hints displayed
+
 
         // clicking ANY of the three buttons should close the prompt
         resumeButton.onClick.AddListener(manageAppearance);
@@ -54,7 +55,7 @@ public class PauseController : MonoBehaviour
         manageAppearance();
     }
 
-    void manageAppearance()
+    public void manageAppearance()
     {
         isPaused = !isPaused;
         AudioSource[] audios = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
@@ -97,7 +98,7 @@ public class PauseController : MonoBehaviour
         }
     }
 
-    void manageAppearanceHints()
+    public void manageAppearanceHints()
     {
         isPaused = !isPaused;
         AudioSource[] audios = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
@@ -106,11 +107,13 @@ public class PauseController : MonoBehaviour
         {
             Time.timeScale = 1;
             Debug.Log("GAME RUNNING");
+
         }
         else
         {
             Time.timeScale = 0;
             Debug.Log("GAME PAUSED");
+
         }
     }
 }

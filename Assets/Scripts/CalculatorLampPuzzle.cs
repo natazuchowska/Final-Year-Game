@@ -14,7 +14,6 @@ public class CalculatorLampPuzzle : MonoBehaviour
     bool electricityFlow; 
 
     public int[] correctOrder = { 8, 1, 0, 5, 9}; //the order in which calculator buttons should be clicked, 9 is R button for confirmation
-    [SerializeField] public AudioSource clickAudio; // audio for clicking the button
 
     // ------------ BACKGROUNDS -------------------------
     [SerializeField] GameObject beforeBackground;

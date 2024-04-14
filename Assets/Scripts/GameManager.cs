@@ -99,7 +99,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("OnSceneLoaded: " + scene.name);
         Debug.Log(mode);
 
-
         isFacingRight = playerScript.isFacingRight; // var from playercontroller script
 
         // inventoryCanvas.SetActive(false); // close inventory (if was open) on every new scene load
@@ -109,6 +108,9 @@ public class GameManager : MonoBehaviour
         if(sceneID == 1)
         {
             newGameStarted = true; // change the flag to conditionally change settings/controls goback button redirection
+
+            HintManager.hintActive[0] = true; // paintings hint can now be accessed
+            HintManager.hintActive[1] = true; // cables hint can now be accessed
         }
 
         if (!(sceneID == 8 || sceneID == 9 || sceneID == 10 || sceneID == 12 || sceneID == 14 || sceneID == 15 || sceneID == 3 || sceneID == 5))
@@ -165,6 +167,8 @@ public class GameManager : MonoBehaviour
         {
             player.SetActive(true);
             player.transform.localPosition = new Vector3(-0.5f, -3.4f, -1); // move player 
+
+            HintManager.hintActive[2] = true; //unblock bottles hint
         }
 
         if (sceneID == 11) // SWIMMING POOL (GLASSHOUSE TOP FLOOR)
@@ -175,7 +179,6 @@ public class GameManager : MonoBehaviour
 
             lightOn = GameObject.FindGameObjectWithTag("LampLight").GetComponent<LampController>().lightOn; // read lightOn value from lamp script
 
-
             if (isFacingRight)
             {
                 player.transform.localScale = new Vector3(0.16f, 0.16f, 0.16f); // rescale player only in this room
@@ -184,6 +187,8 @@ public class GameManager : MonoBehaviour
             {
                 player.transform.localScale = new Vector3(-0.16f, 0.16f, 0.16f); // rescale player only in this room
             }
+
+            HintManager.hintActive[3] = true; // unblock fish hint
         }
         else
         {

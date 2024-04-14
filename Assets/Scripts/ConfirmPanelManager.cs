@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ConfirmPanelManager : MonoBehaviour
 {
     private GameObject confirmPanel;
     private bool alreadyDisplayed = false;
-
 
     private void Start()
     {

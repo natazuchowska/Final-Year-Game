@@ -91,7 +91,6 @@ public class InventoryManager : MonoBehaviour
 
                 Debug.Log("game paused case of inventory called");
             }
-
         }
     }
 

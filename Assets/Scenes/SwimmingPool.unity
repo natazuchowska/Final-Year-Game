@@ -2573,6 +2573,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubble1: {fileID: 1067639865}
   bubble2: {fileID: 0}
+  dialogueCircle: {fileID: 0}
+  character: {fileID: 0}
 --- !u!4 &1256702483
 Transform:
   m_ObjectHideFlags: 0
@@ -2733,7 +2735,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2
+  m_Radius: 2.5
 --- !u!4 &1311588762
 Transform:
   m_ObjectHideFlags: 0
@@ -2743,7 +2745,7 @@ Transform:
   m_GameObject: {fileID: 1311588759}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.31, y: -1.16, z: -2.151302}
+  m_LocalPosition: {x: 4.54, y: 0.51, z: -2.151302}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

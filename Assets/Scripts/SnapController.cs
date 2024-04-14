@@ -88,7 +88,7 @@ public class SnapController : MonoBehaviour
     [SerializeField] GameObject cableFixedBLACK1;
     [SerializeField] GameObject cableFixedBLACK2;
 
-
+    [SerializeField] private AudioSource bzzSound;
     GameObject puzzleSolvedBg;
 
     // -----------------------------------------------------------------------------
@@ -483,6 +483,7 @@ public class SnapController : MonoBehaviour
                 plant.GetComponent<Renderer>().material.color = Color.white;
 
                 GameManager.plantGiven = true; // inform game mngr that plant was received
+                GameObject.Find("doorOpeningAudio").GetComponent<AudioSource>().Play(); // play door sound to show it opened
             }
 
             // DOOR SCENES ===========================================================================
@@ -682,6 +683,8 @@ public class SnapController : MonoBehaviour
                         cableFixedBLACK1.SetActive(true);
                         GameObject c = GameObject.Find("cable1");
                         c.transform.localPosition = new Vector3(c.transform.localPosition.x, c.transform.localPosition.y, 10);
+
+                        bzzSound.Play();
                     }
                     else
                     {
@@ -699,6 +702,8 @@ public class SnapController : MonoBehaviour
                         cableFixedBLUE.SetActive(true);
                         GameObject c = GameObject.Find("cable2");
                         c.transform.localPosition = new Vector3(c.transform.localPosition.x, c.transform.localPosition.y, 10);
+
+                        bzzSound.Play();
                     }
                     else
                     {
@@ -716,6 +721,8 @@ public class SnapController : MonoBehaviour
                         cableFixedRED.SetActive(true);
                         GameObject c = GameObject.Find("cable3");
                         c.transform.localPosition = new Vector3(c.transform.localPosition.x, c.transform.localPosition.y, 10);
+
+                        bzzSound.Play();
                     }
                     else
                     {
@@ -733,6 +740,8 @@ public class SnapController : MonoBehaviour
                         cableFixedBLACK2.SetActive(true);
                         GameObject c = GameObject.Find("cable4");
                         c.transform.localPosition = new Vector3(c.transform.localPosition.x, c.transform.localPosition.y, 10);
+
+                        bzzSound.Play();
                     }
                     else
                     {
