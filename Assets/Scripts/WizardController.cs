@@ -25,7 +25,6 @@ public class WizardController : MonoBehaviour
         }
 
         player = GameObject.FindGameObjectWithTag("Player");
-
     }
 
     private void FixedUpdate()
@@ -82,7 +81,6 @@ public class WizardController : MonoBehaviour
         {
             animator.SetBool("isSpeaking", false);
         }
-        
     }
 
     public void SetTopicAnimation(int topic)

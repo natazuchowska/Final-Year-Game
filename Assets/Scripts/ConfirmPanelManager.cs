@@ -24,7 +24,7 @@ public class ConfirmPanelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f); // wait for the animation of turning the key to finish executing
         confirmPanel.SetActive(true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         confirmPanel.SetActive(false);
     }
 }

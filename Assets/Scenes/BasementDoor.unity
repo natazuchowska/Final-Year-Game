@@ -558,8 +558,10 @@ MonoBehaviour:
   - {fileID: 253721768}
   - {fileID: 84780370}
   draggableObjects:
-  - {fileID: 8822020927442450401, guid: 2c3c8d3076a7d6a4fb6a748863e57197, type: 3}
-  - {fileID: 6966610363154088092, guid: eb608bd5e6120db4d9c638df87ab3248, type: 3}
+  - {fileID: 453332259}
+  - {fileID: 1942636840}
+  - {fileID: 8822020927442450401, guid: 9f6689976b7fb0447a5804e77a33cac2, type: 3}
+  - {fileID: 6966610363154088092, guid: cef398bf1efc02049bb4a10892471f07, type: 3}
   snapRange: 1.5
   audioPlayer: {fileID: 1599676140}
   goBackButton: {fileID: 621907571}
@@ -568,6 +570,11 @@ MonoBehaviour:
   key2prev: {fileID: 5273927456866042649}
   key3prev: {fileID: 1099531455312381951}
   backgroundAfter: {fileID: 0}
+  cableFixedRED: {fileID: 0}
+  cableFixedBLUE: {fileID: 0}
+  cableFixedBLACK1: {fileID: 0}
+  cableFixedBLACK2: {fileID: 0}
+  bzzSound: {fileID: 0}
   keyInserted: {fileID: 0}
   keyInserted1: {fileID: 930241132}
   keyInserted2: {fileID: 1730531903}
@@ -1030,7 +1037,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4b3680e9356aad84daa6f4fa8df31976, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.64
+  m_Volume: 0.55
   m_Pitch: 1
   Loop: 0
   Mute: 0

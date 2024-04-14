@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    private GameObject inventoryCanvas;
+    [SerializeField] private GameObject inventoryCanvas;
     public bool isOpen = false;
 
     [SerializeField] GameObject optionsCanvas;
@@ -30,11 +30,15 @@ public class InventoryManager : MonoBehaviour
 
         invIcon = GameObject.Find("InventoryButton");
         invButton = GameObject.Find("InventoryButton").GetComponent<Button>();
+        invButton.onClick.AddListener(OpenInventory);
 
         optionsCanvas = GameObject.Find("OptionsCanvas");
+    }
 
-        /*isOpen = false;
-        inventoryCanvas.SetActive(false);*/
+    private void Start()
+    {
+        isOpen = false;
+        inventoryCanvas.SetActive(false);
     }
 
 
@@ -45,23 +49,13 @@ public class InventoryManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (inventoryCanvas != null /*&& inventoryCanvas.activeSelf && SceneManager.GetActiveScene().buildIndex != 0*/)
-        {
-            Debug.Log("OnSceneLoaded called");
-            isOpen = false;
-            inventoryCanvas.SetActive(false);
-        }
+        Debug.Log("OnSceneLoaded called");
+        isOpen = false;
+        inventoryCanvas.SetActive(false);
     }
 
     private void Update()
     {
-    
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // open inventory with inventory button or space key
-            OpenInventory();
-        }*/
-
         // only do this if there is a player sprite in the current scene
         if (player.activeInHierarchy == true)
         {
@@ -84,19 +78,16 @@ public class InventoryManager : MonoBehaviour
 
         if(gamePaused == true)
         {
-            if(inventoryCanvas!=null)
-            {
-                inventoryCanvas.SetActive(false);
-                isOpen = false;
+            inventoryCanvas.SetActive(false);
+            isOpen = false;
 
-                Debug.Log("game paused case of inventory called");
-            }
+            Debug.Log("game paused case of inventory called");
         }
     }
 
     public void OpenInventory()
     {
-        Debug.Log("called OpenInventory() method");
+        Debug.Log("called OpenInventory() method by object: " + this.gameObject.name);
 
         // if this is a scene where there is an inventory
         if(inventoryCanvas != null)
@@ -113,16 +104,14 @@ public class InventoryManager : MonoBehaviour
             }
 
             isOpen = !isOpen;
+            Debug.Log("is inventory canvas active? : " + inventoryCanvas.activeInHierarchy);
         }
     }
 
     public void HighlightButton()
     {
         Debug.Log("HighlightButton() executed");
-
-
         StartCoroutine(WaitForSec());
-        
     }
 
     IEnumerator WaitForSec()

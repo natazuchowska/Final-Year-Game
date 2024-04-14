@@ -61,8 +61,6 @@ public class Slot : MonoBehaviour
 
     public void DropItem()
     {
-        
-
         foreach(Transform child in transform) // for each child in slot
         {
             if(!child.CompareTag("Cross") && slotActiveToUse)

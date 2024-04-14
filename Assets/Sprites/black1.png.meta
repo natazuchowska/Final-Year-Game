@@ -1,0 +1,1299 @@
+fileFormatVersion: 2
+guid: 4243f921db984e44ca5dbf5031c40cfc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4958486102222194190
+    second: round_room_electricity_repair (8)_0
+  - first:
+      213: 6196683529407220138
+    second: round_room_electricity_repair (8)_1
+  - first:
+      213: 8111197821801058740
+    second: round_room_electricity_repair (8)_2
+  - first:
+      213: 952027052716726350
+    second: round_room_electricity_repair (8)_3
+  - first:
+      213: -6445395575322563045
+    second: round_room_electricity_repair (8)_4
+  - first:
+      213: -3015105217182068760
+    second: round_room_electricity_repair (8)_5
+  - first:
+      213: -8776669621068437366
+    second: round_room_electricity_repair (8)_6
+  - first:
+      213: -1361616440343771164
+    second: round_room_electricity_repair (8)_7
+  - first:
+      213: 6658880876678339190
+    second: round_room_electricity_repair (8)_8
+  - first:
+      213: -549160177862935370
+    second: round_room_electricity_repair (8)_9
+  - first:
+      213: -7711187462506522150
+    second: round_room_electricity_repair (8)_10
+  - first:
+      213: 8890900926798262534
+    second: round_room_electricity_repair (8)_11
+  - first:
+      213: 888268227370550163
+    second: round_room_electricity_repair (8)_12
+  - first:
+      213: 4405792310791875142
+    second: round_room_electricity_repair (8)_13
+  - first:
+      213: 2213529073223126276
+    second: round_room_electricity_repair (8)_14
+  - first:
+      213: -830830743545758653
+    second: round_room_electricity_repair (8)_15
+  - first:
+      213: -3939788377206673502
+    second: round_room_electricity_repair (8)_16
+  - first:
+      213: 6563508394201864843
+    second: round_room_electricity_repair (8)_17
+  - first:
+      213: 5691678968971704444
+    second: round_room_electricity_repair (8)_18
+  - first:
+      213: -8474478914034622814
+    second: round_room_electricity_repair (8)_19
+  - first:
+      213: 5456961572992971719
+    second: round_room_electricity_repair (8)_20
+  - first:
+      213: -5208109166838456498
+    second: round_room_electricity_repair (8)_21
+  - first:
+      213: -6287476988304850508
+    second: round_room_electricity_repair (8)_22
+  - first:
+      213: 5925419830445887705
+    second: round_room_electricity_repair (8)_23
+  - first:
+      213: 6307138107540999805
+    second: round_room_electricity_repair (8)_24
+  - first:
+      213: -7629361358958582319
+    second: round_room_electricity_repair (8)_25
+  - first:
+      213: 6949222120227132885
+    second: round_room_electricity_repair (8)_26
+  - first:
+      213: 387879434219373390
+    second: round_room_electricity_repair (8)_27
+  - first:
+      213: -2165739075166598498
+    second: round_room_electricity_repair (8)_28
+  - first:
+      213: -74311001675722512
+    second: round_room_electricity_repair (8)_29
+  - first:
+      213: -4403686569667488129
+    second: round_room_electricity_repair (8)_30
+  - first:
+      213: 2523335179244761678
+    second: round_room_electricity_repair (8)_31
+  - first:
+      213: 7051789158330113467
+    second: round_room_electricity_repair (8)_32
+  - first:
+      213: 4487969011682268659
+    second: round_room_electricity_repair (8)_33
+  - first:
+      213: -1693534471219821681
+    second: round_room_electricity_repair (8)_34
+  - first:
+      213: 6330978784855940323
+    second: round_room_electricity_repair (8)_35
+  - first:
+      213: -4832846749083949441
+    second: round_room_electricity_repair (8)_36
+  - first:
+      213: 2539451429195150145
+    second: round_room_electricity_repair (8)_37
+  - first:
+      213: -6905223888737655518
+    second: round_room_electricity_repair (8)_38
+  - first:
+      213: 4888733391920972184
+    second: round_room_electricity_repair (8)_39
+  - first:
+      213: 4929849282813963673
+    second: round_room_electricity_repair (8)_40
+  - first:
+      213: -1632193890456617619
+    second: round_room_electricity_repair (8)_41
+  - first:
+      213: 5060130816637116875
+    second: round_room_electricity_repair (8)_42
+  - first:
+      213: 6619601073878243108
+    second: round_room_electricity_repair (8)_43
+  - first:
+      213: 829206676378571596
+    second: round_room_electricity_repair (8)_44
+  - first:
+      213: -2685243189785901619
+    second: round_room_electricity_repair (8)_45
+  - first:
+      213: 6421855091111744724
+    second: round_room_electricity_repair (8)_46
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_0
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 2184
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e064aaab6d410d440800000000000000
+      internalID: 4958486102222194190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_1
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 1194
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9c4dba6da0ff550800000000000000
+      internalID: 6196683529407220138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_2
+      rect:
+        serializedVersion: 2
+        x: 2259
+        y: 1011
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1df57a173c09070800000000000000
+      internalID: 8111197821801058740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_3
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 954
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e481eb57f87463d00800000000000000
+      internalID: 952027052716726350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_4
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 941
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e26089fda5d86a0800000000000000
+      internalID: -6445395575322563045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_5
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 914
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef8f6997c13826d0800000000000000
+      internalID: -3015105217182068760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_6
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 884
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88e04dfa71033680800000000000000
+      internalID: -8776669621068437366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_7
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 858
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e74af8cf019a1de0800000000000000
+      internalID: -1361616440343771164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_8
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 856
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67add0880e8196c50800000000000000
+      internalID: 6658880876678339190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_9
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 825
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc70b15abdf068f0800000000000000
+      internalID: -549160177862935370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_10
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 817
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad95ad4cbdb5cf490800000000000000
+      internalID: -7711187462506522150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_11
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 796
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60170037943d26b70800000000000000
+      internalID: 8890900926798262534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_12
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 806
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39300bd1f33c35c00800000000000000
+      internalID: 888268227370550163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_13
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 783
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64aa5e683c4842d30800000000000000
+      internalID: 4405792310791875142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_14
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 766
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40dc67dd6f808be10800000000000000
+      internalID: 2213529073223126276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_15
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 747
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c3b7637db4874f0800000000000000
+      internalID: -830830743545758653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_16
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 729
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af2266485f0359c0800000000000000
+      internalID: -3939788377206673502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_17
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 748
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a52bc0c14461b50800000000000000
+      internalID: 6563508394201864843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_18
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 739
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c78be11ddd7ecfe40800000000000000
+      internalID: 5691678968971704444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_19
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 734
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae9d60d35a946a80800000000000000
+      internalID: -8474478914034622814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_20
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 738
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c3f33f63a50bbb40800000000000000
+      internalID: 5456961572992971719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_21
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 739
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f53277e4419b7b0800000000000000
+      internalID: -5208109166838456498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_22
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 738
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b185aaddf46eb8a0800000000000000
+      internalID: -6287476988304850508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_23
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 739
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d058ca01f15b3250800000000000000
+      internalID: 5925419830445887705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_24
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 727
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e8f4131b4778750800000000000000
+      internalID: 6307138107540999805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_25
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 730
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d5ae2024401f1690800000000000000
+      internalID: -7629361358958582319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_26
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 701
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5dc6523b8907060800000000000000
+      internalID: 6949222120227132885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_27
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 720
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4343545a46026500800000000000000
+      internalID: 387879434219373390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_28
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 698
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9a038429cfb1f1e0800000000000000
+      internalID: -2165739075166598498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_29
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 692
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f01736a98ef7fef0800000000000000
+      internalID: -74311001675722512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_30
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 669
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f769fc88566f2e2c0800000000000000
+      internalID: -4403686569667488129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_31
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 683
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e427120f9ffa40320800000000000000
+      internalID: 2523335179244761678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_32
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 652
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbd9735a0ecfcd160800000000000000
+      internalID: 7051789158330113467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_33
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 627
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f55840b908784e30800000000000000
+      internalID: 4487969011682268659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_34
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 657
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8340140f5b5f78e0800000000000000
+      internalID: -1693534471219821681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_35
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 632
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec5fdf69a72cd750800000000000000
+      internalID: 6330978784855940323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_36
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 602
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7623fabc774eecb0800000000000000
+      internalID: -4832846749083949441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_37
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 635
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 143f889ce91fd3320800000000000000
+      internalID: 2539451429195150145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_38
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 579
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22520496577bb20a0800000000000000
+      internalID: -6905223888737655518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_39
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 559
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8914a0b4e1548d340800000000000000
+      internalID: 4888733391920972184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_40
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 548
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d2752adc75a6440800000000000000
+      internalID: 4929849282813963673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_41
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 545
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d35caed484959e0800000000000000
+      internalID: -1632193890456617619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_42
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 538
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1a9a20b22393640800000000000000
+      internalID: 5060130816637116875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_43
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 430
+        width: 56
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4279e43ca1c8ddb50800000000000000
+      internalID: 6619601073878243108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_44
+      rect:
+        serializedVersion: 2
+        x: 2330
+        y: 469
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c435dee241fe18b00800000000000000
+      internalID: 829206676378571596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_45
+      rect:
+        serializedVersion: 2
+        x: 2355
+        y: 463
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc54641cb891cbad0800000000000000
+      internalID: -2685243189785901619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_room_electricity_repair (8)_46
+      rect:
+        serializedVersion: 2
+        x: 2345
+        y: 427
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4dfb05e230f1950800000000000000
+      internalID: 6421855091111744724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      round_room_electricity_repair (8)_0: 4958486102222194190
+      round_room_electricity_repair (8)_1: 6196683529407220138
+      round_room_electricity_repair (8)_10: -7711187462506522150
+      round_room_electricity_repair (8)_11: 8890900926798262534
+      round_room_electricity_repair (8)_12: 888268227370550163
+      round_room_electricity_repair (8)_13: 4405792310791875142
+      round_room_electricity_repair (8)_14: 2213529073223126276
+      round_room_electricity_repair (8)_15: -830830743545758653
+      round_room_electricity_repair (8)_16: -3939788377206673502
+      round_room_electricity_repair (8)_17: 6563508394201864843
+      round_room_electricity_repair (8)_18: 5691678968971704444
+      round_room_electricity_repair (8)_19: -8474478914034622814
+      round_room_electricity_repair (8)_2: 8111197821801058740
+      round_room_electricity_repair (8)_20: 5456961572992971719
+      round_room_electricity_repair (8)_21: -5208109166838456498
+      round_room_electricity_repair (8)_22: -6287476988304850508
+      round_room_electricity_repair (8)_23: 5925419830445887705
+      round_room_electricity_repair (8)_24: 6307138107540999805
+      round_room_electricity_repair (8)_25: -7629361358958582319
+      round_room_electricity_repair (8)_26: 6949222120227132885
+      round_room_electricity_repair (8)_27: 387879434219373390
+      round_room_electricity_repair (8)_28: -2165739075166598498
+      round_room_electricity_repair (8)_29: -74311001675722512
+      round_room_electricity_repair (8)_3: 952027052716726350
+      round_room_electricity_repair (8)_30: -4403686569667488129
+      round_room_electricity_repair (8)_31: 2523335179244761678
+      round_room_electricity_repair (8)_32: 7051789158330113467
+      round_room_electricity_repair (8)_33: 4487969011682268659
+      round_room_electricity_repair (8)_34: -1693534471219821681
+      round_room_electricity_repair (8)_35: 6330978784855940323
+      round_room_electricity_repair (8)_36: -4832846749083949441
+      round_room_electricity_repair (8)_37: 2539451429195150145
+      round_room_electricity_repair (8)_38: -6905223888737655518
+      round_room_electricity_repair (8)_39: 4888733391920972184
+      round_room_electricity_repair (8)_4: -6445395575322563045
+      round_room_electricity_repair (8)_40: 4929849282813963673
+      round_room_electricity_repair (8)_41: -1632193890456617619
+      round_room_electricity_repair (8)_42: 5060130816637116875
+      round_room_electricity_repair (8)_43: 6619601073878243108
+      round_room_electricity_repair (8)_44: 829206676378571596
+      round_room_electricity_repair (8)_45: -2685243189785901619
+      round_room_electricity_repair (8)_46: 6421855091111744724
+      round_room_electricity_repair (8)_5: -3015105217182068760
+      round_room_electricity_repair (8)_6: -8776669621068437366
+      round_room_electricity_repair (8)_7: -1361616440343771164
+      round_room_electricity_repair (8)_8: 6658880876678339190
+      round_room_electricity_repair (8)_9: -549160177862935370
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

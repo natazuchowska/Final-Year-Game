@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShowHintButton : MonoBehaviour
 {
     [SerializeField] private AudioSource bookSound;
+    [SerializeField] private AudioSource lockedSound;
 
     // unblock corresponding hints only at certain levels of the game
     public static bool[] hintActive;
@@ -22,6 +23,8 @@ public class ShowHintButton : MonoBehaviour
     {
         hintActive = HintManager.hintActive;
         hints = GameObject.Find("GameManager").GetComponent<HintManager>().hints;
+
+        lockedSound = GameObject.Find("LockedSound").GetComponent<AudioSource>();
     }
 
     public void ShowHint(/*GameObject myHint*/)
@@ -36,10 +39,15 @@ public class ShowHintButton : MonoBehaviour
             HideText(myText); // hide corresponding cover text
             bookSound.Play();
         }
+        else
+        {
+            lockedSound.Play();
+        }
     }
 
     public void HideText(GameObject text)
     {
         text.SetActive(false);
     }
+
 }

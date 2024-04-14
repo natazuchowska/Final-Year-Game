@@ -730,11 +730,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3780573606230264929, guid: 58dbfa09c90d56243bff0044adcd522c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.54
+      value: -1.535
       objectReference: {fileID: 0}
     - target: {fileID: 3780573606230264929, guid: 58dbfa09c90d56243bff0044adcd522c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.77
+      value: 1.72
       objectReference: {fileID: 0}
     - target: {fileID: 3780573606230264929, guid: 58dbfa09c90d56243bff0044adcd522c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2087,6 +2087,7 @@ MonoBehaviour:
   cableFixedBLUE: {fileID: 0}
   cableFixedBLACK1: {fileID: 0}
   cableFixedBLACK2: {fileID: 0}
+  bzzSound: {fileID: 0}
   keyInserted: {fileID: 0}
   keyInserted1: {fileID: 0}
   keyInserted2: {fileID: 0}

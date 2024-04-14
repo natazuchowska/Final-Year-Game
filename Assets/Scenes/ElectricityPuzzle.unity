@@ -1142,7 +1142,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5c700193bbca54a43a779eb0dcf26405, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.58
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2396,6 +2396,11 @@ MonoBehaviour:
   key2prev: {fileID: 0}
   key3prev: {fileID: 0}
   backgroundAfter: {fileID: 0}
+  cableFixedRED: {fileID: 0}
+  cableFixedBLUE: {fileID: 0}
+  cableFixedBLACK1: {fileID: 0}
+  cableFixedBLACK2: {fileID: 0}
+  bzzSound: {fileID: 0}
   keyInserted: {fileID: 0}
   keyInserted1: {fileID: 0}
   keyInserted2: {fileID: 0}
@@ -2597,7 +2602,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctOrder: 0800000001000000000000000500000009000000
-  clickAudio: {fileID: 815133747}
   beforeBackground: {fileID: 511463069}
   afterLampOnBackground: {fileID: 285529498}
   afterLampOffBackground: {fileID: 1475918223}
