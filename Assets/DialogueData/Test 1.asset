@@ -16,6 +16,7 @@ MonoBehaviour:
   dialogue:
   - HELP!!! My friends are being grilled alive!! Please save us!!!!! :(((
   - Can you think of a way to turn off the lamp light?
+  - 8 1 0 5 should help you.
   - ... Please... Sir, you are our only hope;(
   responses:
   - responseText: OF course!

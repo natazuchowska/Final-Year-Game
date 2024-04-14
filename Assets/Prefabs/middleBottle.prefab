@@ -30,13 +30,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3082463463846727782}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.032971986, w: 0.9994563}
   m_LocalPosition: {x: 2.88, y: 2.18, z: 0}
-  m_LocalScale: {x: 0.5, y: -0.5, z: 0.5}
+  m_LocalScale: {x: 0.15, y: -0.12, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.779}
 --- !u!212 &1075064360380740493
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 65ca5f95f0cef1a4ea04e0271cd578c7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7366ea2e24064814a9611afda51c2923, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,6 +104,8 @@ MonoBehaviour:
   itemButton: {fileID: 5277565819059789725, guid: b6b8ee08b81c2574693fc1d40b51862a, type: 3}
   pickUpItem: {fileID: 3082463463846727782}
   pickUpButton: {fileID: 7257749087185748502}
+  invMngr: {fileID: 0}
+  pickUpAudio: {fileID: 0}
 --- !u!114 &7257749087185748502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +211,7 @@ PolygonCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 6.5099998, y: 10.251343, z: 5.46, w: 8.361095}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 16.4, y: 23.603092}
     newSize: {x: 16.4, y: 23.603092}

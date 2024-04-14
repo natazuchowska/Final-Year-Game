@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7091413875775495265}
   - component: {fileID: 1075064360380740493}
-  - component: {fileID: 6048989860569331441}
   - component: {fileID: 7257749087185748502}
   - component: {fileID: 5078146021725194189}
   - component: {fileID: 1257577120465767745}
@@ -32,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.88, y: 2.18, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 93c9cf1ebe46a0e4e92f3cbd5c65337b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f96fd1bc945e0fc4aa5e9b0b0f6877e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,23 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6048989860569331441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3082463463846727782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aa32f9398cf960499157d96f0cfa455, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemButton: {fileID: 5277565819059789725, guid: b6b8ee08b81c2574693fc1d40b51862a, type: 3}
-  pickUpItem: {fileID: 3082463463846727782}
-  pickUpButton: {fileID: 7257749087185748502}
-  invMngr: {fileID: 0}
-  pickUpAudio: {fileID: 0}
 --- !u!114 &7257749087185748502
 MonoBehaviour:
   m_ObjectHideFlags: 0

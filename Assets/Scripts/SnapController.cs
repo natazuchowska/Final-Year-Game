@@ -83,6 +83,12 @@ public class SnapController : MonoBehaviour
     bool cableSlot3 = false;
     bool cableSlot4 = false;
 
+    [SerializeField] GameObject cableFixedRED;
+    [SerializeField] GameObject cableFixedBLUE;
+    [SerializeField] GameObject cableFixedBLACK1;
+    [SerializeField] GameObject cableFixedBLACK2;
+
+
     GameObject puzzleSolvedBg;
 
     // -----------------------------------------------------------------------------
@@ -282,6 +288,11 @@ public class SnapController : MonoBehaviour
         {
             puzzleSolvedBg = GameObject.FindGameObjectWithTag("BackgroundAfter");
             puzzleSolvedBg.SetActive(false);
+
+            cableFixedRED.SetActive(false);
+            cableFixedBLUE.SetActive(false);
+            cableFixedBLACK1.SetActive(false);
+            cableFixedBLACK2.SetActive(false);
         }
     }
 
@@ -660,52 +671,68 @@ public class SnapController : MonoBehaviour
             }
             if(draggable.gameObject.CompareTag("CableFix"))
             {
-                if (snapIndex == 0)
+                if (snapIndex == 0) // black short
                 {
                     // check which bottle that is
                     if (draggable.gameObject.name == "cable1")
                     {
                         cableSlot1 = true;
                         Debug.Log("c1 OK");
+
+                        cableFixedBLACK1.SetActive(true);
+                        GameObject c = GameObject.Find("cable1");
+                        c.transform.localPosition = new Vector3(c.transform.localPosition.x, c.transform.localPosition.y, 10);
                     }
                     else
                     {
                         cableSlot1 = false;
                     }
                 }
-                if (snapIndex == 1)
+                if (snapIndex == 1) // blue
                 {
                     // check which bottle that is
                     if (draggable.gameObject.name == "cable2")
                     {
                         cableSlot2 = true;
                         Debug.Log("c2 OK");
+
+                        cableFixedBLUE.SetActive(true);
+                        GameObject c = GameObject.Find("cable2");
+                        c.transform.localPosition = new Vector3(c.transform.localPosition.x, c.transform.localPosition.y, 10);
                     }
                     else
                     {
                         cableSlot2 = false;
                     }
                 }
-                if (snapIndex == 2)
+                if (snapIndex == 2) // red
                 {
                     // check which bottle that is
                     if (draggable.gameObject.name == "cable3")
                     {
                         cableSlot3 = true;
                         Debug.Log("c3 OK");
+
+                        cableFixedRED.SetActive(true);
+                        GameObject c = GameObject.Find("cable3");
+                        c.transform.localPosition = new Vector3(c.transform.localPosition.x, c.transform.localPosition.y, 10);
                     }
                     else
                     {
                         cableSlot3 = false;
                     }
                 }
-                if (snapIndex == 3)
+                if (snapIndex == 3) // black long
                 {
                     // check which bottle that is
                     if (draggable.gameObject.name == "cable4")
                     {
                         cableSlot4 = true;
                         Debug.Log("c4 OK");
+
+                        cableFixedBLACK2.SetActive(true);
+                        GameObject c = GameObject.Find("cable4");
+                        c.transform.localPosition = new Vector3(c.transform.localPosition.x, c.transform.localPosition.y, 10);
                     }
                     else
                     {
@@ -729,43 +756,11 @@ public class SnapController : MonoBehaviour
                     GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(1); // mark appropriate puzzle flag in game mngr as solved
                 }
             }
-
-            // ELECTRICITY FIX PUZZLE ====================================================================================
-           /* if(sceneID == 13)
-            {
-                backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); 
-                backgroundAfter.SetActive(false);
-
-                *//*if (electricityFlow == true)
-                {
-                    electricityBackgroundAfter.SetActive(true); //display open box
-                }*//*
-
-                if (snapIndex == 0)
-                {
-                    // check if correct obj (docelowo -> button)
-                    if (draggable.gameObject.name == "sardynka")
-                    {
-                        Debug.Log("object inserted OK");
-                        audioPlayer.Play(); // play door unlocking sound
-
-                        lightOn = false; // light now turned off
-                        Debug.Log("lightOn val in electricity box: " + lightOn);
-
-                        GameObject.Find("GameManager").GetComponent<GameManager>().markAsSolved(2); // mark appropriate puzzle flag in game mngr as solved
-                    }
-                    else
-                    {
-                        *//*slot1 = false;*//*
-                        Debug.Log("wrong object");
-                    }
-                }
-            }*/
         }
 
         if (closestDistance > snapRange) //not in snap distance so snap back to original position
         {
-            if(sceneID != 10)
+            if(sceneID != 10 && sceneID != 12)
             {
                 draggable.transform.localPosition = new Vector3(initialPos.x, initialPos.y, -2.6f); // go back to the initial position of the object if not put in the snap slot
             }

@@ -1,0 +1,599 @@
+fileFormatVersion: 2
+guid: 1a9fcd794ce157248949d261cac90c80
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1135185547025345168
+    second: Grafika_bez_nazwy 5_0
+  - first:
+      213: 8127420509165992010
+    second: Grafika_bez_nazwy 5_1
+  - first:
+      213: 6000144489276612754
+    second: Grafika_bez_nazwy 5_2
+  - first:
+      213: 5674629169939805940
+    second: Grafika_bez_nazwy 5_3
+  - first:
+      213: 3593953557413512435
+    second: Grafika_bez_nazwy 5_4
+  - first:
+      213: 6636240675828023432
+    second: Grafika_bez_nazwy 5_5
+  - first:
+      213: 4138446335521576304
+    second: Grafika_bez_nazwy 5_6
+  - first:
+      213: -1156380766769040700
+    second: Grafika_bez_nazwy 5_7
+  - first:
+      213: 2342633708147233826
+    second: Grafika_bez_nazwy 5_8
+  - first:
+      213: -364457904964250779
+    second: Grafika_bez_nazwy 5_9
+  - first:
+      213: 8492163302668290699
+    second: Grafika_bez_nazwy 5_10
+  - first:
+      213: 5730907426916621026
+    second: Grafika_bez_nazwy 5_11
+  - first:
+      213: -821629095038974554
+    second: Grafika_bez_nazwy 5_12
+  - first:
+      213: -1726039299484384080
+    second: Grafika_bez_nazwy 5_13
+  - first:
+      213: 5627686657106645185
+    second: Grafika_bez_nazwy 5_14
+  - first:
+      213: -7641923759385732447
+    second: Grafika_bez_nazwy 5_15
+  - first:
+      213: -4811640241268432865
+    second: Grafika_bez_nazwy 5_16
+  - first:
+      213: -3356929499899848322
+    second: Grafika_bez_nazwy 5_17
+  - first:
+      213: -1935818217674201359
+    second: Grafika_bez_nazwy 5_18
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 562
+        width: 1624
+        height: 1204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09a6a949d3df0cf00800000000000000
+      internalID: 1135185547025345168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1760
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48301564e56ac070800000000000000
+      internalID: 8127420509165992010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_2
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1734
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290a9547f9bc44350800000000000000
+      internalID: 6000144489276612754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_3
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1724
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f6f4522a2550ce40800000000000000
+      internalID: 5674629169939805940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_4
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1701
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f442e808b940e130800000000000000
+      internalID: 3593953557413512435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_5
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 1702
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8804abefbb9a81c50800000000000000
+      internalID: 6636240675828023432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_6
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1698
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075d7c60407be6930800000000000000
+      internalID: 4138446335521576304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_7
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 1692
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c233a3c1d5b3ffe0800000000000000
+      internalID: -1156380766769040700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1386
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224d8fc12f4b28020800000000000000
+      internalID: 2342633708147233826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1341
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563d507677f21faf0800000000000000
+      internalID: -364457904964250779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1325
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ac626c7893ad570800000000000000
+      internalID: 8492163302668290699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1313
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea530ee0f5488f40800000000000000
+      internalID: 5730907426916621026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_12
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 643
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a58315f0bcf894f0800000000000000
+      internalID: -821629095038974554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_13
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 647
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b48edde660eb08e0800000000000000
+      internalID: -1726039299484384080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_14
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 646
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c01c08a23f891e40800000000000000
+      internalID: 5627686657106645185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_15
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 639
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa123954de62f590800000000000000
+      internalID: -7641923759385732447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_16
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 587
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10683891be993db0800000000000000
+      internalID: -4811640241268432865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_17
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 562
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e799076d76ac961d0800000000000000
+      internalID: -3356929499899848322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy 5_18
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 564
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6acc166979225e0800000000000000
+      internalID: -1935818217674201359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Grafika_bez_nazwy 5_0: 1135185547025345168
+      Grafika_bez_nazwy 5_1: 8127420509165992010
+      Grafika_bez_nazwy 5_10: 8492163302668290699
+      Grafika_bez_nazwy 5_11: 5730907426916621026
+      Grafika_bez_nazwy 5_12: -821629095038974554
+      Grafika_bez_nazwy 5_13: -1726039299484384080
+      Grafika_bez_nazwy 5_14: 5627686657106645185
+      Grafika_bez_nazwy 5_15: -7641923759385732447
+      Grafika_bez_nazwy 5_16: -4811640241268432865
+      Grafika_bez_nazwy 5_17: -3356929499899848322
+      Grafika_bez_nazwy 5_18: -1935818217674201359
+      Grafika_bez_nazwy 5_2: 6000144489276612754
+      Grafika_bez_nazwy 5_3: 5674629169939805940
+      Grafika_bez_nazwy 5_4: 3593953557413512435
+      Grafika_bez_nazwy 5_5: 6636240675828023432
+      Grafika_bez_nazwy 5_6: 4138446335521576304
+      Grafika_bez_nazwy 5_7: -1156380766769040700
+      Grafika_bez_nazwy 5_8: 2342633708147233826
+      Grafika_bez_nazwy 5_9: -364457904964250779
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

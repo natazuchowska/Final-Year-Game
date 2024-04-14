@@ -1,0 +1,799 @@
+fileFormatVersion: 2
+guid: f96fd1bc945e0fc4aa5e9b0b0f6877e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6288884740253621281
+    second: bottle2 (1)_0
+  - first:
+      213: -7649110891268885728
+    second: bottle2 (1)_1
+  - first:
+      213: 4849019609835483672
+    second: bottle2 (1)_2
+  - first:
+      213: 6866450331208273993
+    second: bottle2 (1)_3
+  - first:
+      213: -4023502273919662481
+    second: bottle2 (1)_4
+  - first:
+      213: 2380617924753765898
+    second: bottle2 (1)_5
+  - first:
+      213: -1716425797472098053
+    second: bottle2 (1)_6
+  - first:
+      213: -1188181522461353883
+    second: bottle2 (1)_7
+  - first:
+      213: -5150519779040513767
+    second: bottle2 (1)_8
+  - first:
+      213: -4814717513067208027
+    second: bottle2 (1)_9
+  - first:
+      213: 8692334302693746467
+    second: bottle2 (1)_10
+  - first:
+      213: 8525168030962311478
+    second: bottle2 (1)_11
+  - first:
+      213: 2619448904365203342
+    second: bottle2 (1)_12
+  - first:
+      213: -8344045469267370810
+    second: bottle2 (1)_13
+  - first:
+      213: 1118276053637352503
+    second: bottle2 (1)_14
+  - first:
+      213: 7173410170296962958
+    second: bottle2 (1)_15
+  - first:
+      213: 3814738895731059639
+    second: bottle2 (1)_16
+  - first:
+      213: -5186312645263343448
+    second: bottle2 (1)_17
+  - first:
+      213: -293417157225896793
+    second: bottle2 (1)_18
+  - first:
+      213: 6350212804708904178
+    second: bottle2 (1)_19
+  - first:
+      213: -524051897528123163
+    second: bottle2 (1)_20
+  - first:
+      213: 9018951241116938133
+    second: bottle2 (1)_21
+  - first:
+      213: -4149991095700814431
+    second: bottle2 (1)_22
+  - first:
+      213: 6217062939824944947
+    second: bottle2 (1)_23
+  - first:
+      213: -1714719161300890463
+    second: bottle2 (1)_24
+  - first:
+      213: -9201745174142654053
+    second: bottle2 (1)_25
+  - first:
+      213: 3080784925710589535
+    second: bottle2 (1)_26
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bottle2 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 1502
+        height: 2352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c1130f95b964750800000000000000
+      internalID: 6288884740253621281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 2340
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 023b85ecb26e8d590800000000000000
+      internalID: -7649110891268885728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 2338
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812b529d4ad2b4340800000000000000
+      internalID: 4849019609835483672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_3
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 1332
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940588b32388a4f50800000000000000
+      internalID: 6866450331208273993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 1324
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66ca02dff5a928c0800000000000000
+      internalID: -4023502273919662481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 1112
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0630e6b367a90120800000000000000
+      internalID: 2380617924753765898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_6
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1057
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf8eb5ac4d70e28e0800000000000000
+      internalID: -1716425797472098053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 741
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5681209533bb28fe0800000000000000
+      internalID: -1188181522461353883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 727
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 911baa1bc8da588b0800000000000000
+      internalID: -5150519779040513767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 720
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a2e6cb6eefae2db0800000000000000
+      internalID: -4814717513067208027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 561
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 327e00d8eff51a870800000000000000
+      internalID: 8692334302693746467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 550
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6316608e72b7f4670800000000000000
+      internalID: 8525168030962311478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 376
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f59fb66e62a5420800000000000000
+      internalID: 2619448904365203342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 356
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc5c96badef33c80800000000000000
+      internalID: -8344045469267370810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 347
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c41e9552ae48f00800000000000000
+      internalID: 1118276053637352503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 330
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f89b42b821d8360800000000000000
+      internalID: 7173410170296962958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 55
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb6ae670dca0f430800000000000000
+      internalID: 3814738895731059639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_17
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 51
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a046fc90248608b0800000000000000
+      internalID: -5186312645263343448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_18
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 55
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4ab8c66a29debf0800000000000000
+      internalID: -293417157225896793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_19
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 47
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fcafc8a6ec702850800000000000000
+      internalID: 6350212804708904178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_20
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 40
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e087f363913ab8f0800000000000000
+      internalID: -524051897528123163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_21
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 40
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59fe75d8e50c92d70800000000000000
+      internalID: 9018951241116938133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_22
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 31
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a508b706154866c0800000000000000
+      internalID: -4149991095700814431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_23
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 12
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337f28aedc1774650800000000000000
+      internalID: 6217062939824944947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_24
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 21
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1acca1df1081438e0800000000000000
+      internalID: -1714719161300890463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_25
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 10
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b99ef8d5485dc4080800000000000000
+      internalID: -9201745174142654053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2 (1)_26
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 3
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e9b56319521ca20800000000000000
+      internalID: 3080784925710589535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bottle2 (1)_0: 6288884740253621281
+      bottle2 (1)_1: -7649110891268885728
+      bottle2 (1)_10: 8692334302693746467
+      bottle2 (1)_11: 8525168030962311478
+      bottle2 (1)_12: 2619448904365203342
+      bottle2 (1)_13: -8344045469267370810
+      bottle2 (1)_14: 1118276053637352503
+      bottle2 (1)_15: 7173410170296962958
+      bottle2 (1)_16: 3814738895731059639
+      bottle2 (1)_17: -5186312645263343448
+      bottle2 (1)_18: -293417157225896793
+      bottle2 (1)_19: 6350212804708904178
+      bottle2 (1)_2: 4849019609835483672
+      bottle2 (1)_20: -524051897528123163
+      bottle2 (1)_21: 9018951241116938133
+      bottle2 (1)_22: -4149991095700814431
+      bottle2 (1)_23: 6217062939824944947
+      bottle2 (1)_24: -1714719161300890463
+      bottle2 (1)_25: -9201745174142654053
+      bottle2 (1)_26: 3080784925710589535
+      bottle2 (1)_3: 6866450331208273993
+      bottle2 (1)_4: -4023502273919662481
+      bottle2 (1)_5: 2380617924753765898
+      bottle2 (1)_6: -1716425797472098053
+      bottle2 (1)_7: -1188181522461353883
+      bottle2 (1)_8: -5150519779040513767
+      bottle2 (1)_9: -4814717513067208027
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
