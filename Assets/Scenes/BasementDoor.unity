@@ -569,6 +569,7 @@ MonoBehaviour:
   key1prev: {fileID: 0}
   key2prev: {fileID: 5273927456866042649}
   key3prev: {fileID: 1099531455312381951}
+  incorrectLockSound: {fileID: 1591210678}
   backgroundAfter: {fileID: 0}
   cableFixedRED: {fileID: 0}
   cableFixedBLUE: {fileID: 0}

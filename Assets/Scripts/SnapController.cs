@@ -41,7 +41,7 @@ public class SnapController : MonoBehaviour
     [SerializeField] GameObject key2prev;
     [SerializeField] GameObject key3prev;
 
-    private AudioSource incorrectLockSound;
+    [SerializeField] private AudioSource incorrectLockSound;
 
     // ------------------------------------------------------------------------------
 
