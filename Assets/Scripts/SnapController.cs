@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
+/*using Unity.Mathematics;
 using Unity.VisualScripting;
-using UnityEditor.SearchService;
+using UnityEditor.SearchService;*/
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,7 +16,6 @@ public class SnapController : MonoBehaviour
     Vector3 initialPos;
 
     int sceneID; // to check which scene it is
-
     public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
 
     [SerializeField] public static bool canGoThru1; // glasshouse door

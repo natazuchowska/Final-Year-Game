@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+/*using System.Collections;
+using System.Collections.Generic;*/
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
-using System.Net.Security;
+/*using TMPro;
+using System.Net.Security;*/
 
 public class CursorChangeObject : MonoBehaviour
 {
