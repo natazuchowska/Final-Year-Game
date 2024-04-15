@@ -182,9 +182,9 @@ public class SnapController : MonoBehaviour
             if (GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
             {
                 backgroundAfter.SetActive(true);
-                steamLeft.SetActive(false);
-                steamMid.SetActive(false);
-                steamRight.SetActive(false);
+                Destroy(steamLeft);
+                Destroy(steamMid);
+                Destroy(steamRight);
 
                 // hide the key
                 bottleKeyReward.transform.localPosition = new Vector3(bottleKeyReward.transform.localPosition.x, bottleKeyReward.transform.localPosition.y, 10);
@@ -230,38 +230,62 @@ public class SnapController : MonoBehaviour
 
             // if returning to the scene
             if (bottleSlot1 == true || bLD != 0)
-            {
-                steamLeft.SetActive(false);
-                bottleLprev.SetActive(true);
+            {    
+                 if(steamLeft!=null)
+                 {
+                     steamLeft.SetActive(false);
+                 }
+
+                 bottleLprev.SetActive(true);
 
                 if (bLD != 0 && !bottleSlot1)
                 {
                     bottleLprev.transform.localPosition = new Vector3(-7, 0, -3);
-                    steamLeft.SetActive(true);
+                    if (steamLeft != null)
+                    {
+                        steamLeft.SetActive(true);
+                    }
                 }
             }
+
             if (bottleSlot2 == true || bMD != 0)
             {
-                steamMid.SetActive(false);
+                if(steamMid!=null)
+                {
+                    steamMid.SetActive(false);
+                }
+
                 bottleMprev.SetActive(true);
 
                 if (bMD != 0 && !bottleSlot2)
                 {
                     bottleMprev.transform.localPosition = new Vector3(-7, 2, -3);
-                    steamMid.SetActive(true);
+                    if(steamMid!=null)
+                    {
+                        steamMid.SetActive(true);
+                    }
                 }
             }
+
             if (bottleSlot3 == true || bRD != 0)
             {
-                steamRight.SetActive(false);
+                if(steamRight!=null)
+                {
+                    steamRight.SetActive(false);
+                }
+
                 bottleRprev.SetActive(true);
 
                 if (bRD != 0 && !bottleSlot3)
                 {
                     bottleRprev.transform.localPosition = new Vector3(-7, -2, -3);
-                    steamRight.SetActive(true);
+                    if(steamRight!=null)
+                    {
+                        steamRight.SetActive(true);
+                    }
                 }
             }
+                      
 
             // backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // open little door revealing the key
             backgroundAfter.SetActive(false);
@@ -305,9 +329,9 @@ public class SnapController : MonoBehaviour
             if (GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
             {
                 backgroundAfter.SetActive(true);
-                steamLeft.SetActive(false);
-                steamMid.SetActive(false);
-                steamRight.SetActive(false);
+                Destroy(steamLeft);
+                Destroy(steamMid);
+                Destroy(steamRight);
 
                 // hide the key
                 Destroy(bottleKeyReward.GetComponent<CursorChangeObject>());
@@ -354,24 +378,28 @@ public class SnapController : MonoBehaviour
     {
         if(sceneID == 10)
         {
-            foreach (Transform snapPt in snapPoints)
+            if (!GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
             {
-                if (snapPt.transform.childCount == 0)
+                foreach (Transform snapPt in snapPoints)
                 {
-                    if (snapPoints.IndexOf(snapPt) == 0)
+                    if (snapPt.transform.childCount == 0)
                     {
-                        steamLeft.SetActive(true);
-                    }
-                    if (snapPoints.IndexOf(snapPt) == 1)
-                    {
-                        steamMid.SetActive(true);
-                    }
-                    if (snapPoints.IndexOf(snapPt) == 2)
-                    {
-                        steamRight.SetActive(true);
+                        if (snapPoints.IndexOf(snapPt) == 0)
+                        {
+                            steamLeft.SetActive(true);
+                        }
+                        if (snapPoints.IndexOf(snapPt) == 1)
+                        {
+                            steamMid.SetActive(true);
+                        }
+                        if (snapPoints.IndexOf(snapPt) == 2)
+                        {
+                            steamRight.SetActive(true);
+                        }
                     }
                 }
             }
+                
         }
         
         // audioPlayer = GameObject.Find("PuzzleSolvedAudio").GetComponent<AudioSource>();
@@ -587,7 +615,7 @@ public class SnapController : MonoBehaviour
                     
                 }
             }
-            if(draggable.gameObject.CompareTag("SnapBottle") || draggable.gameObject.CompareTag("Bottle"))
+            if((draggable.gameObject.CompareTag("SnapBottle") || draggable.gameObject.CompareTag("Bottle")) && !GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
             {
                 if (snapIndex == 0)
                 {
