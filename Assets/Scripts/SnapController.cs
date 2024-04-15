@@ -189,8 +189,7 @@ public class SnapController : MonoBehaviour
                 // hide the key
                 bottleKeyReward.transform.localPosition = new Vector3(bottleKeyReward.transform.localPosition.x, bottleKeyReward.transform.localPosition.y, 10);
             }
-
-            if (!GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
+            else
             {
                 // set to be visible on start
                 if (!bottleSlot1)

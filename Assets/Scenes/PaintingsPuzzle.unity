@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintButton: {fileID: 111667032}
-  paintID: 6
+  paintID: 5
   pcp: {fileID: 0}
 --- !u!114 &111667036
 MonoBehaviour:
@@ -1624,7 +1624,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -3941859787809185254, guid: d012fce6da5f676428c5a5b63d7c787d, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3a94180c9ec153843a2d67aea74253df, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.12
+  m_Volume: 0.18
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2164,7 +2164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintButton: {fileID: 1258840283}
-  paintID: 3
+  paintID: 2
   pcp: {fileID: 0}
 --- !u!114 &1258840287
 MonoBehaviour:
@@ -2562,7 +2562,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -3941859787809185254, guid: d012fce6da5f676428c5a5b63d7c787d, type: 2}
   m_audioClip: {fileID: 8300000, guid: f2a4c076c5b03b0479497957ef8c8900, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2916,7 +2916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintButton: {fileID: 1439117274}
-  paintID: 1
+  paintID: 0
   pcp: {fileID: 0}
 --- !u!114 &1439117278
 MonoBehaviour:
@@ -3020,7 +3020,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -3941859787809185254, guid: d012fce6da5f676428c5a5b63d7c787d, type: 2}
   m_audioClip: {fileID: 8300000, guid: a02203ace858f2d4093cc8f82d973500, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 0.45
   m_Pitch: 2.78
   Loop: 0
   Mute: 0
@@ -3482,7 +3482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintButton: {fileID: 1795590603}
-  paintID: 4
+  paintID: 3
   pcp: {fileID: 0}
 --- !u!114 &1795590607
 MonoBehaviour:
@@ -3678,7 +3678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintButton: {fileID: 1915532219}
-  paintID: 2
+  paintID: 1
   pcp: {fileID: 0}
 --- !u!114 &1915532223
 MonoBehaviour:
@@ -4256,7 +4256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintButton: {fileID: 2134576892}
-  paintID: 5
+  paintID: 4
   pcp: {fileID: 0}
 --- !u!114 &2134576896
 MonoBehaviour:

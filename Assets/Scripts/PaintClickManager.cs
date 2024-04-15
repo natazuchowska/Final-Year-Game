@@ -18,7 +18,7 @@ public class PaintClickManager : MonoBehaviour
     /*[SerializeField] public GameObject text;*/
 
     [SerializeField] PaintingClickPuzzle pcp;
-    int[] correctOrder;
+    List<int> correctOrder;
 
 
 
@@ -49,9 +49,11 @@ public class PaintClickManager : MonoBehaviour
         // make texts visible for 4 seconds only and then hide again
         Debug.Log("Coroutine started");
         // text.SetActive(true);
-        GameObject.Find("PaintStoryManager").GetComponent<PaintingClickPuzzle>().paintAudio[Array.IndexOf(correctOrder, paintID)].Play(); // play the correct audio
+        GameObject.Find("PaintStoryManager").GetComponent<PaintingClickPuzzle>().paintAudio[correctOrder.IndexOf(paintID)].Play(); // play the correct audio
         yield return new WaitForSeconds(4);
         // text.SetActive(false);
-        GameObject.Find("PaintStoryManager").GetComponent<PaintingClickPuzzle>().paintAudio[Array.IndexOf(correctOrder, paintID)].Pause(); // pause the correct audio
+        GameObject.Find("PaintStoryManager").GetComponent<PaintingClickPuzzle>().paintAudio[correctOrder.IndexOf(paintID)].Pause(); // pause the correct audio
+        // GameObject.Find("PaintStoryManager").GetComponent<PaintingClickPuzzle>().paintAudio[Array.IndexOf(correctOrder, paintID)].Pause(); // pause the correct audio
+
     }
 }

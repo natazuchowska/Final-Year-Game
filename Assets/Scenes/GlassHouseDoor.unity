@@ -932,6 +932,13 @@ MonoBehaviour:
   key1prev: {fileID: 797397745}
   key2prev: {fileID: 0}
   key3prev: {fileID: 0}
+  incorrectLockSound: {fileID: 0}
+  backgroundAfter: {fileID: 0}
+  cableFixedRED: {fileID: 0}
+  cableFixedBLUE: {fileID: 0}
+  cableFixedBLACK1: {fileID: 0}
+  cableFixedBLACK2: {fileID: 0}
+  bzzSound: {fileID: 0}
   keyInserted: {fileID: 1405868220}
   keyInserted1: {fileID: 1405868220}
   keyInserted2: {fileID: 1405868220}
@@ -1182,7 +1189,7 @@ AudioSource:
   m_GameObject: {fileID: 1853229878}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3941859787809185254, guid: d012fce6da5f676428c5a5b63d7c787d, type: 2}
   m_audioClip: {fileID: 8300000, guid: 365a515ba1c1ca841ac3e25a3f6063fd, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

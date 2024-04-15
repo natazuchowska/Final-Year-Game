@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
 
     // FLAG PUZZLES THAT HAVE ALREADY BEEN SOLVED 
-    private bool[] puzzleSolved = new bool[4]; // 4 puzzles in game to be marked as solved(true)/not solved yet (false)
+    private static bool[] puzzleSolved = new bool[4]; // 4 puzzles in game to be marked as solved(true)/not solved yet (false)
     // id 0 -> paintings
     // id 1 -> cables
     // id 2 -> electricity

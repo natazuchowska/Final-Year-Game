@@ -14,7 +14,7 @@ public class PaintingClickPuzzle : MonoBehaviour
 
     GameObject keyReward; // key to get when puzzle solved
 
-    public int[] correctOrder = { 6, 5, 3, 4, 2, 1 }; //the order in which paintings should be clicked
+    public List<int> correctOrder; // ( 6, 5, 3, 4, 2, 1 ) //the order in which paintings should be clicked
     [SerializeField] public AudioSource[] paintAudio; // store audios for each painting
 
     // ------------ BACKGROUNDS -------------------------
@@ -25,7 +25,7 @@ public class PaintingClickPuzzle : MonoBehaviour
     [SerializeField] GameObject paintV5;
     // --------------------------------------------------
 
-    [SerializeField] public int[] dialogueOrder; // get order of dialogue from 1st scene
+    [SerializeField] public List<int> dialogueOrder; // get order of dialogue from 1st scene
 
     public static int howManyPaintings;
     public static int howManyCorrectSoFar = 0; // how many have been clicked ok so far
@@ -44,9 +44,18 @@ public class PaintingClickPuzzle : MonoBehaviour
     {
         dialogueOrder = GameObject.Find("GameManager").GetComponent<DialogueOrderManager>().getFinalOrder(); // get the array from dialogueOrderManager script
 
-        // get BACKGROUNDS
-        /*ogBackground = GameObject.Find("paintings_puzzle");
-        variant1Background = GameObject.Find("paintingsVariant");*/
+        // initialise the correct order -> will be like this if no convo with the character takes place
+        for (int i=0; i<6; i++)
+        {
+/*            int newNum = Random.Range(0, 7);
+            while(!(correctOrder.Count == 0) && correctOrder.Contains(newNum)) // if already in the list generate a different number
+            {
+                newNum = Random.Range(0, 7);
+            }*/
+            correctOrder.Add((i + 3) % 6);
+
+            // correctOrder.Add(newNum);
+        }
 
         // hide all painting variants by default
         paintV1.SetActive(false);
@@ -71,10 +80,48 @@ public class PaintingClickPuzzle : MonoBehaviour
         correctOrder = decideOrder();
     }
 
-    private int[] decideOrder()
+    private List<int> decideOrder()
     {
+        int numFromDialogue = 0;
+        for (int j = 0; j < dialogueOrder.Count; j++)
+        {
+            numFromDialogue += j * dialogueOrder[j];
+        }
 
-        if (dialogueOrder[1] == 1)
+        for (int i=0; i<6; i++)
+        { 
+            correctOrder[i] = (i + numFromDialogue) % 6; // %6 to get nums in the range 0-6
+        }
+        // swap around some around
+        int temp = correctOrder[1];
+        int temp2 = correctOrder[3];
+        correctOrder[1] = correctOrder[4];
+        correctOrder[4] = temp;
+        correctOrder[3] = correctOrder[0];
+        correctOrder[0] = temp2;
+
+        int graphicsverion = (numFromDialogue%13) % 5; // range 0-4 ids for paintings versions
+
+        switch(graphicsverion) // activate the corresponding visual paintings version
+        {
+            case 0:
+                paintV1.SetActive(true);
+                break;
+            case 1:
+                paintV2.SetActive(true);
+                break;
+            case 2:
+                paintV3.SetActive(true);
+                break;
+            case 3:
+                paintV4.SetActive(true);
+                break;
+            case 4:
+                paintV5.SetActive(true);
+                break;
+        }
+
+        /*if (dialogueOrder[1] == 1)
         {
             for(int i=0; i<6; i++)
             {
@@ -126,9 +173,9 @@ public class PaintingClickPuzzle : MonoBehaviour
         {
             // in case dialogue hs not been attempted at all
             paintV1.SetActive(true);
-        }
+        }*/
 
-        Debug.Log("start click chain from painting nr " + correctOrder[0]);
+        // Debug.Log("start click chain from painting nr " + correctOrder[0]);
         return correctOrder;
     }
 
