@@ -22,7 +22,7 @@ public class GoToActivator : MonoBehaviour
     {
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of the scene
 
-        if (bgAfter != null && sceneID == 0) // initial scene
+        if (bgAfter != null && sceneID == 3) // initial scene
         {
             bgAfter.SetActive(false);
             // thankYouMessage = GameObject.Find("thank_you");
@@ -36,7 +36,7 @@ public class GoToActivator : MonoBehaviour
     {
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of the scene
 
-        if(sceneID == 0)
+        if(sceneID == 3) // main scene
         {
             if (GameManager.plantGiven == true && flag == 0)
             {
@@ -53,7 +53,7 @@ public class GoToActivator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(sceneID == 0) // additional plant condition to check
+        if(sceneID == 3) // additional plant condition to check
         {
             // show buttons when player goes into a certain area (collides with button collider)
             if (collision.CompareTag("Player") && GameManager.plantGiven == true)
@@ -76,7 +76,7 @@ public class GoToActivator : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(sceneID == 0)
+        if(sceneID == 3)
         {
             if (goToButton != null && GameManager.plantGiven == true)
             {

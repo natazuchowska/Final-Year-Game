@@ -5,12 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: 91657ca633090d04ab3ac191f2f9e72d
+    path: Assets/Scenes/StartScreen.unity
+    guid: 90875496df27fea4cb9f321718ae9188
   - enabled: 1
     path: Assets/Scenes/RoundRoomScene.unity
     guid: bdeb4d958295c5a48ba3c1d553f6baa7
@@ -18,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TowerRoomScene.unity
     guid: 395542b291b1a79428dff3e17756ab66
   - enabled: 1
-    path: Assets/Scenes/StartScreen.unity
-    guid: 90875496df27fea4cb9f321718ae9188
+    path: Assets/Scenes/MainScene.unity
+    guid: 91657ca633090d04ab3ac191f2f9e72d
   - enabled: 1
     path: Assets/Scenes/LoadScene.unity
     guid: 7f09cb17282e3ae4bb367f71e617adad
@@ -62,5 +59,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Balcony.unity
     guid: d6cdef5c228b0644497c0a9f4d7e5d91
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: f12332f4fb459b6419f17ebb3eeb017e, type: 2}
   m_UseUCBPForAssetBundles: 0

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     /* SCENE INDICES -----------------------------
-     * 0 -> main scene /->snap slots
+     * 3 -> main scene /->snap slots (WAS 0)
      * 1 -> round room
      * 6 -> glasshouse
      * 7 -> basement
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
     bool isFacingRight;
     public PlayerController playerScript;
 
-    public bool lightOn = true;
+    public bool lightOn;
 
     public bool newGameStarted = false; // to check when going back to settings/controls where we came from and change 'go back' button redirection
 
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         plantGiven = false;
 
         // MAIN SCENE
-        if (sceneID == 0)
+        if (sceneID == 3)
         {
             goToRRButton = GameObject.Find("RoundRoomButton").GetComponent<Button>(); // get reference to the navigation button
             goToRRButton.interactable = false;
@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
             HintManager.hintActive[1] = true; // cables hint can now be accessed
         }
 
-        if (!(sceneID == 8 || sceneID == 9 || sceneID == 10 || sceneID == 12 || sceneID == 14 || sceneID == 15 || sceneID == 3 || sceneID == 5))
+        if (!(sceneID == 8 || sceneID == 9 || sceneID == 10 || sceneID == 12 || sceneID == 14 || sceneID == 15 || sceneID == 0 || sceneID == 5))
         {
             Debug.Log("ENABLING THE PLAYER");
             player.SetActive(true); // not a puzzle scene
@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
         }
 
         // MENU SCENES -> disable inventory and option buttons
-        if (sceneID == 3 || sceneID == 5 || sceneID == 16)
+        if (sceneID == 0 || sceneID == 5 || sceneID == 16)
         {
             if (optionsCanvas != null) // if game was already started before and the reference is set
             {
@@ -177,7 +177,7 @@ public class GameManager : MonoBehaviour
             player.transform.localPosition = new Vector3(2.1f, 1.4f, -1); // move player 
             playerScript.speed = 2.0f; // player smaller so needs to proportionally walk a bit slower
 
-            lightOn = GameObject.FindGameObjectWithTag("LampLight").GetComponent<LampController>().lightOn; // read lightOn value from lamp script
+            lightOn = LampController.lightOn; // read lightOn value from lamp script
 
             if (isFacingRight)
             {
@@ -205,7 +205,7 @@ public class GameManager : MonoBehaviour
         }
 
         // MAIN SCENE
-        if (sceneID == 0)
+        if (sceneID == 3)
         {
             goToRRButton = GameObject.Find("RoundRoomButton").GetComponent<Button>(); // get reference to the navigation button
             goToRRButton.interactable = false;

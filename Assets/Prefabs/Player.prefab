@@ -212,9 +212,7 @@ GameObject:
   - component: {fileID: 5397587113700949946}
   - component: {fileID: 2902875439164314240}
   - component: {fileID: 8673122741220908208}
-  - component: {fileID: 3698234482800630803}
   - component: {fileID: 1394522964540877304}
-  - component: {fileID: 5280346720910056546}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -611,26 +609,13 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  speed: 2.4
+  isFacingRight: 1
+  isMoving: 0
+  isThinking: 0
   dialogueUI: {fileID: 0}
---- !u!114 &3698234482800630803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180793806157959848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04360b1a8420ba41ac34925adefed8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFull: 0000000000
-  slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  canTalkRn: 0
+  dialogueBackground: {fileID: 0}
 --- !u!114 &1394522964540877304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -643,21 +628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cae53ad422599349b3d5813e5255c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObj: {fileID: 0}
---- !u!114 &5280346720910056546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180793806157959848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6128c3735f1d4e24a8443c1a7f0d3ba1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  sceneID: 0
 --- !u!1 &1490944089295534033
 GameObject:
   m_ObjectHideFlags: 0

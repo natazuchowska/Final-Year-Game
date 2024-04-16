@@ -76,7 +76,7 @@ public class Draggable : MonoBehaviour
         if(this.gameObject.tag != "Key") // only snap back if not a key
         {
             // scene has no snap slots so return
-            if (!(sceneID == 0 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)) { return; }
+            if (!(sceneID == 3 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)) { return; }
 
             // whereBeforeDragCallback(this);
             snapControl.OnBeforeDrag(this);
@@ -92,7 +92,7 @@ public class Draggable : MonoBehaviour
             transform.localPosition = spriteDragStartPosition + (Camera.main.ScreenToWorldPoint(Input.mousePosition) - mouseDragStartPoistion);
             
             // scene has no snap slots so return
-            if (!(sceneID == 0 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)) { return; }
+            if (!(sceneID == 3 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)) { return; }
 
             // dragInProgressCallback(this);
             snapControl.OnDragInProgress(this);
@@ -105,7 +105,7 @@ public class Draggable : MonoBehaviour
         isDragged = false;
 
         // scene has no snap slots so return
-        if (!(sceneID == 0 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)) { return; }
+        if (!(sceneID == 3 || sceneID == 10 || sceneID == 12 || sceneID == 13 || sceneID == 14 || sceneID == 15)) { return; }
 
         // dragEndedCallback(this);
         snapControl.OnDragEnded(this);

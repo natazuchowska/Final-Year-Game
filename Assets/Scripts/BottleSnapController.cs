@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -81,7 +81,7 @@ public class BottleSnapController : MonoBehaviour
                 closestSnapPoint = snapPoint;
                 closestDistance = currentDistance;
                 snapIndex = snapPoints.IndexOf(snapPoint); // get the index of snappoint
-               /* if(snapIndex == 0 && slot1 == false)
+               *//* if(snapIndex == 0 && slot1 == false)
                 {
                     steamLeft.SetActive(true);
                 }
@@ -92,11 +92,11 @@ public class BottleSnapController : MonoBehaviour
                 if(snapIndex == 2 && slot3 == false)
                 {
                     steamRight.SetActive(true);
-                }*/
+                }*//*
             }
         }
 
-        if (closestSnapPoint != null && closestDistance <= snapRange /* && takenSnapPoints[snapIndex] == 0*/) // if item can be inserted into the slot
+        if (closestSnapPoint != null && closestDistance <= snapRange *//* && takenSnapPoints[snapIndex] == 0*//*) // if item can be inserted into the slot
         {
             draggable.transform.localPosition = closestSnapPoint.localPosition; // put the object in the centre of the (closest) snappoint
 
@@ -200,3 +200,4 @@ public class BottleSnapController : MonoBehaviour
         }
     }
 }
+*/

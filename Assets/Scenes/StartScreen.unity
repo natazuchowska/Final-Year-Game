@@ -199,7 +199,7 @@ PrefabInstance:
     - target: {fileID: 4038249867557473634, guid: 2cb7e13649754ce4d8403f544d24d2b2, type: 3}
       propertyPath: currentAudio
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 894022743}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1055,7 +1055,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5212102904625999148, guid: d012fce6da5f676428c5a5b63d7c787d, type: 2}
   m_audioClip: {fileID: 8300000, guid: b343a9b55e7d29648b246ebca43b553c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2001,7 +2001,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

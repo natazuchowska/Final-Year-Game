@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DialogueActivator : MonoBehaviour, IInteractable // make the class implement the Interactable interface
 {
@@ -9,6 +10,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
     [SerializeField] public GameObject dialogueBackground;
 
     private static bool alreadyTalked = false;
+    public static bool displayNavArrow = false;
 
 
     private void Start()
@@ -23,6 +25,23 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
         if(dialogueBackground != null)
         {
             dialogueBackground.SetActive(false);
+        }
+    }
+
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 11)
+        {
+            if(dialogueBackground.activeSelf == true)
+            {
+                // GameObject.Find("GoBackButton").GetComponent<Button>().interactable = false; // hide the nav arrow when dialogue displayed
+                displayNavArrow = false;
+            }
+            else
+            {
+                // GameObject.Find("GoBackButton").GetComponent<Button>().interactable = true;
+                displayNavArrow = true;
+            }
         }
     }
 
@@ -49,11 +68,11 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
     {
         if(SceneManager.GetActiveScene().buildIndex == 11) // swimming pool -> disable fish talking if light turned off
         {
-            if(!alreadyTalked)
+            if(LampController.lightOn == true) // only display fish dialogue if lamp is on
             {
                 dialogueBackground.SetActive(true);
                 player.DialogueUI.ShowDialogue(dialogueObject);
-                alreadyTalked = true; //shouldn't be able to talk twice to the fish
+                alreadyTalked = true; 
             }
 
         }

@@ -20,22 +20,23 @@ public class DontDestroy : MonoBehaviour
         AudioListener[] listeners = GameObject.FindObjectsByType<AudioListener>(FindObjectsSortMode.None);
 
 
-        if (player.Length > 1) // destroy if any duplicates of the player occur
-        {
-            Destroy(this.gameObject); // avoid duplicates (if plaer already in the scene we don't want to keep the object from previous scene
-        }
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-        }
-
         if (listeners.Length > 1)
         {
-            Destroy(this.gameObject); // avoid duplicates 
+            Destroy(gameObject); // avoid duplicates 
         }
         else
         {
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject); // was 'this.gameObject' before
         }
+
+        if (player.Length > 1) // destroy if any duplicates of the player occur
+        {
+            Destroy(gameObject); // avoid duplicates (if plaer already in the scene we don't want to keep the object from previous scene
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
     }
 }

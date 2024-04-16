@@ -64,7 +64,7 @@ public class CursorManager : MonoBehaviour
             mainCamera = Camera.main;
         }
 
-        if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 11)
+        if (SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 11)
         {
             var rayHit = Physics2D.GetRayIntersection(mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
 
@@ -86,8 +86,15 @@ public class CursorManager : MonoBehaviour
                     }
                     else
                     {
-                        ChangeCursor(4);
+                        if(currentCursor!=normalCursor)
+                        {
+                            ChangeCursor(4);
+                        }
                     }
+                }
+                else
+                {
+                    ChangeCursor(4);
                 }
             }
             

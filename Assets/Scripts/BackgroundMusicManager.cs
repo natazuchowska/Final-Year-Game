@@ -48,7 +48,7 @@ public class BackgroundMusicManager : MonoBehaviour
 
         currentAudio.Pause();
 
-        if (sceneID == 0)
+        if (sceneID == 3) // main scene
         {
             currentAudio = mainSceneAudio;
             currentAudio.volume = 0.7f;
@@ -70,7 +70,8 @@ public class BackgroundMusicManager : MonoBehaviour
             currentAudio = GHAudio;
             currentAudio.volume = 0.8f;
         }
-        if(sceneID == 3 || sceneID == 4 || sceneID == 5)
+
+        if(sceneID == 0 || sceneID == 4 || sceneID == 5 || sceneID == 16)
         {
             currentAudio = menuAudio;
             currentAudio.volume = 0.8f;

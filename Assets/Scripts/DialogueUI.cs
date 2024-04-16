@@ -49,7 +49,7 @@ public class DialogueUI : MonoBehaviour
         recordOrder.RecordResponse(ID); // get id of topic and pass to dialogueOrderManager to record it was picked
 
         // choose and assign the approriate voice for the topic picked -> main scene
-        if(SceneManager.GetActiveScene().buildIndex == 0)
+        if(SceneManager.GetActiveScene().buildIndex == 3) // **WAS 0
         {
             switch (ID)
             {
@@ -116,8 +116,12 @@ public class DialogueUI : MonoBehaviour
             }
         }
         else
-        { 
+        {
+            // ====================
+            GameObject.Find("CursorManager").GetComponent<CursorManager>().ChangeCursor(4); // change cursor to normal when dialogue finished
+            // ====================
             CloseDialogueBox(); // close dialogue box after whole dialogue has been diaplayed
+           
 
             if(GameObject.Find("DialogueCircle") != null)
             {

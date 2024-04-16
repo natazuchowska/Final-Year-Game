@@ -9,7 +9,7 @@ public class CalculatorLampPuzzle : MonoBehaviour
 {
     // general script for checking for the correct order of clicks
 
-    public static bool lightOn; // is lamp light in swimming pool turned on(?)
+    public static bool lightOn = true; // is lamp light in swimming pool turned on(?)
 
     bool electricityFlow; 
 
@@ -42,7 +42,7 @@ public class CalculatorLampPuzzle : MonoBehaviour
         afterLampOnBackground.SetActive(false);
         afterLampOffBackground.SetActive(false);
 
-        lightOn = true;
+        // lightOn = true;
 
         electricityFlow = SnapController.electricityFlow; // get the electricity flow value from snapcontroller
 

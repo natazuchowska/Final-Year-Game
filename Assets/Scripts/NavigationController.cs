@@ -72,6 +72,18 @@ public class NavigationController : MonoBehaviour
             {
                 goThruDoor.interactable = true;
             }
+
+            /*if (SceneManager.GetActiveScene().buildIndex == 11) // swimming pool
+            {
+                if (DialogueActivator.displayNavArrow == false)
+                {
+                    goToRoom.interactable = false; // hide arrow when dialogue displayed
+                }
+                else
+                {
+                    goToRoom.interactable = true; 
+                }
+            }*/
         }
         else
         {

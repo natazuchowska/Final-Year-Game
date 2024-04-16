@@ -56,9 +56,10 @@ public class SpeechBubbleManager : MonoBehaviour
 
             inArea = false;
             // cmScript.ChangeCursor(4);
-            if(character != null && dialogueCircle != null)
+            if(dialogueCircle != null && character != null)
             {
-                character.GetComponent<CursorChangeObject>().DecideCursor();
+                // character.GetComponent<CursorChangeObject>().DecideCursor();
+                cmScript.ChangeCursor(4);
             }
         }
     }

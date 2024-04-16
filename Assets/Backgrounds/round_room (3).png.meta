@@ -188,7 +188,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      round_room (3)_0: -6294972284755110315
+      round_room (3)_1: -3150854384077094645
+      round_room (3)_2: 2492603772767525456
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

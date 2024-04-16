@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+/*using System.Collections;
+using System.Collections.Generic;*/
 using UnityEngine;
 
 public class LampController : MonoBehaviour
 {
-    public bool lightOn = true; // is light turned on(?)
+    public static bool lightOn; // is light turned on(?)
     GameObject lightSprite;
 
     // Start is called before the first frame update

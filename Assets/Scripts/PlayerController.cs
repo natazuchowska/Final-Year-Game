@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
     {
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of current scene    
 
-        if((sceneID == 0 || sceneID == 11) && dialogueBackground == null)
+        if((sceneID == 3 || sceneID == 11) && dialogueBackground == null)
         {
             dialogueBackground = GameObject.Find("DialogueCircle").GetComponent<DialogueActivator>().dialogueBackground;
             // dialogueBackground.SetActive(false);
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
             // dialogueBackground = GameObject.Find("talking_background");
             // dialogueBackground.SetActive(true);
 
-            if (sceneID == 0 || sceneID == 11)
+            if (sceneID == 3 || sceneID == 11)
             {
                 dialogueBackground.SetActive(true);
 
@@ -144,11 +144,6 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isThinking", isThinking);
     }
 
-
-    /*private bool isGrounded()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }*/
 
     // change the size of the character sprite if going away/coming closer
     private void ChangeSize(float change)
@@ -195,7 +190,7 @@ public class PlayerController : MonoBehaviour
         isThinking = false;
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+/*    void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("OnCollisionEnter2D");
         Debug.Log(col.gameObject.name);
@@ -205,7 +200,7 @@ public class PlayerController : MonoBehaviour
             isThinking = true;
             animator.SetBool("isThinking", isThinking); //play thinking animaion when stepping upon the plant
         }
-    }
+    }*/
     IEnumerator WaitForSec() // wait for 4 seconds and then stop displaying the message
     {
         yield return new WaitForSeconds(1);

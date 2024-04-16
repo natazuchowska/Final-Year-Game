@@ -17,7 +17,7 @@ public class ChangeScene : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(3); // go back to startscreen if game has not been started yet
+                SceneManager.LoadScene(0); // go back to startscreen if game has not been started yet
             }
         }
         else

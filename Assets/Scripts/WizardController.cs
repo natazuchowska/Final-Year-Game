@@ -19,7 +19,7 @@ public class WizardController : MonoBehaviour
 
     private void Awake()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 0)
+        if(SceneManager.GetActiveScene().buildIndex == 3) // main scene
         {
             animator = GetComponent<Animator>();
         }
@@ -77,7 +77,7 @@ public class WizardController : MonoBehaviour
 
     public void SetIdleAnimation() // make character speak when dialogue window open
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0) // only animate in the first scene
+        if (SceneManager.GetActiveScene().buildIndex == 3) // only animate in the first scene
         {
             animator.SetBool("isSpeaking", false);
         }

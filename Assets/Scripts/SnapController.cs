@@ -45,9 +45,9 @@ public class SnapController : MonoBehaviour
     // ------------------------------------------------------------------------------
 
     //instantiate bottle slots to false
-    public static bool bottleSlot1 = false;
-    public static bool bottleSlot2 = false;
-    public static bool bottleSlot3 = false;
+    public static bool bottleSlot1;
+    public static bool bottleSlot2;
+    public static bool bottleSlot3;
 
    /* public bool bottleLDropped = false;
     public bool bottleMDropped = false;
@@ -177,7 +177,7 @@ public class SnapController : MonoBehaviour
             steamMid = GameObject.FindGameObjectWithTag("SteamM");
             steamRight = GameObject.FindGameObjectWithTag("SteamR");
 
-            // puzzle has been solved already so display after background
+            // puzzle has been solved already so display after background and remove draggable and change cursor cripts from bottles
             if (GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
             {
                 backgroundAfter.SetActive(true);
@@ -185,13 +185,66 @@ public class SnapController : MonoBehaviour
                 Destroy(steamMid);
                 Destroy(steamRight);
 
+                // draggable.gameObject.name == "rightBottle(Clone)" || draggable.gameObject.name == "rightBottle"
+                Destroy(GameObject.Find("rightBottle(Clone)"));
+                Destroy(GameObject.Find("rightBottle"));
+
+                Destroy(GameObject.Find("middleBottle(Clone)"));
+                Destroy(GameObject.Find("middleBottle"));
+
+                Destroy(GameObject.Find("leftBottle(Clone)"));
+                Destroy(GameObject.Find("leftBottle"));
+
+                GameObject.Find("leftBottleSolved").SetActive(true);
+                GameObject.Find("middleBottleSolved").SetActive(true);
+                GameObject.Find("rightBottleSolved").SetActive(true);
+
                 // hide the key
                 bottleKeyReward.transform.localPosition = new Vector3(bottleKeyReward.transform.localPosition.x, bottleKeyReward.transform.localPosition.y, 10);
             }
             else
             {
+                if(bottleSlot1 == true)
+                {
+                    Destroy(GameObject.Find("leftBottle(Clone)"));
+                    Destroy(GameObject.Find("leftBottle"));
+                    Destroy(steamLeft);
+                    GameObject.Find("leftBottleSolved").SetActive(true);
+                }
+                else
+                {
+                    GameObject.Find("leftBottleSolved").SetActive(false);
+                }
+
+                if (bottleSlot2 == true)
+                {
+                    Destroy(GameObject.Find("middleBottle(Clone)"));
+                    Destroy(GameObject.Find("middleBottle"));
+                    Destroy(steamMid);
+                    GameObject.Find("middleBottleSolved").SetActive(true);
+                }
+                else
+                {
+                    GameObject.Find("middleBottleSolved").SetActive(false);
+                }
+
+                if (bottleSlot3 == true)
+                {
+                    Destroy(GameObject.Find("rightBottle(Clone)"));
+                    Destroy(GameObject.Find("rightBottle"));
+                    Destroy(steamRight);
+                    GameObject.Find("rightBottleSolved").SetActive(true);
+                }
+                else
+                {
+                    GameObject.Find("rightBottleSolved").SetActive(false);
+                }
+                /*GameObject.Find("leftBottleSolved").SetActive(false);
+                GameObject.Find("middleBottleSolved").SetActive(false);
+                GameObject.Find("rightBottleSolved").SetActive(false);*/
+
                 // set to be visible on start
-                if (!bottleSlot1)
+                if (!bottleSlot1 && steamLeft!=null)
                 {
                     steamLeft.SetActive(true);
                 }
@@ -200,7 +253,7 @@ public class SnapController : MonoBehaviour
                     steamLeft.SetActive(false);
                 }
 
-                if (!bottleSlot2)
+                if (!bottleSlot2 && steamMid!=null)
                 {
                     steamMid.SetActive(true);
                 }
@@ -209,7 +262,7 @@ public class SnapController : MonoBehaviour
                     steamMid.SetActive(false);
                 }
 
-                if (!bottleSlot3)
+                if (!bottleSlot3 && steamRight!=null)
                 {
                     steamRight.SetActive(true);
                 }
@@ -227,7 +280,7 @@ public class SnapController : MonoBehaviour
             bottleMprev.SetActive(false);
             bottleRprev.SetActive(false);
 
-            // if returning to the scene
+            // if returning to the scene and bottle dropped but not inserted
             if (bottleSlot1 == true || bLD != 0)
             {    
                  if(steamLeft!=null)
@@ -237,7 +290,7 @@ public class SnapController : MonoBehaviour
 
                  bottleLprev.SetActive(true);
 
-                if (bLD != 0 && !bottleSlot1)
+                if (!bottleSlot1)
                 {
                     bottleLprev.transform.localPosition = new Vector3(-7, 0, -3);
                     if (steamLeft != null)
@@ -256,7 +309,7 @@ public class SnapController : MonoBehaviour
 
                 bottleMprev.SetActive(true);
 
-                if (bMD != 0 && !bottleSlot2)
+                if (!bottleSlot2)
                 {
                     bottleMprev.transform.localPosition = new Vector3(-7, 2, -3);
                     if(steamMid!=null)
@@ -275,7 +328,7 @@ public class SnapController : MonoBehaviour
 
                 bottleRprev.SetActive(true);
 
-                if (bRD != 0 && !bottleSlot3)
+                if (!bottleSlot3)
                 {
                     bottleRprev.transform.localPosition = new Vector3(-7, -2, -3);
                     if(steamRight!=null)
@@ -315,6 +368,18 @@ public class SnapController : MonoBehaviour
             cableFixedBLUE.SetActive(false);
             cableFixedBLACK1.SetActive(false);
             cableFixedBLACK2.SetActive(false);
+
+            if (puzzleSolvedBg != null && GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(1))// check if cables puzzle was already solved -> if so hide the cable sprites
+            {
+                if (puzzleSolvedBg.activeSelf == false)
+                {
+                    puzzleSolvedBg.SetActive(true);
+                    Destroy(GameObject.Find("cable1"));
+                    Destroy(GameObject.Find("cable2"));
+                    Destroy(GameObject.Find("cable3"));
+                    Destroy(GameObject.Find("cable4"));
+                }
+            }
         }
     }
 
@@ -383,15 +448,15 @@ public class SnapController : MonoBehaviour
                 {
                     if (snapPt.transform.childCount == 0)
                     {
-                        if (snapPoints.IndexOf(snapPt) == 0)
+                        if (snapPoints.IndexOf(snapPt) == 0 && steamLeft!=null)
                         {
                             steamLeft.SetActive(true);
                         }
-                        if (snapPoints.IndexOf(snapPt) == 1)
+                        if (snapPoints.IndexOf(snapPt) == 1 && steamMid!=null)
                         {
                             steamMid.SetActive(true);
                         }
-                        if (snapPoints.IndexOf(snapPt) == 2)
+                        if (snapPoints.IndexOf(snapPt) == 2 && steamRight!=null)
                         {
                             steamRight.SetActive(true);
                         }
@@ -419,23 +484,7 @@ public class SnapController : MonoBehaviour
                 electricityBackgroundAfter.SetActive(true); //display open box
             }*/
 
-            // cables puzzle scene
-            if(sceneID == 12)
-            {
-                puzzleSolvedBg.SetActive(false);
-
-                if (puzzleSolvedBg != null && GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(1))
-                {
-                    if(puzzleSolvedBg.activeSelf == false)
-                    {
-                        puzzleSolvedBg.SetActive(true);
-                        Destroy(GameObject.Find("cable1").GetComponent<CursorChangeObject>());
-                        Destroy(GameObject.Find("cable2").GetComponent<CursorChangeObject>());
-                        Destroy(GameObject.Find("cable3").GetComponent<CursorChangeObject>());
-                        Destroy(GameObject.Find("cable4").GetComponent<CursorChangeObject>());
-                    }
-                }
-            }
+            
         }
     }
 
@@ -664,7 +713,7 @@ public class SnapController : MonoBehaviour
                     }
                 }
 
-                foreach(Transform snapPt in snapPoints)
+                /*foreach(Transform snapPt in snapPoints)
                 {
                     if(snapPoints.IndexOf(snapPt) == 0 && snapPt.childCount == 0)
                     {
@@ -680,8 +729,9 @@ public class SnapController : MonoBehaviour
                     {
                         bottleSlot3 = false;
                     }
-                }
-           
+                }*/
+
+                Debug.Log("bottle slot1: " + bottleSlot1 + ", bottle slot2: " + bottleSlot2 + ", bottle slot3: " + bottleSlot3);
 
                 // are all in correct order?
                 if (bottleSlot1 == true && bottleSlot2 == true && bottleSlot3 == true)
