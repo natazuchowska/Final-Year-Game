@@ -19,7 +19,7 @@ public class KeySnapController : MonoBehaviour
     [SerializeField] public Button goThruDoorButton;
 
     //instantiate slots to false
-    bool keySlot1 = false;
+    // bool keySlot1 = false;
     bool keySlot2 = false;
     bool keySlot3 = false;
 
@@ -164,7 +164,7 @@ public class KeySnapController : MonoBehaviour
                         // check if correct key
                         if (draggable.gameObject.name == "glasshouseKey")
                         {
-                            keySlot1 = true;
+                            // keySlot1 = true;
                             Debug.Log("key OK");
 
                             draggable.gameObject.transform.Translate(draggable.gameObject.transform.position.x, draggable.gameObject.transform.position.y, 10); // hide key sprite (push to the back)
@@ -180,7 +180,7 @@ public class KeySnapController : MonoBehaviour
                         }
                         else
                         {
-                            keySlot1 = false;
+                            // keySlot1 = false;
                         }
                     }
                 }

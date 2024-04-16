@@ -11,8 +11,6 @@ public class ElectricitySnapController : MonoBehaviour
 
     [SerializeField] public static bool lightOn = true; // lamp on and needs to be switched off (if initialized here, when set to false would the false value persist when script is executed again?)
 
-    //instantiate slots to false
-    bool slot1 = false;
     bool electricityFlow; // ckeck if electricity ON -> if yes display open box
 
     GameObject electricityBackgroundAfter;

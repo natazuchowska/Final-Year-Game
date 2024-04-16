@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ConfirmPanelManager : MonoBehaviour
 {
     private GameObject confirmPanel;
-    private bool alreadyDisplayed = false;
+    // private bool alreadyDisplayed = false;
 
     private void Start()
     {

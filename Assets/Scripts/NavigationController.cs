@@ -44,10 +44,10 @@ public class NavigationController : MonoBehaviour
 
         Debug.Log(doorOpen);
 
-        if(doorOpen == null) // if no door then same as door open
+        /*if(doorOpen == null) // if no door then same as door open
         {
             doorOpen = true;
-        }
+        }*/
 
         if (goToText != null) // if theres a text to an arrow
         {

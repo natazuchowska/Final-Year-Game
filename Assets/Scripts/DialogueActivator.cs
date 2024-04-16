@@ -9,7 +9,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
 
     [SerializeField] public GameObject dialogueBackground;
 
-    private static bool alreadyTalked = false;
+    // private static bool alreadyTalked = false;
     public static bool displayNavArrow = false;
 
 
@@ -72,7 +72,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
             {
                 dialogueBackground.SetActive(true);
                 player.DialogueUI.ShowDialogue(dialogueObject);
-                alreadyTalked = true; 
+                // alreadyTalked = true; 
             }
 
         }
