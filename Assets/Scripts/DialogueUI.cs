@@ -74,7 +74,7 @@ public class DialogueUI : MonoBehaviour
         // swimming pool
         if(SceneManager.GetActiveScene().buildIndex == 11)
         {
-            GameObject.Find("MainMusic").GetComponent<BackgroundMusicManager>().currentAudio.Pause();
+            // GameObject.Find("MainMusic").GetComponent<BackgroundMusicManager>().currentAudio.Pause();=> UNCOMMENT LATER
         }
 
         speakNow.Play(); // play the character voice sound
@@ -131,7 +131,7 @@ public class DialogueUI : MonoBehaviour
             // swimming pool
             if (SceneManager.GetActiveScene().buildIndex == 11)
             {
-                GameObject.Find("MainMusic").GetComponent<BackgroundMusicManager>().currentAudio.Play();
+                // GameObject.Find("MainMusic").GetComponent<BackgroundMusicManager>().currentAudio.Play(); ==> UNCOMMENT LATER
             }
 
             recordOrder.PrintChosenOrder(); // show order of topics chosen by player
