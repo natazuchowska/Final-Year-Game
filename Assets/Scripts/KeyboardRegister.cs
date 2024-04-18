@@ -27,5 +27,25 @@ public class KeyboardRegister : MonoBehaviour
         {
             Debug.Log("D key pressed");
         }
+
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            Debug.Log("A key released");
+        }
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            Debug.Log("W key released");
+        }
+
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            Debug.Log("S key released");
+        }
+
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            Debug.Log("D key released");
+        }
     }
 }

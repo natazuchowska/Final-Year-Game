@@ -1,0 +1,1124 @@
+fileFormatVersion: 2
+guid: 1e0acd3f79145624f91c65bda2138481
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1311627296393501834
+    second: okladka_0
+  - first:
+      213: -8828817350126677710
+    second: okladka_1
+  - first:
+      213: 3991839411340946847
+    second: okladka_2
+  - first:
+      213: 7820405195497158592
+    second: okladka_3
+  - first:
+      213: -949474234933688406
+    second: okladka_4
+  - first:
+      213: -3868233601567449602
+    second: okladka_5
+  - first:
+      213: 2893453537777223680
+    second: okladka_6
+  - first:
+      213: -4032582523823890332
+    second: okladka_7
+  - first:
+      213: -841445117197635679
+    second: okladka_8
+  - first:
+      213: -1270052334852374539
+    second: okladka_9
+  - first:
+      213: -6023365894442720798
+    second: okladka_10
+  - first:
+      213: -3317238828891181089
+    second: okladka_11
+  - first:
+      213: -6849616392502063536
+    second: okladka_12
+  - first:
+      213: -5775951765414126477
+    second: okladka_13
+  - first:
+      213: 1858284333852379993
+    second: okladka_14
+  - first:
+      213: -115019623819688361
+    second: okladka_15
+  - first:
+      213: 365795999617593571
+    second: okladka_16
+  - first:
+      213: -3222018156497659223
+    second: okladka_17
+  - first:
+      213: -51478739775294194
+    second: okladka_18
+  - first:
+      213: 2549864881902594434
+    second: okladka_19
+  - first:
+      213: -4398879355520553944
+    second: okladka_20
+  - first:
+      213: -1001831240908688170
+    second: okladka_21
+  - first:
+      213: -8455513670786441923
+    second: okladka_22
+  - first:
+      213: 2874297763468768126
+    second: okladka_23
+  - first:
+      213: -4723319936600266357
+    second: okladka_24
+  - first:
+      213: 4954276075520076561
+    second: okladka_25
+  - first:
+      213: 56045095892786330
+    second: okladka_26
+  - first:
+      213: -3175290675874739658
+    second: okladka_27
+  - first:
+      213: -8904991710221522788
+    second: okladka_28
+  - first:
+      213: -8390233788421278347
+    second: okladka_29
+  - first:
+      213: -3207574799103969363
+    second: okladka_30
+  - first:
+      213: -3864096637434359169
+    second: okladka_31
+  - first:
+      213: 698046554511779285
+    second: okladka_32
+  - first:
+      213: 5044966959362568961
+    second: okladka_33
+  - first:
+      213: -4354654996745527159
+    second: okladka_34
+  - first:
+      213: -1924812112271444272
+    second: okladka_35
+  - first:
+      213: 7215481229151433782
+    second: okladka_36
+  - first:
+      213: 2145445757730692590
+    second: okladka_37
+  - first:
+      213: -6159268713929452994
+    second: okladka_38
+  - first:
+      213: 179755585359234486
+    second: okladka_39
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: okladka_0
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 2023
+        width: 36
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67362c85ce92ccde0800000000000000
+      internalID: -1311627296393501834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_1
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 2026
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231d4eaa56db97580800000000000000
+      internalID: -8828817350126677710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_2
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 2020
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9da1618bccd56730800000000000000
+      internalID: 3991839411340946847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_3
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 2030
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c73a3d4719a78c60800000000000000
+      internalID: 7820405195497158592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_4
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 2026
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7446fb63ac2d2f0800000000000000
+      internalID: -949474234933688406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_5
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 2031
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efd975eb806415ac0800000000000000
+      internalID: -3868233601567449602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_6
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2026
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0080f4599ac972820800000000000000
+      internalID: 2893453537777223680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 2048
+        height: 2026
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46067046f836908c0800000000000000
+      internalID: -4032582523823890332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_8
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1993
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1afa273cf169254f0800000000000000
+      internalID: -841445117197635679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_9
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 2002
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fff7f6612edf5ee0800000000000000
+      internalID: -1270052334852374539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_10
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 2002
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1e985d1a4b86ca0800000000000000
+      internalID: -6023365894442720798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_11
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 1993
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdfeec05cdcc6f1d0800000000000000
+      internalID: -3317238828891181089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_12
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1994
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05ec83d8e2641f0a0800000000000000
+      internalID: -6849616392502063536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_13
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 1993
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c53beb872b7dfa0800000000000000
+      internalID: -5775951765414126477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_14
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 1994
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95bc1fa81c3f9c910800000000000000
+      internalID: 1858284333852379993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_15
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 1972
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7564704f24e576ef0800000000000000
+      internalID: -115019623819688361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_16
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 1853
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e037790681931500800000000000000
+      internalID: 365795999617593571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_17
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 1652
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa1912ce871943d0800000000000000
+      internalID: -3222018156497659223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_18
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1652
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e057532eb5c194ff0800000000000000
+      internalID: -51478739775294194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_19
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 1545
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2892c0fa990f26320800000000000000
+      internalID: 2549864881902594434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_20
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 1545
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82ce56c488a04f2c0800000000000000
+      internalID: -4398879355520553944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_21
+      rect:
+        serializedVersion: 2
+        x: 2014
+        y: 1513
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4bfb85bc7c812f0800000000000000
+      internalID: -1001831240908688170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_22
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 1496
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3d905b9d1bf7aa80800000000000000
+      internalID: -8455513670786441923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_23
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 1501
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e737142569e83e720800000000000000
+      internalID: 2874297763468768126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_24
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 1498
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89ab6afa85637eb0800000000000000
+      internalID: -4723319936600266357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_25
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1489
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b279087df11c440800000000000000
+      internalID: 4954276075520076561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_26
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 1493
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c9710c7bc17c000800000000000000
+      internalID: 56045095892786330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_27
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 1481
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a40e524f91fe3d0800000000000000
+      internalID: -3175290675874739658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_28
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 1468
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98a270683d1b6480800000000000000
+      internalID: -8904991710221522788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_29
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1476
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5757ba2a2d6ef8b80800000000000000
+      internalID: -8390233788421278347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_30
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1471
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7b9e4f6b76c73d0800000000000000
+      internalID: -3207574799103969363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_31
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 1461
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7291f3c498ff5ac0800000000000000
+      internalID: -3864096637434359169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_32
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 1436
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d52c5694a5ffa900800000000000000
+      internalID: 698046554511779285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_33
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 1445
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103736c58b2530640800000000000000
+      internalID: 5044966959362568961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_34
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1425
+        width: 8
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9806a973a582193c0800000000000000
+      internalID: -4354654996745527159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_35
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 1425
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6f0bcf491b945e0800000000000000
+      internalID: -1924812112271444272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_36
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 79
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 634f11bd2f9822460800000000000000
+      internalID: 7215481229151433782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_37
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed1862bc8726cd10800000000000000
+      internalID: 2145445757730692590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_38
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 75
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32de06ecb1e58aa0800000000000000
+      internalID: -6159268713929452994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okladka_39
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 80
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b5cab3a0ce9e7200800000000000000
+      internalID: 179755585359234486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      okladka_0: -1311627296393501834
+      okladka_1: -8828817350126677710
+      okladka_10: -6023365894442720798
+      okladka_11: -3317238828891181089
+      okladka_12: -6849616392502063536
+      okladka_13: -5775951765414126477
+      okladka_14: 1858284333852379993
+      okladka_15: -115019623819688361
+      okladka_16: 365795999617593571
+      okladka_17: -3222018156497659223
+      okladka_18: -51478739775294194
+      okladka_19: 2549864881902594434
+      okladka_2: 3991839411340946847
+      okladka_20: -4398879355520553944
+      okladka_21: -1001831240908688170
+      okladka_22: -8455513670786441923
+      okladka_23: 2874297763468768126
+      okladka_24: -4723319936600266357
+      okladka_25: 4954276075520076561
+      okladka_26: 56045095892786330
+      okladka_27: -3175290675874739658
+      okladka_28: -8904991710221522788
+      okladka_29: -8390233788421278347
+      okladka_3: 7820405195497158592
+      okladka_30: -3207574799103969363
+      okladka_31: -3864096637434359169
+      okladka_32: 698046554511779285
+      okladka_33: 5044966959362568961
+      okladka_34: -4354654996745527159
+      okladka_35: -1924812112271444272
+      okladka_36: 7215481229151433782
+      okladka_37: 2145445757730692590
+      okladka_38: -6159268713929452994
+      okladka_39: 179755585359234486
+      okladka_4: -949474234933688406
+      okladka_5: -3868233601567449602
+      okladka_6: 2893453537777223680
+      okladka_7: -4032582523823890332
+      okladka_8: -841445117197635679
+      okladka_9: -1270052334852374539
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

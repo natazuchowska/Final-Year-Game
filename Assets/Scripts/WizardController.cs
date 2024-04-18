@@ -32,7 +32,7 @@ public class WizardController : MonoBehaviour
         // if there is a dialogueUI in the scene
         if (GameObject.Find("DialogueCanvas") != null)
         {
-            if (GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().isOpen == true && SceneManager.GetActiveScene().buildIndex == 0)
+            if (GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().isOpen == true && SceneManager.GetActiveScene().buildIndex == 3)
             {
                 convoTopic = GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().getTopicID(); // check which topic is chosen is convo
              
@@ -67,7 +67,7 @@ public class WizardController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        player.GetComponent<PlayerController>().TalkToCharacter();
+        player.GetComponent<PlayerController>().TalkToCharacter(); // BUILD V -> was PlayerController
     }
 
     public void SetSpeakingAnimation() // make character speak when dialogue window open
@@ -85,7 +85,7 @@ public class WizardController : MonoBehaviour
 
     public void SetTopicAnimation(int topic)
     {
-        if(SceneManager.GetActiveScene().buildIndex == 0) // only animate in the first scene
+        if(SceneManager.GetActiveScene().buildIndex == 3) // only animate in the first scene
         {
             animator.SetInteger("convoTopic", topic);
         }

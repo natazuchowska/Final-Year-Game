@@ -11,7 +11,7 @@ public class PauseController : MonoBehaviour
     [SerializeField] private GameObject pauseCanvas;
 
     GameObject musicManager;
-    // public BackgroundMusicManager musicScript; ==> UNCOMMENT LATER
+    public BackgroundMusicManager musicScript; //==> UNCOMMENT LATER
 
     [SerializeField] Button menuButton;
     [SerializeField] Button resumeButton;
@@ -24,7 +24,7 @@ public class PauseController : MonoBehaviour
     {
         pauseCanvas.SetActive(false);
         musicManager = GameObject.Find("MainMusic"); // get reference to the object controlling music
-        // musicScript = musicManager.GetComponent<BackgroundMusicManager>(); // get reference to music script ==> UNCOMMENT LATER
+        musicScript = musicManager.GetComponent<BackgroundMusicManager>(); // get reference to music script ==> UNCOMMENT LATER
         menuButton.onClick.AddListener(manageAppearance); // call manageAppearance() when button clicked
         // hintButton.onClick.AddListener(manageAppearanceHints); // pause the game when hints displayed
 
@@ -71,10 +71,10 @@ public class PauseController : MonoBehaviour
             {
                 if (a.CompareTag("Music")) // only pause if it is the main scene music
                 {
-                    /*if(musicScript != null) ==> UNCOMMENT LATER
+                    if (musicScript != null) // ==> UNCOMMENT LATER
                     {
                         musicScript.DecideAudio();
-                    }*/
+                    }
                 }
             }
         }
@@ -89,10 +89,10 @@ public class PauseController : MonoBehaviour
             {
                 if (a.CompareTag("Music")) // only pause if it is the main scene music
                 {
-                    /*if(musicScript != null) ==> UNCOMMENT LATER
+                    if (musicScript != null) // ==> UNCOMMENT LATER
                     {
                         a.Pause();
-                    }*/
+                    }
                 }
             }
         }

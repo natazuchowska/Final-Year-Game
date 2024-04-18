@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     public static bool plantGiven; // has plant been given back to the wizard? if so -> unblock the left door
 
     bool isFacingRight;
-    public PlayerController playerScript;
+    public PlayerController playerScript; //CHANGED THIS IN BUILD V
 
     public bool lightOn;
 
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
-        playerScript = player.GetComponent<PlayerController>(); // get the cursor manager script
+        playerScript = player.GetComponent<PlayerController>(); // get the cursor manager script //CHANGED THIS IN BUILD V
 
         optionsCanvas = GameObject.Find("OptionsCanvas");
 

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float _speed = 2.4f;
+    public float speed = 2.6f;
 
     //private float jumpingPower = 8f;
     public bool isFacingRight = true;
@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     int sceneID;
 
     public float horizontalInput;
+    public float verticalInput;
 
     public IInteractable Interactable { get; set; }
 
@@ -47,10 +48,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        verticalInput = Input.GetAxis("Vertical");
 
         Vector3 direction = new Vector3(horizontalInput, verticalInput, 0);
-        transform.Translate(direction * _speed * Time.deltaTime);
+        transform.Translate(direction * speed * Time.deltaTime);
 
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of current scene    
 
@@ -96,6 +97,10 @@ public class PlayerMovement : MonoBehaviour
                 isThinking = true;
                 // SetThinkingAnimation();
             }
+            else
+            {
+                isThinking = false;
+            }
 
             DialogueObject dialogueObject = GameObject.Find("DialogueCircle").GetComponent<DialogueActivator>().dialogueObject;
             this.DialogueUI.ShowDialogue(dialogueObject);
@@ -105,6 +110,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(dialogueBackground!=null && !dialogueBackground.activeSelf) // if dialogue background closed stop thinking
+        {
+            isThinking = false;
+        }
+
         SetWalkingAnimation();
         SetThinkingAnimation();
 
@@ -122,7 +132,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void SetWalkingAnimation() // set the walk animation if player is moving (isMoving == true)
     {
-        isMoving = horizontalInput!= 0f;
+        /*if(horizontalInput > 0.1f || horizontalInput < -0.1f || verticalInput > 0.1f || verticalInput < -0.1f)
+        {
+            isMoving = true;
+        }*/
+
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow))
+        {
+            isMoving = true;
+        }
+        else
+        {
+            /*if((Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.RightArrow))) {
+                isMoving = false;
+            }*/
+        }
+
+        if(!Input.anyKey)
+        {
+            isMoving = false;
+        }
+
+
+        // isMoving = horizontalInput!= 0f;
         animator.SetBool("isMoving", isMoving);
     }
 

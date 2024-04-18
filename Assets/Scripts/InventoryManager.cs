@@ -59,7 +59,7 @@ public class InventoryManager : MonoBehaviour
         // only do this if there is a player sprite in the current scene
         if (player.activeInHierarchy == true)
         {
-            playerIsMoving = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isMoving; // check if player is moving
+            playerIsMoving = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isMoving; // check if player is moving BUILD VERSION
 
             if (playerIsMoving == true)
             {
