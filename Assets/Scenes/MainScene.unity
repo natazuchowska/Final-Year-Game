@@ -13930,6 +13930,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5887518594023287060, guid: 06c97489fee03be4fb6e62a4125b0c84, type: 3}
+      propertyPath: m_Mass
+      value: 10.281692
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887518594023287060, guid: 06c97489fee03be4fb6e62a4125b0c84, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6168601596107725517, guid: 06c97489fee03be4fb6e62a4125b0c84, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.029427875
