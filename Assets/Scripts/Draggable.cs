@@ -6,9 +6,6 @@ using UnityEngine;
 
 public class Draggable : MonoBehaviour
 {
-
-
-    // ERROR OF NULLREFERENCE -> DELEGATES SHOULD BE REASSIGNED TO A NEW SNAPCONTROLLER WITH EVERY SCENE CHANGE
     public delegate void DragEndedDelegate(Draggable draggableObject); // delegate type - can hold reference to another method
 
     public DragEndedDelegate dragEndedCallback; // want to invoke the callback when the drag is over
@@ -24,25 +21,6 @@ public class Draggable : MonoBehaviour
     public delegate void BeforeDragDelegate(Draggable draggableObject); // delegate type - can hold reference to another method
 
     public BeforeDragDelegate whereBeforeDragCallback; // want o invoke the callback when the drag is in progress
-
-    /*    // === FOR KEY SNAP CONTROLLER: ================================================================
-
-        public delegate void KeyDragEndedDelegate(Draggable draggableObject); 
-
-        public KeyDragEndedDelegate keyDragEndedCallback; 
-
-        // ---------------------------------------------------------------------------------------------
-
-        public delegate void KeyDragInProgressDelegate(Draggable draggableObject);
-
-        public KeyDragInProgressDelegate keyDragInProgressCallback;
-
-        // ---------------------------------------------------------------------------------------------
-
-        public delegate void KeyBeforeDragDelegate(Draggable draggableObject);
-
-        public KeyBeforeDragDelegate keyWhereBeforeDragCallback;*/
-
 
     GameObject snapControlObj; // get reference to snap control object
     [SerializeField] SnapController snapControl; // to reference snap controller

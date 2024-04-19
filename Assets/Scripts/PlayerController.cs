@@ -18,12 +18,10 @@ public class PlayerController : MonoBehaviour
     private float vertical;
 
     public float speed = 2.4f;
-    //private float jumpingPower = 8f;
     public bool isFacingRight = true;
 
     private Animator animator;
     public bool isMoving = false; // to set walking animation (was private before but inventory needs to access it to close on movement)
-    //private bool isInAir = false; // to set jumping animation
     public bool isThinking = false; //to set thinking animation
 
     private AudioSource walkAudio; // walking sound
@@ -77,20 +75,6 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
-
-        // ----- MANAGE DIALOGUE ---------------------------------------------
-
-        // get the mouse position
-
-       
-        
-        /*if (Input.GetKeyDown(KeyCode.T))
-        {
-            if(Interactable != null)
-            {
-                Interactable.Interact(this); // same as Interactable?.Interact(this) --> can then omit the 'if(Intractable != null)' as equivalent
-            }
-        } */
     }
 
     public void TalkToCharacter()
@@ -144,36 +128,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isThinking", isThinking);
     }
 
-
-    // change the size of the character sprite if going away/coming closer
-    private void ChangeSize(float change)
-    {
-        Vector3 localScale = transform.localScale;
-        
-        if(change < 1.0f) // size down
-        {
-            if (Math.Abs(localScale.x) > 0.21f && localScale.y > 0.21f) // allow scale 0.1 at most
-            {
-                StartCoroutine("WaitForSec"); // slow down the resizing process
-
-                localScale.x *= change;
-                localScale.y *= change;
-                transform.localScale = localScale;
-            }
-        }
-        if (change > 1.0f) // size up
-        {
-            if (Math.Abs(localScale.x) < 0.29f && localScale.y < 0.29f) // allow scale 0.3 at most
-            {
-                StartCoroutine("WaitForSec"); // slow down the resizing process
-
-                localScale.x *= change;
-                localScale.y *= change;
-                transform.localScale = localScale;
-            }
-        }
-    }
-    // flip the character baesd on which direction it is going
+    // flip the character based on which direction it is going
     private void Flip()
     {
         isFacingRight = !isFacingRight;
@@ -190,17 +145,6 @@ public class PlayerController : MonoBehaviour
         isThinking = false;
     }
 
-/*    void OnCollisionEnter2D(Collision2D col)
-    {
-        Debug.Log("OnCollisionEnter2D");
-        Debug.Log(col.gameObject.name);
-        if (col.gameObject.CompareTag("Plant"))
-        {
-            Debug.Log("Hit the plant:(");
-            isThinking = true;
-            animator.SetBool("isThinking", isThinking); //play thinking animaion when stepping upon the plant
-        }
-    }*/
     IEnumerator WaitForSec() // wait for 4 seconds and then stop displaying the message
     {
         yield return new WaitForSeconds(1);

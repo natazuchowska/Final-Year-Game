@@ -71,6 +71,7 @@ public class SnapController : MonoBehaviour
 
 
     [SerializeField] GameObject backgroundAfter; // to change the background when puzzle solved
+    [SerializeField] AudioSource steamSound;
 
     // ------------------------------------------------------------------------------
 
@@ -102,14 +103,10 @@ public class SnapController : MonoBehaviour
 
     [SerializeField] public static bool lightOn = true; // lamp on and needs to be switched off (if initialized here, when set to false would the false value persist when script is executed again?)
 
-    //instantiate slots to false
-    // bool slot1 = false;
-    // bool electricityFlow; 
-
     GameObject electricityBackgroundAfter;
 
     // scenes with snap slots
-    // ids: 0 10 12 13 14 15
+    // ids: 3 10 12 13 14 15
 
     void Awake()
     {
@@ -293,7 +290,7 @@ public class SnapController : MonoBehaviour
                 if (!bottleSlot1)
                 {
                     bottleLprev.transform.localPosition = new Vector3(-7, 0, -3);
-                    if (steamLeft != null)
+                    if (steamLeft != null && !GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
                     {
                         steamLeft.SetActive(true);
                     }
@@ -312,7 +309,7 @@ public class SnapController : MonoBehaviour
                 if (!bottleSlot2)
                 {
                     bottleMprev.transform.localPosition = new Vector3(-7, 2, -3);
-                    if(steamMid!=null)
+                    if(steamMid!=null && !GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
                     {
                         steamMid.SetActive(true);
                     }
@@ -331,32 +328,22 @@ public class SnapController : MonoBehaviour
                 if (!bottleSlot3)
                 {
                     bottleRprev.transform.localPosition = new Vector3(-7, -2, -3);
-                    if(steamRight!=null)
+                    if(steamRight!=null && !GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
                     {
                         steamRight.SetActive(true);
                     }
                 }
             }
                       
-
             // backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // open little door revealing the key
             backgroundAfter.SetActive(false);
         }
 
         // ELECTRICITY (LAMP) PUZZLE SCENE
-        if (sceneID == 13)
+/*        if (sceneID == 13)
         {
             Debug.Log("lightOn val in electricity box: " + lightOn);
-            // electricityBackgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // get reference to the background
-            // electricityBackgroundAfter.SetActive(false); // display closed box initially
-
-            /* electricityFlow = CableFix.electricityFlow; // get the state of electricity from cable fix puzzle*/
-
-            /*if (electricityFlow == true)
-            {
-                electricityBackgroundAfter.SetActive(true); //display open box
-            }*/
-        }
+        }*/
 
         // cables puzzle scene
         if (sceneID == 12)
@@ -437,7 +424,6 @@ public class SnapController : MonoBehaviour
         }
     }
 
-    // wken key is dropped out of inventory
     private void Update()
     {
         if(sceneID == 10)
@@ -466,7 +452,6 @@ public class SnapController : MonoBehaviour
                 
         }
         
-        // audioPlayer = GameObject.Find("PuzzleSolvedAudio").GetComponent<AudioSource>();
 
         foreach (Draggable draggable in draggableObjects)
         {
@@ -475,17 +460,6 @@ public class SnapController : MonoBehaviour
             draggable.whereBeforeDragCallback = OnBeforeDrag;
         }
 
-        // electricity puzzle scene
-        if (electricityFlow == true)
-        {
-            // lamp switch scene
-            /*if(sceneID == 13)
-            {
-                electricityBackgroundAfter.SetActive(true); //display open box
-            }*/
-
-            
-        }
     }
 
 
@@ -500,11 +474,6 @@ public class SnapController : MonoBehaviour
                 initialPos = draggable.transform.parent.transform.localPosition;
             }
         }
-
-
-        /*Vector3 mousePos = Input.mousePosition;
-        draggable.transform.localPosition = new Vector3(mousePos.x, mousePos.y, -2.6f);*/
-
     }
 
     public void OnDragEnded(Draggable draggable)
@@ -671,13 +640,17 @@ public class SnapController : MonoBehaviour
                     if (draggable.gameObject.name == "leftBottle(Clone)" || draggable.gameObject.name == "leftBottle")
                     {
                         bottleSlot1 = true;
-                        Debug.Log("left OK");
                         steamLeft.SetActive(false);
+
+                        steamSound.Play();
                     }
                     else
                     {
                         bottleSlot1 = false;
-                        steamLeft.SetActive(true);
+                        if (!GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
+                        {
+                            steamLeft.SetActive(true);
+                        }
                     }
 
                 }
@@ -687,13 +660,17 @@ public class SnapController : MonoBehaviour
                     if ((draggable.gameObject.name == "middleBottle(Clone)" || draggable.gameObject.name == "middleBottle"))
                     {
                         bottleSlot2 = true;
-                        Debug.Log("middle OK");
                         steamMid.SetActive(false);
+
+                        steamSound.Play();
                     }
                     else
                     {
                         bottleSlot2 = false;
-                        steamMid.SetActive(true);
+                        if (!GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
+                        {
+                            steamMid.SetActive(true);
+                        }
                     }
                 }
                 if (snapIndex == 2)
@@ -703,41 +680,26 @@ public class SnapController : MonoBehaviour
                     if (draggable.gameObject.name == "rightBottle(Clone)" || draggable.gameObject.name == "rightBottle")
                     {
                         bottleSlot3 = true;
-                        Debug.Log("right OK");
                         steamRight.SetActive(false);
+
+                        steamSound.Play();
                     }
                     else
                     {
                         bottleSlot3 = false;
-                        steamRight.SetActive(true);
+
+                        if(!GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
+                        {
+                            steamRight.SetActive(true);
+                        }
                     }
                 }
-
-                /*foreach(Transform snapPt in snapPoints)
-                {
-                    if(snapPoints.IndexOf(snapPt) == 0 && snapPt.childCount == 0)
-                    {
-                        bottleSlot1 = false;
-                    }
-
-                    if (snapPoints.IndexOf(snapPt) == 1 && snapPt.childCount == 0)
-                    {
-                        bottleSlot2 = false;
-                    }
-
-                    if (snapPoints.IndexOf(snapPt) == 2 && snapPt.childCount == 0)
-                    {
-                        bottleSlot3 = false;
-                    }
-                }*/
 
                 Debug.Log("bottle slot1: " + bottleSlot1 + ", bottle slot2: " + bottleSlot2 + ", bottle slot3: " + bottleSlot3);
 
                 // are all in correct order?
                 if (bottleSlot1 == true && bottleSlot2 == true && bottleSlot3 == true)
                 {
-                    Debug.Log("CORRECT ORDER! CONGRATS!!!!");
-
                     bottleKeyReward.SetActive(true);
                     backgroundAfter.SetActive(true);
                     audioPlayer.Play(); // play puzzle solved sound 
@@ -754,7 +716,6 @@ public class SnapController : MonoBehaviour
                     if (draggable.gameObject.name == "cable1")
                     {
                         cableSlot1 = true;
-                        Debug.Log("c1 OK");
 
                         cableFixedBLACK1.SetActive(true);
                         GameObject c = GameObject.Find("cable1");
@@ -769,11 +730,10 @@ public class SnapController : MonoBehaviour
                 }
                 if (snapIndex == 1) // blue
                 {
-                    // check which bottle that is
+                    // check which cable that is
                     if (draggable.gameObject.name == "cable2")
                     {
                         cableSlot2 = true;
-                        Debug.Log("c2 OK");
 
                         cableFixedBLUE.SetActive(true);
                         GameObject c = GameObject.Find("cable2");
@@ -788,11 +748,10 @@ public class SnapController : MonoBehaviour
                 }
                 if (snapIndex == 2) // red
                 {
-                    // check which bottle that is
+                    // check which cable that is
                     if (draggable.gameObject.name == "cable3")
                     {
                         cableSlot3 = true;
-                        Debug.Log("c3 OK");
 
                         cableFixedRED.SetActive(true);
                         GameObject c = GameObject.Find("cable3");
@@ -807,11 +766,10 @@ public class SnapController : MonoBehaviour
                 }
                 if (snapIndex == 3) // black long
                 {
-                    // check which bottle that is
+                    // check which cable that is
                     if (draggable.gameObject.name == "cable4")
                     {
                         cableSlot4 = true;
-                        Debug.Log("c4 OK");
 
                         cableFixedBLACK2.SetActive(true);
                         GameObject c = GameObject.Find("cable4");
@@ -853,17 +811,17 @@ public class SnapController : MonoBehaviour
 
             if (sceneID == 10)
             {
-                if(snapIndex == 0 && GameObject.Find("SnapPointBL").transform.childCount == 0)
+                if(snapIndex == 0 && GameObject.Find("SnapPointBL").transform.childCount == 0 && !GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
                 {
                     steamLeft.SetActive(true);
                 }
 
-                if (snapIndex == 1 && GameObject.Find("SnapPointBM").transform.childCount == 0)
+                if (snapIndex == 1 && GameObject.Find("SnapPointBM").transform.childCount == 0 && !GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
                 {
                     steamMid.SetActive(true);
                 }
 
-                if (snapIndex == 2 && GameObject.Find("SnapPointBR").transform.childCount == 0)
+                if (snapIndex == 2 && GameObject.Find("SnapPointBR").transform.childCount == 0 && !GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
                 {
                     steamRight.SetActive(true);
                 }

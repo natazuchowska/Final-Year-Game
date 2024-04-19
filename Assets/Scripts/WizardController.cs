@@ -67,6 +67,12 @@ public class WizardController : MonoBehaviour
 
     private void OnMouseDown()
     {
+
+        if (GameObject.Find("InventoryCanvas")!= null && GameObject.Find("InventoryCanvas").activeSelf == true)
+        {
+            Debug.Log("ENTERED THE CLOSE INVENTORY CASE WITH DIALOGUE");
+            GameObject.Find("InventoryButton").GetComponent<InventoryManager>().OpenInventory(); // close inventory
+        }
         player.GetComponent<PlayerController>().TalkToCharacter(); // BUILD V -> was PlayerController
     }
 

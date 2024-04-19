@@ -1,7 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
+/*using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
+using Unity.VisualScripting;*/
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     [SerializeField] private GameObject inventoryCanvas;
-    public bool isOpen = false;
+    public bool isOpen;
 
     [SerializeField] GameObject optionsCanvas;
 
@@ -37,8 +37,11 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-        isOpen = false;
-        inventoryCanvas.SetActive(false);
+        if (SceneManager.GetActiveScene().buildIndex != 3) // if not the main scene 
+        {
+            isOpen = false;
+            OpenInventory();
+        }
     }
 
 
@@ -49,9 +52,13 @@ public class InventoryManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("OnSceneLoaded called");
-        isOpen = false;
-        inventoryCanvas.SetActive(false);
+        if (SceneManager.GetActiveScene().buildIndex != 3)
+        {
+            if (inventoryCanvas.activeSelf == true)
+            {
+                OpenInventory(); // close inventory
+            }
+        }
     }
 
     private void Update()
@@ -65,24 +72,29 @@ public class InventoryManager : MonoBehaviour
             {
                 if(isOpen == true)
                 {
-                    inventoryCanvas.SetActive(false);
-                    isOpen = false;
+                    OpenInventory();
                     Debug.Log("player moving case of inventory caled");
                 } 
             }
-
         }
 
         gamePaused = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseController>().isPaused; // get value if game paused or not
+
+        if(!gamePaused && Input.GetKeyDown(KeyCode.I))
+        {
+            OpenInventory();
+        }
+
+
         // if paused -> close the inventory
 
-        if(gamePaused == true)
-        {
-            inventoryCanvas.SetActive(false);
-            isOpen = false;
+        /*        if (gamePaused == true)
+                {
+                    inventoryCanvas.SetActive(false);
+                    isOpen = false;
 
-            Debug.Log("game paused case of inventory called");
-        }
+                    Debug.Log("game paused case of inventory called");
+                }*/
     }
 
     public void OpenInventory()
@@ -94,12 +106,12 @@ public class InventoryManager : MonoBehaviour
         {
             if (!isOpen)
             {
-                Debug.Log("isOpen false if else called");
+                Debug.Log("Opening inventory");
                 inventoryCanvas.SetActive(true); // open on first click if closed
             }
             else
             {
-                Debug.Log("isOpen true if else called");
+                Debug.Log("Closing inventory");
                 inventoryCanvas.SetActive(false); // close on second click if open
             }
 
@@ -110,16 +122,12 @@ public class InventoryManager : MonoBehaviour
 
     public void HighlightButton()
     {
-        Debug.Log("HighlightButton() executed");
         StartCoroutine(WaitForSec());
     }
 
     IEnumerator WaitForSec()
     {
-        Debug.Log("WaitForSec() executed");
-
         invButton.interactable = false;
-        // invIcon.transform.localScale = new Vector3(1.7f, 1.7f, 1);
 
         StartCoroutine(RotateIcon());
 
@@ -127,7 +135,6 @@ public class InventoryManager : MonoBehaviour
 
         invIcon.transform.rotation = Quaternion.identity; // reset the rotation 
         invButton.interactable = true;
-        // invIcon.transform.localScale = new Vector3(1.5f, 1.5f, 1);
     }
 
     IEnumerator RotateIcon()

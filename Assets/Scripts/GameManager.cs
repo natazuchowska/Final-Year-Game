@@ -86,11 +86,7 @@ public class GameManager : MonoBehaviour
     // called first
     void OnEnable()
     {
-        Debug.Log("OnEnable called");
-        // GameObject player = GameObject.FindGameObjectWithTag("Player"); // get reference to cursor manager obj
-
         SceneManager.sceneLoaded += OnSceneLoaded;
-        // player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
     }
 
     // called second
@@ -100,8 +96,6 @@ public class GameManager : MonoBehaviour
         Debug.Log(mode);
 
         isFacingRight = playerScript.isFacingRight; // var from playercontroller script
-
-        // inventoryCanvas.SetActive(false); // close inventory (if was open) on every new scene load
 
         sceneID = SceneManager.GetActiveScene().buildIndex; // get the id of current scene
 
@@ -115,12 +109,12 @@ public class GameManager : MonoBehaviour
 
         if (!(sceneID == 8 || sceneID == 9 || sceneID == 10 || sceneID == 12 || sceneID == 14 || sceneID == 15 || sceneID == 0 || sceneID == 5))
         {
-            Debug.Log("ENABLING THE PLAYER");
+            // Debug.Log("ENABLING THE PLAYER");
             player.SetActive(true); // not a puzzle scene
         }
         else
         {
-            Debug.Log("DISABLING THE PLAYER");
+            // Debug.Log("DISABLING THE PLAYER");
             player.SetActive(false); // this is a puzzle scene/ door scene so perform the appropriate actions
         }
 
@@ -130,7 +124,7 @@ public class GameManager : MonoBehaviour
         }
 
         // MENU SCENES -> disable inventory and option buttons
-        if (sceneID == 0 || sceneID == 5 || sceneID == 16)
+/*        if (sceneID == 0 || sceneID == 5 || sceneID == 16)
         {
             if (optionsCanvas != null) // if game was already started before and the reference is set
             {
@@ -145,7 +139,7 @@ public class GameManager : MonoBehaviour
         else
         {
             optionsCanvas.SetActive(true);
-        }
+        }*/
 
         if (sceneID == 1) // ROUND ROOM
         {

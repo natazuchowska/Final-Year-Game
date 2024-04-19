@@ -81,6 +81,5 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
             dialogueBackground.SetActive(true);
             player.DialogueUI.ShowDialogue(dialogueObject);
         }
-        
     }
 }

@@ -7,8 +7,15 @@ using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
+
+    public void ButtonClicked()
+    {
+        Debug.Log("BUTTON CLICKED");
+    }
     public void MoveToScene(int sceneID)
     {
+        Debug.Log("MoveToScene called");
+
         if(sceneID == -1)
         {
             if(GameObject.FindGameObjectWithTag("GameManager") != null)
