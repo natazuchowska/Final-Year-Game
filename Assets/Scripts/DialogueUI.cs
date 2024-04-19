@@ -95,6 +95,11 @@ public class DialogueUI : MonoBehaviour
         {
             string dialogue = dialogueObject.Dialogue[i];
 
+            if(SceneManager.GetActiveScene().buildIndex == 11 && i == 2) // swimming pool -> change the number sequence to the one randomly generated in RR
+            {
+                dialogue = FishNumber.fishNum[0] + " " + FishNumber.fishNum[1] + " " + FishNumber.fishNum[2] + " " + FishNumber.fishNum[3] + " should help you";
+            }
+
             yield return RunTypingEffect(dialogue);
 
             textLabel.text = dialogue;

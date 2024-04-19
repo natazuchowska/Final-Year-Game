@@ -11,9 +11,9 @@ public class CalculatorLampPuzzle : MonoBehaviour
 
     public static bool lightOn = true; // is lamp light in swimming pool turned on(?)
 
-    bool electricityFlow; 
+    bool electricityFlow;
 
-    public int[] correctOrder = { 8, 1, 0, 5, 9}; //the order in which calculator buttons should be clicked, 9 is R button for confirmation
+    public int[] correctOrder; // = { 8, 1, 0, 5, 9}; //the order in which calculator buttons should be clicked, 9 is R button for confirmation
 
     // ------------ BACKGROUNDS -------------------------
     [SerializeField] GameObject beforeBackground;
@@ -31,6 +31,8 @@ public class CalculatorLampPuzzle : MonoBehaviour
     public static bool soundPlayed = false;
     private static int puzzleFlag = 0;
 
+    // private static int[] fishNum;
+
 
     public static int paintPuzzleID; // get the order_id of the painting being clicked from the singular paintings cript (WAS STATIC)
 
@@ -38,6 +40,8 @@ public class CalculatorLampPuzzle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        correctOrder = FishNumber.GetCorrectOrder();
+
         // hide the backgrounds of open box
         afterLampOnBackground.SetActive(false);
         afterLampOffBackground.SetActive(false);
@@ -94,16 +98,21 @@ public class CalculatorLampPuzzle : MonoBehaviour
 
     public void setClickOrderID(Button btn)
     {
-        Debug.Log("this painting has order id of: " + paintPuzzleID);
+        Debug.Log("correct order of buttons in calclampscript is: " + correctOrder[0] + " " + correctOrder[1] + " " + correctOrder[2] + " " + correctOrder[3] + " " + correctOrder[4]);
 
         if(puzzleSolved == false)
         {
+            Debug.Log("index of button in calcButtons list: " + calculatorButtons.IndexOf(btn));
+            Debug.Log("value in correctOrder array: " + correctOrder[howManyCorrectSoFar]);
             if (calculatorButtons.IndexOf(btn) == correctOrder[howManyCorrectSoFar])
             {
+                Debug.Log("correct click!");
+                Debug.Log("how many correct?: " + howManyCorrectSoFar);
                 howManyCorrectSoFar++; // go to next in order
             }
             else
             {
+                Debug.Log("incorrect click!");
                 howManyCorrectSoFar = 0; // restart
             }
 

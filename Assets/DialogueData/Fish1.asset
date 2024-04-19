@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5cc27cd04975a4459d50a58bbf7bcd9, type: 3}
-  m_Name: Test 1
+  m_Name: Fish1
   m_EditorClassIdentifier: 
   narrativeID: 0
   dialogue:
