@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseController : MonoBehaviour
 {
-    public bool isPaused = false; // check if the game is currently paused
+    public static bool isPaused = false; // check if the game is currently paused
     [SerializeField] private GameObject pauseCanvas;
 
     GameObject musicManager;
@@ -26,19 +26,13 @@ public class PauseController : MonoBehaviour
         musicManager = GameObject.Find("MainMusic"); // get reference to the object controlling music
         musicScript = musicManager.GetComponent<BackgroundMusicManager>(); // get reference to music script ==> UNCOMMENT LATER
         menuButton.onClick.AddListener(manageAppearance); // call manageAppearance() when button clicked
-        // hintButton.onClick.AddListener(manageAppearanceHints); // pause the game when hints displayed
 
-
-        // clicking ANY of the three buttons should close the prompt
         resumeButton.onClick.AddListener(manageAppearance);
-        // mainMenuButton.onClick.AddListener(manageAppearance);
-        // settingsButton.onClick.AddListener(manageAppearance);
     }
 
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        // isPaused = false;
     }
 
     void Update()

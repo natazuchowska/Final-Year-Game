@@ -14,6 +14,8 @@ public class ChangeScene : MonoBehaviour
     }
     public void MoveToScene(int sceneID)
     {
+        if(PauseController.isPaused) { return;  } // game paused so don't execute
+
         Debug.Log("MoveToScene called");
 
         if(sceneID == -1)

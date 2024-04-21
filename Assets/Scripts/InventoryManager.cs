@@ -78,7 +78,7 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        gamePaused = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseController>().isPaused; // get value if game paused or not
+        gamePaused = PauseController.isPaused; // get value if game paused or not
 
         if(!gamePaused && Input.GetKeyDown(KeyCode.I))
         {

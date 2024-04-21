@@ -1,6 +1,6 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using Unity.VisualScripting;*/
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,7 +17,7 @@ public class BackgroundMusicManager : MonoBehaviour
     private AudioSource newAudio;
 
 
-    void Start()
+    void Awake()
     {
         currentAudio = menuAudio;
         currentAudio.Play();
@@ -30,8 +30,6 @@ public class BackgroundMusicManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
-        // currentAudio.Play();
         DecideAudio();
     }
 
@@ -54,7 +52,6 @@ public class BackgroundMusicManager : MonoBehaviour
         }
         if (sceneID == 1 || sceneID == 8 || sceneID == 9 || sceneID == 12 || sceneID == 13) // round room and all puzzles inside of it
         {
-            // newAudio = RRAudio;
             currentAudio = RRAudio;
             if (sceneID != 1)
             {
@@ -67,22 +64,15 @@ public class BackgroundMusicManager : MonoBehaviour
         }
         if (sceneID == 6 || sceneID == 10 || sceneID == 11) // glasshouse ground and top floor and bottles puzzle
         {
-            // newAudio = GHAudio;
             currentAudio = GHAudio;
             currentAudio.volume = 0.8f;
         }
 
         if (sceneID == 0 || sceneID == 4 || sceneID == 5 || sceneID == 16)
         {
-            // newAudio = menuAudio;
             currentAudio = menuAudio;
             currentAudio.volume = 0.8f;
         }
-
-        /*if (newAudio != currentAudio)
-        {
-            currentAudio = newAudio;
-        }*/
 
         currentAudio.Play();
     }

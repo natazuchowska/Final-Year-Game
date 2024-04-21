@@ -5,23 +5,14 @@ using UnityEngine.UI;
 public class DialogueActivator : MonoBehaviour, IInteractable // make the class implement the Interactable interface
 {
     [SerializeField] public DialogueObject dialogueObject;
-    // DialogueUI dialogueUI;
 
     [SerializeField] public GameObject dialogueBackground;
 
-    // private static bool alreadyTalked = false;
     public static bool displayNavArrow = false;
 
 
     private void Start()
     {
-        // dialogueUI = GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>();
-/*
-        if(dialogueBackground = null) // not initialized yet (2nd dialogue scene)
-        {
-            dialogueBackground = GameObject.FindGameObjectWithTag("DialogueBackground");
-        }*/
-
         if(dialogueBackground != null)
         {
             dialogueBackground.SetActive(false);
@@ -34,12 +25,10 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
         {
             if(dialogueBackground.activeSelf == true)
             {
-                // GameObject.Find("GoBackButton").GetComponent<Button>().interactable = false; // hide the nav arrow when dialogue displayed
                 displayNavArrow = false;
             }
             else
             {
-                // GameObject.Find("GoBackButton").GetComponent<Button>().interactable = true;
                 displayNavArrow = true;
             }
         }
@@ -72,7 +61,6 @@ public class DialogueActivator : MonoBehaviour, IInteractable // make the class 
             {
                 dialogueBackground.SetActive(true);
                 player.DialogueUI.ShowDialogue(dialogueObject);
-                // alreadyTalked = true; 
             }
 
         }

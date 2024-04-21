@@ -1936,7 +1936,6 @@ GameObject:
   - component: {fileID: 368703597}
   - component: {fileID: 368703598}
   - component: {fileID: 368703599}
-  - component: {fileID: 368703600}
   - component: {fileID: 368703601}
   m_Layer: 0
   m_Name: GameManager
@@ -2041,18 +2040,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueOrder: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
---- !u!114 &368703600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368703594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855109afbe0a0e04abf638263a001bf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &368703601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8512,7 +8499,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!1 &1202421380
 GameObject:
@@ -14683,6 +14670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3391211219943922837, guid: 607484d77c979fa4886c12d6a3a82fe3, type: 3}
+    - {fileID: 8400604299656667009, guid: 607484d77c979fa4886c12d6a3a82fe3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5710166271205186905, guid: 607484d77c979fa4886c12d6a3a82fe3, type: 3}

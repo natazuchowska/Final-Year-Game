@@ -38,7 +38,6 @@ public class SpeechBubbleManager : MonoBehaviour
             Debug.Log("collision - display speech");
 
             inArea = true;
-            // cmScript.ChangeCursor(3);
 
             if(character != null)
             {

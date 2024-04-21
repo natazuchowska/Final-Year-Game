@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+/*using System.Collections;
+using System.Collections.Generic;*/
 using UnityEngine;
-using UnityEngine.UI;
+/*using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEngine.InputSystem;
+using UnityEngine.InputSystem;*/
 using UnityEngine.SceneManagement;
 
 public class WizardController : MonoBehaviour
@@ -12,8 +12,6 @@ public class WizardController : MonoBehaviour
     private Animator animator;
     public bool isSpeaking = false;
     public int convoTopic;
-
-    private Camera mainCamera;
 
     [SerializeField] GameObject player;
 
@@ -67,6 +65,12 @@ public class WizardController : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if(PauseController.isPaused) { return;  }
+
+        if (GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().checkIfSolved(2) == true) // lamp turned off -> disable fish dialogue
+        {
+            return;
+        }
 
         if (GameObject.Find("InventoryCanvas")!= null && GameObject.Find("InventoryCanvas").activeSelf == true)
         {

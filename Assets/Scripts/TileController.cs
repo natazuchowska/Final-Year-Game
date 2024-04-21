@@ -9,7 +9,7 @@ public class TileController : MonoBehaviour
     bool lightOn;
     [SerializeField] public Button tileButton;
     GameObject keyReward; // key to get as a reward for turning light off -> need to click the tile to reveal
-    bool keyCollected = false; // has key been picked up already?
+    public static bool keyCollected; // has key been picked up already?
 
     public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
 
@@ -30,7 +30,7 @@ public class TileController : MonoBehaviour
     // todo when button clicked 
     private void TaskOnClick()
     {
-        if(lightOn == false && keyCollected == false)
+        if(lightOn == false && keyCollected == false) // only if key not collected previously
         {
             backgroundAfter.SetActive(true); // remove the tile
             keyReward.SetActive(true); // show the key

@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject optionsCanvas;
 
     public Button goToRRButton;
-    // [SerializeField] public int firstTime = 0; // flag for 1st plant puzzle
 
     public static bool plantGiven; // has plant been given back to the wizard? if so -> unblock the left door
 
@@ -124,23 +123,6 @@ public class GameManager : MonoBehaviour
             previousSceneID = sceneID; // remember this scene id for later navigation back
         }
 
-        // MENU SCENES -> disable inventory and option buttons
-/*        if (sceneID == 0 || sceneID == 5 || sceneID == 16)
-        {
-            if (optionsCanvas != null) // if game was already started before and the reference is set
-            {
-                optionsCanvas.SetActive(false);
-                InventoryManager invManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<InventoryManager>(); // get ref to inventory manager script
-                if (invManager != null && invManager.isOpen == true)
-                {
-                    invManager.OpenInventory(); // close inventory
-                }
-            }
-        }
-        else
-        {
-            optionsCanvas.SetActive(true);
-        }*/
 
         if (sceneID == 1) // ROUND ROOM
         {

@@ -12,11 +12,8 @@ public class CursorChangeObject : MonoBehaviour
     string objectTag;
     int whichCursor; // normal cursor
 
-    // [SerializeField] public GameObject textLabel;
     int sceneID;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         cursorManager = GameObject.FindGameObjectWithTag("CursorManager"); // get reference to cursor manager obj
@@ -30,7 +27,7 @@ public class CursorChangeObject : MonoBehaviour
 
     public int DecideCursor()
     {
-        Debug.Log("object tag: " + objectTag);
+        // Debug.Log("object tag: " + objectTag);
 
         // set the passed argument to a correct cursor case
         if (objectTag == "Plant" || objectTag == "Key" || objectTag == "SnapBottle" || objectTag == "CableFix" || objectTag == "NO")
@@ -42,8 +39,8 @@ public class CursorChangeObject : MonoBehaviour
         {
             if(sceneID == 11 && objectTag.Equals("ClickTile"))
             {
-                // if lamp light turned off
-                if(GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().checkIfSolved(2) == true)
+                // if lamp light turned off and key not yet collected
+                if(GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().checkIfSolved(2) == true && !TileController.keyCollected)
                 {
                     // only then change the cursor to handCursor -> otherwise don't show that tile is interractable
                     return 1;
@@ -60,7 +57,6 @@ public class CursorChangeObject : MonoBehaviour
         }
         else if (objectTag == "Puzzle")
         {
-            // Debug.Log("cursor change obj case puzzle");
             return 2;
         }
         else if (objectTag == "Character")
@@ -75,6 +71,13 @@ public class CursorChangeObject : MonoBehaviour
 
                 if (GameObject.Find("DialogueCircle").GetComponent<SpeechBubbleManager>().inArea == true)
                 {
+                    if(sceneID == 11)
+                    {
+                        if(GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().checkIfSolved(2) == true) // lamp turned off -> disable fish dialogue
+                        {
+                            return 4;
+                        }
+                    }
                     return 3;
                 }
 
@@ -94,23 +97,24 @@ public class CursorChangeObject : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if(PauseController.isPaused) { return;  }
+
         whichCursor = DecideCursor();
         cmScript.ChangeCursor(whichCursor);
-        // cmScript.ChangeCursor(2);
     }
 
     private void OnMouseDown()
     {
+        if (PauseController.isPaused) { return; }
+
         // on click change to normal cursor
         cmScript.ChangeCursor(4);
     }
 
     private void OnMouseExit()
     {
-        /*if((sceneID == 1 || sceneID == 11) && textLabel.activeSelf == true)
-        {
-            textLabel.SetActive(false);
-        }*/
+        if (PauseController.isPaused) { return; }
+
         cmScript.ChangeCursor(4);
     }
 }

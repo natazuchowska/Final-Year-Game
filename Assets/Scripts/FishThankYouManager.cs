@@ -10,7 +10,7 @@ public class FishThankYouManager : MonoBehaviour
     [SerializeField] private GameObject dialogueCircle;
     [SerializeField] private GameObject character;
 
-    private static bool hasBeenDisabled = false; // flag when dialogueCircle is setActive to false
+    private static bool hasBeenDisabled; // flag when dialogueCircle is setActive to false
 
     // Start is called before the first frame update
     void Start()

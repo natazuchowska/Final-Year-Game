@@ -18,7 +18,6 @@ public class PickUp : MonoBehaviour
 
     private GameManager gm; // reference to gamemanager script
 
-    // [SerializeField] private GameObject invIcon;
     [SerializeField] private InventoryManager invMngr;
 
     public AudioSource pickUpAudio; // to play pickup sound on item pickup
@@ -26,16 +25,11 @@ public class PickUp : MonoBehaviour
     private void Awake()
     {
         mainCamera = Camera.main;
-        //invIcon = GameObject.Find("InventoryButtonActive");
     }
 
     private void Start()
     {
-        /*if (invIcon != null)
-        {
-            invIcon.SetActive(false);
-        }
-*/
+
         inventory = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Inventory>();
         pickUpItem = this.gameObject;
 
@@ -49,11 +43,11 @@ public class PickUp : MonoBehaviour
     // add to inventory on mouse CLICK
     private void OnMouseDown()
     {
+        if (PauseController.isPaused) { return; } // do nothing if game paused
+
         var rayHit = Physics2D.GetRayIntersection(mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
 
         if (!rayHit.collider) { return; }
-
-        // Debug.Log(rayHit.collider.gameObject.name); //display the name of the clicked object on the console
 
         Vector3 itemScale = rayHit.transform.localScale;
 
@@ -61,7 +55,6 @@ public class PickUp : MonoBehaviour
         if (rayHit.collider.gameObject.CompareTag("Collectible") || rayHit.collider.gameObject.CompareTag("KeyReward") || rayHit.collider.gameObject.CompareTag("Bottle"))
         {
             Debug.Log("item added to inventory NOW");
-            // rayHit.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
 
             gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
@@ -95,35 +88,19 @@ public class PickUp : MonoBehaviour
 
             for (int i = 0; i < inventory.slots.Length; i++)
             {
-                Debug.Log("inventory size: " + inventory.slots.Length); 
+                // Debug.Log("inventory size: " + inventory.slots.Length); 
 
                 if (inventory.isFull[i] == false) // if the slot empty add the item to it
                 {
-                    // *** REFERENCE THE INVENTORY ICON HERE AND CHANGE ITS COLOUR ON EVERY PICKUP (and possibly play pickup sound)
-                    //invIcon.GetComponent<Renderer>().material.color = Color.green;
-                    /*Color addColour = Color.green;
-                    ColorBlock cb = invIcon.colors;
-
-                    cb.normalColor = addColour;*/
-                    
-                    /*StartCoroutine(SetIconActive(true));
-                    StartCoroutine(SetIconActive(false));
-*/
-
-                    //invIcon.SetActive(false);
-
-                    // cb.normalColor = Color.white;
-
                     pickUpAudio.Play(); // play pickup sound
 
                     inventory.isFull[i] = true; //set slot to full now
 
                     invMngr.HighlightButton(); // highlight the inventory icon
 
-                    Debug.Log("adding item to slot " + i);
+                    // Debug.Log("adding item to slot " + i);
 
                     GameObject inventoryObj = Instantiate(itemButton, inventory.slots[i].transform); // make sure the button spawns at the same position as the graphic (instantiate as child of that slot)
-                    inventoryObj.AddComponent<Draggable>(); // add a draggable script to the object so it can be used by dragging out of inventory
                     Destroy(gameObject);
                     break;
                 }
@@ -133,7 +110,7 @@ public class PickUp : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        // Debug.Log("Mouse over interactable object!!!!");
+        if (PauseController.isPaused) { return; } // do nothing if game paused
 
         if (gameObject.CompareTag("Collectible") || gameObject.CompareTag("Bottle"))
         {
@@ -146,19 +123,11 @@ public class PickUp : MonoBehaviour
 
     private void OnMouseExit()
     {
-        // Debug.Log("Mouse NOT over interactable object ANYMORE!!!!");
+        if (PauseController.isPaused) { return; } // do nothing if game paused
 
         if (gameObject.CompareTag("Collectible") || gameObject.CompareTag("Bottle"))
         {
             gameObject.GetComponent<Renderer>().material.color = Color.white;
         }
     }
-
-/*    IEnumerator SetIconActive(bool activate) 
-    {
-        Debug.Log("Coroutine called");
-
-        invIcon.SetActive(activate);
-        yield return new WaitForSeconds(2);
-    }*/
 }

@@ -45,6 +45,8 @@ public class Draggable : MonoBehaviour
     // when an object is clicked
     private void OnMouseDown()
     {
+        if (PauseController.isPaused) { return; } // do not drag if game paused
+
         isDragged = true;
 
         sceneID = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().getSceneID(); // get id of current scene from gamemanager
@@ -80,6 +82,8 @@ public class Draggable : MonoBehaviour
     // when the object is released
     private void OnMouseUp()
     {
+        if (PauseController.isPaused) { return; } // do not drag if game paused
+
         isDragged = false;
 
         // scene has no snap slots so return
