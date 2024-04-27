@@ -12,7 +12,6 @@ public class FishThankYouManager : MonoBehaviour
 
     private static bool hasBeenDisabled; // flag when dialogueCircle is setActive to false
 
-    // Start is called before the first frame update
     void Start()
     {
         // get reference to the speech bubbles

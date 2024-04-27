@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ConfirmPanelManager : MonoBehaviour
 {
     private GameObject confirmPanel;
-    // private bool alreadyDisplayed = false;
 
     private void Start()
     {
@@ -22,7 +21,7 @@ public class ConfirmPanelManager : MonoBehaviour
 
     IEnumerator DisplayForSec()
     {
-        yield return new WaitForSeconds(1.5f); // wait for the animation of turning the key to finish executing
+        yield return new WaitForSeconds(1.2f); // wait for the animation of turning the key to finish executing
         confirmPanel.SetActive(true);
         yield return new WaitForSeconds(1);
         confirmPanel.SetActive(false);

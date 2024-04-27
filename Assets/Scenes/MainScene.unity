@@ -1441,7 +1441,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &242996266
 RectTransform:
@@ -1548,7 +1548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180793806157959848, guid: 06c97489fee03be4fb6e62a4125b0c84, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1696107787049965509, guid: 06c97489fee03be4fb6e62a4125b0c84, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2020,7 +2020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20957c6090adad54fadc266d716a0217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: 0
   pauseCanvas: {fileID: 1193121186}
   musicScript: {fileID: 0}
   menuButton: {fileID: 1407688734}
@@ -13823,7 +13822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180793806157959848, guid: 06c97489fee03be4fb6e62a4125b0c84, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1696107787049965509, guid: 06c97489fee03be4fb6e62a4125b0c84, type: 3}
       propertyPath: m_LocalRotation.z

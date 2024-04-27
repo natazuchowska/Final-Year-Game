@@ -17,7 +17,7 @@ public class CursorManager : MonoBehaviour
     [SerializeField] Texture2D dragCursor; // for draggable items 
     [SerializeField] Texture2D talkCursor; // for talking with characters
 
-    // Start is called before the first frame update
+
     void Start()
     {
         Cursor.SetCursor(normalCursor, Vector2.zero, CursorMode.ForceSoftware);
@@ -26,7 +26,7 @@ public class CursorManager : MonoBehaviour
 
     public void ChangeCursor(int whichOne)
     {
-        Debug.Log("entered the cursor manager script and changing the cursor!");
+        // Debug.Log("entered the cursor manager script and changing the cursor!");
         if (whichOne == 0)
         {
             currentCursor = dragCursor;
@@ -45,8 +45,7 @@ public class CursorManager : MonoBehaviour
         }
         else if(whichOne == -1)
         {
-            Debug.Log("Changing to DARK CURSOR");
-            currentCursor = normalCursorDark;
+            currentCursor = normalCursorDark; // if over white speechbubble
         }
         else
         {

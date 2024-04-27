@@ -29,9 +29,6 @@ public class ShowHintButton : MonoBehaviour
 
     public void ShowHint(/*GameObject myHint*/)
     {
-/*        myHint.SetActive(true);
-        HideText(myText); // hide corresponding cover text
-        bookSound.Play();*/
 
         if (hintActive[hints.IndexOf(myHint)] == true) // only show hint if unblocked already
         {

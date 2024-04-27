@@ -12,8 +12,6 @@ using UnityEngine;
 
 public class DontDestroy : MonoBehaviour
 {
-    private int sceneID;
-   
     void Awake()
     {
         GameObject[] player = GameObject.FindGameObjectsWithTag("Player");

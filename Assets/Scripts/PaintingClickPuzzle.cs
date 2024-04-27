@@ -10,7 +10,6 @@ public class PaintingClickPuzzle : MonoBehaviour
     // general script for checking for the correct order od clicks
 
     [SerializeField] public List<Button> paints;
-    /*[SerializeField] public List<GameObject> texts;*/
 
     GameObject keyReward; // key to get when puzzle solved
 
@@ -38,8 +37,6 @@ public class PaintingClickPuzzle : MonoBehaviour
 
     public static int paintPuzzleID; // get the order_id of the painting being clicked from the singular paintings cript (WAS STATIC)
 
-
-    // Start is called before the first frame update
     void Start()
     {
         dialogueOrder = GameObject.Find("GameManager").GetComponent<DialogueOrderManager>().getFinalOrder(); // get the array from dialogueOrderManager script
@@ -47,14 +44,7 @@ public class PaintingClickPuzzle : MonoBehaviour
         // initialise the correct order -> will be like this if no convo with the character takes place
         for (int i=0; i<6; i++)
         {
-/*            int newNum = Random.Range(0, 7);
-            while(!(correctOrder.Count == 0) && correctOrder.Contains(newNum)) // if already in the list generate a different number
-            {
-                newNum = Random.Range(0, 7);
-            }*/
             correctOrder.Add((i + 3) % 6);
-
-            // correctOrder.Add(newNum);
         }
 
         // hide all painting variants by default
@@ -120,60 +110,6 @@ public class PaintingClickPuzzle : MonoBehaviour
                 paintV5.SetActive(true);
                 break;
         }
-
-        /*if (dialogueOrder[1] == 1)
-        {
-            for(int i=0; i<6; i++)
-            {
-                correctOrder[i] = i+1;
-            }
-
-            // activate the appropriate graphic
-            paintV2.SetActive(true);
-
-            Debug.Log("order version 1");
-        }
-        else if (dialogueOrder[1] == 2)
-        {
-            for (int i = 0; i < 6; i++)
-            {
-                correctOrder[(i+2) % 6] = i+1;
-            }
-
-            // activate the appropriate graphic
-            paintV3.SetActive(true);
-
-            Debug.Log("order version 2");
-        }
-        else if (dialogueOrder[1] == 3)
-        {
-            for (int i = 0; i < 6; i++)
-            {
-                correctOrder[(i+4) % 6] = i+1;
-            }
-
-            // activate the appropriate graphic
-            paintV4.SetActive(true);
-
-            Debug.Log("order version 3");
-        }
-        else if (dialogueOrder[1] == 4)
-        {
-            for (int i = 0; i < 6; i++)
-            {
-                correctOrder[(i+3) % 6] = i+1;
-            }
-
-            // activate the appropriate graphic
-            paintV5.SetActive(true);
-
-            Debug.Log("order version 4");
-        }
-        else
-        {
-            // in case dialogue hs not been attempted at all
-            paintV1.SetActive(true);
-        }*/
 
         // Debug.Log("start click chain from painting nr " + correctOrder[0]);
         return correctOrder;

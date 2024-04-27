@@ -49,10 +49,6 @@ public class SnapController : MonoBehaviour
     public static bool bottleSlot2;
     public static bool bottleSlot3;
 
-   /* public bool bottleLDropped = false;
-    public bool bottleMDropped = false;
-    public bool bottleRDropped = false;*/
-
     // flags
     public static int bLD = 0;
     public static int bMD = 0;
@@ -236,9 +232,6 @@ public class SnapController : MonoBehaviour
                 {
                     GameObject.Find("rightBottleSolved").SetActive(false);
                 }
-                /*GameObject.Find("leftBottleSolved").SetActive(false);
-                GameObject.Find("middleBottleSolved").SetActive(false);
-                GameObject.Find("rightBottleSolved").SetActive(false);*/
 
                 // set to be visible on start
                 if (!bottleSlot1 && steamLeft!=null)
@@ -334,16 +327,9 @@ public class SnapController : MonoBehaviour
                     }
                 }
             }
-                      
-            // backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // open little door revealing the key
+                 
             backgroundAfter.SetActive(false);
         }
-
-        // ELECTRICITY (LAMP) PUZZLE SCENE
-/*        if (sceneID == 13)
-        {
-            Debug.Log("lightOn val in electricity box: " + lightOn);
-        }*/
 
         // cables puzzle scene
         if (sceneID == 12)
@@ -374,7 +360,6 @@ public class SnapController : MonoBehaviour
     {
         if(sceneID == 10)
         {
-            // backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // open little door revealing the key
 
             // puzzle has been solved already so display after background
             if (GameObject.Find("GameManager").GetComponent<GameManager>().checkIfSolved(3))
@@ -502,7 +487,6 @@ public class SnapController : MonoBehaviour
 
         if(closestSnapPoint != null && closestDistance <= snapRange && closestSnapPoint.transform.childCount == 0 /* only if snappoint is not yet taken */) // if item can be inserted into the slot
         {
-            // ------------- WHY IS IT STILL ACCEPTING TWO BOTTLES?????????????????????????????????????????????
             if(closestSnapPoint.transform.childCount == 1)
             {
                 draggable.transform.localPosition = initialPos;

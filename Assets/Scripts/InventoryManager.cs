@@ -66,7 +66,7 @@ public class InventoryManager : MonoBehaviour
         // only do this if there is a player sprite in the current scene
         if (player.activeInHierarchy == true)
         {
-            playerIsMoving = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().isMoving; // check if player is moving BUILD VERSION
+            playerIsMoving = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isMoving; // check if player is moving BUILD VERSION
 
             if (playerIsMoving == true)
             {
@@ -84,17 +84,6 @@ public class InventoryManager : MonoBehaviour
         {
             OpenInventory();
         }
-
-
-        // if paused -> close the inventory
-
-        /*        if (gamePaused == true)
-                {
-                    inventoryCanvas.SetActive(false);
-                    isOpen = false;
-
-                    Debug.Log("game paused case of inventory called");
-                }*/
     }
 
     public void OpenInventory()

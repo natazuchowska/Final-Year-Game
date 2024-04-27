@@ -23,16 +23,12 @@ public class CalculatorLampPuzzle : MonoBehaviour
     // ------------ BUTTONS -----------------------------
     [SerializeField] List<Button> calculatorButtons; // referenced in the inspector
 
-    public static int howManyPaintings;
     public static int howManyCorrectSoFar = 0; // how many have been clicked ok so far
 
     public static bool puzzleSolved = false;
     public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
     public static bool soundPlayed = false;
     private static int puzzleFlag = 0;
-
-    // private static int[] fishNum;
-
 
     public static int paintPuzzleID; // get the order_id of the painting being clicked from the singular paintings cript (WAS STATIC)
 
@@ -45,8 +41,6 @@ public class CalculatorLampPuzzle : MonoBehaviour
         // hide the backgrounds of open box
         afterLampOnBackground.SetActive(false);
         afterLampOffBackground.SetActive(false);
-
-        // lightOn = true;
 
         electricityFlow = SnapController.electricityFlow; // get the electricity flow value from snapcontroller
 
@@ -98,27 +92,23 @@ public class CalculatorLampPuzzle : MonoBehaviour
 
     public void setClickOrderID(Button btn)
     {
-        Debug.Log("correct order of buttons in calclampscript is: " + correctOrder[0] + " " + correctOrder[1] + " " + correctOrder[2] + " " + correctOrder[3] + " " + correctOrder[4]);
+        // Debug.Log("correct order of buttons in calclampscript is: " + correctOrder[0] + " " + correctOrder[1] + " " + correctOrder[2] + " " + correctOrder[3] + " " + correctOrder[4]);
 
         if(puzzleSolved == false)
         {
-            Debug.Log("index of button in calcButtons list: " + calculatorButtons.IndexOf(btn));
-            Debug.Log("value in correctOrder array: " + correctOrder[howManyCorrectSoFar]);
+/*          Debug.Log("index of button in calcButtons list: " + calculatorButtons.IndexOf(btn));
+            Debug.Log("value in correctOrder array: " + correctOrder[howManyCorrectSoFar]);*/
             if (calculatorButtons.IndexOf(btn) == correctOrder[howManyCorrectSoFar])
             {
-                Debug.Log("correct click!");
-                Debug.Log("how many correct?: " + howManyCorrectSoFar);
                 howManyCorrectSoFar++; // go to next in order
             }
             else
             {
-                Debug.Log("incorrect click!");
                 howManyCorrectSoFar = 0; // restart
             }
 
             if (howManyCorrectSoFar == 5) // need to click 4 buttons and accept with RED
             {
-                Debug.Log("CALC PUZZLE SOLVED!!!!!");
                 puzzleSolved = true;
                 lightOn = false; // inform to turn off the lamp light sprite in swimming pool
 

@@ -21,8 +21,7 @@ public class ResponseHandler : MonoBehaviour
     public void ShowResponses(Response[] responses)
     {
         float responseBoxHeight = 0;
-        /*Debug.Log("height of the box is set to: ");
-        Debug.Log(responseBoxHeight);*/
+
         foreach(Response response in responses)
         {
             GameObject responseButton = Instantiate(responseButtonTemplate.gameObject, responseContainer);
@@ -33,8 +32,6 @@ public class ResponseHandler : MonoBehaviour
             tempResponseButtons.Add(responseButton);
 
             responseBoxHeight += responseButtonTemplate.sizeDelta.y; // increment the height of response box by that of the button
-            /*Debug.Log("height of the box is set to: ");
-            Debug.Log(responseBoxHeight);*/
         }
 
         responseBox.sizeDelta = new Vector2(responseBox.sizeDelta.x, responseBoxHeight);

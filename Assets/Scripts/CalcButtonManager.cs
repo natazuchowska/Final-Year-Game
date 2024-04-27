@@ -11,12 +11,11 @@ public class CalcButtonManager : MonoBehaviour
 
     private void Awake()
     {
-        /*btn.onClick.AddListener(RecordClick);*/
-        btn = this.gameObject.GetComponent<Button>();
+        btn = gameObject.GetComponent<Button>();
     }
     public void RecordClick()
     {
-        Debug.Log("button " + this.gameObject.name + " clicked");
+        /*Debug.Log("button " + gameObject.name + " clicked");*/
         GameObject.Find("CalcManager").GetComponent<CalculatorLampPuzzle>().setClickOrderID(btn);
 
         clickAudio.Play();

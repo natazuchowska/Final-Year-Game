@@ -13,7 +13,7 @@ public class TileController : MonoBehaviour
 
     public AudioSource audioPlayer; // to play rewarding sound when puzzle solved
 
-    // Start is called before the first frame update
+
     void Start()
     {
         backgroundAfter = GameObject.FindGameObjectWithTag("BackgroundAfter"); // background to set after puzzle is solved
@@ -25,6 +25,11 @@ public class TileController : MonoBehaviour
 
         keyReward = GameObject.FindGameObjectWithTag("KeyReward"); // get the reference to the correct object
         keyReward.SetActive(false); // hide the key by default
+
+        if(keyCollected)
+        {
+            backgroundAfter.SetActive(true); // key was collected prev. so show dislocated tile
+        }
     }
 
     // todo when button clicked 

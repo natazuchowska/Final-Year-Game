@@ -51,10 +51,6 @@ public class HintManager : MonoBehaviour
         hint4Cover = GameObject.Find("Hint4Cover");
 
         hintButton.onClick.AddListener(ShowCanvas); // display canvas when button clicked
-        // hintButton.onClick.AddListener(pauseControl.manageAppearanceHints); // pause the game on click
-
-        // closeButton = GameObject.Find("CloseButon").GetComponent<Button>();
-        // closeButton.onClick.AddListener(ShowCanvas); // close canvas when "X" clicked
 
         // hide the hints by default
         foreach(GameObject hint in hints)
@@ -65,8 +61,8 @@ public class HintManager : MonoBehaviour
 
     public void ShowCanvas()
     {
-        Debug.Log("SHOWING HINT CANVAS");
-        // pauseControl.manageAppearanceHints(); // pause the gae when hints displayed
+        // Debug.Log("SHOWING HINT CANVAS");
+        pauseControl.manageAppearanceHints(); // pause the gae when hints displayed
 
         foreach (GameObject hint in hints)
         {

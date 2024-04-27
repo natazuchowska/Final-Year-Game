@@ -7,18 +7,15 @@ using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
-
     public void ButtonClicked()
     {
-        Debug.Log("BUTTON CLICKED");
+        // Debug.Log("BUTTON CLICKED");
     }
     public void MoveToScene(int sceneID)
     {
         if(PauseController.isPaused) { return;  } // game paused so don't execute
 
-        Debug.Log("MoveToScene called");
-
-        if(sceneID == -1)
+        if(sceneID == -1) // this was implemented if in the future the user can go back to settings/controls after starting the game
         {
             if(GameObject.FindGameObjectWithTag("GameManager") != null)
             {

@@ -14,13 +14,15 @@ public class BackgroundMusicManager : MonoBehaviour
 
     [SerializeField] private int sceneID;
 
-    private AudioSource newAudio;
-
-
     void Awake()
     {
         currentAudio = menuAudio;
-        currentAudio.Play();
+
+        if(currentAudio.enabled)
+        {
+            currentAudio.Play();
+        }
+
     }
 
     private void OnEnable()
@@ -46,7 +48,6 @@ public class BackgroundMusicManager : MonoBehaviour
 
         if (sceneID == 3) // main scene
         {
-            // newAudio = mainSceneAudio;
             currentAudio = mainSceneAudio;
             currentAudio.volume = 0.7f;
         }

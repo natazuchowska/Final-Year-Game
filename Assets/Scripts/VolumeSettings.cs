@@ -39,7 +39,6 @@ public class VolumeSettings : MonoBehaviour
         {
 
             sfxAudio.Play();
-            // StartCoroutine(WaitRoutine());
         }
     }
 

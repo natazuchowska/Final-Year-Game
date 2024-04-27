@@ -48,8 +48,8 @@ public class GameManager : MonoBehaviour
     public static bool plantGiven; // has plant been given back to the wizard? if so -> unblock the left door
 
     bool isFacingRight;
-    // public PlayerController playerScript; //CHANGED THIS IN BUILD V
-    public PlayerMovement playerScript; //CHANGED THIS IN BUILD V
+    public PlayerController playerScript; // unity editor version
+    // public PlayerMovement playerScript; //CHANGED THIS IN BUILD V
 
     public bool lightOn;
 
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         player = GameObject.FindGameObjectWithTag("Player"); // get reference to the player object
-        playerScript = player.GetComponent<PlayerMovement>(); // get the cursor manager script //CHANGED THIS IN BUILD V
+        playerScript = player.GetComponent<PlayerController>(); // get the cursor manager script //CHANGED THIS IN BUILD V
 
         optionsCanvas = GameObject.Find("OptionsCanvas");
 
@@ -118,10 +118,10 @@ public class GameManager : MonoBehaviour
             player.SetActive(false); // this is a puzzle scene/ door scene so perform the appropriate actions
         }
 
-        if(!(sceneID == 5 || sceneID == 16))
+/*        if(!(sceneID == 5 || sceneID == 16))
         {
             previousSceneID = sceneID; // remember this scene id for later navigation back
-        }
+        }*/
 
 
         if (sceneID == 1) // ROUND ROOM

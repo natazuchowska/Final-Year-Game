@@ -33,8 +33,7 @@ public class WizardController : MonoBehaviour
             if (GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().isOpen == true && SceneManager.GetActiveScene().buildIndex == 3)
             {
                 convoTopic = GameObject.Find("DialogueCanvas").GetComponent<DialogueUI>().getTopicID(); // check which topic is chosen is convo
-             
-                // SetSpeakingAnimation();
+
 
                 switch (convoTopic)
                 {
@@ -77,7 +76,7 @@ public class WizardController : MonoBehaviour
             Debug.Log("ENTERED THE CLOSE INVENTORY CASE WITH DIALOGUE");
             GameObject.Find("InventoryButton").GetComponent<InventoryManager>().OpenInventory(); // close inventory
         }
-        player.GetComponent<PlayerMovement>().TalkToCharacter(); // BUILD V -> was PlayerController
+        player.GetComponent<PlayerController>().TalkToCharacter(); // BUILD V -> was PlayerController
     }
 
     public void SetSpeakingAnimation() // make character speak when dialogue window open

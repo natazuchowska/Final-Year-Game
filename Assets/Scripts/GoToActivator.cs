@@ -25,7 +25,6 @@ public class GoToActivator : MonoBehaviour
         if (bgAfter != null && sceneID == 3) // initial scene
         {
             bgAfter.SetActive(false);
-            // thankYouMessage = GameObject.Find("thank_you");
 
             thankYouMessage.SetActive(false);
         }

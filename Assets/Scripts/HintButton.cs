@@ -14,7 +14,6 @@ public class HintButton : MonoBehaviour
     private void Start()
     {
         hintCanvas = GameObject.Find("HintCanvas");
-        // hintCanvas.SetActive(false);
 
         hintBtn = this.gameObject.GetComponent<Button>();
         hintBtn.onClick.AddListener(ShowCanvas);

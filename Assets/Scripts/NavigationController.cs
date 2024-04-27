@@ -35,19 +35,11 @@ public class NavigationController : MonoBehaviour
             doorOpen = SnapController.canGoThru2; // can go thru door? (static var controlled by door script)
         }
 
-        /*goThruDoor.interactable = true; // need to go to door and unlock
-        goToRoom.interactable = false; // can't go thru (door locked)*/
-
         // initially hide both as player far away
         goThruDoor.interactable = false;
         goToRoom.interactable = false;
 
-        Debug.Log(doorOpen);
-
-        /*if(doorOpen == null) // if no door then same as door open
-        {
-            doorOpen = true;
-        }*/
+        // Debug.Log(doorOpen);
 
         if (goToText != null) // if theres a text to an arrow
         {

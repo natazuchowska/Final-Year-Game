@@ -5,7 +5,7 @@ using UnityEngine;
 public class KeyboardRegister : MonoBehaviour
 {
 
-    // Update is called once per frame
+    // for build versions debugging purposes only
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.A))

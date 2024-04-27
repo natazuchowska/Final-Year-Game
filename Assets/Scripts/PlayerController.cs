@@ -54,7 +54,6 @@ public class PlayerController : MonoBehaviour
         if((sceneID == 3 || sceneID == 11) && dialogueBackground == null)
         {
             dialogueBackground = GameObject.Find("DialogueCircle").GetComponent<DialogueActivator>().dialogueBackground;
-            // dialogueBackground.SetActive(false);
         }
 
         // if there is a dialogueUI in the scene
@@ -83,20 +82,16 @@ public class PlayerController : MonoBehaviour
 
         if(GameObject.Find("DialogueCircle").GetComponent<SpeechBubbleManager>().inArea == true)
         {
-            // dialogueBackground = GameObject.Find("talking_background");
-            // dialogueBackground.SetActive(true);
 
             if (sceneID == 3 || sceneID == 11)
             {
                 dialogueBackground.SetActive(true);
 
                 isThinking = true;
-                // SetThinkingAnimation();
             }
 
             DialogueObject dialogueObject = GameObject.Find("DialogueCircle").GetComponent<DialogueActivator>().dialogueObject;
             this.DialogueUI.ShowDialogue(dialogueObject);
-            // Interactable.Interact(this); // same as Interactable?.Interact(this) --> can then omit the 'if(Intractable != null)' as equivalent
         }
     }
 
