@@ -95,17 +95,17 @@ public class InventoryManager : MonoBehaviour
         {
             if (!isOpen)
             {
-                Debug.Log("Opening inventory");
+                // Debug.Log("Opening inventory");
                 inventoryCanvas.SetActive(true); // open on first click if closed
             }
             else
             {
-                Debug.Log("Closing inventory");
+                // Debug.Log("Closing inventory");
                 inventoryCanvas.SetActive(false); // close on second click if open
             }
 
             isOpen = !isOpen;
-            Debug.Log("is inventory canvas active? : " + inventoryCanvas.activeInHierarchy);
+            // Debug.Log("is inventory canvas active? : " + inventoryCanvas.activeInHierarchy);
         }
     }
 

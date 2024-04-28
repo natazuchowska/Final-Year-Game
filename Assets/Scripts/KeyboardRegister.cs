@@ -8,7 +8,7 @@ public class KeyboardRegister : MonoBehaviour
     // for build versions debugging purposes only
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        /*if(Input.GetKeyDown(KeyCode.A))
         {
             Debug.Log("A key pressed");
         }
@@ -46,6 +46,6 @@ public class KeyboardRegister : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.D))
         {
             Debug.Log("D key released");
-        }
+        }*/
     }
 }
