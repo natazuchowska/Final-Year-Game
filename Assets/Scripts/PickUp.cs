@@ -54,7 +54,7 @@ public class PickUp : MonoBehaviour
         // if collectible add to inventory on click
         if (rayHit.collider.gameObject.CompareTag("Collectible") || rayHit.collider.gameObject.CompareTag("KeyReward") || rayHit.collider.gameObject.CompareTag("Bottle"))
         {
-            Debug.Log("item added to inventory NOW");
+            //Debug.Log("item added to inventory NOW");
 
             gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 

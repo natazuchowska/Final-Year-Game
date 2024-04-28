@@ -35,7 +35,7 @@ public class SpeechBubbleManager : MonoBehaviour
         // player in the right distance so change cursor to speech bubble
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("collision - display speech");
+            //Debug.Log("collision - display speech");
 
             inArea = true;
 
@@ -51,7 +51,7 @@ public class SpeechBubbleManager : MonoBehaviour
         // player in the right distance so change cursor to speech bubble
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("end of collision - change to normal cursor");
+            //Debug.Log("end of collision - change to normal cursor");
 
             inArea = false;
             // cmScript.ChangeCursor(4);

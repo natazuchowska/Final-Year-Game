@@ -57,7 +57,7 @@ public class PauseController : MonoBehaviour
         if (isPaused == false)
         {
             Time.timeScale = 1;
-            Debug.Log("GAME RUNNING");
+            //Debug.Log("GAME RUNNING");
 
             pauseCanvas.SetActive(false);
 
@@ -75,7 +75,7 @@ public class PauseController : MonoBehaviour
         else
         {
             Time.timeScale = 0;
-            Debug.Log("GAME PAUSED");
+            //Debug.Log("GAME PAUSED");
 
             pauseCanvas.SetActive(true);
 
@@ -100,13 +100,13 @@ public class PauseController : MonoBehaviour
         if (isPaused == false)
         {
             Time.timeScale = 1;
-            Debug.Log("GAME RUNNING");
+            //Debug.Log("GAME RUNNING");
 
         }
         else
         {
             Time.timeScale = 0;
-            Debug.Log("GAME PAUSED");
+            //Debug.Log("GAME PAUSED");
 
         }
     }

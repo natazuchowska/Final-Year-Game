@@ -504,7 +504,7 @@ public class SnapController : MonoBehaviour
             // MAIN SCENE ===========================================================================
             if (draggable.gameObject.CompareTag("Plant"))
             {
-                Debug.Log("Character is saying: Thank you for the plant girlie");
+                //Debug.Log("Character is saying: Thank you for the plant girlie");
                 GameObject plant = draggable.gameObject;
                 plant.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
                 plant.transform.localPosition = new Vector3(plant.transform.localPosition.x, plant.transform.localPosition.y, -3); // move the plant to the front
@@ -530,7 +530,7 @@ public class SnapController : MonoBehaviour
                         if (draggable.gameObject.name == "keyTop(Clone)" || draggable.gameObject.name == "keyTop")
                         {
                             keySlot2 = true;
-                            Debug.Log("top key OK");
+                            //Debug.Log("top key OK");
 
 
                             draggable.gameObject.transform.Translate(draggable.gameObject.transform.position.x, draggable.gameObject.transform.position.y, 10); // hide key sprite (push to the back)
@@ -556,7 +556,7 @@ public class SnapController : MonoBehaviour
                         if (draggable.gameObject.name == "keyBottom(Clone)" || draggable.gameObject.name == "keyBottom")
                         {
                             keySlot3 = true;
-                            Debug.Log("bottom key OK");
+                            //Debug.Log("bottom key OK");
 
                             draggable.gameObject.transform.Translate(draggable.gameObject.transform.position.x, draggable.gameObject.transform.position.y, 10); // hide key sprite (push to the back)
                             keyInserted2.SetActive(true); // show the inserted key sprite
@@ -579,7 +579,7 @@ public class SnapController : MonoBehaviour
                     // are all keys in place?
                     if (keySlot2 == true && keySlot3 == true)
                     {
-                        Debug.Log("DOOR NOW OPEN");
+                        //Debug.Log("DOOR NOW OPEN");
                         canGoThru2 = true;
 
                         goBackButton.interactable = false; // can't go back to the room
@@ -595,7 +595,7 @@ public class SnapController : MonoBehaviour
                         if (draggable.gameObject.CompareTag("Key"))
                         {
                             keySlot1 = true;
-                            Debug.Log("key OK");
+                            //Debug.Log("key OK");
 
                             draggable.gameObject.transform.Translate(draggable.gameObject.transform.position.x, draggable.gameObject.transform.position.y, 10); // hide key sprite (push to the back)
                             keyInserted.SetActive(true); // show the inserted key sprite
@@ -770,7 +770,7 @@ public class SnapController : MonoBehaviour
                 // are all in correct order?
                 if (cableSlot1 == true && cableSlot2 == true && cableSlot3 == true && cableSlot4 == true)
                 {
-                    Debug.Log("CORRECT CABLE FIX! CONGRATS!!!!");
+                    //Debug.Log("CORRECT CABLE FIX! CONGRATS!!!!");
 
                     electricityFlow = true; // electricity now on -> can open the box with cables on the other wall
                     audioPlayer.Play(); // play puzzle solved sound 

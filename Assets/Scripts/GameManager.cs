@@ -92,8 +92,8 @@ public class GameManager : MonoBehaviour
     // called second
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("OnSceneLoaded: " + scene.name);
-        Debug.Log(mode);
+        //Debug.Log("OnSceneLoaded: " + scene.name);
+        //Debug.Log(mode);
 
         isFacingRight = playerScript.isFacingRight; // var from playercontroller script
 

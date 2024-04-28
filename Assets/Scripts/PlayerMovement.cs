@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TalkToCharacter()
     {
-        Debug.Log("CALLED TALK TO CHARACTER METHOD");
+        //Debug.Log("CALLED TALK TO CHARACTER METHOD");
 
         if (GameObject.Find("DialogueCircle").GetComponent<SpeechBubbleManager>().inArea == true)
         {
