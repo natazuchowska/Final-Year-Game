@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // SCRIPT CREATED ONLY FOR BUILD VERSIONS AS UNITY INPUTSYSTEM WOULD NOT MOVE THE CHARACTER -> NOT USED IN UNITY EDITOR VERSION (attached to the disabled player gameobject)
+    // SCRIPT CREATED ONLY FOR BUILD VERSIONS AS UNITY INPUTSYSTEM WOULD NOT MOVE THE CHARACTER 
     [SerializeField]
     public float speed = 2.6f;
 

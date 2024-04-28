@@ -76,7 +76,7 @@ public class WizardController : MonoBehaviour
             Debug.Log("ENTERED THE CLOSE INVENTORY CASE WITH DIALOGUE");
             GameObject.Find("InventoryButton").GetComponent<InventoryManager>().OpenInventory(); // close inventory
         }
-        player.GetComponent<PlayerController>().TalkToCharacter(); // BUILD V -> was PlayerController
+        player.GetComponent<PlayerMovement>().TalkToCharacter(); // BUILD V -> was PlayerController
     }
 
     public void SetSpeakingAnimation() // make character speak when dialogue window open
