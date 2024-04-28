@@ -27,7 +27,7 @@ This game was developed for a Final Year Project in the 3rd year of studying BSc
 ## Basic controls
 - The character can be controlled using WASD/arrow keys.
 - All other actions are point-and-click-based and a breakdown can be seen below:
-<img width="610" alt="Screenshot 2024-04-28 at 20 34 49" src="https://github.com/natazuchowska/Final-Year-Game/assets/98778016/fa1df7f3-f161-4403-ae96-e6b49be32645">
+<img width="620" alt="Controls page" src="https://github.com/natazuchowska/Final-Year-Game/assets/98778016/908d427e-a4ce-49e5-8188-e9b13fe41aa3">
 
 ## Resources
 All the sounds used in the game were downloaded from [**freesound.org**](freesound.org)
