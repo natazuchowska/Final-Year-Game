@@ -23,3 +23,15 @@ This game was developed for a Final Year Project in the 3rd year of studying BSc
 > [!WARNING]
 > - In MacOS version the colliders around scenes are not detecting collisions properly. Please keep the player within rooms at all times.
 > - In any case if a **red arrow** appears inside the closed doors in the initial scene please close the window and open the game again. This will result in bugs in further gameplay.
+
+## Basic controls
+- the character can be controlled using WASD/arrow keys
+- all other actions are point-and-click-based and a breakdown can be seen below
+<img width="610" alt="Screenshot 2024-04-28 at 20 34 49" src="https://github.com/natazuchowska/Final-Year-Game/assets/98778016/fa1df7f3-f161-4403-ae96-e6b49be32645">
+
+## Resources
+All the sounds used in the game were downloaded from **freesound.org** 
+</br>
+Icons used for the UI were downloaded from **icons8.com**
+
+  
